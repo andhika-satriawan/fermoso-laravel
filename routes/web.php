@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.customer.home');
 });
 
 Route::get('/products', function () {
@@ -39,4 +41,14 @@ Route::get('/faq-perusahaan', function () {
 
 Route::get('/blog', function () {
     return view('blog');
+});
+
+
+Route::prefix('admin')
+    // ->middleware(['auth:sanctum', 'verified', 'is_admin'])
+    ->name('admin.')
+    ->group(function() {
+
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 });
