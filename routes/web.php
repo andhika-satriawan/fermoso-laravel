@@ -16,19 +16,30 @@ use App\Http\Controllers\Admin\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('pages.customer.home');
+    return view('pages.customer.home', [
+        "title" => "Home",
+        "page" => "home",
+    ]);
 });
 
 Route::get('/products', function () {
-    return view('products');
+    return view('pages.customer.products', [
+        "title" => "Product",
+        "page" => "products",
+    ]);
 });
 
-Route::get('/single-product', function () {
-    return view('single-product');
+Route::get('/detail-product', function () {
+    return view('pages.customer.detail-product', [
+        "title" => "Detail Product",
+        "page" => "detail-product",
+    ]);
 });
 
 Route::get('/cara-belanja', function () {
-    return view('cara-belanja');
+    return view('cara-belanja', [
+        "page" => "cara-belanja"
+    ]);
 });
 
 Route::get('/faq-product', function () {
@@ -47,8 +58,7 @@ Route::get('/blog', function () {
 Route::prefix('admin')
     // ->middleware(['auth:sanctum', 'verified', 'is_admin'])
     ->name('admin.')
-    ->group(function() {
+    ->group(function () {
 
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-});
+    });

@@ -298,7 +298,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-vertical">
-                    <div class="box-nav-vertical kuteshop-dropdown always-open">
+                    <div class="box-nav-vertical kuteshop-dropdown {{ $title === 'Home' ? 'always-open' : '' }}">
                         <a href="#" data-kuteshop="kuteshop-dropdown" class="block-title">
                             <span class="icon ovic-icon-menu"><span
                                     class="inner"><span></span><span></span><span></span></span></span>
@@ -313,168 +313,47 @@
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-1.png"
                                                     class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Electronics</a>
+                                                    decoding="async"></span>Whitening</a>
                                     </li>
                                     <li id="menu-item-447"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-447 menu-item-icon-image">
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-2.png"
                                                     class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Sports & Outdoors</a>
+                                                    decoding="async"></span>Slimming</a>
                                     </li>
                                     <li id="menu-item-439"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-439 menu-item-icon-image">
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-3.png"
                                                     class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Smartphone &amp; Tablets</a>
+                                                    decoding="async"></span>Skinbooster</a>
                                     </li>
                                     <li id="menu-item-445"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-445 menu-item-icon-image">
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-4.png"
                                                     class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Health &amp; Beauty</a>
+                                                    decoding="async"></span>Anastesi</a>
                                     </li>
                                     <li id="menu-item-441"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-441 menu-item-icon-image">
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-5.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Bags
-                                            &amp; Shoes</a>
+                                                    class="icon-image wp-post-image" alt decoding="async"></span>Botox</a>
                                     </li>
                                     <li id=menu-item-443
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-443 menu-item-icon-image">
                                         <a href="#" data-megamenu=463><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-6.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Toys
-                                            &amp; Hobbies</a>
+                                                    class="icon-image wp-post-image" alt decoding="async"></span>Benang</a>
                                     </li>
                                     <li id=menu-item-438
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-438 menu-item-icon-image">
                                         <a href="#" data-megamenu=463><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-7.png"
                                                     class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Networking Plus</a>
-                                    </li>
-                                    <li id=menu-item-437
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-437 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-8.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Laptops Plus</a>
-                                        <ul class=sub-menu>
-                                            <li id=menu-item-452
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-452">
-                                                <a href="#" class="disable-link" data-megamenu="0">Laptop
-                                                    Window</a>
-                                                <ul class=sub-menu>
-                                                    <li id=menu-item-457
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-457">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            HP</a>
-                                                    </li>
-                                                    <li id=menu-item-458
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-458">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            Lenovo</a>
-                                                    </li>
-                                                    <li id=menu-item-454
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-454">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            Dell</a>
-                                                    </li>
-                                                    <li id=menu-item-455
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-455">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            Acer</a>
-                                                    </li>
-                                                    <li id=menu-item-456
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-456">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            Asus</a>
-                                                    </li>
-                                                    <li id=menu-item-459
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-459">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Laptop
-                                                            MSI</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li id=menu-item-453
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-453">
-                                                <a href="#" class="disable-link" data-megamenu="0">Macbook</a>
-                                                <ul class=sub-menu>
-                                                    <li id=menu-item-460
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-460">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Macbook
-                                                            Air</a>
-                                                    </li>
-                                                    <li id=menu-item-461
-                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-461">
-                                                        <a href="#" class="disable-link"
-                                                            data-megamenu="0">Macbook
-                                                            Pro</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id=menu-item-444
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-444 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-9.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Jewelry & Watches</a>
-                                    </li>
-                                    <li id=menu-item-440
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-440 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-10.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Lights &amp; Lamps</a>
-                                    </li>
-                                    <li id=menu-item-436
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-436 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-11.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Cameras &amp; Photo</a>
-                                    </li>
-                                    <li id=menu-item-451
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-451 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-1.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Digital</a>
-                                    </li>
-                                    <li id=menu-item-449
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-449 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-10.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Furniture</a>
-                                    </li>
-                                    <li id=menu-item-450
-                                        class="hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-450 menu-item-icon-image">
-                                        <a href="#" data-megamenu=462><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-1.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Fashion & Clothing</a>
-                                    </li>
-                                    <li id=menu-item-442
-                                        class="hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-442 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-2.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Food
-                                            &amp; Drink</a>
+                                                    decoding="async"></span>Lain - lain</a>
                                     </li>
                                 </ul>
                             </div>
@@ -490,36 +369,34 @@
                     <div class="ovic-menu-wapper horizontal">
                         <ul id=menu-primary-menu class="kuteshop-nav main-menu horizontal-menu ovic-menu">
                             <li id="menu-item-121"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu">
-                                <a href="./" aria-current="page" data-megamenu="464">Home</a>
+                                class="menu-item {{ $page === 'home' ? 'current_page_item' : '' }} menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-21 menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                                <a href="<?= url('/') ?>" aria-current="page" data-megamenu="464">Home</a>
                             </li>
-                            <li id=menu-item-191
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu">
-                                <a href="./product.html" data-megamenu=240>Product</a>
+                            <li id="menu-item-191"
+                                class="menu-item {{ $page === 'products' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                                <a href="<?= url('/products') ?>" data-megamenu=240>Products</a>
                             </li>
-                            <li id=menu-item-192
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                            <li id="menu-item-192"
+                                class="menu-item {{ $page === 'cara-belanja' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
                                 <a href="./cara-belanja.html" data-megamenu="239">Cara Belanja</a>
                             </li>
-                            <li id=menu-item-193
+                            <li id="menu-item-193"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193">
-                                <a class="disable-link" data-megamenu="0">Pages</a>
+                                <a class="disable-link" data-megamenu="0">FAQ</a>
                                 <ul class=sub-menu>
                                     <li id=menu-item-324
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324">
-                                        <a href="https://kuteshop.kutethemes.net/my-account/?demo=21"
-                                            data-megamenu="0">My account</a>
+                                        <a href="#" data-megamenu="0">FAQ Product</a>
                                     </li>
                                     <li id=menu-item-325
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-325">
-                                        <a href="/404-error?demo=21" data-megamenu="0">404 Error</a>
+                                        <a href="#" data-megamenu="0">FAQ Toko Kami</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li id=menu-item-194
+                            <li id="menu-item-194"
                                 class="item-end menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
-                                <a href="https://1.envato.market/WEdOn?demo=21" data-megamenu="0">Buy KuteShop
-                                    !</a>
+                                <a href="#" data-megamenu="0">Blog</a>
                             </li>
                         </ul>
                     </div>
