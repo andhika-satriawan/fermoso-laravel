@@ -712,7 +712,7 @@
             -moz-osx-font-smoothing: grayscale !important
         }
     </style>
-    <link rel=stylesheet href=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/53f0a.css media=all>
+    <link rel="stylesheet" href="css/53f0a.css">
     <style id=kuteshop-main-inline-css>
         /*<![CDATA[*/
         body {
@@ -803,13 +803,8 @@
 
 @section('container')
     <div id="content" class="container site-content sidebar-full product-page product-page-standard">
-        <nav class=woocommerce-breadcrumb><a href=https://kuteshop.kutethemes.net>Home</a><span class=delimiter></span><a
-                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21">Market</a><span
-                class=delimiter></span><a
-                href="https://kuteshop.kutethemes.net/product-category/market/electronic/?demo=21">Electronic</a><span
-                class=delimiter></span><a
-                href="https://kuteshop.kutethemes.net/product-category/market/electronic/home-audio/?demo=21">Home
-                Audio</a><span class=delimiter></span>Sanyer Refrigerator 150L</nav>
+        <nav class=woocommerce-breadcrumb><a href="<?= url('/') ?>">Home</a><span class=delimiter></span><a
+                href="<?= url('/products') ?>">Products</a><span class=delimiter></span>Sanyer Refrigerator 150L</nav>
         <div id=primary class=content-area>
             <main id=main class=site-main>
                 <div class=woocommerce-notices-wrapper></div>
@@ -862,30 +857,23 @@
                                     <div class=star-rating role=img aria-label="Rated 5.00 out of 5"><span
                                             style=width:100%>Rated <strong class=rating>5.00</strong> out of 5 based
                                             on <span class=rating>1</span> customer rating</span></div><strong
-                                        class=rating-count>01</strong><a href=#reviews class=woocommerce-review-link
-                                        rel=nofollow>Add your review</a>
+                                        class=rating-count>01</strong>
                                 </div> <a href=#reviews class=woocommerce-review-link rel=nofollow>(<span
                                         class=count>1</span> customer review)</a>
                             </div>
-                            <div class=ovic-share-socials>
-                                <div class=inner>
-                                    <a class=facebook
-                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/product/sanyer-refrigerator-150l/"
+                            <div class="ovic-share-socials">
+                                <div class="inner">
+                                    <a class="tokopedia" href="https://www.tokopedia.com/"
                                         onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                        <span class="icon fa fa-facebook"></span>
-                                        <span class=text>Facebook</span>
+                                        <span class="text">Tokopedia</span>
                                     </a>
-                                    <a class=twitter
-                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/product/sanyer-refrigerator-150l/&#038;text=ul%20liBrand:%20Panasonic/li%20liModel:%20407%20L%20Frost%20Free%20Double%20Door%203%20Star%20Refrigerator%20(NRBW415VN)/li%20liDoor%20Type:%20Double%20Door/li%20liModel%20Name:%20NRBW415VN/li/ul"
+                                    <a class="bukalapak" href="https://www.bukalapak.com/"
                                         onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                        <span class="icon fa fa-twitter"></span>
-                                        <span class=text>Twitter</span>
+                                        <span class="text">Bukalapak</span>
                                     </a>
-                                    <a class=pinterest
-                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/product/sanyer-refrigerator-150l/&#038;description=ul%20liBrand:%20Panasonic/li%20liModel:%20407%20L%20Frost%20Free%20Double%20Door%203%20Star%20Refrigerator%20(NRBW415VN)/li%20liDoor%20Type:%20Double%20Door/li%20liModel%20Name:%20NRBW415VN/li/ul&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-02.jpg"
+                                    <a class="shopee" href="https://shopee.co.id/"
                                         onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                        <span class="icon fa fa-pinterest-square"></span>
-                                        <span class=text>Pinterest</span>
+                                        <span class="text">Shopee</span>
                                     </a>
                                 </div>
                             </div>
@@ -911,23 +899,9 @@
                                         value=1 aria-label="Product quantity" size=4 min=1 max step=1 placeholder
                                         inputmode=numeric autocomplete=off>
                                     <a href=# class="arrow plus quantity-plus"></a>
-                                </div><button type=submit name=add-to-cart value=2275
-                                    class="single_add_to_cart_button button alt">Add to cart</button>
-                                <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2275  wishlist-fragment on-first-load"
-                                    data-fragment-ref=2275
-                                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:true,&quot;show_exists&quot;:false,&quot;product_id&quot;:2275,&quot;parent_product_id&quot;:2275,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:true,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                    <div class=yith-wcwl-add-button>
-                                        <a href="?add_to_wishlist=2275&#038;_wpnonce=f4a5cbc38c"
-                                            class="add_to_wishlist single_add_to_wishlist" data-product-id=2275
-                                            data-product-type=simple data-original-product-id=2275 data-title=Wishlist
-                                            rel=nofollow>
-                                            <i class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                            <span>Wishlist</span>
-                                        </a>
-                                    </div>
                                 </div>
-                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2275"
-                                    class="compare button" data-product_id=2275 rel=nofollow>Compare</a>
+                                <button type="submit" name="add-to-cart" value="2275"
+                                    class="single_add_to_cart_button button alt">Add to cart</button>
                             </form>
                             <div class=product_meta>
                                 <span class=sku_wrapper><span class=title>SKU:</span> <span
@@ -971,14 +945,6 @@
                             <li class=description_tab id=tab-title-description role=tab aria-controls=tab-description>
                                 <a href=#tab-description>
                                     Description </a>
-                            </li>
-                            <li class=reviews_tab id=tab-title-reviews role=tab aria-controls=tab-reviews>
-                                <a href=#tab-reviews>
-                                    Reviews (1) </a>
-                            </li>
-                            <li class=ovic_brands_tab id=tab-title-ovic_brands role=tab aria-controls=tab-ovic_brands>
-                                <a href=#tab-ovic_brands>
-                                    Brands (2) </a>
                             </li>
                         </ul>
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
@@ -1043,182 +1009,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
-                            id=tab-reviews role=tabpanel aria-labelledby=tab-title-reviews>
-                            <div class=ovic-panel-rating>
-                                <div class=average>
-                                    <span>5.00★</span>
-                                    <p>Rating</p>
-                                </div>
-                                <ul class=detail>
-                                    <li>
-                                        <span class=star>5★</span>
-                                        <span class=process>
-                                            <span class=process-bar style=width:100%></span>
-                                        </span>
-                                        <span class=count>1</span>
-                                    </li>
-                                    <li>
-                                        <span class=star>4★</span>
-                                        <span class=process>
-                                            <span class=process-bar style=width:0%></span>
-                                        </span>
-                                        <span class=count>0</span>
-                                    </li>
-                                    <li>
-                                        <span class=star>3★</span>
-                                        <span class=process>
-                                            <span class=process-bar style=width:0%></span>
-                                        </span>
-                                        <span class=count>0</span>
-                                    </li>
-                                    <li>
-                                        <span class=star>2★</span>
-                                        <span class=process>
-                                            <span class=process-bar style=width:0%></span>
-                                        </span>
-                                        <span class=count>0</span>
-                                    </li>
-                                    <li>
-                                        <span class=star>1★</span>
-                                        <span class=process>
-                                            <span class=process-bar style=width:0%></span>
-                                        </span>
-                                        <span class=count>0</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id=reviews class=woocommerce-Reviews>
-                                <div id=comments>
-                                    <h2 class="woocommerce-Reviews-title">
-                                        1 review for <span>Sanyer Refrigerator 150L</span></h2>
-                                    <ol class=commentlist>
-                                        <li class="review byuser comment-author-admin bypostauthor even thread-even depth-1"
-                                            id=li-comment-95>
-                                            <div id=comment-95 class=comment_container><img alt
-                                                    src='https://secure.gravatar.com/avatar/863933273aac21506ab3aedab80ce4dc?s=60&#038;d=mm&#038;r=g'
-                                                    srcset="https://secure.gravatar.com/avatar/863933273aac21506ab3aedab80ce4dc?s=120&#038;d=mm&#038;r=g 2x"
-                                                    class='avatar avatar-60 photo' height=60 width=60 loading=lazy
-                                                    decoding=async>
-                                                <div class=comment-text>
-                                                    <div class=star-rating-wrap>
-                                                        <div class=star-rating role=img aria-label="Rated 5 out of 5">
-                                                            <span style=width:100%>Rated <strong class=rating>5</strong>
-                                                                out
-                                                                of 5</span>
-                                                        </div>
-                                                        <strong class=rating-count>01</strong><a href=#reviews
-                                                            class=woocommerce-review-link rel=nofollow>Add your
-                                                            review</a>
-                                                    </div>
-                                                    <p class=meta>
-                                                        <strong class=woocommerce-review__author>Admin </strong>
-                                                        <span class=woocommerce-review__dash>&ndash;</span> <time
-                                                            class=woocommerce-review__published-date
-                                                            datetime=2021-08-29T08:43:59+00:00>August 29,
-                                                            2021</time>
-                                                    </p>
-                                                    <div class=description>
-                                                        <p>It is beautiful and hight quality. I will continue to buy
-                                                            to give to friends and relatives</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </div>
-                                <div id=review_form_wrapper>
-                                    <div id=review_form>
-                                        <div id=respond class=comment-respond>
-                                            <span id=reply-title class=comment-reply-title>Add a review <small><a
-                                                        rel=nofollow id=cancel-comment-reply-link
-                                                        href="/product/sanyer-refrigerator-150l/?demo=21#respond"
-                                                        style=display:none;>Cancel reply</a></small></span>
-                                            <form action=https://kuteshop.kutethemes.net/wp-comments-post.php method=post
-                                                id=commentform class=comment-form novalidate>
-                                                <p class=comment-notes><span id=email-notes>Your email address will
-                                                        not be published.</span> <span class=required-field-message>Required
-                                                        fields are marked
-                                                        <span class=required>*</span></span></p>
-                                                <div class=row>
-                                                    <p class="comment-form-author col-sm-6"><input placeholder=Name
-                                                            type=text name=author id=author required=required></p>
-                                                    <p class="comment-form-email col-sm-6"><input placeholder=Email
-                                                            type=text name=email id=email aria-describedby=email-notes
-                                                            required=required></p>
-                                                </div>
-                                                <p class=comment-form-cookies-consent><input id=wp-comment-cookies-consent
-                                                        name=wp-comment-cookies-consent type=checkbox value=yes>
-                                                    <label for=wp-comment-cookies-consent>Save my name, email, and
-                                                        website in this browser for the next time I comment.</label>
-                                                </p>
-                                                <div class=comment-form-rating><label for=rating>Your
-                                                        rating&nbsp;<span class=required>*</span></label><select name=rating
-                                                        id=rating required>
-                                                        <option value>Rate&hellip;</option>
-                                                        <option value=5>Perfect</option>
-                                                        <option value=4>Good</option>
-                                                        <option value=3>Average</option>
-                                                        <option value=2>Not that bad</option>
-                                                        <option value=1>Very poor</option>
-                                                    </select></div>
-                                                <p class=comment-form-comment><label for=comment>Your
-                                                        review&nbsp;<span class=required>*</span></label>
-                                                    <textarea id=comment name=comment cols=45 rows=8 required></textarea>
-                                                </p>
-                                                <p class=form-submit><input name=submit type=submit id=submit class=submit
-                                                        value=Submit> <input type=hidden name=comment_post_ID value=2275
-                                                        id=comment_post_ID>
-                                                    <input type=hidden name=comment_parent id=comment_parent value=0>
-                                                </p>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=clear></div>
-                            </div>
-                        </div>
-                        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--ovic_brands panel entry-content wc-tab"
-                            id=tab-ovic_brands role=tabpanel aria-labelledby=tab-title-ovic_brands>
-                            <div class=product-tab-brands>
-                                <div class=brand-item>
-                                    <div class=term-thumbnail>
-                                        <a href="https://kuteshop.kutethemes.net/product-brand/appliances-2/cross/?demo=21"
-                                            class=brand-link>
-                                            <figure><img width=124 height=63
-                                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg
-                                                    class="attachment-full size-full wp-post-image" alt decoding=async
-                                                    loading=lazy
-                                                    srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-84x43.jpg 84w"
-                                                    sizes="(max-width: 124px) 100vw, 124px"></figure>
-                                        </a>
-                                    </div>
-                                    <h3 class="term-name">
-                                        <a href="https://kuteshop.kutethemes.net/product-brand/appliances-2/cross/?demo=21"
-                                            class=brand-link>
-                                            Cross </a>
-                                    </h3>
-                                </div>
-                                <div class=brand-item>
-                                    <div class=term-thumbnail>
-                                        <a href="https://kuteshop.kutethemes.net/product-brand/appliances-2/woll/?demo=21"
-                                            class=brand-link>
-                                            <figure><img width=124 height=63
-                                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg
-                                                    class="attachment-full size-full wp-post-image" alt decoding=async
-                                                    loading=lazy
-                                                    srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-84x43.jpg 84w"
-                                                    sizes="(max-width: 124px) 100vw, 124px"></figure>
-                                        </a>
-                                    </div>
-                                    <h3 class="term-name">
-                                        <a href="https://kuteshop.kutethemes.net/product-brand/appliances-2/woll/?demo=21"
-                                            class=brand-link>
-                                            WOLL </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <section class="related products ovic-products style-01  border-full">
                         <h2 class="title">Related Products</h2>
@@ -1263,8 +1053,8 @@
                                                 data-quantity=1
                                                 class="button product_type_simple add_to_cart_button ajax_add_to_cart"
                                                 data-product_id=2778 data-product_sku=MK-EL-0014
-                                                aria-label="Add &ldquo;Flat Samsang TV&rdquo; to your cart"
-                                                aria-describedby rel=nofollow>Add to cart</a></span>
+                                                aria-label="Add &ldquo;Flat Samsang TV&rdquo; to your cart" aria-describedby
+                                                rel=nofollow>Add to cart</a></span>
                                     </div>
                                     <div class="product-info equal-elem">
                                         <h2 class="product-title"><a
@@ -1273,9 +1063,7 @@
                                         <div class=star-rating-wrap>
                                             <div class=star-rating role=img aria-label="Rated 4.25 out of 5"><span
                                                     style=width:85%>Rated <strong class=rating>4.25</strong> out of
-                                                    5</span></div><strong class=rating-count>04</strong><a href=#reviews
-                                                class=woocommerce-review-link rel=nofollow>Add your
-                                                review</a>
+                                                    5</span></div><strong class=rating-count>04</strong>
                                         </div>
                                         <span class=price><span class="woocommerce-Price-amount amount"><bdi><span
                                                         class=woocommerce-Price-currencySymbol>&#36;</span>450.00</bdi></span></span>

@@ -37,21 +37,31 @@ Route::get('/detail-product', function () {
 });
 
 Route::get('/cara-belanja', function () {
-    return view('cara-belanja', [
+    return view('pages.customer.cara-belanja', [
+        "title" => "Cara Belanja",
         "page" => "cara-belanja"
     ]);
 });
 
 Route::get('/faq-product', function () {
-    return view('faq-product');
+    return view('pages.customer.faq-product', [
+        "title" => "FAQ Product",
+        "page"  => "faq-product"
+    ]);
 });
 
-Route::get('/faq-perusahaan', function () {
-    return view('faq-perusahaan');
+Route::get('/faq-toko-kami', function () {
+    return view('pages.customer.faq-toko-kami', [
+        "title" => "FAQ Toko Kami",
+        "page"  => "faq-toko-kami"
+    ]);
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('pages.customer.blog', [
+        "title" => "Blog",
+        "page"  => "blog"
+    ]);
 });
 
 

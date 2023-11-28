@@ -340,20 +340,22 @@
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-441 menu-item-icon-image">
                                         <a href="#" data-megamenu="463"><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-5.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Botox</a>
+                                                    class="icon-image wp-post-image" alt
+                                                    decoding="async"></span>Botox</a>
                                     </li>
                                     <li id=menu-item-443
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-443 menu-item-icon-image">
                                         <a href="#" data-megamenu=463><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-6.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Benang</a>
+                                                    class="icon-image wp-post-image" alt
+                                                    decoding="async"></span>Benang</a>
                                     </li>
                                     <li id=menu-item-438
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-438 menu-item-icon-image">
                                         <a href="#" data-megamenu=463><span class="icon icon-img"><img
                                                     width="16" height="16" src="icons/01-menu-7.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Lain - lain</a>
+                                                    class="icon-image wp-post-image" alt decoding="async"></span>Lain
+                                            - lain</a>
                                     </li>
                                 </ul>
                             </div>
@@ -378,7 +380,7 @@
                             </li>
                             <li id="menu-item-192"
                                 class="menu-item {{ $page === 'cara-belanja' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
-                                <a href="./cara-belanja.html" data-megamenu="239">Cara Belanja</a>
+                                <a href="<?= url('/cara-belanja') ?>" data-megamenu="239">Cara Belanja</a>
                             </li>
                             <li id="menu-item-193"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193">
@@ -386,17 +388,17 @@
                                 <ul class=sub-menu>
                                     <li id=menu-item-324
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324">
-                                        <a href="#" data-megamenu="0">FAQ Product</a>
+                                        <a href="<?= url('/faq-product') ?>" data-megamenu="0">FAQ Product</a>
                                     </li>
                                     <li id=menu-item-325
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-325">
-                                        <a href="#" data-megamenu="0">FAQ Toko Kami</a>
+                                        <a href="<?= url('/faq-toko-kami') ?>" data-megamenu="0">FAQ Toko Kami</a>
                                     </li>
                                 </ul>
                             </li>
                             <li id="menu-item-194"
-                                class="item-end menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
-                                <a href="#" data-megamenu="0">Blog</a>
+                                class="item-end {{ $page === 'blog' ? 'current_page_item' : '' }} menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
+                                <a href="<?= url('/blog') ?>" data-megamenu="0">Blog</a>
                             </li>
                         </ul>
                     </div>

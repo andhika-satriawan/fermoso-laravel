@@ -14975,6 +14975,15 @@ div.ovic-question-answers .question .text {
 .entry-summary .ovic-share-socials a.facebook {
   background-color: #3b5998;
 }
+.entry-summary .ovic-share-socials a.tokopedia {
+  background-color: #00aa5b;
+}
+.entry-summary .ovic-share-socials a.bukalapak {
+  background-color: #e31e52;
+}
+.entry-summary .ovic-share-socials a.shopee {
+  background-color: #f53d2d;
+}
 .entry-summary .ovic-share-socials a.twitter {
   background-color: #1da1f2;
 }

@@ -20,8 +20,9 @@
 
 @section('container')
     <div id=content class="container site-content sidebar-left shop-page">
-        <nav class=woocommerce-breadcrumb><a href=https://kuteshop.kutethemes.net>Home</a><span
-                class=delimiter></span>Market</nav>
+        <nav class=woocommerce-breadcrumb><a href="<?= url('/') ?>">Home</a>
+            <span class=delimiter></span>Products
+        </nav>
         <div id=primary class=content-area>
             <main id=main class=site-main>
                 <header class=woocommerce-products-header></header>
