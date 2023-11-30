@@ -4247,8 +4247,12 @@ body
 .shop_table .actions .coupon .input-text {
   height: 46px;
   padding: 11px 20px;
-  width: 252px;
+  width: 100%;
   margin-inline-end: 10px;
+  margin-bottom: 10px;
+}
+input#coupon_code.provinsi {
+  margin-top: 40px;
 }
 .shop_table .actions .coupon button {
   margin-inline-end: 7px;

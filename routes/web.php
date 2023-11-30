@@ -64,6 +64,27 @@ Route::get('/blog', function () {
     ]);
 });
 
+Route::get('/register', function () {
+    return view('pages.customer.register', [
+        "title" => "Register",
+        "page"  => "register"
+    ]);
+});
+
+Route::get('/login', function () {
+    return view('pages.customer.login', [
+        "title" => "Login",
+        "page"  => "login"
+    ]);
+});
+
+Route::get('/cart', function () {
+    return view('pages.customer.cart', [
+        "title" => "Cart",
+        "page"  => "cart"
+    ]);
+});
+
 
 Route::prefix('admin')
     // ->middleware(['auth:sanctum', 'verified', 'is_admin'])
