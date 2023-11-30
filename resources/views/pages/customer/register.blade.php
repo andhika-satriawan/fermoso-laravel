@@ -33,7 +33,21 @@
                                     <h2>Register</h2>
                                     <form method="post" class="woocommerce-form woocommerce-form-register register">
                                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                            <label for="reg_username">No Handphone&nbsp;<span
+                                            <label for="reg_username">Nama <span class="required">*</span></label>
+                                            <input type="text"
+                                                class="woocommerce-Input woocommerce-Input--text input-text" name="username"
+                                                id="reg_username" autocomplete="username" value="">
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                            <label for="reg_username">Status Pribadi / Clinic<span
+                                                    class="required">*</span></label>
+                                            <select name="cars" id="cars">
+                                                <option value="pribadi">Pribadi</option>
+                                                <option value="clinic">Klinik</option>
+                                            </select>
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                            <label for="reg_username">No. Whatsapp Aktif<span
                                                     class="required">*</span></label>
                                             <input type="tel"
                                                 class="woocommerce-Input woocommerce-Input--text input-text" name="phone"
@@ -41,11 +55,16 @@
                                                 placeholder="08xxxxxxxxxx">
                                         </p>
                                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                            <label for="reg_username">Username&nbsp;<span class="required">*</span></label>
-                                            <input type="text"
-                                                class="woocommerce-Input woocommerce-Input--text input-text" name="username"
-                                                id="reg_username" autocomplete="username" value="">
+                                            <label for="reg_username">Alamat <span class="required">*</span></label>
+                                            <textarea type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username"
+                                                autocomplete="username" value=""></textarea>
                                         </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                            <label for="reg_username">Patokan Alamat <span class="required">*</span></label>
+                                            <textarea type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username"
+                                                autocomplete="username" value=""></textarea>
+                                        </p>
+
                                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                                             <label for="reg_email">Email address&nbsp;<span
                                                     class="required">*</span></label>
@@ -69,8 +88,8 @@
                                         </div>
                                         <p class="woocommerce-form-row form-row">
                                             <input type="hidden" id="woocommerce-register-nonce"
-                                                name="woocommerce-register-nonce" value="6a54ffd1b3"><input type="hidden"
-                                                name="_wp_http_referer" value="/my-account/?demo=21">
+                                                name="woocommerce-register-nonce" value="6a54ffd1b3"><input
+                                                type="hidden" name="_wp_http_referer" value="/my-account/?demo=21">
                                             <button type="submit"
                                                 class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"
                                                 name="register" value="Register">Register</button>
