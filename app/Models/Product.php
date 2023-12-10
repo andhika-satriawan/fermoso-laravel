@@ -20,6 +20,8 @@ class Product extends Model
         'slug',
         'description',
         'photo',
+        'video_url',
+        'video_youtube_url',
         'status'
     ];
 
@@ -31,5 +33,15 @@ class Product extends Model
     public function product_subcategory(): BelongsTo
     {
         return $this->belongsTo(ProductSubcategory::class, 'product_subcategory_id', 'id');
+    }
+
+    /**
+     * Get all of the details for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function details(): HasMany
+    {
+        return $this->hasMany(ProductDetail::class, 'product_id', 'id');
     }
 }

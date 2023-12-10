@@ -17,8 +17,9 @@ return new class extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('sku')->unique();
             $table->string('name');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->unsignedInteger('price');
+            $table->unsignedInteger('discount_price')->nullable();
             $table->unsignedInteger('weight')->nullable();
             $table->unsignedInteger('width')->nullable();
             $table->unsignedInteger('length')->nullable();

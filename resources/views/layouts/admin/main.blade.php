@@ -8,8 +8,14 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
     <meta name="author" content="Dreamguys - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
-    <title>Dreams Pos admin template</title>
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>@yield('title')</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('admin/img/favicon.png')}}">
+    
     @stack('prepend-style')
     @include('partials.admin.style')
     @stack('addon-style')
@@ -27,7 +33,7 @@
 
         @include('partials.admin.sidebar')
 
-        <div class="page-wrapper">
+        <div class="page-wrapper pagehead">
             <div class="content">
 
                 @yield('content')

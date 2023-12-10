@@ -1,8 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,81 +14,6 @@ use App\Http\Controllers\Admin\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.customer.home', [
-        "title" => "Home",
-        "page" => "home",
-    ]);
-});
-
-Route::get('/products', function () {
-    return view('pages.customer.products', [
-        "title" => "Product",
-        "page" => "products",
-    ]);
-});
-
-Route::get('/detail-product', function () {
-    return view('pages.customer.detail-product', [
-        "title" => "Detail Product",
-        "page" => "detail-product",
-    ]);
-});
-
-Route::get('/cara-belanja', function () {
-    return view('pages.customer.cara-belanja', [
-        "title" => "Cara Belanja",
-        "page" => "cara-belanja"
-    ]);
-});
-
-Route::get('/faq-product', function () {
-    return view('pages.customer.faq-product', [
-        "title" => "FAQ Product",
-        "page"  => "faq-product"
-    ]);
-});
-
-Route::get('/faq-toko-kami', function () {
-    return view('pages.customer.faq-toko-kami', [
-        "title" => "FAQ Toko Kami",
-        "page"  => "faq-toko-kami"
-    ]);
-});
-
-Route::get('/blog', function () {
-    return view('pages.customer.blog', [
-        "title" => "Blog",
-        "page"  => "blog"
-    ]);
-});
-
-Route::get('/register', function () {
-    return view('pages.customer.register', [
-        "title" => "Register",
-        "page"  => "register"
-    ]);
-});
-
-Route::get('/login', function () {
-    return view('pages.customer.login', [
-        "title" => "Login",
-        "page"  => "login"
-    ]);
-});
-
-Route::get('/cart', function () {
-    return view('pages.customer.cart', [
-        "title" => "Cart",
-        "page"  => "cart"
-    ]);
-});
-
-
-Route::prefix('admin')
-    // ->middleware(['auth:sanctum', 'verified', 'is_admin'])
-    ->name('admin.')
-    ->group(function () {
-
-        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    });
+// require __DIR__.'/auth.php';
+require __DIR__.'/user.php';
+require __DIR__.'/admin.php';
