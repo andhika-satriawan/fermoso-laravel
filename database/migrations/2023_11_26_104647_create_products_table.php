@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->longText('description');
             $table->string('photo');
+            $table->string('video_url')->nullable();
+            $table->string('video_youtube_url')->nullable();
             $table->unsignedInteger('status')->default(1); // 0 = tidak aktif || 1 = aktif || 2 = draft
             $table->timestamps();
         });
