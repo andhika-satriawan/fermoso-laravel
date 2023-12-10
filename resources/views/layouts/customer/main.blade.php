@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en-US">
+@include('partials.customer.header');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>{{ $title }}</title>
-
-    <link rel="icon" href="icons/cropped-favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="icons/cropped-favicon-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon" href="icons/cropped-favicon-180x180.png">
-    <meta name="msapplication-TileImage" content="icons/cropped-favicon-270x270.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    @yield('css')
-</head>
-
-<body data-rsssl=1
-    class="home page-template page-template-elementor_header_footer page page-id-21 wp-embed-responsive theme-kuteshop woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.7 header-style-01 has-header-sticky elementor-default elementor-template-full-width elementor-kit-12 elementor-page elementor-page-21">
+<body>
     <a href="#" class="overlay-body" aria-hidden="true"></a>
     <div id="page" class="site">
 
         @include('partials.customer.navbar');
 
         @yield('container')
-        
+
         <footer class="footer footer-01">
             <div class="container">
                 <div data-elementor-type=wp-post data-elementor-id=332 class="elementor elementor-332">
@@ -450,8 +431,8 @@
                                                                     <a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest-p elementor-repeater-item-2aec99e"
                                                                         target=_blank>
                                                                         <span
-                                                                            class=elementor-screen-only>Pinterest-p</span>
-                                                                        <i class="fab fa-pinterest-p"></i> </a>
+                                                                            class=elementor-screen-only>Whatsapp</span>
+                                                                        <i class="fab fa-whatsapp"></i> </a>
                                                                 </span>
                                                             </div>
                                                         </div>

@@ -1,3 +1,97 @@
+<div class="header-mobile style-01 mobile-style-01">
+    <div class="main">
+        <div class="container">
+            <div class="inner">
+                <div class="logo"><a href="https://kuteshop.kutethemes.net/">
+                        <figure class="logo-image"><img alt="KuteShop"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo.png" class="_rw">
+                        </figure>
+                    </a></div>
+                <div class="block-search">
+                    <div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
+                        <form class="search-form dgwt-wcas-search-form" role="search" method="get"
+                            action="https://kuteshop.kutethemes.net/">
+                            <div class="dgwt-wcas-sf-wrapp">
+                                <label class="screen-reader-text">
+                                    Products search </label>
+                                <input type="hidden" name="dgwt_wcas" value="1">
+                                <input type="hidden" name="post_type" value="product">
+                                <div class="search-input">
+                                    <input id="dgwt-wcas-search-input-192e" type="search"
+                                        class="input-text dgwt-wcas-search-input" name="s" value=""
+                                        placeholder="Search for products..." autocomplete="off" data-custom-params="">
+                                    <span class="input-focus"></span>
+                                    <div class="dgwt-wcas-preloader" style="right: 46px;"></div>
+                                </div>
+                                <button type="submit" class="btn-submit dgwt-wcas-search-submit">
+                                    Search </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="inner-control">
+                        <div class="block-wishlist block-woo">
+                            <a class="woo-wishlist-link icon-link" href="https://kuteshop.kutethemes.net/wishlist/">
+                                <span class="icon main-icon-heart1">
+                                    <span class="count">0</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="block-minicart">
+                            <a class="woo-cart-link icon-link" href="https://kuteshop.kutethemes.net/cart/"
+                                data-kuteshop="">
+                                <span class="icon main-icon-cart1">
+                                    <span class="count">0</span>
+                                </span>
+                                <span class="content">
+                                    <span class="text">
+                                        Cart </span>
+                                    <span class="item">
+                                        <span class="count">0</span>
+                                        items - </span>
+                                    <span class="total"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>0.00</bdi></span></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed">
+        <div class="inner">
+            <a href="https://kuteshop.kutethemes.net/" class="home-page">
+                <span class="icon main-icon-home"></span>
+                <span class="text">Home</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-bar menu-toggle">
+                <span class="icon main-icon-menu"></span>
+                <span class="text">Menu</span>
+            </a>
+            <a class="woo-cart-link icon-link" href="https://kuteshop.kutethemes.net/cart/" data-kuteshop="">
+                <span class="icon main-icon-cart1">
+                    <span class="count">0</span>
+                </span>
+                <span class="content">
+                    <span class="text">
+                        Cart </span>
+                    <span class="item">
+                        <span class="count">0</span>
+                        items - </span>
+                    <span class="total"><span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>0.00</bdi></span></span>
+                </span>
+            </a>
+            <a href="javascript:void(0)" class="action-to-top">
+                <span class="icon main-icon-back-2"></span>
+                <span class="text">Top</span>
+            </a>
+        </div>
+    </div>
+</div>
+
 <header id="header" class="header style-01">
     <div class="header-section header-top">
         <div class="container">
@@ -98,7 +192,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="logo">
-                    <a href="">
+                    <a href="<?= url('/') ?>">
                         <figure class="logo-image">
                             <img alt="" src="images/logo.jpg" class="_rw">
                         </figure>

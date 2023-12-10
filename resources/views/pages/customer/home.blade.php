@@ -13,10 +13,11 @@
 
     <link rel="stylesheet" href="css/22b88.css">
 
+    <link rel="stylesheet" href="css/2b01b.css">
 
     <script src="js/818c0.js"></script>
     <script src="script.js"></script>
-@endsection 
+@endsection
 
 @section('container')
     <div class="elementor elementor-21">
@@ -46,26 +47,22 @@
                                                     <rs-module-wrap id=rev_slider_6_1_wrapper data-source=gallery
                                                         style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
                                                         <rs-module id=rev_slider_6_1 style data-version=6.6.14>
-                                                            <rs-slides
-                                                                style="overflow: hidden; position: absolute;">
-                                                                <rs-slide style="position: absolute;"
-                                                                    data-key=rs-11 data-title="Slide"
+                                                            <rs-slides style="overflow: hidden; position: absolute;">
+                                                                <rs-slide style="position: absolute;" data-key=rs-11
+                                                                    data-title="Slide"
                                                                     data-thumb="images/01-slide-3-50x100.jpg"
-                                                                    data-in="prst:rndany;o:0;x:100%;"
-                                                                    data-out="a:false;">
+                                                                    data-in="prst:rndany;o:0;x:100%;" data-out="a:false;">
                                                                     <img decoding="async" fetchpriority="high"
-                                                                        src="images/dummy.png" alt
-                                                                        title="01-slide-3.jpg" width="666"
-                                                                        height="450"
+                                                                        src="images/dummy.png" alt title="01-slide-3.jpg"
+                                                                        width="666" height="450"
                                                                         class="rev-slidebg tp-rs-img rs-lazyload"
                                                                         data-lazyload="images/01-slide-3.jpg"
                                                                         data-no-retina>
                                                                     <rs-group id="slider-6-slide-11-layer-8"
                                                                         data-type="group" data-xy="x:c;y:m;"
-                                                                        data-text="w:normal;"
-                                                                        data-dim="w:100%;h:100%;" data-rsp_o="off"
-                                                                        data-wrpcls="ovic-wrap" data-rsp_bd="off"
-                                                                        data-frame_0="o:1;"
+                                                                        data-text="w:normal;" data-dim="w:100%;h:100%;"
+                                                                        data-rsp_o="off" data-wrpcls="ovic-wrap"
+                                                                        data-rsp_bd="off" data-frame_0="o:1;"
                                                                         data-frame_999="o:0;st:w;sA:9000;"
                                                                         style="z-index:11;">
                                                                         <rs-layer id="slider-6-slide-11-layer-7"
@@ -101,9 +98,8 @@
                                                                             ACCESSORIES
                                                                         </rs-layer>
                                                                         <a id="slider-6-slide-11-layer-12"
-                                                                            class="rs-layer rev-btn"
-                                                                            href="#" target="_self"
-                                                                            data-type="button"
+                                                                            class="rs-layer rev-btn" href="#"
+                                                                            target="_self" data-type="button"
                                                                             data-xy="x:r;xo:101px,101px,101px,36px;yo:189px,189px,189px,150px;"
                                                                             data-pos="a"
                                                                             data-text="w:normal;s:14;l:24;fw:600;a:center;"
@@ -121,29 +117,24 @@
                                                                         </a>
                                                                     </rs-group>
                                                                 </rs-slide>
-                                                                <rs-slide style="position: absolute;"
-                                                                    data-key="rs-12" data-title=Slide
-                                                                    data-thumb=images/01-slide-1-50x100.jpg
-                                                                    data-in="prst:rndany;o:0;x:100%;"
-                                                                    data-out="a:false;">
-                                                                    <img decoding=async
-                                                                        src="images/dummy.png" alt
+                                                                <rs-slide style="position: absolute;" data-key="rs-12"
+                                                                    data-title=Slide data-thumb=images/01-slide-1-50x100.jpg
+                                                                    data-in="prst:rndany;o:0;x:100%;" data-out="a:false;">
+                                                                    <img decoding=async src="images/dummy.png" alt
                                                                         title=01-slide-1 width=666 height=450
                                                                         class="rev-slidebg tp-rs-img rs-lazyload"
                                                                         data-lazyload="images/01-slide-1.jpg"
                                                                         data-no-retina>
                                                                     <rs-group id="slider-6-slide-12-layer-0"
                                                                         data-type="group" data-xy="x:c;y:m;"
-                                                                        data-text="w:normal;"
-                                                                        data-dim="w:100%;h:100%;" data-rsp_o="off"
-                                                                        data-wrpcls="ovic-wrap" data-rsp_bd="off"
-                                                                        data-frame_0="o:1;"
+                                                                        data-text="w:normal;" data-dim="w:100%;h:100%;"
+                                                                        data-rsp_o="off" data-wrpcls="ovic-wrap"
+                                                                        data-rsp_bd="off" data-frame_0="o:1;"
                                                                         data-frame_999="o:0;st:w;sA:9000;"
                                                                         style="z-index:12;">
                                                                         <a id="slider-6-slide-12-layer-4"
-                                                                            class="rs-layer rev-btn"
-                                                                            href="#" target="_self"
-                                                                            data-type="button"
+                                                                            class="rs-layer rev-btn" href="#"
+                                                                            target="_self" data-type="button"
                                                                             data-color="#000000"
                                                                             data-xy="xo:96px,96px,96px,92px;y:m;yo:50px,50px,50px,70px;"
                                                                             data-pos="a"
@@ -206,30 +197,26 @@
                                                                         </rs-layer>
                                                                     </rs-group>
                                                                 </rs-slide>
-                                                                <rs-slide style="position: absolute;"
-                                                                    data-key="rs-13" data-title="Slide"
+                                                                <rs-slide style="position: absolute;" data-key="rs-13"
+                                                                    data-title="Slide"
                                                                     data-thumb="images/01-slide-2-50x100.jpg"
                                                                     data-anim="f:nodelay;"
                                                                     data-in="prst:rndany;y:(100%);m:true;row:5;">
-                                                                    <img decoding="async"
-                                                                        src="images/dummy.png" alt
-                                                                        title="01-slide-2" width="666"
-                                                                        height="450"
+                                                                    <img decoding="async" src="images/dummy.png" alt
+                                                                        title="01-slide-2" width="666" height="450"
                                                                         class="rev-slidebg tp-rs-img rs-lazyload"
                                                                         data-lazyload="images/01-slide-2.jpg"
                                                                         data-no-retina>
                                                                     <rs-group id="slider-6-slide-13-layer-0"
                                                                         data-type="group" data-xy="x:c;y:m;"
-                                                                        data-text="w:normal;"
-                                                                        data-dim="w:100%;h:100%;" data-rsp_o="off"
-                                                                        data-wrpcls="ovic-wrap" data-rsp_bd="off"
-                                                                        data-frame_0="o:1;"
+                                                                        data-text="w:normal;" data-dim="w:100%;h:100%;"
+                                                                        data-rsp_o="off" data-wrpcls="ovic-wrap"
+                                                                        data-rsp_bd="off" data-frame_0="o:1;"
                                                                         data-frame_999="o:0;st:w;sA:9000;"
                                                                         style="z-index:12;">
                                                                         <a id="slider-6-slide-13-layer-4"
-                                                                            class="rs-layer rev-btn"
-                                                                            href="#" target="_self"
-                                                                            data-type="button"
+                                                                            class="rs-layer rev-btn" href="#"
+                                                                            target="_self" data-type="button"
                                                                             data-color="#ffcd95"
                                                                             data-xy="xo:133px,133px,133px,53px;y:m;yo:39px,39px,39px,50px;"
                                                                             data-pos="a"
@@ -268,9 +255,8 @@
                                                                             data-type="shape"
                                                                             data-xy="xo:205px,205px,205px,125px;y:m;yo:-68px,-68px,-68px,-57px;"
                                                                             data-pos="a" data-text="w:normal;"
-                                                                            data-dim="w:45px;h:2px;"
-                                                                            data-rsp_o="off" data-rsp_bd="off"
-                                                                            data-frame_999="o:0;st:w;"
+                                                                            data-dim="w:45px;h:2px;" data-rsp_o="off"
+                                                                            data-rsp_bd="off" data-frame_999="o:0;st:w;"
                                                                             style="z-index:9;background-color:#3e2c1c;">
                                                                         </rs-layer>
                                                                         <rs-layer id="slider-6-slide-13-layer-5"
@@ -426,8 +412,7 @@
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class=elementor-widget-wrap>
                                         <div class="elementor-element elementor-element-34c6298 none elementor-widget elementor-widget-ovic_iconbox"
-                                            data-id=34c6298 data-element_type=widget
-                                            data-widget_type=ovic_iconbox.default>
+                                            data-id=34c6298 data-element_type=widget data-widget_type=ovic_iconbox.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-iconbox style-01 effect bounce-in">
                                                     <div class=inner>
@@ -458,14 +443,14 @@
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class=elementor-widget-wrap>
                                         <div class="elementor-element elementor-element-76e360a rating-not-yes offset-64 none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=76e360a data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=76e360a data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-01 arrows-02 arrows-top">
                                                     <div class=tabs-head>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded" href="#tab-09e710a-655b9bfec3d79">
+                                                                <a class="tab-link loaded"
+                                                                    href="#tab-09e710a-655b9bfec3d79">
                                                                     <span class="title">BEST SELLERS</span>
                                                                     <span class=hover></span>
                                                                 </a>
@@ -485,8 +470,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class="tabs-container">
-                                                        <div class="tab-panel active"
-                                                            id="tab-09e710a-655b9bfec3d79">
+                                                        <div class="tab-panel active" id="tab-09e710a-655b9bfec3d79">
                                                             <div data-id="products_655b9bfec3e70"
                                                                 class="ovic-products  nav-02 nav-top style-01 border-full">
                                                                 <div class="woocommerce columns-3 ">
@@ -503,36 +487,39 @@
                                                                                     <div class="thumb-wrapper">
                                                                                         <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                             href="<?= url('/detail-product') ?>">
-                                                                                            <figure
-                                                                                                class="primary-thumb">
+                                                                                            <figure class="primary-thumb">
                                                                                                 <img decoding="async"
                                                                                                     width="850"
                                                                                                     height="1021"
                                                                                                     src="images/fa-h1-06-850x1021.jpg"
                                                                                                     class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                    alt
-                                                                                                    loading="lazy">
+                                                                                                    alt loading="lazy">
                                                                                             </figure>
                                                                                         </a>
                                                                                     </div>
-                                                                                    <div class="group-button style-01 popup">
-                                                                                        <a href=# class="button yith-wcqv-button" data-product_id="2213">Quick View</a>
+                                                                                    <div
+                                                                                        class="group-button style-01 popup">
+                                                                                        <a href=#
+                                                                                            class="button yith-wcqv-button"
+                                                                                            data-product_id="2213">Quick
+                                                                                            View</a>
                                                                                     </div>
                                                                                     <span class="add-to-cart">
-                                                                                        <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                                                        <a href="#"
+                                                                                            class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add
+                                                                                            to cart</a>
                                                                                     </span>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="product-info equal-elem">
+                                                                                <div class="product-info equal-elem">
                                                                                     <h2 class="product-title">
-                                                                                        <a href="<?= url('/detail-product') ?>">Daily Women’s Dress</a>
+                                                                                        <a
+                                                                                            href="<?= url('/detail-product') ?>">Daily
+                                                                                            Women’s Dress</a>
                                                                                     </h2>
                                                                                     <div class=star-rating-wrap>
-                                                                                        <div class=star-rating
-                                                                                            role=img
+                                                                                        <div class=star-rating role=img
                                                                                             aria-label="Rated 3.00 out of 5">
-                                                                                            <span
-                                                                                                style=width:60%>Rated
+                                                                                            <span style=width:60%>Rated
                                                                                                 <strong
                                                                                                     class=rating>3.00</strong>
                                                                                                 out of 5</span>
@@ -540,8 +527,10 @@
                                                                                             class=rating-count>01</strong>
                                                                                     </div>
                                                                                     <span class="price">
-                                                                                        <span class="woocommerce-Price-amount amount"><bdi>
-                                                                                            <span class="woocommerce-Price-currencySymbol">&#36;</span>230.00</bdi>
+                                                                                        <span
+                                                                                            class="woocommerce-Price-amount amount"><bdi>
+                                                                                                <span
+                                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>230.00</bdi>
                                                                                         </span>
                                                                                     </span>
                                                                                 </div>
@@ -563,20 +552,21 @@
                                                                                     <div class=thumb-wrapper>
                                                                                         <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                             href="<?= url('/detail-product') ?>">
-                                                                                            <figure
-                                                                                                class=primary-thumb>
+                                                                                            <figure class=primary-thumb>
                                                                                                 <img decoding=async
-                                                                                                    width=850
-                                                                                                    height=1021
+                                                                                                    width=850 height=1021
                                                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-03-850x1021.jpg
                                                                                                     class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                    alt
-                                                                                                    loading=lazy>
+                                                                                                    alt loading=lazy>
                                                                                             </figure>
                                                                                         </a>
                                                                                     </div>
-                                                                                    <div class="group-button style-01 popup">
-                                                                                        <a href=# class="button yith-wcqv-button" data-product_id=2215>Quick View</a>
+                                                                                    <div
+                                                                                        class="group-button style-01 popup">
+                                                                                        <a href=#
+                                                                                            class="button yith-wcqv-button"
+                                                                                            data-product_id=2215>Quick
+                                                                                            View</a>
                                                                                     </div>
                                                                                     <span class=add-to-cart
                                                                                         data-title="Add to cart"><a
@@ -590,17 +580,16 @@
                                                                                             rel=nofollow>Add to
                                                                                             cart</a></span>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="product-info equal-elem">
+                                                                                <div class="product-info equal-elem">
                                                                                     <h2 class="product-title">
-                                                                                        <a href="<?= url('/detail-product') ?>">Short-Sleeve Dress</a>
+                                                                                        <a
+                                                                                            href="<?= url('/detail-product') ?>">Short-Sleeve
+                                                                                            Dress</a>
                                                                                     </h2>
                                                                                     <div class=star-rating-wrap>
-                                                                                        <div class=star-rating
-                                                                                            role=img
+                                                                                        <div class=star-rating role=img
                                                                                             aria-label="Rated 3.00 out of 5">
-                                                                                            <span
-                                                                                                style=width:60%>Rated
+                                                                                            <span style=width:60%>Rated
                                                                                                 <strong
                                                                                                     class=rating>3.00</strong>
                                                                                                 out of 5</span>
@@ -626,25 +615,25 @@
                                                                                     <div class=thumb-wrapper>
                                                                                         <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                             href="<?= url('/detail-product') ?>">
-                                                                                            <figure
-                                                                                                class=primary-thumb>
+                                                                                            <figure class=primary-thumb>
                                                                                                 <img decoding=async
-                                                                                                    width=850
-                                                                                                    height=1021
+                                                                                                    width=850 height=1021
                                                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02-850x1021.jpg
                                                                                                     class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                    alt
-                                                                                                    loading=lazy>
+                                                                                                    alt loading=lazy>
                                                                                             </figure>
                                                                                         </a>
                                                                                     </div>
-                                                                                    <div class="group-button style-01 popup">
-                                                                                        <a href="#" class="button yith-wcqv-button" data-product_id=2218>Quick View</a>
+                                                                                    <div
+                                                                                        class="group-button style-01 popup">
+                                                                                        <a href="#"
+                                                                                            class="button yith-wcqv-button"
+                                                                                            data-product_id=2218>Quick
+                                                                                            View</a>
                                                                                     </div>
                                                                                     <span class=add-to-cart
                                                                                         data-title="Buy product"><a
-                                                                                            href="#"
-                                                                                            data-quantity=1
+                                                                                            href="#" data-quantity=1
                                                                                             class="button product_type_external"
                                                                                             data-product_id=2218
                                                                                             data-product_sku=MK-FS-003
@@ -653,17 +642,16 @@
                                                                                             rel=nofollow>Buy
                                                                                             product</a></span>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="product-info equal-elem">
+                                                                                <div class="product-info equal-elem">
                                                                                     <h2 class="product-title">
-                                                                                        <a href="<?= url('/detail-product') ?>">Sleeveless Dress</a>
+                                                                                        <a
+                                                                                            href="<?= url('/detail-product') ?>">Sleeveless
+                                                                                            Dress</a>
                                                                                     </h2>
                                                                                     <div class=star-rating-wrap>
-                                                                                        <div class=star-rating
-                                                                                            role=img
+                                                                                        <div class=star-rating role=img
                                                                                             aria-label="Rated 5.00 out of 5">
-                                                                                            <span
-                                                                                                style=width:100%>Rated
+                                                                                            <span style=width:100%>Rated
                                                                                                 <strong
                                                                                                     class=rating>5.00</strong>
                                                                                                 out of 5</span>
@@ -685,21 +673,21 @@
                                                                                     <div class=thumb-wrapper>
                                                                                         <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                             href="<?= url('/detail-product') ?>">
-                                                                                            <figure
-                                                                                                class=primary-thumb>
+                                                                                            <figure class=primary-thumb>
                                                                                                 <img decoding=async
-                                                                                                    width=850
-                                                                                                    height=1021
+                                                                                                    width=850 height=1021
                                                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-05-850x1021.jpg
                                                                                                     class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                    alt
-                                                                                                    loading=lazy>
+                                                                                                    alt loading=lazy>
                                                                                             </figure>
                                                                                         </a>
                                                                                     </div>
                                                                                     <div
                                                                                         class="group-button style-01 popup">
-                                                                                        <a href="#" class="button yith-wcqv-button" data-product_id="2220">Quick View</a>
+                                                                                        <a href="#"
+                                                                                            class="button yith-wcqv-button"
+                                                                                            data-product_id="2220">Quick
+                                                                                            View</a>
                                                                                     </div>
                                                                                     <span class=add-to-cart
                                                                                         data-title="View products"><a
@@ -710,19 +698,19 @@
                                                                                             data-product_sku=MK-FS-004
                                                                                             aria-label="View products in the &ldquo;Dresses flowers Pattern&rdquo; group"
                                                                                             aria-describedby
-                                                                                            rel=nofollow>View products</a></span>
+                                                                                            rel=nofollow>View
+                                                                                            products</a></span>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="product-info equal-elem">
+                                                                                <div class="product-info equal-elem">
                                                                                     <h2 class="product-title">
-                                                                                        <a href="<?= url('/detail-product') ?>">Dresses flowers Pattern</a>
+                                                                                        <a
+                                                                                            href="<?= url('/detail-product') ?>">Dresses
+                                                                                            flowers Pattern</a>
                                                                                     </h2>
                                                                                     <div class=star-rating-wrap>
-                                                                                        <div class=star-rating
-                                                                                            role=img
+                                                                                        <div class=star-rating role=img
                                                                                             aria-label="Rated 5.00 out of 5">
-                                                                                            <span
-                                                                                                style=width:100%>Rated
+                                                                                            <span style=width:100%>Rated
                                                                                                 <strong
                                                                                                     class=rating>5.00</strong>
                                                                                                 out of 5</span>
@@ -747,46 +735,45 @@
                                                                                     <div class=thumb-wrapper>
                                                                                         <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                             href="<?= url('/detail-product') ?>">
-                                                                                            <figure
-                                                                                                class=primary-thumb>
+                                                                                            <figure class=primary-thumb>
                                                                                                 <img decoding=async
-                                                                                                    width=850
-                                                                                                    height=1021
+                                                                                                    width=850 height=1021
                                                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-04-850x1021.jpg
                                                                                                     class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                    alt
-                                                                                                    loading=lazy>
+                                                                                                    alt loading=lazy>
                                                                                             </figure>
                                                                                         </a>
                                                                                     </div>
                                                                                     <div
                                                                                         class="group-button style-01 popup">
-                                                                                        <a href="#" class="button yith-wcqv-button" data-product_id="2222">Quick View</a>
-                                                                                    </div>
-                                                                                    <span class="add-to-cart" data-title="Select options">
                                                                                         <a href="#"
-                                                                                            data-quantity=1
+                                                                                            class="button yith-wcqv-button"
+                                                                                            data-product_id="2222">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                    <span class="add-to-cart"
+                                                                                        data-title="Select options">
+                                                                                        <a href="#" data-quantity=1
                                                                                             class="button product_type_variable add_to_cart_button rtwpvs_add_to_cart rtwpvs_ajax_add_to_cart"
                                                                                             data-product_id=2222
                                                                                             data-product_sku=MK-FS-005
                                                                                             aria-label="Select options for &ldquo;Women’s Cocktail Dress&rdquo;"
                                                                                             aria-describedby="This product has multiple variants. The options may be chosen on the product page"
-                                                                                            rel=nofollow
-                                                                                            data-variation_id
-                                                                                            data-variation>Select options</a>
+                                                                                            rel=nofollow data-variation_id
+                                                                                            data-variation>Select
+                                                                                            options</a>
                                                                                     </span>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="product-info equal-elem">
+                                                                                <div class="product-info equal-elem">
                                                                                     <h2 class="product-title">
-                                                                                        <a href="<?= url('/detail-product') ?>">Women’s Cocktail Dress</a>
+                                                                                        <a
+                                                                                            href="<?= url('/detail-product') ?>">Women’s
+                                                                                            Cocktail Dress</a>
                                                                                     </h2>
                                                                                     <div class=star-rating-wrap>
-                                                                                        <div class=star-rating
-                                                                                            role=img
+                                                                                        <div class=star-rating role=img
                                                                                             aria-label="Rated 4.00 out of 5">
-                                                                                            <span
-                                                                                                style=width:80%>Rated
+                                                                                            <span style=width:80%>Rated
                                                                                                 <strong
                                                                                                     class=rating>4.00</strong>
                                                                                                 out of 5</span>
@@ -824,8 +811,7 @@
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class=elementor-widget-wrap>
                                         <div class="elementor-element elementor-element-83320f1 rating-not-yes none elementor-widget elementor-widget-ovic_products"
-                                            data-id=83320f1 data-element_type=widget
-                                            data-widget_type=ovic_products.default>
+                                            data-id=83320f1 data-element_type=widget data-widget_type=ovic_products.default>
                                             <div class=elementor-widget-container>
                                                 <div data-id=products_137 class="ovic-products   style-02">
                                                     <div class=sc-title><span class=icon></span>
@@ -847,8 +833,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div
-                                                                        class="product-thumb tooltip-wrap tooltip-start">
+                                                                    <div class="product-thumb tooltip-wrap tooltip-start">
                                                                         <div class=product-labels><span
                                                                                 class="onsale product-label"><span
                                                                                     class="text">Sale</span><span
@@ -860,8 +845,7 @@
                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                 href="https://kuteshop.kutethemes.net/product/iphon-pro-max-128gb/?demo=21">
                                                                                 <figure class=primary-thumb><img
-                                                                                        decoding=async width=792
-                                                                                        height=780
+                                                                                        decoding=async width=792 height=780
                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-01-792x780.jpg
                                                                                         class="attachment-792x780 size-792x780 wp-post-image"
                                                                                         alt loading=lazy></figure>
@@ -877,8 +861,7 @@
                                                                                         data-product-id=2207
                                                                                         data-product-type=simple
                                                                                         data-original-product-id=2207
-                                                                                        data-title=Wishlist
-                                                                                        rel=nofollow>
+                                                                                        data-title=Wishlist rel=nofollow>
                                                                                         <i
                                                                                             class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
                                                                                         <span>Wishlist</span>
@@ -891,12 +874,10 @@
                                                                                     class="compare button"
                                                                                     data-product_id=2207
                                                                                     rel=nofollow>Compare</a>
-                                                                            </div><a href=#
-                                                                                class="button yith-wcqv-button"
+                                                                            </div><a href=# class="button yith-wcqv-button"
                                                                                 data-product_id=2207>Quick View</a>
                                                                         </div>
-                                                                        <span class=add-to-cart
-                                                                            data-title="Add to cart"><a
+                                                                        <span class=add-to-cart data-title="Add to cart"><a
                                                                                 href="https://kuteshop.kutethemes.net/?add-to-cart=2207"
                                                                                 data-quantity=1
                                                                                 class="button product_type_simple add_to_cart_button ajax_add_to_cart"
@@ -916,11 +897,9 @@
                                                                                 <span style=width:85%>Rated <strong
                                                                                         class=rating>4.25</strong>
                                                                                     out of 5</span>
-                                                                            </div><strong
-                                                                                class=rating-count>04</strong>
+                                                                            </div><strong class=rating-count>04</strong>
                                                                         </div>
-                                                                        <span class=price><del
-                                                                                aria-hidden=true><span
+                                                                        <span class=price><del aria-hidden=true><span
                                                                                     class="woocommerce-Price-amount amount"><bdi><span
                                                                                             class=woocommerce-Price-currencySymbol>&#36;</span>569.99</bdi></span></del>
                                                                             <ins><span
@@ -940,8 +919,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div
-                                                                        class="product-thumb tooltip-wrap tooltip-start">
+                                                                    <div class="product-thumb tooltip-wrap tooltip-start">
                                                                         <div class=product-labels><span
                                                                                 class="onsale product-label"><span
                                                                                     class="text">Sale</span><span
@@ -953,8 +931,7 @@
                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                 href="https://kuteshop.kutethemes.net/product/iphone-10-rsx-max-256gb/?demo=21">
                                                                                 <figure class=primary-thumb><img
-                                                                                        decoding=async width=792
-                                                                                        height=780
+                                                                                        decoding=async width=792 height=780
                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-06-792x780.jpg
                                                                                         class="attachment-792x780 size-792x780 wp-post-image"
                                                                                         alt loading=lazy></figure>
@@ -970,8 +947,7 @@
                                                                                         data-product-id=2291
                                                                                         data-product-type=simple
                                                                                         data-original-product-id=2291
-                                                                                        data-title=Wishlist
-                                                                                        rel=nofollow>
+                                                                                        data-title=Wishlist rel=nofollow>
                                                                                         <i
                                                                                             class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
                                                                                         <span>Wishlist</span>
@@ -984,12 +960,10 @@
                                                                                     class="compare button"
                                                                                     data-product_id=2291
                                                                                     rel=nofollow>Compare</a>
-                                                                            </div><a href=#
-                                                                                class="button yith-wcqv-button"
+                                                                            </div><a href=# class="button yith-wcqv-button"
                                                                                 data-product_id=2291>Quick View</a>
                                                                         </div>
-                                                                        <span class=add-to-cart
-                                                                            data-title="Add to cart"><a
+                                                                        <span class=add-to-cart data-title="Add to cart"><a
                                                                                 href="https://kuteshop.kutethemes.net/?add-to-cart=2291"
                                                                                 data-quantity=1
                                                                                 class="button product_type_simple add_to_cart_button ajax_add_to_cart"
@@ -1009,11 +983,9 @@
                                                                                 <span style=width:80%>Rated <strong
                                                                                         class=rating>4.00</strong>
                                                                                     out of 5</span>
-                                                                            </div><strong
-                                                                                class=rating-count>01</strong>
+                                                                            </div><strong class=rating-count>01</strong>
                                                                         </div>
-                                                                        <span class=price><del
-                                                                                aria-hidden=true><span
+                                                                        <span class=price><del aria-hidden=true><span
                                                                                     class="woocommerce-Price-amount amount"><bdi><span
                                                                                             class=woocommerce-Price-currencySymbol>&#36;</span>350.00</bdi></span></del>
                                                                             <ins><span
@@ -1033,8 +1005,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div
-                                                                        class="product-thumb tooltip-wrap tooltip-start">
+                                                                    <div class="product-thumb tooltip-wrap tooltip-start">
                                                                         <div class=product-labels><span
                                                                                 class="onsale product-label"><span
                                                                                     class="text">Sale</span><span
@@ -1046,8 +1017,7 @@
                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                 href="https://kuteshop.kutethemes.net/product/mobile-double-flash/?demo=21">
                                                                                 <figure class=primary-thumb><img
-                                                                                        decoding=async width=792
-                                                                                        height=780
+                                                                                        decoding=async width=792 height=780
                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-01-792x780.jpg
                                                                                         class="attachment-792x780 size-792x780 wp-post-image"
                                                                                         alt loading=lazy></figure>
@@ -1063,8 +1033,7 @@
                                                                                         data-product-id=2619
                                                                                         data-product-type=simple
                                                                                         data-original-product-id=2619
-                                                                                        data-title=Wishlist
-                                                                                        rel=nofollow>
+                                                                                        data-title=Wishlist rel=nofollow>
                                                                                         <i
                                                                                             class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
                                                                                         <span>Wishlist</span>
@@ -1077,12 +1046,10 @@
                                                                                     class="compare button"
                                                                                     data-product_id=2619
                                                                                     rel=nofollow>Compare</a>
-                                                                            </div><a href=#
-                                                                                class="button yith-wcqv-button"
+                                                                            </div><a href=# class="button yith-wcqv-button"
                                                                                 data-product_id=2619>Quick View</a>
                                                                         </div>
-                                                                        <span class=add-to-cart
-                                                                            data-title="Add to cart"><a
+                                                                        <span class=add-to-cart data-title="Add to cart"><a
                                                                                 href="https://kuteshop.kutethemes.net/?add-to-cart=2619"
                                                                                 data-quantity=1
                                                                                 class="button product_type_simple add_to_cart_button ajax_add_to_cart"
@@ -1102,11 +1069,9 @@
                                                                                 <span style=width:85%>Rated <strong
                                                                                         class=rating>4.25</strong>
                                                                                     out of 5</span>
-                                                                            </div><strong
-                                                                                class=rating-count>04</strong>
+                                                                            </div><strong class=rating-count>04</strong>
                                                                         </div>
-                                                                        <span class=price><del
-                                                                                aria-hidden=true><span
+                                                                        <span class=price><del aria-hidden=true><span
                                                                                     class="woocommerce-Price-amount amount"><bdi><span
                                                                                             class=woocommerce-Price-currencySymbol>&#36;</span>450.00</bdi></span></del>
                                                                             <ins><span
@@ -1137,8 +1102,7 @@
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class=elementor-widget-wrap>
                                         <div class="elementor-element elementor-element-3aa7727 rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=3aa7727 data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=3aa7727 data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-02">
                                                     <div class=tabs-head>
@@ -1148,9 +1112,8 @@
                                                         </h2>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded"
-                                                                    href=#tab-2b78a2c-655b9bfedc6d1 data-ajax=1
-                                                                    data-animate=fadeIn
+                                                                <a class="tab-link loaded" href=#tab-2b78a2c-655b9bfedc6d1
+                                                                    data-ajax=1 data-animate=fadeIn
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;category&quot;:null,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;ids&quot;:&quot;2225,2227,2229,2231,2233&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>Best Sellers</span>
                                                                     <span class=hover></span>
@@ -1199,19 +1162,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -1234,8 +1197,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bfedc6d1>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bfedc6d1>
                                                                 <div data-id=products_655b9bfedd066
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -1252,15 +1214,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-autum-dresses/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-11-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1307,19 +1267,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-autum-dresses/?demo=21">Black
                                                                                                 Autum Dresses</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
+                                                                                                <span style=width:60%>Rated
                                                                                                     <strong
                                                                                                         class=rating>3.00</strong>
                                                                                                     out of 5</span>
@@ -1341,15 +1298,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/classic-solid-sweater/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-10-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1396,19 +1351,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/classic-solid-sweater/?demo=21">Classic
                                                                                                 Solid Sweater</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -1430,15 +1382,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/set-t-shirt-and-short-pants/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-07-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1485,19 +1435,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/set-t-shirt-and-short-pants/?demo=21">Set
                                                                                                 T-Shirt And Short
-                                                                                                Pants</a></h2>
+                                                                                                Pants</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.75 out of 5">
-                                                                                                <span
-                                                                                                    style=width:95%>Rated
+                                                                                                <span style=width:95%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.75</strong>
                                                                                                     out of 5</span>
@@ -1519,15 +1467,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/mens-soft-cotton-cardigan/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-08-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1574,19 +1520,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/mens-soft-cotton-cardigan/?demo=21">Men’s
                                                                                                 Soft Cotton
-                                                                                                Cardigan</a></h2>
+                                                                                                Cardigan</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -1608,15 +1552,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/dresses-summer-floral/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-01-1-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1663,18 +1605,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/dresses-summer-floral/?demo=21">Dresses-Summer
-                                                                                                Floral</a></h2>
+                                                                                                Floral</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -1701,8 +1641,7 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-0158b5e rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=0158b5e data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=0158b5e data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-02">
                                                     <div class=tabs-head>
@@ -1712,9 +1651,8 @@
                                                         </h2>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded"
-                                                                    href=#tab-2b78a2c-655b9bfee2b86 data-ajax=1
-                                                                    data-animate=fadeIn
+                                                                <a class="tab-link loaded" href=#tab-2b78a2c-655b9bfee2b86
+                                                                    data-ajax=1 data-animate=fadeIn
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2236,2241,2243,2245,2267&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>Best Sellers</span>
                                                                     <span class=hover></span>
@@ -1763,19 +1701,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-27-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-28-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -1798,8 +1736,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bfee2b86>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bfee2b86>
                                                                 <div data-id=products_655b9bfee3475
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -1816,15 +1753,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/dynamic-ball-size-5/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/sport-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1871,18 +1806,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/dynamic-ball-size-5/?demo=21">Dynamic
-                                                                                                Ball Size 5</a></h2>
+                                                                                                Ball Size 5</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -1904,15 +1837,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/mens-superior-sneaker/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/sport-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -1959,19 +1890,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/mens-superior-sneaker/?demo=21">Men’s
                                                                                                 Superior Sneaker</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -1993,15 +1921,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/badminton-rackets/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/sport-h1-05-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2048,18 +1974,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/badminton-rackets/?demo=21">Badminton
-                                                                                                Rackets</a></h2>
+                                                                                                Rackets</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -2081,15 +2005,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/comfortable-shoessport/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/sport-h1-04-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2136,18 +2058,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/comfortable-shoessport/?demo=21">Comfortable
-                                                                                                ShoesSport</a></h2>
+                                                                                                ShoesSport</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -2169,15 +2089,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/comfortable-shoes/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/sport-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2224,18 +2142,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/comfortable-shoes/?demo=21">Comfortable
-                                                                                                Shoes</a></h2>
+                                                                                                Shoes</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -2262,8 +2178,7 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-08d83bd rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=08d83bd data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=08d83bd data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-02">
                                                     <div class=tabs-head>
@@ -2273,9 +2188,8 @@
                                                         </h2>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded"
-                                                                    href=#tab-2b78a2c-655b9bfee8dbf data-ajax=1
-                                                                    data-animate=fadeIn
+                                                                <a class="tab-link loaded" href=#tab-2b78a2c-655b9bfee8dbf
+                                                                    data-ajax=1 data-animate=fadeIn
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2270,2275,2277,2281,2283&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>Best Sellers</span>
                                                                     <span class=hover></span>
@@ -2324,19 +2238,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-29-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-30-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -2359,8 +2273,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bfee8dbf>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bfee8dbf>
                                                                 <div data-id=products_655b9bfee9817
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -2377,15 +2290,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/white-front-load-washer/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2432,19 +2343,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/white-front-load-washer/?demo=21">White
                                                                                                 Front-Load
-                                                                                                Washer</a></h2>
+                                                                                                Washer</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
+                                                                                                <span style=width:60%>Rated
                                                                                                     <strong
                                                                                                         class=rating>3.00</strong>
                                                                                                     out of 5</span>
@@ -2466,15 +2375,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/sanyer-refrigerator-150l/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2521,19 +2428,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/sanyer-refrigerator-150l/?demo=21">Sanyer
                                                                                                 Refrigerator
-                                                                                                150L</a></h2>
+                                                                                                150L</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -2555,15 +2460,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/smart-tivi-sany-8k-full-hd/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2610,19 +2513,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/smart-tivi-sany-8k-full-hd/?demo=21">Smart
                                                                                                 Tivi Sany 8K Full
-                                                                                                HD</a></h2>
+                                                                                                HD</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -2644,15 +2545,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/rice-cooker-steamer/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-04-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2699,19 +2598,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/rice-cooker-steamer/?demo=21">Rice
                                                                                                 Cooker Steamer</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -2733,15 +2629,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/sun-house-rice-cooker/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/elec-h1-05-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2788,18 +2682,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/sun-house-rice-cooker/?demo=21">Sun-house
-                                                                                                Rice Cooker</a></h2>
+                                                                                                Rice Cooker</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 1.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:20%>Rated
+                                                                                                <span style=width:20%>Rated
                                                                                                     <strong
                                                                                                         class=rating>1.00</strong>
                                                                                                     out of 5</span>
@@ -2826,8 +2718,7 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-cba77eb rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=cba77eb data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=cba77eb data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-02">
                                                     <div class=tabs-head>
@@ -2837,9 +2728,8 @@
                                                         </h2>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded"
-                                                                    href=#tab-2b78a2c-655b9bfeef3ad data-ajax=1
-                                                                    data-animate=fadeIn
+                                                                <a class="tab-link loaded" href=#tab-2b78a2c-655b9bfeef3ad
+                                                                    data-ajax=1 data-animate=fadeIn
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2285,2291,2294,2296.2298&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>Best Sellers</span>
                                                                     <span class=hover></span>
@@ -2888,19 +2778,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-31-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-32-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -2923,8 +2813,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bfeef3ad>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bfeef3ad>
                                                                 <div data-id=products_655b9bfeefccb
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -2941,15 +2830,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/digital-camera-full-frame/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-07-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -2996,19 +2883,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/digital-camera-full-frame/?demo=21">Digital
                                                                                                 Camera Full
-                                                                                                Frame</a></h2>
+                                                                                                Frame</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 2.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:40%>Rated
+                                                                                                <span style=width:40%>Rated
                                                                                                     <strong
                                                                                                         class=rating>2.00</strong>
                                                                                                     out of 5</span>
@@ -3038,15 +2923,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/iphone-10-rsx-max-256gb/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-06-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3093,19 +2976,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/iphone-10-rsx-max-256gb/?demo=21">Iphone
                                                                                                 10 Rsx Max 256GB</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -3131,15 +3011,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/camera-sonic-4k-full-hd/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3186,19 +3064,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/camera-sonic-4k-full-hd/?demo=21">Camera
                                                                                                 Sonic 4K Full HD</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -3220,15 +3095,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/tablet-air-10-5inch-5g/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-05-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3275,19 +3148,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/tablet-air-10-5inch-5g/?demo=21">Tablet
                                                                                                 Air 10.5inch 5G</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -3314,8 +3184,7 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-ef5acbb rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                            data-id=ef5acbb data-element_type=widget
-                                            data-widget_type=ovic_tabs.default>
+                                            data-id=ef5acbb data-element_type=widget data-widget_type=ovic_tabs.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-tab ovic-tabs style-02">
                                                     <div class=tabs-head>
@@ -3325,9 +3194,8 @@
                                                         </h2>
                                                         <ul class=tabs-list>
                                                             <li class="tab-item active">
-                                                                <a class="tab-link loaded"
-                                                                    href=#tab-2b78a2c-655b9bff00665 data-ajax=1
-                                                                    data-animate=fadeIn
+                                                                <a class="tab-link loaded" href=#tab-2b78a2c-655b9bff00665
+                                                                    data-ajax=1 data-animate=fadeIn
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2300,2307,2309,2317&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>Best Sellers</span>
                                                                     <span class=hover></span>
@@ -3376,19 +3244,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-33-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-34-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -3411,8 +3279,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bff00665>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bff00665>
                                                                 <div data-id=products_655b9bff00f31
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -3429,15 +3296,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/wooden-tv-frame-65-inch/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fur-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3484,19 +3349,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/wooden-tv-frame-65-inch/?demo=21">Wooden
                                                                                                 TV Frame 65 inch</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -3518,15 +3380,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/felt-padded-armchair/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fur-h1-04-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3573,19 +3433,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/felt-padded-armchair/?demo=21">Felt
                                                                                                 Padded Armchair</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -3607,15 +3464,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/bedroom-decoration-lights/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fur-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3662,19 +3517,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/bedroom-decoration-lights/?demo=21">Bedroom
                                                                                                 Decoration
-                                                                                                Lights</a></h2>
+                                                                                                Lights</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -3696,15 +3549,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/lincoln-leadership-chair/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fur-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3751,19 +3602,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/lincoln-leadership-chair/?demo=21">Lincoln
                                                                                                 Leadership Chair</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -3797,23 +3645,21 @@
                                                     <div class="tabs-head">
                                                         <h2 class="tab-title">
                                                             <span class="icon-tab">
-                                                                <i aria-hidden="true"
-                                                                    class=" main-icon-jewelry"></i>
+                                                                <i aria-hidden="true" class=" main-icon-jewelry"></i>
                                                             </span>BOTOX
                                                         </h2>
                                                         <ul class="tabs-list">
                                                             <li class="tab-item active">
                                                                 <a class="tab-link loaded"
-                                                                    href="#tab-2b78a2c-655b9bff05825"
-                                                                    data-ajax="1" data-animate="fadeIn"
+                                                                    href="#tab-2b78a2c-655b9bff05825" data-ajax="1"
+                                                                    data-animate="fadeIn"
                                                                     data-section="{&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2319,2325,2330,2332,2334&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}">
                                                                     <span class="title">Best Sellers</span>
                                                                     <span class="hover"></span>
                                                                 </a>
                                                             </li>
                                                             <li class="tab-item">
-                                                                <a class="tab-link"
-                                                                    href="#tab-72f4c76-655b9bff05856"
+                                                                <a class="tab-link" href="#tab-72f4c76-655b9bff05856"
                                                                     data-ajax="1" data-animate="fadeIn"
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;category&quot;:null,&quot;ids&quot;:&quot;2325,2670,2662,2668&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>New Arrivals</span>
@@ -3855,19 +3701,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -3890,8 +3736,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bff05825>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bff05825>
                                                                 <div data-id=products_655b9bff0654c
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -3908,15 +3753,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -3963,19 +3806,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">Circle
                                                                                                 Pendant Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
+                                                                                                <span style=width:60%>Rated
                                                                                                     <strong
                                                                                                         class=rating>3.00</strong>
                                                                                                     out of 5</span>
@@ -3997,15 +3837,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-08-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4052,19 +3890,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">Ring
                                                                                                 Platinum Plated</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4086,15 +3921,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4141,19 +3974,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">Platinum
                                                                                                 Doka Earrings</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4175,15 +4005,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4230,19 +4058,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">Black
                                                                                                 Pearls Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4264,15 +4089,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-06-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4319,19 +4142,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">Diamond
                                                                                                 Ring Eternity
-                                                                                                Bands</a></h2>
+                                                                                                Bands</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -4365,23 +4186,21 @@
                                                     <div class="tabs-head">
                                                         <h2 class="tab-title">
                                                             <span class="icon-tab">
-                                                                <i aria-hidden="true"
-                                                                    class=" main-icon-jewelry"></i>
+                                                                <i aria-hidden="true" class=" main-icon-jewelry"></i>
                                                             </span>BENANG
                                                         </h2>
                                                         <ul class="tabs-list">
                                                             <li class="tab-item active">
                                                                 <a class="tab-link loaded"
-                                                                    href="#tab-2b78a2c-655b9bff05825"
-                                                                    data-ajax="1" data-animate="fadeIn"
+                                                                    href="#tab-2b78a2c-655b9bff05825" data-ajax="1"
+                                                                    data-animate="fadeIn"
                                                                     data-section="{&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2319,2325,2330,2332,2334&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}">
                                                                     <span class="title">Best Sellers</span>
                                                                     <span class="hover"></span>
                                                                 </a>
                                                             </li>
                                                             <li class="tab-item">
-                                                                <a class="tab-link"
-                                                                    href="#tab-72f4c76-655b9bff05856"
+                                                                <a class="tab-link" href="#tab-72f4c76-655b9bff05856"
                                                                     data-ajax="1" data-animate="fadeIn"
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;category&quot;:null,&quot;ids&quot;:&quot;2325,2670,2662,2668&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>New Arrivals</span>
@@ -4423,19 +4242,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -4458,8 +4277,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bff05825>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bff05825>
                                                                 <div data-id=products_655b9bff0654c
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -4476,15 +4294,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4531,19 +4347,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">Circle
                                                                                                 Pendant Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
+                                                                                                <span style=width:60%>Rated
                                                                                                     <strong
                                                                                                         class=rating>3.00</strong>
                                                                                                     out of 5</span>
@@ -4565,15 +4378,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-08-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4620,19 +4431,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">Ring
                                                                                                 Platinum Plated</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4654,15 +4462,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4709,19 +4515,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">Platinum
                                                                                                 Doka Earrings</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4743,15 +4546,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4798,19 +4599,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">Black
                                                                                                 Pearls Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -4832,15 +4630,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-06-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -4887,19 +4683,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">Diamond
                                                                                                 Ring Eternity
-                                                                                                Bands</a></h2>
+                                                                                                Bands</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -4933,23 +4727,21 @@
                                                     <div class="tabs-head">
                                                         <h2 class="tab-title">
                                                             <span class="icon-tab">
-                                                                <i aria-hidden="true"
-                                                                    class=" main-icon-jewelry"></i>
+                                                                <i aria-hidden="true" class=" main-icon-jewelry"></i>
                                                             </span>LAIN-LAIN
                                                         </h2>
                                                         <ul class="tabs-list">
                                                             <li class="tab-item active">
                                                                 <a class="tab-link loaded"
-                                                                    href="#tab-2b78a2c-655b9bff05825"
-                                                                    data-ajax="1" data-animate="fadeIn"
+                                                                    href="#tab-2b78a2c-655b9bff05825" data-ajax="1"
+                                                                    data-animate="fadeIn"
                                                                     data-section="{&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2319,2325,2330,2332,2334&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}">
                                                                     <span class="title">Best Sellers</span>
                                                                     <span class="hover"></span>
                                                                 </a>
                                                             </li>
                                                             <li class="tab-item">
-                                                                <a class="tab-link"
-                                                                    href="#tab-72f4c76-655b9bff05856"
+                                                                <a class="tab-link" href="#tab-72f4c76-655b9bff05856"
                                                                     data-ajax="1" data-animate="fadeIn"
                                                                     data-section={&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;category&quot;:null,&quot;ids&quot;:&quot;2325,2670,2662,2668&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-0&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;850x1021&quot;,&quot;product_custom_thumb_width&quot;:null,&quot;product_custom_thumb_height&quot;:null,&quot;slide_nav&quot;:&quot;&quot;}}>
                                                                     <span class=title>New Arrivals</span>
@@ -4991,19 +4783,19 @@
                                                     </div>
                                                     <div class="tab-banner top">
                                                         <a href=#>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-35-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
-                                                            <figure class="effect plus-zoom"><img loading=lazy
-                                                                    width=585 height=65
+                                                            <figure class="effect plus-zoom"><img loading=lazy width=585
+                                                                    height=65
                                                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg
-                                                                    class="attachment-full size-full wp-post-image"
-                                                                    alt decoding=async
+                                                                    class="attachment-full size-full wp-post-image" alt
+                                                                    decoding=async
                                                                     srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-36-84x9.jpg 84w"
                                                                     sizes="(max-width: 585px) 100vw, 585px">
                                                             </figure>
@@ -5026,8 +4818,7 @@
                                                             </div>
                                                         </div>
                                                         <div class=tabs-container>
-                                                            <div class="tab-panel active"
-                                                                id=tab-2b78a2c-655b9bff05825>
+                                                            <div class="tab-panel active" id=tab-2b78a2c-655b9bff05825>
                                                                 <div data-id=products_655b9bff0654c
                                                                     class="ovic-products   style-01 border-full">
                                                                     <div class="woocommerce columns-3 ">
@@ -5044,15 +4835,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-01-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -5099,19 +4888,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/circle-pendant-necklace/?demo=21">Circle
                                                                                                 Pendant Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
+                                                                                                <span style=width:60%>Rated
                                                                                                     <strong
                                                                                                         class=rating>3.00</strong>
                                                                                                     out of 5</span>
@@ -5133,15 +4919,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-08-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -5188,19 +4972,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/ring-platinum-plated/?demo=21">Ring
                                                                                                 Platinum Plated</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -5222,15 +5003,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-03-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -5277,19 +5056,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/platinum-doka-earrings/?demo=21">Platinum
                                                                                                 Doka Earrings</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -5311,15 +5087,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-02-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -5366,19 +5140,16 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/black-pearls-necklace/?demo=21">Black
                                                                                                 Pearls Necklace</a>
                                                                                         </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
+                                                                                                <span style=width:100%>Rated
                                                                                                     <strong
                                                                                                         class=rating>5.00</strong>
                                                                                                     out of 5</span>
@@ -5400,15 +5171,13 @@
                                                                                         <div class=thumb-wrapper>
                                                                                             <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
+                                                                                                <figure class=primary-thumb>
                                                                                                     <img decoding=async
                                                                                                         width=850
                                                                                                         height=1021
                                                                                                         src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/jewel-h1-06-850x1021.jpg
                                                                                                         class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
+                                                                                                        alt loading=lazy>
                                                                                                 </figure>
                                                                                             </a>
                                                                                         </div>
@@ -5455,19 +5224,17 @@
                                                                                                 rel=nofollow>Add to
                                                                                                 cart</a></span>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
+                                                                                    <div class="product-info equal-elem">
                                                                                         <h2 class="product-title">
                                                                                             <a
                                                                                                 href="https://kuteshop.kutethemes.net/product/diamond-ring-eternity-bands/?demo=21">Diamond
                                                                                                 Ring Eternity
-                                                                                                Bands</a></h2>
+                                                                                                Bands</a>
+                                                                                        </h2>
                                                                                         <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
+                                                                                            <div class=star-rating role=img
                                                                                                 aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
+                                                                                                <span style=width:80%>Rated
                                                                                                     <strong
                                                                                                         class=rating>4.00</strong>
                                                                                                     out of 5</span>
@@ -5550,8 +5317,8 @@
                                 data-id=1b7121a data-element_type=column>
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class=elementor-widget-wrap>
-                                        <div class="elementor-element elementor-element-d815dee nav-02 nav-top offset-54 none elementor-widget elementor-widget-ovic_title" style="padding-top: 20px"
-                                            data-id="d815dee" data-element_type="widget"
+                                        <div class="elementor-element elementor-element-d815dee nav-02 nav-top offset-54 none elementor-widget elementor-widget-ovic_title"
+                                            style="padding-top: 20px" data-id="d815dee" data-element_type="widget"
                                             data-widget_type="ovic_title.default">
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-title style-01">
@@ -5570,16 +5337,15 @@
                                         data-slick={&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:2,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:30,&quot;rows&quot;:2,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:15,&quot;rows&quot;:2,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:15,&quot;rows&quot;:2,&quot;vertical&quot;:false}}]}
                                         style=--show:4;--margin:30px;--show-landscape:3;--margin-landscape:30px;--show-portrait:2;--margin-portrait:15px;--show-mobile:1;--margin-mobile:15px;>
                                         <div class="elementor-element elementor-element-9971a94 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=9971a94 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=9971a94 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Whitening</h3>
@@ -5610,16 +5376,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-03d2d55 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=03d2d55 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=03d2d55 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-21-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Slimming</h3>
@@ -5649,16 +5414,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-0416935 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=0416935 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=0416935 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-18-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Skinbooster</h3>
@@ -5689,16 +5453,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-92b3ce4 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=92b3ce4 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=92b3ce4 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-22-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Anastesi</h3>
@@ -5730,16 +5493,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-8a34304 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=8a34304 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=8a34304 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-19-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Botox</h3>
@@ -5771,16 +5533,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-0e1a395 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=0e1a395 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=0e1a395 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-23-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Benang</h3>
@@ -5810,16 +5571,15 @@
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-610fe04 none elementor-widget elementor-widget-ovic_category"
-                                            data-id=610fe04 data-element_type=widget
-                                            data-widget_type=ovic_category.default>
+                                            data-id=610fe04 data-element_type=widget data-widget_type=ovic_category.default>
                                             <div class=elementor-widget-container>
                                                 <div class="ovic-category style-01 equal-container better-height">
                                                     <div class=top-category>
                                                         <a href="#" class=thumb>
                                                             <img loading=lazy width=270 height=110
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20.jpg
-                                                                class="attachment-full size-full wp-post-image"
-                                                                alt decoding=async
+                                                                class="attachment-full size-full wp-post-image" alt
+                                                                decoding=async
                                                                 srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-20-84x34.jpg 84w"
                                                                 sizes="(max-width: 270px) 100vw, 270px"> </a>
                                                         <h3 class="title">Lain - lain</h3>
@@ -5859,6 +5619,182 @@
         </div>
     </div>
 @endsection
+
+<div id="ovic-menu-mobile-1" class="ovic-menu-clone-wrap mobile-main-menu loaded"
+    data-locations="[&quot;primary-menu&quot;,&quot;01-vertical-menu&quot;]" data-default="primary">
+    <div class="head-menu-mobile">
+        <a href="https://kuteshop.kutethemes.net/my-account/" class="action login">
+            <span class="icon main-icon-enter"></span>
+            Login </a>
+        <a href="https://kuteshop.kutethemes.net/my-account/" class="avatar">
+            <figure>
+                <img src="https://secure.gravatar.com/avatar/?s=60&amp;d=mm&amp;r=g" alt="Avatar Mobile">
+            </figure>
+        </a>
+        <div class="author">
+            <a href="https://kuteshop.kutethemes.net/my-account/" class="name">
+                Guest <span class="email">Example@email.com</span>
+            </a>
+        </div>
+    </div>
+    <div class="ovic-menu-panels-actions-wrap"><span class="ovic-menu-current-panel-title"
+            data-main-title="Main Menu">
+            Main Menu </span><a href="#" class="ovic-menu-close-btn ovic-menu-close-panels">x</a></div>
+    <div class="ovic-menu-panels">
+        <div id="ovic-menu-panel-main-6574cf231df82" class="ovic-menu-panel ovic-menu-panel-main">
+            <ul class="depth-0">
+                <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item menu-item menu-item-121">
+                    <a class="menu-link" href="<?= url('/') ?>">Home</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-191 menu-item-has-children">
+                    <a class="menu-link" href="<?= url('/products') ?>">Products</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                    <a class="menu-link" href="<?= url('/cara-belanja') ?>">Cara Belanja</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-193 disable-link">
+                    <a class="ovic-menu-next-panel" href="#ovic-menu-panel-193"></a><a class="menu-link"
+                        href="">FAQ</a>
+                </li>
+                <li class="item-end menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-194">
+                    <a class="menu-link" href="<?= url('/blog') ?>">Blog</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-448 menu-item-icon-image">
+                    <a class="menu-link" href="#">
+                        <span class="icon icon-img">
+                            <img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png"
+                                class="icon-image wp-post-image" alt="" decoding="async" loading="lazy">
+                        </span>Whitening
+                    </a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-447 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/sport/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-2.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Slimming</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-439 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/digital/smartphone-tablets/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-3.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Skinbooster</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-445 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/health-beauty/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-4.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Anastesi</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-441 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/fashion/bags-shoes/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-5.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Botox</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-443 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/toys-hobbies/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-6.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Benang</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-438 menu-item-icon-image">
+                    <a class="menu-link"
+                        href="https://kuteshop.kutethemes.net/product-category/market/digital/networking-plus/?demo=21"><span
+                            class="icon icon-img"><img width="16" height="16"
+                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-7.png"
+                                class="icon-image wp-post-image" alt="" decoding="async"
+                                loading="lazy"></span>Lain - lain</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="ovic-menu-panel-193" class="ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden">
+            <ul class="depth-4">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item menu-item-324"><a
+                        class="menu-link" href="<?= url('/faq-product') ?>">FAQ Product</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-325"><a
+                        class="menu-link" href="<?= url('/faq-toko-kami') ?>">FAQ Toko Kami</a></li>
+            </ul>
+        </div>
+        <div id="ovic-menu-panel-437" class="ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden">
+            <ul class="depth-5">
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-452 disable-link">
+                    <a class="ovic-menu-next-panel" href="#ovic-menu-panel-452"></a><a class="menu-link"
+                        href="#">Laptop Window</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-453 disable-link">
+                    <a class="ovic-menu-next-panel" href="#ovic-menu-panel-453"></a><a class="menu-link"
+                        href="#">Macbook</a>
+                </li>
+            </ul>
+        </div>
+        <div id="ovic-menu-panel-452" class="ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden">
+            <ul class="depth-6">
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-457 disable-link">
+                    <a class="menu-link" href="#">Laptop HP</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-458 disable-link">
+                    <a class="menu-link" href="#">Laptop Lenovo</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-454 disable-link">
+                    <a class="menu-link" href="#">Laptop Dell</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-455 disable-link">
+                    <a class="menu-link" href="#">Laptop Acer</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-456 disable-link">
+                    <a class="menu-link" href="#">Laptop Asus</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-459 disable-link">
+                    <a class="menu-link" href="#">Laptop MSI</a>
+                </li>
+            </ul>
+        </div>
+        <div id="ovic-menu-panel-453" class="ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden">
+            <ul class="depth-7">
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-460 disable-link">
+                    <a class="menu-link" href="#">Macbook Air</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-461 disable-link">
+                    <a class="menu-link" href="#">Macbook Pro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 @section('js')
     <script src="script-footer.js"></script>
@@ -5921,6 +5857,4 @@
     <script src="js/85527.js"></script>
     <script src="js/bcf3d.js"></script>
     <div class="xlwcty_header_passed" style='display: none;'></div>
-@endsection 
-
-        
+@endsection
