@@ -7,18 +7,21 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\ProductSubcategory;
 
-class HomeController extends Controller
+class DetailProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($slug)
     {
+        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory'])->firstOrFail();
+        $title = $product->name;
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
 
-        return view('pages.customer.home', [
-            "title" => "Home",
-            "page" => "home",
+        return view('pages.customer.detail-product', [
+            "product" => $product,
+            "title" => $title,
+            "page" => "detail-product",
             "product_subcategories" => $product_subcategories,
         ]);
     }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ProductSubcategory;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -12,9 +14,17 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        // Loop through each product subcategory to calculate product count for each category
+        foreach ($product_subcategories as $product_subcategory) {
+            $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
+        }
+
         return view('pages.customer.products', [
             "title" => "Product",
             "page" => "products",
+            "product_subcategories" => $product_subcategories,
         ]);
     }
 

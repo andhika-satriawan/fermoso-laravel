@@ -22,6 +22,7 @@ class ProductController extends Controller
 {
     private $view_path = 'pages.admin.product.list.';
     private $route_path = 'admin.product.list.';
+    private $page_info = [];
 
     public function __construct()
     {
@@ -46,7 +47,7 @@ class ProductController extends Controller
     public function create()
     {
         $categories = ProductCategory::orderBy('name', 'ASC')->with('subcategories')->get();
-        
+
         return view($this->view_path . 'create', [
             'page_info'     => $this->page_info,
             'categories'    => $categories,
@@ -59,7 +60,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'photo' => 'required|mimes:jpg,bmp,png',
+            'photo' => 'required|mimes:jpg,bmp,png,webp',
             'product_name' => 'required|string|max:255|unique:App\Models\Product,name',
             'product_subcategory_id' => 'required|exists:App\Models\ProductSubcategory,id',
             'description' => 'required|string',
@@ -75,8 +76,8 @@ class ProductController extends Controller
             'productDetails.*.name' => 'required|string',
             'productDetails.*.price' => 'required|numeric',
             'productDetails.*.discount_price' => 'nullable|numeric',
-            'productDetails.*.photo_variant' => 'nullable|mimes:jpg,bmp,png',
-            'productImages.*.photo' => 'nullable|mimes:jpg,bmp,png',
+            'productDetails.*.photo_variant' => 'nullable|mimes:jpg,bmp,png,webp',
+            'productImages.*.photo' => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
 
         $product = new Product;
@@ -155,7 +156,7 @@ class ProductController extends Controller
                         $extension          = $request->file('productImages.' . $productImagesIndex . '.photo')->getClientOriginalExtension();
                         $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
                         $pathFile           = $request->file('productImages.' . $productImagesIndex . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
-                        
+
                         // Add value
                         $product_image = new ProductImage;
                         $product_image->product_id = $product->id;
@@ -175,7 +176,7 @@ class ProductController extends Controller
         }
 
         return to_route($this->route_path . 'index')
-        ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
+            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
     }
 
     /**
@@ -219,7 +220,7 @@ class ProductController extends Controller
     {
         $item = Product::findorFail($id);
 
-        if(!$item->delete()){
+        if (!$item->delete()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Error during delete data'

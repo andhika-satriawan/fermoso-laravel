@@ -30,6 +30,7 @@ Route::middleware('auth:web')->group(function () {
 Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])->name('home');
 Route::get('products', [App\Http\Controllers\Customer\ProductController::class, 'index'])->name('product');
 Route::get('detail-product', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('product.detail');
+Route::get('/product/{slug}', [App\Http\Controllers\Customer\DetailProductController::class, 'index'])->name('detail.index');
 
 Route::get('/cara-belanja', function () {
     return view('pages.customer.cara-belanja', [
@@ -58,6 +59,3 @@ Route::get('/blog', function () {
         "page"  => "blog"
     ]);
 });
-
-
-

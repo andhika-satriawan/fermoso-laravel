@@ -39,4 +39,14 @@ class ProductSubcategory extends Model
     {
         return $this->hasMany(Product::class, 'product_subcategory_id', 'id');
     }
+
+    /**
+     * Get all of the details for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function details(): HasMany
+    {
+        return $this->hasMany(ProductDetail::class, 'product_id', 'id');
+    }
 }

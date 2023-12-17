@@ -19,6 +19,7 @@ class ProductSubcategoryController extends Controller
 {
     private $view_path = 'pages.admin.product.subcategory.';
     private $route_path = 'admin.product.subcategory.';
+    private $page_info = [];
 
     public function __construct()
     {
@@ -66,7 +67,7 @@ class ProductSubcategoryController extends Controller
         $subcategory->save();
 
         return to_route($this->route_path . 'index')
-        ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
+            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
     }
 
     /**
@@ -85,7 +86,7 @@ class ProductSubcategoryController extends Controller
         $item = ProductSubcategory::findOrFail($id);
         $categories = ProductCategory::orderBy('name')->get();
 
-        return view($this->view_path . 'edit',[
+        return view($this->view_path . 'edit', [
             'page_info'     => $this->page_info,
             'item'          => $item,
             'categories'    => $categories,
@@ -99,7 +100,7 @@ class ProductSubcategoryController extends Controller
     {
         $validated = $request->validate([
             'product_category_id'   => 'required|numeric|exists:App\Models\ProductCategory,id',
-            'subcategory_name'      => 'required|string|max:255|unique:product_subcategories,name,'.$id
+            'subcategory_name'      => 'required|string|max:255|unique:product_subcategories,name,' . $id
         ]);
 
         $subcategory = ProductSubcategory::findOrFail($id);
@@ -109,7 +110,7 @@ class ProductSubcategoryController extends Controller
         $subcategory->save();
 
         return to_route($this->route_path . 'index')
-        ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
+            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
     }
 
     /**
@@ -119,7 +120,7 @@ class ProductSubcategoryController extends Controller
     {
         $item = ProductSubcategory::findorFail($id);
 
-        if(!$item->delete()){
+        if (!$item->delete()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Error during delete data'

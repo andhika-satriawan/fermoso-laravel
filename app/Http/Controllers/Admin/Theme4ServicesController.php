@@ -1,25 +1,27 @@
 <?php
 
-namespace App\Http\Controllers\Customer;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Product;
-use App\Models\ProductSubcategory;
 
-class HomeController extends Controller
+class ThemeServicesController extends Controller
 {
+    private $view_path = 'pages.admin.theme.services.';
+    private $page_info = [];
+
+    public function __construct()
+    {
+        $this->page_info['title'] = '4 Services';
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
-        return view('pages.customer.home', [
-            "title" => "Home",
-            "page" => "home",
-            "product_subcategories" => $product_subcategories,
+        return view($this->view_path . 'index', [
+            'page_info' => $this->page_info
         ]);
     }
 

@@ -733,7 +733,7 @@ body {
 
 .woocommerce-product-gallery {
     opacity: 1 !important
-}       
+}
 
 
 /* CSS FOOTER */
@@ -894,4 +894,8 @@ body {
 #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-top .tp-bullet.rs-touchhover .tp-bullet-title {
     transform: translateX(-50%) translatey(0px);
     -webkit-transform: translateX(-50%) translatey(0px)
+}
+
+ul#menu-01-vertical-menu a span img {
+    margin-top: 6px;
 }

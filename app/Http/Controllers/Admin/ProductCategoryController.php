@@ -18,6 +18,7 @@ class ProductCategoryController extends Controller
 {
     private $view_path = 'pages.admin.product.category.';
     private $route_path = 'admin.product.category.';
+    private $page_info = [];
 
     public function __construct()
     {
@@ -61,7 +62,7 @@ class ProductCategoryController extends Controller
         $category->save();
 
         return to_route($this->route_path . 'index')
-        ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
+            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
     }
 
     /**
@@ -79,7 +80,7 @@ class ProductCategoryController extends Controller
     {
         $item = ProductCategory::findOrFail($id);
 
-        return view($this->view_path . 'edit',[
+        return view($this->view_path . 'edit', [
             'page_info' => $this->page_info,
             'item'      => $item,
         ]);
@@ -100,7 +101,7 @@ class ProductCategoryController extends Controller
         $category->save();
 
         return to_route($this->route_path . 'index')
-        ->with('success', $this->page_info['title'] . ' data has been updated successfully');
+            ->with('success', $this->page_info['title'] . ' data has been updated successfully');
     }
 
     /**
@@ -110,7 +111,7 @@ class ProductCategoryController extends Controller
     {
         $item = ProductCategory::findorFail($id);
 
-        if(!$item->delete()){
+        if (!$item->delete()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Error during delete data'

@@ -194,7 +194,7 @@
                 <div class="logo">
                     <a href="<?= url('/') ?>">
                         <figure class="logo-image">
-                            <img alt="" src="images/logo.jpg" class="_rw">
+                            <img alt="" src="{{ asset('images/logo.jpg') }}" class="_rw">
                         </figure>
                     </a>
                 </div>
@@ -206,142 +206,10 @@
                                 <select name="product_cat" id="163109786" class="category-search-option"
                                     tabindex="1">
                                     <option value="0">All Categories</option>
-                                    <option class="level-0" value=appliances>Appliances</option>
-                                    <option class="level-1" value=mobile-tablet>&nbsp;&nbsp;&nbsp;Mobile &amp;
-                                        Tablet</option>
-                                    <option class="level-0" value="fashion-bg">Fashion Bg</option>
-                                    <option class="level-0" value="furniture-2">Furniture</option>
-                                    <option class="level-1" value="armchair">&nbsp;&nbsp;&nbsp;Armchair
-                                    </option>
-                                    <option class="level-1" value="lamp">&nbsp;&nbsp;&nbsp;Lamp</option>
-                                    <option class="level-1" value="light">&nbsp;&nbsp;&nbsp;Light</option>
-                                    <option class="level-1" value="sofas">&nbsp;&nbsp;&nbsp;Sofas</option>
-                                    <option class="level-1" value="table">&nbsp;&nbsp;&nbsp;Table</option>
-                                    <option class="level-0" value="market">Market</option>
-                                    <option class="level-1" value="bags">&nbsp;&nbsp;&nbsp;Bags</option>
-                                    <option class="level-1" value="digital">&nbsp;&nbsp;&nbsp;Digital</option>
-                                    <option class="level-2" value="cameras-photo">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cameras &amp; Photo</option>
-                                    <option class="level-2" value="laptops-plus">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laptops Plus</option>
-                                    <option class="level-2" value="networking-plus">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Networking Plus</option>
-                                    <option class="level-2" value="smartphone-tablets">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smartphone &amp; Tablets</option>
-                                    <option class="level-1" value="electronic">&nbsp;&nbsp;&nbsp;Electronic
-                                    </option>
-                                    <option class="level-2" value="batteries">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batteries</option>
-                                    <option class="level-2" value="headphone-headset">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Headphone, Headset</option>
-                                    <option class="level-2" value="home-audio">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home Audio</option>
-                                    <option class="level-2" value="lights-lamps">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lights &amp; Lamps</option>
-                                    <option class="level-1" value="fashion">&nbsp;&nbsp;&nbsp;Fashion</option>
-                                    <option class="level-2" value="bags-shoes">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bags &amp; Shoes</option>
-                                    <option class="level-2" value="bikinis">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bikinis</option>
-                                    <option class="level-2" value="blouses">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blouses</option>
-                                    <option class="level-2" value="casual-dresses">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casual Dresses</option>
-                                    <option class="level-2" value="for-men">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Men</option>
-                                    <option class="level-2" value="for-women">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Women</option>
-                                    <option class="level-2" value="hair-accessories">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hair Accessories</option>
-                                    <option class="level-2" value="jackets">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jackets</option>
-                                    <option class="level-2" value="jumpsuits">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jumpsuits</option>
-                                    <option class="level-2" value="kids-fashion">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kids Fashion</option>
-                                    <option class="level-2" value="scarves">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scarves</option>
-                                    <option class="level-2" value="skirts">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skirts</option>
-                                    <option class="level-2" value="summer-dresses">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Summer Dresses</option>
-                                    <option class="level-2" value="sunglasses">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sunglasses</option>
-                                    <option class="level-2" value="t-shirts">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T-Shirts</option>
-                                    <option class="level-1" value="food-drink">&nbsp;&nbsp;&nbsp;Food &amp;
-                                        Drink
-                                    </option>
-                                    <option class="level-1" value="furniture">&nbsp;&nbsp;&nbsp;Furniture
-                                    </option>
-                                    <option class="level-2" value="glasses">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Glasses</option>
-                                    <option class="level-2" value="indoor-furniture">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indoor Furniture</option>
-                                    <option class="level-2" value="sofa">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sofa
-                                    </option>
-                                    <option class="level-2" value="wood-decor">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wood Decor</option>
-                                    <option class="level-1" value="health-beauty">&nbsp;&nbsp;&nbsp;Health
-                                        &amp;
-                                        Beauty</option>
-                                    <option class="level-2" value="bath-body">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bath &amp; Body</option>
-                                    <option class="level-2" value="beauty-spa">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beauty &amp; Spa</option>
-                                    <option class="level-2" value="fragrances">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragrances</option>
-                                    <option class="level-2" value="shaving-hair">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shaving &amp; Hair</option>
-                                    <option class="level-1" value="jewelry">&nbsp;&nbsp;&nbsp;Jewelry</option>
-                                    <option class="level-2" value="earring">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earring</option>
-                                    <option class="level-2" value="men-watches">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Men Watches</option>
-                                    <option class="level-2" value="necklaces">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Necklaces</option>
-                                    <option class="level-2" value="wedding-rings">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wedding Rings</option>
-                                    <option class="level-1" value="sport">&nbsp;&nbsp;&nbsp;Sport</option>
-                                    <option class="level-2" value="camping-hiking">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Camping &amp; Hiking</option>
-                                    <option class="level-2" value="fishing">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fishing</option>
-                                    <option class="level-2" value="golf-supplies">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Golf Supplies</option>
-                                    <option class="level-2" value="sport-shoes">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sport Shoes</option>
-                                    <option class="level-1" value="toys-hobbies">&nbsp;&nbsp;&nbsp;Toys &amp;
-                                        Hobbies</option>
-                                    <option class="level-2" value="fpv-system-parts">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fpv System &amp; Parts</option>
-                                    <option class="level-2" value="helicopters">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Helicopters</option>
-                                    <option class="level-2" value="rc-cars-parts">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RC Cars &amp; Parts</option>
-                                    <option class="level-2" value="walkera">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walkera</option>
-                                    <option class="level-1" value="watch">&nbsp;&nbsp;&nbsp;Watch</option>
-                                    <option class="level-0" value="square-market">Market Square</option>
-                                    <option class="level-1" value="digital-electronics">
-                                        &nbsp;&nbsp;&nbsp;Digital
-                                        &amp; Electronics</option>
-                                    <option class="level-1" value="fashion-accessories">
-                                        &nbsp;&nbsp;&nbsp;Fashion
-                                        &amp; Accessories</option>
-                                    <option class="level-1" value="furnitures-home-decors">
-                                        &nbsp;&nbsp;&nbsp;Furnitures &amp; Home decors</option>
-                                    <option class="level-1" value="kids-toys">&nbsp;&nbsp;&nbsp;Kid’s Toys
-                                    </option>
-                                    <option class="level-1" value="organics-spa">&nbsp;&nbsp;&nbsp;Organics
-                                        &amp;
-                                        Spa</option>
-                                    <option class="level-1" value="tools-equipments">&nbsp;&nbsp;&nbsp;Tools
-                                        &amp;
-                                        Equipments</option>
-                                    <option class="level-0" value="sport-2">Sport</option>
-                                    <option class="level-0" value="sunglasses-2">Sunglasses</option>
+                                    @foreach ($product_subcategories as $product_subcategory)
+                                        <option class="level-0" value="{{ $product_subcategory->name }}">
+                                            {{ $product_subcategory->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="dgwt-wcas-sf-wrapp">
@@ -402,61 +270,20 @@
                             <div class="ovic-menu-wapper vertical support-mobile-menu">
                                 <ul id="menu-01-vertical-menu"
                                     class="kuteshop-nav vertical-menu ovic-menu ovic-clone-mobile-menu">
-                                    <li id="menu-item-448"
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-448 menu-item-icon-image">
-                                        <a href="#" data-megamenu="463"><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-1.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Whitening</a>
-                                    </li>
-                                    <li id="menu-item-447"
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-447 menu-item-icon-image">
-                                        <a href="#" data-megamenu="463"><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-2.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Slimming</a>
-                                    </li>
-                                    <li id="menu-item-439"
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-439 menu-item-icon-image">
-                                        <a href="#" data-megamenu="463"><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-3.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Skinbooster</a>
-                                    </li>
-                                    <li id="menu-item-445"
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-445 menu-item-icon-image">
-                                        <a href="#" data-megamenu="463"><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-4.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Anastesi</a>
-                                    </li>
-                                    <li id="menu-item-441"
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-441 menu-item-icon-image">
-                                        <a href="#" data-megamenu="463"><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-5.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Botox</a>
-                                    </li>
-                                    <li id=menu-item-443
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-443 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-6.png"
-                                                    class="icon-image wp-post-image" alt
-                                                    decoding="async"></span>Benang</a>
-                                    </li>
-                                    <li id=menu-item-438
-                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-438 menu-item-icon-image">
-                                        <a href="#" data-megamenu=463><span class="icon icon-img"><img
-                                                    width="16" height="16" src="icons/01-menu-7.png"
-                                                    class="icon-image wp-post-image" alt decoding="async"></span>Lain
-                                            - lain</a>
-                                    </li>
+                                    @foreach ($product_subcategories as $product_subcategory)
+                                        <li id="menu-item-{{ $product_subcategory->id }}"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-{{ $product_subcategory->id }} menu-item-icon-image">
+                                            <a href="{{ url('product/category/' . $product_subcategory->slug) }}"
+                                                data-megamenu="{{ $product_subcategory->id }}">
+                                                <span class="icon icon-img">
+                                                    <img width="16" height="16" src="icons/01-menu-1.png"
+                                                        class="icon-image wp-post-image" alt decoding="async">
+                                                </span>
+                                                {{ $product_subcategory->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
-                            </div>
-                            <div class=view-all-menu>
-                                <a href=javascript:void(0); data-items=11 data-less=Close data-more="All Categories"
-                                    class="btn-view-all open-menu">All Categories
-                                </a>
                             </div>
                         </div>
                     </div>

@@ -13,6 +13,8 @@ class AuthController extends Controller
     private $view_path = 'pages.admin.product.category.';
     private $route_path = 'admin.product.category.';
 
+    private $page_info = [];
+
     public function __construct()
     {
         $this->page_info['title'] = 'Product Category';
@@ -44,7 +46,7 @@ class AuthController extends Controller
                 ->with('success', 'Login success!');
             // return redirect()->intended(RouteServiceProvider::HOME);
         }
- 
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -63,5 +65,4 @@ class AuthController extends Controller
 
         return to_route('admin.login');
     }
-
 }
