@@ -1,278 +1,167 @@
 @extends('layouts.admin.main')
 
-@section('title')
-    {{ $page_info['title'] }}
-@endsection
+@section('title') {{ $page_info['title'] }} @endsection
 
 @section('content')
-    <div class="page-header">
-        <div class="page-title">
-            <h4>{{ $page_info['title'] }}</h4>
-        </div>
 
-        <div class="card upload-product">
-            <div class="card-body">
-                <h4>Column 1</h4>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="card image-uploader">
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <input class="form-control file-uploader" type="file" accept="image/*" name="photo"
-                                    value="">
-                            </div>
-                            <img class="card-img-top image-uploader-preview"
-                                src="http://127.0.0.1:8000/admin/img/product/noimage.png">
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="form-group theme">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Title</h5>
-                            </label>
-                            <input type="text" class="form-control " id="menu-1" placeholder="Text Menu"
-                                name="menu-1" value="" autocomplete="off">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Text Short</h5>
-                            </label>
-                            <input type="text" class="form-control " id="link-menu-1" placeholder="Link Menu"
-                                name="link-menu-1" value="" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card upload-product">
-            <div class="card-body">
-                <h4>Column 2</h4>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="card image-uploader">
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <input class="form-control file-uploader" type="file" accept="image/*" name="photo"
-                                    value="">
-                            </div>
-                            <img class="card-img-top image-uploader-preview"
-                                src="http://127.0.0.1:8000/admin/img/product/noimage.png">
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="form-group theme">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Title</h5>
-                            </label>
-                            <input type="text" class="form-control " id="menu-1" placeholder="Text Menu"
-                                name="menu-1" value="" autocomplete="off">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Text Short</h5>
-                            </label>
-                            <input type="text" class="form-control " id="link-menu-1" placeholder="Link Menu"
-                                name="link-menu-1" value="" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card upload-product">
-            <div class="card-body">
-                <h4>Column 3</h4>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="card image-uploader">
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <input class="form-control file-uploader" type="file" accept="image/*" name="photo"
-                                    value="">
-                            </div>
-                            <img class="card-img-top image-uploader-preview"
-                                src="http://127.0.0.1:8000/admin/img/product/noimage.png">
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="form-group theme">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Title</h5>
-                            </label>
-                            <input type="text" class="form-control " id="menu-1" placeholder="Text Menu"
-                                name="menu-1" value="" autocomplete="off">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Text Short</h5>
-                            </label>
-                            <input type="text" class="form-control " id="link-menu-1" placeholder="Link Menu"
-                                name="link-menu-1" value="" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card upload-product">
-            <div class="card-body">
-                <h4>Column 4</h4>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="card image-uploader">
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <input class="form-control file-uploader" type="file" accept="image/*" name="photo"
-                                    value="">
-                            </div>
-                            <img class="card-img-top image-uploader-preview"
-                                src="http://127.0.0.1:8000/admin/img/product/noimage.png">
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="form-group theme">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Title</h5>
-                            </label>
-                            <input type="text" class="form-control " id="menu-1" placeholder="Text Menu"
-                                name="menu-1" value="" autocomplete="off">
-                            <label for="menu-1" class="form-label">
-                                <h5 class="card-title">Text Short</h5>
-                            </label>
-                            <input type="text" class="form-control " id="link-menu-1" placeholder="Link Menu"
-                                name="link-menu-1" value="" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn btn-submit me-2">SAVE</button>
-        </div>
+<div class="page-header">
+    <div class="page-title">
+      <h4>{{ $page_info['title'] }} List</h4>
+      <h6>View/Search {{ $page_info['title'] }}</h6>
     </div>
+    <div class="page-btn">
+      <a href="{{ route('admin.theme.services.create') }}" class="btn btn-added">
+        <img
+          src="{{ asset('admin/img/icons/plus.svg')}}"
+          class="me-1"
+          alt="img"
+        />Add {{ $page_info['title'] }}
+      </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-top">
+            <div class="search-set">
+                <div class="search-input">
+                    <a class="btn btn-searchset"
+                    ><img src="{{ asset('admin/img/icons/search-white.svg')}}" alt="img"
+                    /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table datanew">
+                <thead>
+                    <tr>
+                        <th>
+                            <label class="checkboxs">
+                                <input type="checkbox" id="select-all" />
+                                <span class="checkmarks"></span>
+                            </label>
+                        </th>
+                        <th>Icon</th>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($services as $service)
+                    <tr>
+                        <td width="5%">
+                            <label class="checkboxs">
+                                <input type="checkbox" />
+                                <span class="checkmarks"></span>
+                            </label>
+                        </td>
+                        <td class="productimgname">
+                            <a href="javascript:void(0);" class="product-img">
+                                <img
+                                src="{{ Storage::url($service->icon) }}"
+                                alt="product"
+                                />
+                            </a>
+                            <a href="javascript:void(0);">{{ $service->title }}</a>
+                        </td>
+                        <td>{{ $service->description }}</td>
+                        <td>
+                            <a class="me-3" href="{{ route('admin.theme.services.edit', $service->id)}}">
+                                <img src="{{ asset('admin/img/icons/edit.svg')}}" alt="img" />
+                            </a>
+                            <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $service->id }})">
+                                <img src="{{asset('admin/img/icons/delete.svg')}}" alt="img" />
+                            </a>
+                        </td>
+                    </tr>
+                        
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
 @endsection
 
 @push('addon-style')
-    <style>
-        .page-header {
-            display: block;
-        }
+<link rel="stylesheet" href="{{ asset('admin/plugins/select2/css/select2.min.css')}}" />
+@endpush
 
-        .page-title {
-            padding-bottom: 20px;
-        }
-
-        img.file-image-preview {
-            max-height: 50px;
-        }
-
-        .card img {
-            max-width: 94px;
-            display: table;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .upload-product input.file-uploader {
-            display: none;
-        }
-
-        .upload-product img {
-            cursor: pointer;
-        }
-
-        .card .card-body {
-            border-bottom: 1px solid #e8ebed;
-        }
-
-        .card .card-body h5.card-title {
-            color: #1B2850;
-            margin: 0;
-        }
-
-        .card-body h4 {
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e8ebed;
-            margin-bottom: 20px;
-        }
-
-        .form-group.theme input {
-            margin-bottom: 10px;
-        }
-
-        .form-group.theme.sub-menu {
-            padding-left: 2rem;
-        }
-
-        .card img.upload-logo {
-            max-width: 120px;
-        }
-    </style>
+@push('prepend-script')
 @endpush
 
 @push('addon-script')
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
-    <!-- Sweetalert 2 -->
-    <script src="{{ asset('admin/plugins/sweetalert/sweetalert2.all.min.js') }}"></script>
-    @if ($message = Session::get('success'))
-        <script type="text/javascript">
-            Swal.fire({
-                icon: 'success',
-                title: 'Success..',
-                text: '{{ $message }}',
-            })
-        </script>
-    @endif
-    <script type="text/javascript">
-        // Delete Data
-        const deleteConfirmation = (id) => {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                // confirmButtonColor: '#ff0022',
-                // cancelButtonColor: '#212529',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
+<!-- Select2 JS -->
+<script src="{{ asset('admin/plugins/select2/js/select2.min.js')}}"></script>
+<!-- Sweetalert 2 -->
+<script src="{{ asset('admin/plugins/sweetalert/sweetalert2.all.min.js')}}"></script>
+@if ($message = Session::get('success'))
+<script type="text/javascript">
+    Swal.fire({
+        icon: 'success',
+        title: 'Success..',
+        text: '{{ $message  }}',
+    })
+</script>
+@endif
+<script type="text/javascript">
+    // Delete Data
+    const deleteConfirmation = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            // confirmButtonColor: '#ff0022',
+            // cancelButtonColor: '#212529',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
 
-                    $.ajax({
-                        type: 'DELETE',
-                        url: '{{ route('admin.product.list.index') }}/' + id,
-                        data: {
-                            _token: $('meta[name="csrf-token"]').attr('content'),
-                        },
-                        dataType: 'JSON',
-                        error: function(response) {
-                            // console.log(response);
-                            Swal.fire("Error!", 'Something is wrong', "error")
-                                .then((result) => {
-                                    if (result.isConfirmed) {
-                                        location.reload();
-                                    }
-                                });
-                        },
-                        success: function(response) {
-                            // console.log(response);
-                            if (response.success == true) {
-                                Swal.fire("Deleted successfully!", response.message, "success")
-                                    .then((result) => {
-                                        if (result.isConfirmed) {
-                                            location.reload();
-                                        }
-                                    });
-                            } else {
-                                Swal.fire("Error!", response.message, "error").then((result) => {
-                                    if (result.isConfirmed) {
-                                        location.reload();
-                                    }
-                                });
+                $.ajax({
+                    type: 'DELETE',
+                    url: '{{ route("admin.theme.services.index") }}/' + id,
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                    },
+                    dataType: 'JSON',
+                    error: function(response) {
+                        // console.log(response);
+                        Swal.fire("Error!", 'Something is wrong', "error")
+                        .then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload();
                             }
+                        });
+                    },
+                    success: function (response) {
+                        // console.log(response);
+                        if (response.success == true) {
+                            Swal.fire("Deleted successfully!", response.message, "success")
+                            .then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
+                        } else {
+                            Swal.fire("Error!", response.message, "error").then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
                         }
-                    });
-                } else if (result.dismiss) {
-                    Swal.fire(
-                        'Canceled!',
-                        'Your important file is still safe.',
-                        'error'
-                    )
-                }
-            });
-        }
-    </script>
+                    }
+                });
+            } else if (result.dismiss) {
+                Swal.fire(
+                    'Canceled!',
+                    'Your important file is still safe.',
+                    'error'
+                )
+            }
+        });
+    }
+</script>
 @endpush

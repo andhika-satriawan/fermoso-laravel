@@ -10,9 +10,6 @@ use Illuminate\Http\RedirectResponse;
 
 class AuthController extends Controller
 {
-    private $view_path = 'pages.admin.product.category.';
-    private $route_path = 'admin.product.category.';
-
     private $page_info = [];
 
     public function __construct()
