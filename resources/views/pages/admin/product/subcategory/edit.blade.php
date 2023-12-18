@@ -7,8 +7,8 @@
 @section('content')
     <div class="page-header">
         <div class="page-title">
-            <h4>Add {{ $page_info['title'] }}</h4>
-            <h6>Create New {{ $page_info['title'] }}</h6>
+            <h4>Edit {{ $page_info['title'] }}</h4>
+            <h6>Change the data of existing {{ $page_info['title'] }}</h6>
         </div>
     </div>
 

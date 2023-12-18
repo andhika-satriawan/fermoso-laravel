@@ -7,14 +7,15 @@
 @section('content')
     <div class="page-header">
         <div class="page-title">
-            <h4>Add {{ $page_info['title'] }}</h4>
-            <h6>Create New {{ $page_info['title'] }}</h6>
+            <h4>Edit {{ $page_info['title'] }}</h4>
+            <h6>Change the data of existing {{ $page_info['title'] }}</h6>
         </div>
 
         <div class="card upload-product">
             <div class="card-body">
-                <form action="{{ route('admin.theme.services.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                <form action="{{ route('admin.theme.services.update', $item->id) }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
                 @csrf
+                @method('PATCH')
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="card image-uploader">
@@ -23,14 +24,14 @@
                                     <input class="form-control file-uploader" type="file" accept="image/*" name="icon"
                                         value="">
                                     <img class="card-img-top image-uploader-preview"
-                                        src="{{ asset('admin/img/product/noimage.png')}}">
+                                        src="{{ Storage::url($item->icon) }}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-10">
                             <div class="form-group">
                                 <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ old('title') }}" autocomplete="off" required>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ $item->title }}" autocomplete="off" required>
                                 @error('title')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -40,7 +41,7 @@
 
                             <div class="form-group">
                                 <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" placeholder="Description" name="description" value="{{ old('description') }}" autocomplete="off" required>
+                                <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" placeholder="Description" name="description" value="{{ $item->description }}" autocomplete="off" required>
                                 @error('description')
                                 <div class="invalid-feedback">
                                     {{ $message }}
