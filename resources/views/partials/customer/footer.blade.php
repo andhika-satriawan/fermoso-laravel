@@ -1,27 +1,28 @@
     <footer class="footer footer-01">
         <div class="container">
-            <div data-elementor-type=wp-post data-elementor-id=332 class="elementor elementor-332">
-                <div class=elementor-inner>
-                    <div class=elementor-section-wrap>
+            <div data-elementor-type="wp-post" data-elementor-id="332" class="elementor elementor-332">
+                <div class="elementor-inner">
+                    <div class="elementor-section-wrap">
                         <section
                             class="elementor-section elementor-top-section elementor-element elementor-element-4058170 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                            data-id=4058170 data-element_type=section
-                            data-settings={&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}>
+                            data-id="4058170" data-element_type="section"
+                            data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
                             <div class="elementor-container elementor-column-gap-extended">
-                                <div class=elementor-row>
+                                <div class="elementor-row">
                                     <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-37f693b none"
-                                        data-id=37f693b data-element_type=column>
+                                        data-id="37f693b" data-element_type="column">
                                         <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class=elementor-widget-wrap>
+                                            <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-1e90de1 none elementor-widget elementor-widget-image"
-                                                    data-id=1e90de1 data-element_type=widget
-                                                    data-widget_type=image.default>
-                                                    <div class=elementor-widget-container>
-                                                        <div class=elementor-image>
-                                                            <img width=213 height=54 src="images/logo-footer.jpg"
+                                                    data-id="1e90de1" data-element_type="widget"
+                                                    data-widget_type="image.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-image">
+                                                            <img width="213" height="54"
+                                                                src="{{ asset('images/logo-footer.jpg') }}"
                                                                 class="attachment-full size-full wp-image-912 wp-post-image"
-                                                                alt loading=lazy
-                                                                srcset="images/logo-footer.jpg 213w, images/logo-footer.jpg 86w, images/logo-footer.jpg 64w, images/logo-footer.jpg 84w"
+                                                                alt loading="lazy"
+                                                                srcset="{{ asset('images/logo-footer.jpg') }} 213w, {{ asset('images/logo-footer.jpg') }} 86w, {{ asset('images/logo-footer.jpg') }} 64w, {{ asset('images/logo-footer.jpg') }} 84w"
                                                                 sizes="(max-width: 213px) 100vw, 213px">
                                                         </div>
                                                     </div>
@@ -657,25 +658,9 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/86a82.js') }}"></script>
-    <script src="{{ asset('script-footer2.js') }}"></script>
-    <script src="{{ asset('js/51e91.js') }}"></script>
-    <script src="{{ asset('js/2b35d.js') }}"></script>
-    <script src="{{ asset('js/76d15.js') }}"></script>
-    <script src="{{ asset('js/83e16.js') }}"></script>
-    <script src="{{ asset('js/dc06c.js') }}"></script>
-    <script src="{{ asset('js/63a69.js') }}"></script>
-    <script src="{{ asset('js/19969.js') }}"></script>
-    <script src="{{ asset('js/27b55.js') }}"></script>
-    <script src="{{ asset('js/db857.js') }}"></script>
-    <script src="{{ asset('js/183fc.js') }}"></script>
-    <script src="{{ asset('js/cc4bd.js') }}"></script>
-    <script src="{{ asset('js/c8e70.js') }}"></script>
-    <script src="{{ asset('js/76278.js') }}"></script>
-    <script defer src="{{ asset('js/1d5f8.js') }}"></script>
-    <script src="{{ asset('js/00538.js') }}"></script>
-    <script src="{{ asset('js/85527.js') }}"></script>
-    <script src="{{ asset('js/bcf3d.js') }}"></script>
+    @stack('addon-script-home-footer')
+    @stack('addon-script-detail-product-footer')
+
     <div class="xlwcty_header_passed" style='display: none;'></div>
 
     </body>

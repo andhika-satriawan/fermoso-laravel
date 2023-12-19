@@ -9,13 +9,11 @@
         document.documentElement.className = document.documentElement.className + ' yes-js js_active js'
     </script>
     <title>{{ $title }} - FERMOSO</title>
-    <meta name='robots' content='max-image-preview:large'>
+    <meta name='robots' content='max-image-preview:large, noindex, follow'>
     <link rel=alternate type=application/rss+xml title="KuteShop &raquo; Feed"
-        href=https://kuteshop.kutethemes.net/feed/>
+        href=https://kuteshop.kutethemes.net/feed />
     <link rel=alternate type=application/rss+xml title="KuteShop &raquo; Comments Feed"
-        href=https://kuteshop.kutethemes.net/comments/feed/>
-    <link rel=alternate type=application/rss+xml title="KuteShop &raquo; Market Category Feed"
-        href="https://kuteshop.kutethemes.net/product-category/market/?demo=21/feed/">
+        href=https://kuteshop.kutethemes.net/comments/feed />
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/a5ff7.css" media="all">
     <style id="wp-block-library-theme-inline-css">
         .wp-block-audio figcaption {
@@ -652,7 +650,7 @@
 
         /*]]>*/
     </style>
-    <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/dae58.css" media="all">
+    <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/d7fd3.css" media="all">
     <style id="woocommerce-inline-inline-css">
         .woocommerce form .form-row .required {
             visibility: visible
@@ -702,16 +700,46 @@
         }
     </style>
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/1bf85.css" media="all">
-    <style id="font-awesome-inline-css">[data-font="FontAwesome"]:before{font-family:'FontAwesome'
-        !important;content:attr(data-icon) !important;speak:none !important;font-weight:normal
-        !important;font-variant:normal !important;text-transform:none !important;line-height:1
-        !important;font-style:normal !important;-webkit-font-smoothing:antialiased
-        !important;-moz-osx-font-smoothing:grayscale !important}</style>
-        <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/53f0a.css" media="all"><style id=kuteshop-main-inline-css>/*<![CDATA[*/body{--main-color-h:345;--main-color-s:100%;--main-color-l:60%;--default-color:#222;--main-color-b:#e52e5c;--main-color-t:#fff;--main-h-fw:700}@media (max-width:1499px) and (min-width:992px){body{}}@media (min-width: 1230px){body{--main-container:1170px}body.wcfm-store-page .site
-
-        #main {
-            width: 1200px !important
+    <style id="font-awesome-inline-css">
+        [data-font="FontAwesome"]:before {
+            font-family: 'FontAwesome'
+                !important;
+            content: attr(data-icon) !important;
+            speak: none !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            line-height: 1 !important;
+            font-style: normal !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important
         }
+    </style>
+    <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/53f0a.css" media="all">
+    <style id="kuteshop-main-inline-css">
+        /*<![CDATA[*/
+        body {
+            --main-color-h: 345;
+            --main-color-s: 100%;
+            --main-color-l: 60%;
+            --default-color: #222;
+            --main-color-b: #e52e5c;
+            --main-color-t: #fff;
+            --main-h-fw: 700
+        }
+
+        @media (max-width:1499px) and (min-width:992px) {
+            body {}
+        }
+
+        @media (min-width: 1230px) {
+            body {
+                --main-container: 1170px
+            }
+
+            body.wcfm-store-page .site #main {
+                width: 1200px !important
+            }
         }
 
         .vertical-menu>.menu-item:nth-child(n+12) {
@@ -721,38 +749,39 @@
         /*]]>*/
     </style>
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/5fa7e.css" media="all">
+
     @verbatim
-    <script type="text/template" id="tmpl-ovic-notice-popup">
+        <script type="text/template" id="tmpl-ovic-notice-popup">
         <# if ( data.img_url != '' ) { #>
         <figure>
             <img src="{{data.img_url}}" alt="{{data.title}}" class="growl-thumb" />
         </figure>
         <# } #>
-        <p class="growl-content">
+        <p class=growl-content>
             <# if ( data.title != '' ) { #>
             <span>{{data.title}}</span>
             <# } #>
             {{{data.content}}}
         </p>
-    </script> 
-    <script type="text/template" id="tmpl-variation-template">
-        <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
-        <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
-        <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
-    </script> 
+    </script>
+        <script type="text/template id=tmpl-variation-template">
+        <div class=woocommerce-variation-description>{{{ data.variation.variation_description }}}</div>
+        <div class=woocommerce-variation-price>{{{ data.variation.price_html }}}</div>
+        <div class=woocommerce-variation-availability>{{{ data.variation.availability_html }}}</div>
+    </script>
     @endverbatim
-    <script type="text/template" id="tmpl-unavailable-variation-template>"
-        <p>Sorry, this product is unavailable. Please choose a different combination.</p>
-    </script> 
 
-    <script id="jquery-core-js-extra">
+    <script type=text/template id=tmpl-unavailable-variation-template>
+        <p>Sorry, this product is unavailable. Please choose a different combination.</p>
+            </script>
+    <script id=jquery-core-js-extra>
         var xlwcty = {
             "ajax_url": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
             "version": "2.17.0",
             "wc_version": "8.3.1"
         };
     </script>
-    <script src="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/82fd8.js"></script>
+    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/82fd8.js></script>
     <script id=wp-util-js-extra>
         var _wpUtilSettings = {
             "ajax": {
@@ -760,18 +789,48 @@
             }
         };
     </script>
-    <script src="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/76d15.js"></script>
-    <script id="wc-add-to-cart-js-extra">
+    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/76d15.js></script>
+    <script id=wc-add-to-cart-js-extra>
         var wc_add_to_cart_params = {
             "ajax_url": "\/wp-admin\/admin-ajax.php",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
             "i18n_view_cart": "View cart",
-            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
+            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
             "is_cart": "",
             "cart_redirect_after_add": "no"
         };
     </script>
-    <script id="woocommerce-js-extra">
+    <script id=zxcvbn-async-js-extra>
+        var _zxcvbnSettings = {
+            "src": "https:\/\/kuteshop.kutethemes.net\/wp-includes\/js\/zxcvbn.min.js"
+        };
+    </script>
+    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/e7b14.js></script>
+    <script id=wp-i18n-js-after>
+        wp.i18n.setLocaleData({
+            'text direction\u0004ltr': ['ltr']
+        });
+    </script>
+    <script id=password-strength-meter-js-extra>
+        var pwsL10n = {
+            "unknown": "Password strength unknown",
+            "short": "Very weak",
+            "bad": "Weak",
+            "good": "Medium",
+            "strong": "Strong",
+            "mismatch": "Mismatch"
+        };
+    </script>
+    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/f0d29.js></script>
+    <script id=wc-password-strength-meter-js-extra>
+        var wc_password_strength_meter_params = {
+            "min_password_strength": "3",
+            "stop_checkout": "",
+            "i18n_password_error": "Please enter a stronger password.",
+            "i18n_password_hint": "Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! \" ? $ % ^ & )."
+        };
+    </script>
+    <script id=woocommerce-js-extra>
         var woocommerce_params = {
             "ajax_url": "\/wp-admin\/admin-ajax.php",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
@@ -787,17 +846,23 @@
             "i18n_view_cart": "View cart",
             "i18n_add_to_cart": "Add to cart",
             "i18n_select_options": "Select options",
-            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
+            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
             "is_cart": "",
             "cart_redirect_after_add": "no",
             "enable_ajax_add_to_cart": "yes"
         };
     </script>
-    <link rel=https://api.w.org/ href=https://kuteshop.kutethemes.net/wp-json/>
-    <link rel=alternate type=application/json href=https://kuteshop.kutethemes.net/wp-json/wp/v2/product_cat/316>
+    <link rel=https://api.w.org/ href=https://kuteshop.kutethemes.net/wp-json />
+    <link rel=alternate type=application/json href=https://kuteshop.kutethemes.net/wp-json/wp/v2/pages/9>
     <link rel=EditURI type=application/rsd+xml title=RSD href=https://kuteshop.kutethemes.net/xmlrpc.php?rsd>
     <meta name="generator" content="WordPress 6.4.2">
     <meta name="generator" content="WooCommerce 8.3.1">
+    <link rel=canonical href=https://kuteshop.kutethemes.net/my-account />
+    <link rel=shortlink href='https://kuteshop.kutethemes.net/?p=9'>
+    <link rel=alternate type=application/json+oembed
+        href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fmy-account%2F">
+    <link rel=alternate type=text/xml+oembed
+        href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fmy-account%2F&#038;format=xml">
     <style>
         .dgwt-wcas-ico-magnifier,
         .dgwt-wcas-ico-magnifier-handler {
@@ -835,7 +900,7 @@
 </head>
 
 <body data-rsssl=1
-    class="archive tax-product_cat term-market term-316 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
+    class="page-template-default page page-id-9 wp-embed-responsive theme-kuteshop woocommerce-account woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
     <a href=# class=overlay-body aria-hidden=true></a>
     <div id=page class=site>
         <div class="header-banner">
@@ -906,7 +971,8 @@
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-337 menu-item-icon-font">
                                         <a href="mailto:example@gmail.com?demo=21" data-megamenu=240><span
                                                 class=text><span class="icon icon-font fa fa-envelope"></span>Contact us
-                                                today!</span></a></li>
+                                                today!</span></a>
+                                    </li>
                                     <li id=menu-item-343
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-343">
                                         <a class=disable-link data-megamenu=0><span class=text>USD</span></a>
@@ -935,21 +1001,24 @@
                                                             class="icon icon-img"><img width=16 height=11
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_de.png
                                                                 class="icon-image wp-post-image" alt
-                                                                decoding=async></span>Deutsch</span></a></li>
+                                                                decoding=async></span>Deutsch</span></a>
+                                            </li>
                                             <li id=menu-item-341
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341 menu-item-icon-image">
                                                 <a class=disable-link data-megamenu=0><span class=text><span
                                                             class="icon icon-img"><img width=16 height=11
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_fr.png
                                                                 class="icon-image wp-post-image" alt
-                                                                decoding=async></span>Français</span></a></li>
+                                                                decoding=async></span>Français</span></a>
+                                            </li>
                                             <li id=menu-item-342
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342 menu-item-icon-image">
                                                 <a class=disable-link data-megamenu=0><span class=text><span
                                                             class="icon icon-img"><img width=16 height=11
                                                                 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_es.png
                                                                 class="icon-image wp-post-image" alt
-                                                                decoding=async></span>Espanol</span></a></li>
+                                                                decoding=async></span>Espanol</span></a>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -959,9 +1028,10 @@
                             <div class="ovic-menu-wapper horizontal">
                                 <ul id=menu-01-submenu-2 class="ovic-menu header-submenu header_submenu_2 ovic-menu">
                                     <li id=menu-item-355
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
-                                        <a href="https://kuteshop.kutethemes.net/my-account/?demo=21"
-                                            data-megamenu=0><span class=text>My account</span></a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-355">
+                                        <a href="https://kuteshop.kutethemes.net/my-account/?demo=21" aria-current=page
+                                            data-megamenu=0><span class=text>My account</span></a>
+                                    </li>
                                     <li id=menu-item-356
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356"><a
                                             href=# class=disable-link data-megamenu=0><span
@@ -977,8 +1047,8 @@
                 </div>
             </div>
             <div class="header-section header-mid">
-                <div class="container">
-                    <div class="header-inner">
+                <div class=container>
+                    <div class=header-inner>
                         <div class="logo">
                             <a href="<?= url('/') ?>">
                                 <figure class="logo-image">
@@ -987,7 +1057,8 @@
                             </a>
                         </div>
                         <div class="block-search">
-                            <div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
+                            <div
+                                class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
                                 <form class="search-form dgwt-wcas-search-form" role="search" method="get"
                                     action="#">
                                     <div class="category">
@@ -1006,8 +1077,9 @@
                                         <input type="hidden" name="post_type" value="product">
                                         <div class="search-input">
                                             <input id="dgwt-wcas-search-input-1d63" type="search"
-                                                class="input-text dgwt-wcas-search-input" name="s" value=""
-                                                placeholder="Search for products..." autocomplete="off" data-custom-params>
+                                                class="input-text dgwt-wcas-search-input" name="s"
+                                                value="" placeholder="Search for products..."
+                                                autocomplete="off" data-custom-params>
                                             <span class="input-focus"></span>
                                             <div class="dgwt-wcas-preloader"></div>
                                         </div>
@@ -1020,19 +1092,19 @@
                         <div class=header-control>
                             <div class=inner-control>
                                 <div class="block-minicart kuteshop-dropdown main-bora-2">
-                                    <a class="woo-cart-link icon-link" href="<?= url('/') ?>/cart/"
+                                    <a class="woo-cart-link icon-link" href=https://kuteshop.kutethemes.net/cart/
                                         data-kuteshop=kuteshop-dropdown>
                                         <span class="icon main-icon-cart1">
-                                            <span class=count>3</span>
+                                            <span class=count>1</span>
                                         </span>
                                         <span class=content>
                                             <span class=text>
                                                 Shopping Cart </span>
                                             <span class=item>
-                                                <span class=count>3</span>
+                                                <span class=count>1</span>
                                                 items - </span>
                                             <span class=total><span class="woocommerce-Price-amount amount"><bdi><span
-                                                            class=woocommerce-Price-currencySymbol>&#36;</span>1,230.00</bdi></span></span>
+                                                            class=woocommerce-Price-currencySymbol>&#36;</span>630.00</bdi></span></span>
                                         </span>
                                     </a>
                                     <div class="widget woocommerce widget_shopping_cart">
@@ -1103,7 +1175,8 @@
                                             </li>
                                             <li id=menu-item-325
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-325">
-                                                <a href="<?= url('/faq-toko-kami') ?>" data-megamenu="0">FAQ Toko Kami</a>
+                                                <a href="<?= url('/faq-toko-kami') ?>" data-megamenu="0">FAQ Toko
+                                                    Kami</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1125,715 +1198,63 @@
                 </div>
             </div>
         </header>
-        <div id="content" class="container site-content sidebar-left shop-page">
+        <div id=content class="container site-content sidebar-full">
             <nav class="woocommerce-breadcrumb">
                 <a href="<?= url('/') ?>">Home</a><span class="delimiter"></span>
                 {{ $title }}
             </nav>
             <div id=primary class=content-area>
                 <main id=main class=site-main>
-                    <header class=woocommerce-products-header></header>
-                    <div class=woocommerce-notices-wrapper></div>
-                    <div class="shop-control shop-before-control">
-                        <h1 class="page-title entry-title">
-                            <span>{{ $title }}</span>
-                        </h1>
-                        <div class=display-per-page-inline>
-                            <p class=title>Show:</p>
-                            <form class=per-page-form method=GET
-                                action=https://kuteshop.kutethemes.net/product-category/market/>
-                                <button type=submit name=product_per_page value=3 class=button>
-                                    03 </button>
-                                / <button type=submit name=product_per_page value=6 class=button>
-                                    06 </button>
-                                / <button type=submit name=product_per_page value=9 class=button>
-                                    09 </button>
-                                / <button type=submit name=product_per_page value=12 class=button>
-                                    12 </button>
-                                / <button type=submit name=product_per_page value=-1 class=button>
-                                    All </button>
-                                <input type=hidden name=shop_page_layout value=grid><input type=hidden name=demo
-                                    value=21>
-                            </form>
-                        </div>
-                        <div class=display-mode-control>
-                            <form class=display-mode method=get
-                                action=https://kuteshop.kutethemes.net/product-category/market/>
-                                <button type=submit value=list name=shop_page_layout class="mode-list ">
-                                    <span class=icon>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </span>
-                                </button>
-                                <button type=submit value=grid name=shop_page_layout class="mode-grid active">
-                                    <span class=icon>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </span>
-                                </button>
-                                <input type=hidden name=demo value=21>
-                            </form>
-                        </div>
-                        <div class=display-sort-by>
-                            <form class=woocommerce-ordering method=get>
-                                <select name=orderby class=orderby aria-label="Shop order">
-                                    <option value=popularity>Popularity</option>
-                                    <option value=rating>Average Rating</option>
-                                    <option value=date selected=selected>Latest</option>
-                                    <option value=price>Price: Low To High</option>
-                                    <option value=price-desc>Price: High To Low</option>
-                                    <option value=sale>Sale</option>
-                                    <option value=on-sale>On-Sale</option>
-                                    <option value=feature>Feature</option>
-                                </select>
-                                <input type=hidden name=paged value=1>
-                                <input type=hidden name=shop_page_layout value=grid><input type=hidden name=demo
-                                    value=21>
-                            </form>
-                        </div>
-                    </div>
-                    <ul class="products shop-page response-content columns-3 ovic-products style-01 border-full">
-                        @foreach ($product_subcategories as $product_subcategory)
-                            @foreach ($product_subcategory->products as $product)
-                                <li data-product_id="{{ $product->id }}"
-                                    class="product-item style-01 rtwpvs-product product type-product post-{{ $product->id }} status-publish first instock product_cat-for-women product_cat-summer-dresses product_tag-market has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                    <div class="product-inner product-01 add-cart-01">
-                                        <div class="product-thumb tooltip-wrap tooltip-start">
-                                            <div class="thumb-wrapper">
-                                                <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                    href="{{ url('product/' . $product->slug) }}">
-                                                    <figure class="primary-thumb">
-                                                        <img width="850" height="1021"
-                                                            src="{{ Storage::url($product->photo) }}"
-                                                            class="attachment-850x1021 size-850x1021 wp-post-image" alt
-                                                            loading="lazy">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                            <div class="group-button style-01 popup">
-                                                <div class="yith-wcwl-add-to-wishlist add-to-wishlist-{{ $product->id }}  wishlist-fragment on-first-load"
-                                                    data-fragment-ref={{ $product->id }}
-                                                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:{{ $product->id }},&quot;parent_product_id&quot;:{{ $product->id }},&quot;product_type&quot;:&quot;variable&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                    <div class=yith-wcwl-add-button>
-                                                        <a href="?add_to_wishlist={{ $product->id }}&#038;_wpnonce=66865b33fb"
-                                                            class="add_to_wishlist single_add_to_wishlist" data-product-id="{{ $product->id }}"
-                                                            data-product-type=variable data-original-product-id="{{ $product->id }}"
-                                                            data-title="Wishlist" rel="nofollow">
-                                                            <i class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                            <span>Wishlist</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce product compare-button"><a
-                                                        href="{{ $product->slug }}?action=yith-woocompare-add-product&id={{ $product->id }}"
-                                                        class="compare button" data-product_id="{{ $product->id }}" rel=nofollow>Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button" data-product_id="{{ $product->id }}">Quick View</a>
-                                            </div>
-                                            <span class=add-to-cart data-title="Select options">
-                                                <a href="{{ $product->name }}"
-                                                    data-quantity="1"
-                                                    class="button product_type_variable add_to_cart_button rtwpvs_add_to_cart rtwpvs_ajax_add_to_cart"
-                                                    data-product_id="{{ $product->id }}" data-product_sku="{{ $product->details->first()->sku }}"
-                                                    aria-label="Select options for &ldquo;Women’s Cocktail Dress&rdquo;"
-                                                    aria-describedby="This product has multiple variants. The options may be chosen on the product page"
-                                                    rel="nofollow" data-variation_id data-variation>Select options</a>
-                                            </span>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h2 class="product-title">
-                                                <a href="{{ $product->slug }}">{{ $product->name }}</a>
-                                            </h2>
-                                            <div class="star-rating-wrap">
-                                                <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                                    <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                                </div>
-                                                <strong class="rating-count">01</strong>
-                                            </div>
-                                            <span class="price">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi>
-                                                        <span class="woocommerce-Price-currencySymbol">Rp</span>
-                                                        {{ $product->details->first()->price }}
-                                                    </bdi>
-                                                </span>
-                                            </span>
-                                        </div>
+                    <article id=post-9 class="post-9 page type-page status-publish hentry">
+                        <div class=entry-content>
+                            <div class=woocommerce>
+                                <div class=woocommerce-notices-wrapper></div>
+                                <div class="u-columns col2-set" id=customer_login>
+                                    <div class="u-column1 col-1">
+                                        <h2>Login</h2>
+                                        <form class="woocommerce-form woocommerce-form-login login" method=post>
+                                            <p
+                                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for=username>Username or email address&nbsp;<span
+                                                        class=required>*</span></label>
+                                                <input type=text
+                                                    class="woocommerce-Input woocommerce-Input--text input-text"
+                                                    name=username id=username autocomplete=username value>
+                                            </p>
+                                            <p
+                                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for=password>Password&nbsp;<span class=required>*</span></label>
+                                                <input class="woocommerce-Input woocommerce-Input--text input-text"
+                                                    type=password name=password id=password
+                                                    autocomplete=current-password>
+                                            </p>
+                                            <p class=form-row>
+                                                <label
+                                                    class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                                                    <input
+                                                        class="woocommerce-form__input woocommerce-form__input-checkbox"
+                                                        name=rememberme type=checkbox id=rememberme value=forever>
+                                                    <span>Remember me</span>
+                                                </label>
+                                                <input type=hidden id=woocommerce-login-nonce
+                                                    name=woocommerce-login-nonce value=04d848a544><input type=hidden
+                                                    name=_wp_http_referer value="/my-account/?demo=21"> <button
+                                                    type=submit
+                                                    class="woocommerce-button button woocommerce-form-login__submit"
+                                                    name=login value="Log in">Log in</button>
+                                            </p>
+                                            <p class="woocommerce-LostPassword lost_password">
+                                                <a href="<?= url('/my-account/lost-password') ?>">Lost your password?</a>
+                                            </p>
+                                        </form>
                                     </div>
-                                </li>
-                            @endforeach
-                        @endforeach
-                    </ul>
-                    <div class="shop-control shop-after-control">
-                        <div class="woocommerce-pagination pagination-nav type-pagination">
-                            <ul class=page-numbers>
-                                <li><span aria-current=page class="page-numbers current">1</span></li>
-                                <li><a class=page-numbers
-                                        href="https://kuteshop.kutethemes.net/product-category/market/page/2/?shop_page_layout=grid&#038;demo=21">2</a>
-                                </li>
-                                <li><a class=page-numbers
-                                        href="https://kuteshop.kutethemes.net/product-category/market/page/3/?shop_page_layout=grid&#038;demo=21">3</a>
-                                </li>
-                                <li><span class="page-numbers dots">&hellip;</span></li>
-                                <li><a class=page-numbers
-                                        href="https://kuteshop.kutethemes.net/product-category/market/page/8/?shop_page_layout=grid&#038;demo=21">8</a>
-                                </li>
-                                <li><a class=page-numbers
-                                        href="https://kuteshop.kutethemes.net/product-category/market/page/9/?shop_page_layout=grid&#038;demo=21">9</a>
-                                </li>
-                                <li><a class="next page-numbers"
-                                        href="https://kuteshop.kutethemes.net/product-category/market/page/2/?shop_page_layout=grid&#038;demo=21">Next</a>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p class=woocommerce-result-count>
-                            Showing 1&ndash;18 of 154 results</p>
-                    </div>
+                    </article>
                 </main>
             </div>
-            <aside id=secondary class="widget-area shop-widget-area" role=complementary aria-label="Shop Sidebar">
-                <div class=sidebar-inner>
-                    <div id=woocommerce_product_categories-2 class="widget woocommerce widget_product_categories">
-                        <h2 class="widget-title"><span class=text>Categories</span><span class=arrow></span></h2>
-                        <ul class=product-categories>
-                            @foreach ($product_subcategories as $product_subcategory)
-                                <li class="cat-item cat-item-{{ $product_subcategory->id }}">
-                                    <a href="{{ url('product-category/' . $product_subcategory->slug) }}">
-                                        {{ $product_subcategory->name }}</a>
-                                    <span class=count>({{ $product_subcategory->product_count }})</span>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div id=ovic_woocommerce_layered_nav-3 class="widget ovic_widget_layered_nav widget_layered_nav">
-                        <h2 class="widget-title"><span class=text>Size</span><span class=arrow></span></h2>
-                        <ul class=woocommerce-widget-layered-nav-list>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=s">S</a>
-                                <span class=count>(71)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=m">M</a>
-                                <span class=count>(71)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=l">L</a>
-                                <span class=count>(71)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=xl">XL</a>
-                                <span class=count>(71)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=2xl">2XL</a>
-                                <span class=count>(70)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=xxl">XXL</a>
-                                <span class=count>(70)</span></li>
-                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
-                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=3xl">3XL</a>
-                                <span class=count>(70)</span></li>
-                        </ul>
-                    </div>
-                    <div id=ovic_woocommerce_layered_nav-2 class="widget ovic_widget_layered_nav widget_layered_nav">
-                        <h2 class="widget-title"><span class=text>Color</span><span class=arrow></span></h2>
-                        <div class="box-group group-color">
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=red"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #ff0000"></i>
-                                <span class=term-name>Red</span>
-                                <span class=count>(68)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=black"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #000000"></i>
-                                <span class=term-name>Black</span>
-                                <span class=count>(69)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=blue"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #2196f3"></i>
-                                <span class=term-name>Blue</span>
-                                <span class=count>(67)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=brown"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #795548"></i>
-                                <span class=term-name>Brown</span>
-                                <span class=count>(69)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=green"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #9fac76"></i>
-                                <span class=term-name>Green</span>
-                                <span class=count>(68)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=yellow"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #fdd835"></i>
-                                <span class=term-name>Yellow</span>
-                                <span class=count>(69)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=cyan"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #01bdae"></i>
-                                <span class=term-name>Cyan</span>
-                                <span class=count>(67)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=white"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #ffffff"></i>
-                                <span class=term-name>White</span>
-                                <span class=count>(68)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=beige"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #f6deb8"></i>
-                                <span class=term-name>Beige</span>
-                                <span class=count>(67)</span> </a>
-                            <a class=term-color
-                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=grey"
-                                style="font-size: 16px">
-                                <i style="display:inline-block;width:24px;height:24px;background-color: #cccccc"></i>
-                                <span class=term-name>Grey</span>
-                                <span class=count>(68)</span> </a>
-                        </div>
-                    </div>
-                    <div id=woocommerce_product_brand-2
-                        class="widget woocommerce widget_product_brand widget_product_categories">
-                        <h2 class="widget-title"><span class=text>Manufatures</span><span class=arrow></span></h2>
-                        <ul class="product-categories list">
-                            <li class="cat-item cat-item-360 cat-parent"><a
-                                    href="https://kuteshop.kutethemes.net/product-brand/market/?demo=21">Market</a>
-                                <span class=count>(135)</span>
-                                <ul class=children>
-                                    <li class="cat-item cat-item-362 cat-parent"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/market/digital/?demo=21">Digital</a>
-                                        <span class=count>(30)</span>
-                                        <ul class=children>
-                                            <li class="cat-item cat-item-283"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-7/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Canon</a> <span
-                                                    class=count>(4)</span></li>
-                                            <li class="cat-item cat-item-285"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-9/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Daikin</a> <span
-                                                    class=count>(3)</span></li>
-                                            <li class="cat-item cat-item-282"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-6/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Dell</a> <span
-                                                    class=count>(0)</span></li>
-                                            <li class="cat-item cat-item-281"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-5/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">LG</a> <span
-                                                    class=count>(3)</span></li>
-                                            <li class="cat-item cat-item-280"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-4/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Nokia</a> <span
-                                                    class=count>(1)</span></li>
-                                            <li class="cat-item cat-item-284"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-8/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Oppo</a> <span
-                                                    class=count>(2)</span></li>
-                                            <li class="cat-item cat-item-278"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-2/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Samsung</a> <span
-                                                    class=count>(4)</span></li>
-                                            <li class="cat-item cat-item-279"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-3/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Sharp</a> <span
-                                                    class=count>(6)</span></li>
-                                            <li class="cat-item cat-item-277"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-1/?demo=21"><img
-                                                        width=146 height=50
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-84x29.png 84w"
-                                                        sizes="(max-width: 146px) 100vw, 146px">Sony</a> <span
-                                                    class=count>(7)</span></li>
-                                        </ul>
-                                    </li>
-                                    <li class="cat-item cat-item-363 cat-parent"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/market/fashion/?demo=21">Fashion</a>
-                                        <span class=count>(105)</span>
-                                        <ul class=children>
-                                            <li class="cat-item cat-item-209"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/guerlain/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Guerlain</a> <span
-                                                    class=count>(23)</span></li>
-                                            <li class="cat-item cat-item-210"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/hermes/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Hermes</a> <span
-                                                    class=count>(7)</span></li>
-                                            <li class="cat-item cat-item-211"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/gucci/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Gucci</a> <span
-                                                    class=count>(34)</span></li>
-                                            <li class="cat-item cat-item-212"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/etro/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Etro</a> <span
-                                                    class=count>(10)</span></li>
-                                            <li class="cat-item cat-item-213"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/paul-smith/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Paul Smith</a> <span
-                                                    class=count>(16)</span></li>
-                                            <li class="cat-item cat-item-214"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/cartier/?demo=21"><img
-                                                        width=117 height=40
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier.png 117w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-88x30.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-84x29.png 84w"
-                                                        sizes="(max-width: 117px) 100vw, 117px">Cartier</a> <span
-                                                    class=count>(17)</span></li>
-                                            <li class="cat-item cat-item-215"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/inside-fashion/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Inside Fashion</a>
-                                                <span class=count>(5)</span></li>
-                                            <li class="cat-item cat-item-216"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/lack/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Lack</a> <span
-                                                    class=count>(18)</span></li>
-                                            <li class="cat-item cat-item-217"><a
-                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/chanel/?demo=21"><img
-                                                        width=180 height=100
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel.png
-                                                        class="attachment-full size-full wp-post-image" alt
-                                                        decoding=async loading=lazy
-                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-84x47.png 84w"
-                                                        sizes="(max-width: 180px) 100vw, 180px">Chanel</a> <span
-                                                    class=count>(34)</span></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="cat-item cat-item-361 cat-parent"><a
-                                    href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/?demo=21">Fashion
-                                    Bg</a> <span class=count>(6)</span>
-                                <ul class=children>
-                                    <li class="cat-item cat-item-306"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-3/?demo=21"><img
-                                                width=139 height=95
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-84x57.png 84w"
-                                                sizes="(max-width: 139px) 100vw, 139px">Bike Club</a> <span
-                                            class=count>(0)</span></li>
-                                    <li class="cat-item cat-item-304"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-1/?demo=21"><img
-                                                width=139 height=95
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-84x57.png 84w"
-                                                sizes="(max-width: 139px) 100vw, 139px">Lumber Jack</a> <span
-                                            class=count>(4)</span></li>
-                                    <li class="cat-item cat-item-305"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-2/?demo=21"><img
-                                                width=139 height=95
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-84x57.png 84w"
-                                                sizes="(max-width: 139px) 100vw, 139px">Retro Races</a> <span
-                                            class=count>(2)</span></li>
-                                    <li class="cat-item cat-item-307"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-4/?demo=21"><img
-                                                width=139 height=95
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-84x57.png 84w"
-                                                sizes="(max-width: 139px) 100vw, 139px">Woody Nature</a> <span
-                                            class=count>(0)</span></li>
-                                </ul>
-                            </li>
-                            <li class="cat-item cat-item-135 cat-parent"><a
-                                    href="https://kuteshop.kutethemes.net/product-brand/appliances-2/?demo=21">Appliances</a>
-                                <span class=count>(49)</span>
-                                <ul class=children>
-                                    <li class="cat-item cat-item-136"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/cross/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Cross</a> <span
-                                            class=count>(5)</span></li>
-                                    <li class="cat-item cat-item-137"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/acqua-di-parma/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Acqua Di Parma</a> <span
-                                            class=count>(1)</span></li>
-                                    <li class="cat-item cat-item-138"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/febreze/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Febreze</a> <span
-                                            class=count>(1)</span></li>
-                                    <li class="cat-item cat-item-139"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/woll/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">WOLL</a> <span
-                                            class=count>(6)</span></li>
-                                    <li class="cat-item cat-item-140"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/the-north-face/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">The North Face</a> <span
-                                            class=count>(1)</span></li>
-                                    <li class="cat-item cat-item-141"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/gateman/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6.jpg
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-84x43.jpg 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Gateman</a> <span
-                                            class=count>(21)</span></li>
-                                    <li class="cat-item cat-item-142"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/furniture-m/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Furniture</a> <span
-                                            class=count>(14)</span></li>
-                                    <li class="cat-item cat-item-143"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/microwave/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Microwave</a> <span
-                                            class=count>(2)</span></li>
-                                    <li class="cat-item cat-item-144"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/kettlet/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Kettlet</a> <span
-                                            class=count>(1)</span></li>
-                                    <li class="cat-item cat-item-145"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/appliances/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Appliances</a> <span
-                                            class=count>(5)</span></li>
-                                    <li class="cat-item cat-item-146"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/lighting/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Lighting</a> <span
-                                            class=count>(3)</span></li>
-                                    <li class="cat-item cat-item-147"><a
-                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/ipad-m/?demo=21"><img
-                                                width=124 height=63
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12.png
-                                                class="attachment-full size-full wp-post-image" alt decoding=async
-                                                loading=lazy
-                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-84x43.png 84w"
-                                                sizes="(max-width: 124px) 100vw, 124px">Ipad</a> <span
-                                            class=count>(2)</span></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id=media_image-2 class="widget widget_media_image"><a
-                            href=https://kuteshop.kutethemes.net/><img width=330 height=190
-                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1.jpg
-                                class="image wp-image-60  attachment-full size-full wp-post-image" alt
-                                style="max-width: 100%; height: auto;" decoding=async loading=lazy
-                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1.jpg 330w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-300x173.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-220x127.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-86x50.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-64x37.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-88x51.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-84x48.jpg 84w"
-                                sizes="(max-width: 330px) 100vw, 330px"></a></div>
-                    <div id=woocommerce_products-2 class="widget woocommerce widget_products">
-                        <h2 class="widget-title"><span class=text>Special Offers!</span><span class=arrow></span></h2>
-                        <ul class=product_list_widget>
-                            <li>
-                                <a href=https://kuteshop.kutethemes.net/product/womens-cocktail-dress/>
-                                    <img width=850 height=1021
-                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-04.jpg
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt decoding=async loading=lazy> <span class=product-title>Women’s Cocktail
-                                        Dress</span>
-                                </a>
-                                <div class=star-rating-wrap>
-                                    <div class=star-rating role=img aria-label="Rated 4.00 out of 5"><span
-                                            style=width:80%>Rated <strong class=rating>4.00</strong> out of 5</span>
-                                    </div><strong class=rating-count>01</strong>
-                                </div>
-                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                            class=woocommerce-Price-currencySymbol>&#36;</span>189.00</bdi></span>
-                                &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                            class=woocommerce-Price-currencySymbol>&#36;</span>219.00</bdi></span>
-                            </li>
-                            <li>
-                                <a href=https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/>
-                                    <img width=850 height=1021
-                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-05.jpg
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt decoding=async loading=lazy> <span class=product-title>Dresses flowers
-                                        Pattern</span>
-                                </a>
-                                <div class=star-rating-wrap>
-                                    <div class=star-rating role=img aria-label="Rated 5.00 out of 5"><span
-                                            style=width:100%>Rated <strong class=rating>5.00</strong> out of 5</span>
-                                    </div><strong class=rating-count>01</strong>
-                                </div>
-                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                            class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span>
-                                &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                            class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span>
-                            </li>
-                            <li>
-                                <a href=https://kuteshop.kutethemes.net/product/sleeveless-dress/>
-                                    <img width=850 height=1021
-                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02.jpg
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt decoding=async loading=lazy
-                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02.jpg 850w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02-199x239.jpg 199w"
-                                        sizes="(max-width: 850px) 100vw, 850px"> <span class=product-title>Sleeveless
-                                        Dress</span>
-                                </a>
-                                <div class=star-rating-wrap>
-                                    <div class=star-rating role=img aria-label="Rated 5.00 out of 5"><span
-                                            style=width:100%>Rated <strong class=rating>5.00</strong> out of 5</span>
-                                    </div><strong class=rating-count>01</strong>
-                                </div>
-                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                            class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span>
-                            </li>
-                            <li>
-                                <a href=https://kuteshop.kutethemes.net/product/short-sleeve-dress/>
-                                    <img width=850 height=1021
-                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-03.jpg
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt decoding=async loading=lazy> <span class=product-title>Short-Sleeve
-                                        Dress</span>
-                                </a>
-                                <div class=star-rating-wrap>
-                                    <div class=star-rating role=img aria-label="Rated 3.00 out of 5"><span
-                                            style=width:60%>Rated <strong class=rating>3.00</strong> out of 5</span>
-                                    </div><strong class=rating-count>01</strong>
-                                </div>
-                                <del aria-hidden=true><span class="woocommerce-Price-amount amount"><bdi><span
-                                                class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span></del>
-                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span></ins>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
         </div>
-        <div class=container></div>
         <footer class="footer footer-01">
             <div class=container>
                 <div data-elementor-type=wp-post data-elementor-id=332 class="elementor elementor-332">
@@ -1941,7 +1362,8 @@
                                                                                         class="elementor-heading-title elementor-size-default">
                                                                                         <a
                                                                                             href=tel:+00%20123%20456%20789>+00
-                                                                                            123 456 789</a></p>
+                                                                                            123 456 789</a>
+                                                                                    </p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2016,7 +1438,8 @@
                                                                             <li id=menu-item-358
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358">
                                                                                 <a href="https://kuteshop.kutethemes.net/about-us/?demo=21"
-                                                                                    data-megamenu=0>About Us</a></li>
+                                                                                    data-megamenu=0>About Us</a>
+                                                                            </li>
                                                                             <li id=menu-item-361
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-361">
                                                                                 <a href=# class=disable-link
@@ -2026,16 +1449,19 @@
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-362">
                                                                                 <a href=# class=disable-link
                                                                                     data-megamenu=0>Affiliate
-                                                                                    Program</a></li>
+                                                                                    Program</a>
+                                                                            </li>
                                                                             <li id=menu-item-360
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360">
                                                                                 <a href="https://kuteshop.kutethemes.net/terms-conditions/?demo=21"
                                                                                     data-megamenu=0>Terms &#038;
-                                                                                    Conditions</a></li>
+                                                                                    Conditions</a>
+                                                                            </li>
                                                                             <li id=menu-item-359
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359">
                                                                                 <a href="https://kuteshop.kutethemes.net/contact-us/?demo=21"
-                                                                                    data-megamenu=0>Contact Us</a></li>
+                                                                                    data-megamenu=0>Contact Us</a>
+                                                                            </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -2064,11 +1490,13 @@
                                                                             <li id=menu-item-1130
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1130">
                                                                                 <a href="https://kuteshop.kutethemes.net/my-account/orders/?demo=21"
-                                                                                    data-megamenu=0>My Order</a></li>
+                                                                                    data-megamenu=0>My Order</a>
+                                                                            </li>
                                                                             <li id=menu-item-1126
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1126">
                                                                                 <a href="https://kuteshop.kutethemes.net/wishlist/?demo=21"
-                                                                                    data-megamenu=0>My Wishlist</a></li>
+                                                                                    data-megamenu=0>My Wishlist</a>
+                                                                            </li>
                                                                             <li id=menu-item-1127
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1127">
                                                                                 <a href=# class=disable-link
@@ -2117,7 +1545,8 @@
                                                                             <li id=menu-item-370
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-370">
                                                                                 <a href=# class=disable-link
-                                                                                    data-megamenu=0>Help Center</a></li>
+                                                                                    data-megamenu=0>Help Center</a>
+                                                                            </li>
                                                                             <li id=menu-item-369
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-369">
                                                                                 <a href="https://kuteshop.kutethemes.net/privacy-policy/?demo=21"
@@ -2126,11 +1555,13 @@
                                                                             <li id=menu-item-371
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-371">
                                                                                 <a href=# class=disable-link
-                                                                                    data-megamenu=0>Report Spam</a></li>
+                                                                                    data-megamenu=0>Report Spam</a>
+                                                                            </li>
                                                                             <li id=menu-item-372
                                                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-372">
                                                                                 <a href=# class=disable-link
-                                                                                    data-megamenu=0>FAQs</a></li>
+                                                                                    data-megamenu=0>FAQs</a>
+                                                                            </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -2190,7 +1621,7 @@
                                                                                     tabindex=-1
                                                                                     autocomplete=off></label><input
                                                                                 type=hidden name=_mc4wp_timestamp
-                                                                                value=1702967005><input type=hidden
+                                                                                value=1702979486><input type=hidden
                                                                                 name=_mc4wp_form_id value=93><input
                                                                                 type=hidden name=_mc4wp_form_element_id
                                                                                 value=mc4wp-form-1>
@@ -2205,8 +1636,7 @@
                                                         data-id=371e90e data-element_type=widget
                                                         data-widget_type=heading.default>
                                                         <div class=elementor-widget-container>
-                                                            <h3
-                                                                class="elementor-heading-title elementor-size-default">
+                                                            <h3 class="elementor-heading-title elementor-size-default">
                                                                 LET’S SOCIALIZE</h3>
                                                         </div>
                                                     </div>
@@ -2214,8 +1644,7 @@
                                                         data-id=b6c8dfd data-element_type=widget
                                                         data-widget_type=social-icons.default>
                                                         <div class=elementor-widget-container>
-                                                            <div
-                                                                class="elementor-social-icons-wrapper elementor-grid">
+                                                            <div class="elementor-social-icons-wrapper elementor-grid">
                                                                 <span class=elementor-grid-item>
                                                                     <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-14a8d20"
                                                                         target=_blank>
@@ -2420,13 +1849,15 @@
                                                             </div>
                                                         </div>
                                                     </section>
-                                                    
+
                                                     <div class="elementor-element elementor-element-602df33 default-color none elementor-widget elementor-widget-text-editor"
                                                         data-id=602df33 data-element_type=widget
                                                         data-widget_type=text-editor.default>
-                                                        <div class=elementor-widget-container>
+                                                        <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>Copyrights © Fermoso. All Rights Reserved. Designed by <a href="<?= url('/') ?>" target="_blank" rel="noopener">Fermoso.com</a></p>
+                                                                <p>Copyrights © Fermoso. All Rights Reserved. Designed
+                                                                    by <a href="https://fermoso.com/" target="_blank"
+                                                                        rel="noopener">Fermoso.com</a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2441,13 +1872,13 @@
                 </div>
             </div>
         </footer>
-        <a href=# class="backtotop action-to-top"></a> <a class=ovic-purchase-button
-            href=https://1.envato.market/WEdOn target=_blank>
+        <a href=# class="backtotop action-to-top"></a> <a class=ovic-purchase-button href=https://1.envato.market/WEdOn
+            target=_blank>
             <small class=symbol>$</small>
             69 </a>
         <div class=ovic-sales-popup></div>
     </div>
-    <a href="/product-category/market/?shop_page_layout=grid&demo=21&d=rtl" class="ovic-rtl-button" style="display: none">Change to <span>RTL</span></a>
+    <a href="/my-account/?demo=21&d=rtl" class="ovic-rtl-button" style="display: none">Change to <span>RTL</span></a>
     <div id=ovic-menu-mobile-1 class="ovic-menu-clone-wrap mobile-main-menu loaded"
         data-locations=[&quot;primary-menu&quot;,&quot;01-vertical-menu&quot;] data-default=primary>
         <div class=head-menu-mobile>
@@ -2465,31 +1896,34 @@
                 </a>
             </div>
         </div>
-        <div class=ovic-menu-panels-actions-wrap><span class=ovic-menu-current-panel-title
-                data-main-title="Main Menu">
+        <div class=ovic-menu-panels-actions-wrap><span class=ovic-menu-current-panel-title data-main-title="Main Menu">
                 Main Menu </span><a href=# class="ovic-menu-close-btn ovic-menu-close-panels">x</a></div>
         <div class=ovic-menu-panels>
-            <div id=ovic-menu-panel-main-658136dd95628 class='ovic-menu-panel ovic-menu-panel-main'>
+            <div id=ovic-menu-panel-main-6581679e5a08a class='ovic-menu-panel ovic-menu-panel-main'>
                 <ul class=depth-0>
                     <li
                         class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-121></a><a class=menu-link
-                            href=https://kuteshop.kutethemes.net/>Home</a></li>
+                            href=https://kuteshop.kutethemes.net />Home</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-191></a><a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/?demo=21'>Shop</a></li>
+                            href='https://kuteshop.kutethemes.net/product-category/market/?demo=21'>Shop</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-192></a><a class=menu-link
-                            href='https://kuteshop.kutethemes.net/blog/?demo=21'>Blog</a></li>
+                            href='https://kuteshop.kutethemes.net/blog/?demo=21'>Blog</a>
+                    </li>
                     <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-193 disable-link'>
+                        class='menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item menu-item-193 disable-link'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-193></a><a class=menu-link href>Pages</a>
                     </li>
                     <li
                         class='item-end menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-194'>
-                        <a class=menu-link href='https://1.envato.market/WEdOn?demo=21'>Buy KuteShop !</a></li>
+                        <a class=menu-link href='https://1.envato.market/WEdOn?demo=21'>Buy KuteShop !</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-448 menu-item-icon-image'>
                         <a class=menu-link
@@ -2497,7 +1931,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
                                     class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Electronics</a></li>
+                                    loading=lazy></span>Electronics</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-447 menu-item-icon-image'>
                         <a class=menu-link
@@ -2505,7 +1940,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-2.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Sports &
-                            Outdoors</a></li>
+                            Outdoors</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-439 menu-item-icon-image'>
                         <a class=menu-link
@@ -2513,7 +1949,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-3.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Smartphone
-                            &amp; Tablets</a></li>
+                            &amp; Tablets</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-445 menu-item-icon-image'>
                         <a class=menu-link
@@ -2521,7 +1958,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-4.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Health
-                            &amp; Beauty</a></li>
+                            &amp; Beauty</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-441 menu-item-icon-image'>
                         <a class=menu-link
@@ -2529,7 +1967,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-5.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Bags &amp;
-                            Shoes</a></li>
+                            Shoes</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-443 menu-item-icon-image'>
                         <a class=menu-link
@@ -2537,7 +1976,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-6.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Toys &amp;
-                            Hobbies</a></li>
+                            Hobbies</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-438 menu-item-icon-image'>
                         <a class=menu-link
@@ -2545,7 +1985,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-7.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Networking
-                            Plus</a></li>
+                            Plus</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-437 menu-item-icon-image'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-437></a><a class=menu-link
@@ -2553,7 +1994,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-8.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Laptops
-                            Plus</a></li>
+                            Plus</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-444 menu-item-icon-image'>
                         <a class=menu-link
@@ -2561,7 +2003,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-9.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Jewelry &
-                            Watches</a></li>
+                            Watches</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-440 menu-item-icon-image'>
                         <a class=menu-link
@@ -2569,7 +2012,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-10.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Lights
-                            &amp; Lamps</a></li>
+                            &amp; Lamps</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-436 menu-item-icon-image'>
                         <a class=menu-link
@@ -2577,15 +2021,16 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-11.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Cameras
-                            &amp; Photo</a></li>
+                            &amp; Photo</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-451 menu-item-icon-image'>
                         <a class=menu-link
                             href='https://kuteshop.kutethemes.net/product-category/market/digital/?demo=21'><span
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
-                                    class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Digital</a></li>
+                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Digital</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-449 menu-item-icon-image'>
                         <a class=menu-link
@@ -2593,7 +2038,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-10.png
                                     class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Furniture</a></li>
+                                    loading=lazy></span>Furniture</a>
+                    </li>
                     <li
                         class='hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-450 menu-item-icon-image'>
                         <a class=menu-link
@@ -2601,7 +2047,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Fashion &
-                            Clothing</a></li>
+                            Clothing</a>
+                    </li>
                     <li
                         class='hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-442 menu-item-icon-image'>
                         <a class=menu-link
@@ -2609,7 +2056,8 @@
                                 class="icon icon-img"><img width=16 height=16
                                     src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-2.png
                                     class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Food &amp;
-                            Drink</a></li>
+                            Drink</a>
+                    </li>
                 </ul>
             </div>
             <div id=ovic-menu-panel-121 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
@@ -2627,8 +2075,7 @@
                                                 <div class=elementor-row>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1973c27 none"
                                                         data-id=1973c27 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-b25c9fc none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=b25c9fc data-element_type=widget
@@ -2647,32 +2094,38 @@
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-470">
                                                                                             <a href=https://kuteshop.kutethemes.net/
                                                                                                 data-megamenu=0>Market
-                                                                                                01</a></li>
+                                                                                                01</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-965">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-02/
                                                                                                 data-megamenu=0>Market
-                                                                                                02</a></li>
+                                                                                                02</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-03/
                                                                                                 data-megamenu=0>Market
-                                                                                                03</a></li>
+                                                                                                03</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-963">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-04/
                                                                                                 data-megamenu=0>Market
-                                                                                                04</a></li>
+                                                                                                04</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-962">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-05/
                                                                                                 data-megamenu=0>Market
-                                                                                                05</a></li>
+                                                                                                05</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3415">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-06/
                                                                                                 data-megamenu=0>Market
-                                                                                                06</a></li>
+                                                                                                06</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -2684,8 +2137,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3e5f51f4 none"
                                                         data-id=3e5f51f4 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-722b416c none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=722b416c data-element_type=widget
@@ -2704,12 +2156,14 @@
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4970">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-market-square/
                                                                                                 data-megamenu=0>Market
-                                                                                                07</a></li>
+                                                                                                07</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-fashion-bg/
                                                                                                 data-megamenu=0>Fashion
-                                                                                                Bg</a></li>
+                                                                                                Bg</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
                                                                                             <a href=https://kuteshop.kutethemes.net/home-furniture/
@@ -2771,8 +2225,7 @@
                                                 <div class=elementor-row>
                                                     <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-75a0bcf none"
                                                         data-id=75a0bcf data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-29524e7b none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=29524e7b data-element_type=widget
@@ -2788,9 +2241,8 @@
                                                                                     <ul id=menu-shop-layout-1
                                                                                         class="menu ovic-menu">
                                                                                         <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-277">
+                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?shop_page_layout=grid&#038;demo=21"
-                                                                                                aria-current=page
                                                                                                 data-megamenu=0>Grid</a>
                                                                                         </li>
                                                                                         <li
@@ -2822,22 +2274,26 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-282">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=change&#038;demo=21"
                                                                                                 data-megamenu=0>Change
-                                                                                                Image</a></li>
+                                                                                                Image</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=zoom&#038;demo=21"
                                                                                                 data-megamenu=0>Zoom
-                                                                                                Image</a></li>
+                                                                                                Image</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=slide&#038;demo=21"
                                                                                                 data-megamenu=0>Slide
-                                                                                                Image</a></li>
+                                                                                                Image</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover&#038;demo=21"
                                                                                                 data-megamenu=0>No
-                                                                                                Hover</a></li>
+                                                                                                Hover</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -2849,8 +2305,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-5a198f1b none"
                                                         data-id=5a198f1b data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-5b6560ed none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=5b6560ed data-element_type=widget
@@ -2869,22 +2324,26 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=left&#038;demo=21"
                                                                                                 data-megamenu=0>Left
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=right&#038;demo=21"
                                                                                                 data-megamenu=0>Right
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-288">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=full&#038;product_loop_columns=4&#038;product_per_page=24&#038;demo=21"
                                                                                                 data-megamenu=0>No
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?sticky_sidebar=1&#038;product_per_page=40&#038;demo=21"
                                                                                                 data-megamenu=0>Sticky
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -2909,17 +2368,20 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=load_more&#038;demo=21"
                                                                                                 data-megamenu=0>Load
-                                                                                                More</a></li>
+                                                                                                More</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=pagination&#038;demo=21"
                                                                                                 data-megamenu=0>Default
-                                                                                                Pagination</a></li>
+                                                                                                Pagination</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=infinite&#038;demo=21"
                                                                                                 data-megamenu=0>Infinite
-                                                                                                Scroll</a></li>
+                                                                                                Scroll</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -2931,8 +2393,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-7a6412c9 none"
                                                         data-id=7a6412c9 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-1a962a97 none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=1a962a97 data-element_type=widget
@@ -2967,7 +2428,8 @@
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
                                                                                             <a href="https://kuteshop.kutethemes.net/order-tracking/?demo=21"
                                                                                                 data-megamenu=0>Order
-                                                                                                Tracking</a></li>
+                                                                                                Tracking</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -2979,8 +2441,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-14be8bbd none"
                                                         data-id=14be8bbd data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-581b450a none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=581b450a data-element_type=widget
@@ -3005,27 +2466,32 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=grid&#038;demo=21"
                                                                                                 data-megamenu=0>Grid
-                                                                                                Gallery</a></li>
+                                                                                                Gallery</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=slide&#038;demo=21"
                                                                                                 data-megamenu=0>Slide
-                                                                                                Gallery</a></li>
+                                                                                                Gallery</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-301">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=sticky&#038;demo=21"
                                                                                                 data-megamenu=0>Sticky
-                                                                                                Summary</a></li>
+                                                                                                Summary</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-302">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_tabs=show-all&#038;demo=21"
                                                                                                 data-megamenu=0>Tabs
-                                                                                                Show All</a></li>
+                                                                                                Show All</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?sidebar_product_layout=left&#038;woo_related_desktop=4&#038;woo_related_laptop=3&#038;woo_related_ipad=3&#038;demo=21"
                                                                                                 data-megamenu=0>Has
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -3037,8 +2503,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-a728f58 none"
                                                         data-id=a728f58 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-a061651 none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=a061651 data-element_type=widget
@@ -3078,12 +2543,14 @@
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3987">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/short-sleeve-dress/?demo=21"
                                                                                                 data-megamenu=0>On
-                                                                                                Sale</a></li>
+                                                                                                Sale</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-product menu-item-4432">
                                                                                             <a href="https://kuteshop.kutethemes.net/product/dresses-summer-floral/?demo=21"
                                                                                                 data-megamenu=0>Has
-                                                                                                Bundle</a></li>
+                                                                                                Bundle</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -3118,8 +2585,7 @@
                                                 <div class=elementor-row>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-23d56f2 none"
                                                         data-id=23d56f2 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-4e27c8f none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=4e27c8f data-element_type=widget
@@ -3160,8 +2626,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f16ec95 none"
                                                         data-id=f16ec95 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-0ab352e none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=0ab352e data-element_type=widget
@@ -3180,22 +2645,26 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=left&#038;demo=21"
                                                                                                 data-megamenu=0>Left
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=right&#038;demo=21"
                                                                                                 data-megamenu=0>Right
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=full&#038;blog_list_column=3&#038;demo=21"
                                                                                                 data-megamenu=0>No
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-237">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?sticky_sidebar=1&#038;blog_list_style=standard&#038;demo=21"
                                                                                                 data-megamenu=0>Sticky
-                                                                                                Sidebar</a></li>
+                                                                                                Sidebar</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -3207,8 +2676,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f97e2bf none"
                                                         data-id=f97e2bf data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-d76780f none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=d76780f data-element_type=widget
@@ -3228,17 +2696,20 @@
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-248">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=pagination&#038;demo=21"
                                                                                                 data-megamenu=0>Default
-                                                                                                Pagination</a></li>
+                                                                                                Pagination</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=load_more&#038;demo=21"
                                                                                                 data-megamenu=0>Load
-                                                                                                More</a></li>
+                                                                                                More</a>
+                                                                                        </li>
                                                                                         <li
                                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-247">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=infinite&#038;demo=21"
                                                                                                 data-megamenu=0>Infinite
-                                                                                                Scroll</a></li>
+                                                                                                Scroll</a>
+                                                                                        </li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -3250,8 +2721,7 @@
                                                     </div>
                                                     <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-536f3fd none"
                                                         data-id=536f3fd data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class=elementor-widget-wrap>
                                                                 <div class="elementor-element elementor-element-7da0552 none elementor-widget elementor-widget-ovic_menu"
                                                                     data-id=7da0552 data-element_type=widget
@@ -3293,8 +2763,9 @@
             </div>
             <div id=ovic-menu-panel-193 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
                 <ul class=depth-4>
-                    <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item menu-item-324'><a
-                            class=menu-link href='https://kuteshop.kutethemes.net/my-account/?demo=21'>My account</a>
+                    <li
+                        class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item menu-item-324'>
+                        <a class=menu-link href='https://kuteshop.kutethemes.net/my-account/?demo=21'>My account</a>
                     </li>
                     <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-325'><a
                             class=menu-link href='/404-error?demo=21'>404 Error</a></li>
@@ -3305,43 +2776,53 @@
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-452 disable-link'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-452></a><a class=menu-link href=#>Laptop
-                            Window</a></li>
+                            Window</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-453 disable-link'>
                         <a class=ovic-menu-next-panel href=#ovic-menu-panel-453></a><a class=menu-link
-                            href=#>Macbook</a></li>
+                            href=#>Macbook</a>
+                    </li>
                 </ul>
             </div>
             <div id=ovic-menu-panel-452 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
                 <ul class=depth-6>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-457 disable-link'>
-                        <a class=menu-link href=#>Laptop HP</a></li>
+                        <a class=menu-link href=#>Laptop HP</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-458 disable-link'>
-                        <a class=menu-link href=#>Laptop Lenovo</a></li>
+                        <a class=menu-link href=#>Laptop Lenovo</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-454 disable-link'>
-                        <a class=menu-link href=#>Laptop Dell</a></li>
+                        <a class=menu-link href=#>Laptop Dell</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-455 disable-link'>
-                        <a class=menu-link href=#>Laptop Acer</a></li>
+                        <a class=menu-link href=#>Laptop Acer</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-456 disable-link'>
-                        <a class=menu-link href=#>Laptop Asus</a></li>
+                        <a class=menu-link href=#>Laptop Asus</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-459 disable-link'>
-                        <a class=menu-link href=#>Laptop MSI</a></li>
+                        <a class=menu-link href=#>Laptop MSI</a>
+                    </li>
                 </ul>
             </div>
             <div id=ovic-menu-panel-453 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
                 <ul class=depth-7>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-460 disable-link'>
-                        <a class=menu-link href=#>Macbook Air</a></li>
+                        <a class=menu-link href=#>Macbook Air</a>
+                    </li>
                     <li
                         class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-461 disable-link'>
-                        <a class=menu-link href=#>Macbook Pro</a></li>
+                        <a class=menu-link href=#>Macbook Pro</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -3389,8 +2870,8 @@
                 "@type": "ListItem",
                 "position": 2,
                 "item": {
-                    "name": "Market",
-                    "@id": "https:\/\/kuteshop.kutethemes.net\/product-category\/market\/?demo=21"
+                    "name": "My account",
+                    "@id": "https:\/\/kuteshop.kutethemes.net\/my-account\/"
                 }
             }]
         }
@@ -3497,7 +2978,7 @@
             "ajax_url": "\/wp-admin\/admin-ajax.php",
             "security": "b971ac6478",
             "ovic_ajax_url": "\/?ovic-ajax=%%endpoint%%",
-            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
+            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
             "cart_redirect_after_add": "no",
             "ajax_single_add_to_cart": "1",
             "is_preview": "",
@@ -3506,7 +2987,7 @@
                 "added_to_cart_text": "Product has been added to cart!",
                 "added_to_wishlist_text": "Product added!",
                 "removed_from_wishlist_text": "Product has been removed from wishlist!",
-                "wishlist_url": "http:\/\/127.0.0.1:8000\/wishlist\/",
+                "wishlist_url": "https:\/\/kuteshop.kutethemes.net\/wishlist\/",
                 "browse_wishlist_text": "Browse",
                 "growl_notice_text": "Notice!",
                 "removed_cart_text": "Product Removed",
@@ -3985,7 +3466,7 @@
             "flexslider_enabled": "1"
         };
     </script>
-    <script defer src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/858ab.js></script>
+    <script defer src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/25e65.js></script>
     <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/0e7af.js></script>
     <script id=elementor-frontend-js-before>
         var elementorFrontendConfig = {
@@ -4079,6 +3560,7 @@
             },
             "swiperClass": "swiper-container",
             "settings": {
+                "page": [],
                 "editorPreferences": []
             },
             "kit": {
@@ -4094,9 +3576,10 @@
                 "lightbox_description_src": "description"
             },
             "post": {
-                "id": 0,
-                "title": "Market &#8211; KuteShop",
-                "excerpt": ""
+                "id": 9,
+                "title": "My%20account%20%E2%80%93%20KuteShop",
+                "excerpt": "",
+                "featuredImage": false
             }
         };
     </script>

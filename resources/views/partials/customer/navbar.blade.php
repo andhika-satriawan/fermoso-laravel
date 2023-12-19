@@ -113,54 +113,6 @@
                                         today!</span>
                                 </a>
                             </li>
-                            <li id="menu-item-343"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-343">
-                                <a class="disable-link" data-megamenu="0"><span class="text">USD</span></a>
-                                <ul class="sub-menu">
-                                    <li id="menu-item-344"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344">
-                                        <a class="disable-link" data-megamenu="0"><span class="text">EUR</span></a>
-                                    </li>
-                                    <li id="menu-item-345"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345">
-                                        <a class="disable-link" data-megamenu="0"><span class="text">GBP</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-339"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-339 menu-item-icon-image">
-                                <a class="disable-link" data-megamenu="240">
-                                    <span class="text">
-                                        <span class="icon icon-img">
-                                            <img width="18" height="12" src="icons/18_en.png"
-                                                class="icon-image wp-post-image" alt="" decoding="async">
-                                        </span>English
-                                    </span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li id="menu-item-340"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340 menu-item-icon-image">
-                                        <a class="disable-link" data-megamenu="0"><span class="text"><span
-                                                    class="icon icon-img"><img width="16" height="11"
-                                                        src="icons/16_de.png" class="icon-image wp-post-image" alt
-                                                        decoding="async"></span>Deutsch</span></a>
-                                    </li>
-                                    <li id="menu-item-341"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341 menu-item-icon-image">
-                                        <a class="disable-link" data-megamenu="0"><span class="text"><span
-                                                    class="icon icon-img"><img width="16" height="11"
-                                                        src="icons/16_fr.png" class="icon-image wp-post-image" alt
-                                                        decoding="async"></span>Français</span></a>
-                                    </li>
-                                    <li id="menu-item-342"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342 menu-item-icon-image">
-                                        <a class="disable-link" data-megamenu="0"><span class="text"><span
-                                                    class="icon icon-img"><img width="16" height="11"
-                                                        src="icons/16_es.png" class="icon-image wp-post-image" alt
-                                                        decoding="async"></span>Espanol</span></a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -202,7 +154,7 @@
                     <div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
                         <form class="search-form dgwt-wcas-search-form" role="search" method="get"
                             action="#">
-                            <div class=category>
+                            <div class="category">
                                 <select name="product_cat" id="163109786" class="category-search-option"
                                     tabindex="1">
                                     <option value="0">All Categories</option>
@@ -232,17 +184,17 @@
                 <div class="header-control">
                     <div class="inner-control">
                         <div class="block-minicart kuteshop-dropdown main-bora-2">
-                            <a class="woo-cart-link icon-link" href="#" data-kuteshop="kuteshop-dropdown">
+                            <a class="woo-cart-link icon-link" href="<?= url('/') ?>/cart"
+                                data-kuteshop="kuteshop-dropdown">
                                 <span class="icon main-icon-cart1">
                                     <span class="count">1</span>
                                 </span>
                                 <span class="content">
-                                    <span class="text">
-                                        Shopping Cart </span>
+                                    <span class="text">Shopping Cart </span>
                                     <span class="item">
-                                        <span class="count">1</span>
-                                        items - </span>
-                                    <span class="total"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        <span class="count">1</span> items - </span>
+                                    <span class="total">
+                                        <span class="woocommerce-Price-amount amount"><bdi><span
                                                     class="woocommerce-Price-currencySymbol">&#36;</span>230.00</bdi></span></span>
                                 </span>
                             </a>
@@ -276,7 +228,8 @@
                                             <a href="{{ url('product/category/' . $product_subcategory->slug) }}"
                                                 data-megamenu="{{ $product_subcategory->id }}">
                                                 <span class="icon icon-img">
-                                                    <img width="16" height="16" src="icons/01-menu-1.png"
+                                                    <img width="16" height="16"
+                                                        src="{{ asset('icons/01-menu-1.png') }}"
                                                         class="icon-image wp-post-image" alt decoding="async">
                                                 </span>
                                                 {{ $product_subcategory->name }}
@@ -290,7 +243,7 @@
                 </div>
                 <div class="box-header-nav megamenu-wrap">
                     <div class="ovic-menu-wapper horizontal">
-                        <ul id=menu-primary-menu class="kuteshop-nav main-menu horizontal-menu ovic-menu">
+                        <ul id="menu-primary-menu" class="kuteshop-nav main-menu horizontal-menu ovic-menu">
                             <li id="menu-item-121"
                                 class="menu-item {{ $page === 'home' ? 'current_page_item' : '' }} menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-21 menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu">
                                 <a href="<?= url('/') ?>" aria-current="page" data-megamenu="464">Home</a>

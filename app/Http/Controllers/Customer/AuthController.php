@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 
+use App\Models\ProductSubcategory;
+
 class AuthController extends Controller
 {
     /**
@@ -15,9 +17,12 @@ class AuthController extends Controller
      */
     public function login()
     {
-       return view('pages.customer.login', [
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        return view('pages.customer.my-account.login', [
             "title" => "Login",
-            "page"  => "login"
+            "page"  => "login",
+            "product_subcategories" => $product_subcategories,
         ]);
     }
 
@@ -37,7 +42,7 @@ class AuthController extends Controller
                 ->with('success', 'Login success!');
             // return redirect()->intended(RouteServiceProvider::HOME);
         }
- 
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -50,9 +55,12 @@ class AuthController extends Controller
      */
     public function register()
     {
-        return view('pages.customer.register', [
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        return view('pages.customer.my-account.register', [
             "title" => "Register",
-            "page"  => "register"
+            "page"  => "register",
+            "product_subcategories" => $product_subcategories,
         ]);
     }
 
@@ -63,5 +71,4 @@ class AuthController extends Controller
     {
         //
     }
-
 }

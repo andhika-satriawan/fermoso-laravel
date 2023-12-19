@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ProductSubcategory;
 
 class CartController extends Controller
 {
@@ -12,9 +13,12 @@ class CartController extends Controller
      */
     public function index()
     {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
         return view('pages.customer.cart', [
             "title" => "Cart",
-            "page"  => "cart"
+            "page"  => "cart",
+            "product_subcategories" => $product_subcategories,
         ]);
     }
 
