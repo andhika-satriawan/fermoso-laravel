@@ -1,15 +1,18 @@
 <?php
-namespace App\Http\Controllers;
+
+namespace App\Http\Controllers\Customer;
+
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+class AjaxController extends Controller
+{
+    public function ajaxMethod(Request $request)
+    {
+        // Lakukan sesuatu dengan data yang diterima dari permintaan AJAX
+        // ...
 
-class AjaxController extends Controller {
-
-   public function post(Request $request){
-      $response = array(
-          'status' => 'success',
-          'msg' => $request->message,
-      );
-      return response()->json($response); 
-   }
+        // Kembalikan respons jika diperlukan
+        return response()->json(['status' => 'success']);
+    }
 }

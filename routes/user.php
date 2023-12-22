@@ -32,36 +32,11 @@ Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])-
 Route::get('products', [App\Http\Controllers\Customer\ProductController::class, 'index'])->name('product');
 Route::get('detail-product', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('product.detail');
 Route::get('/product/{slug}', [App\Http\Controllers\Customer\DetailProductController::class, 'index'])->name('detail.index');
+Route::get('cara-belanja', [App\Http\Controllers\Customer\CaraBelanjaController::class, 'index'])->name('cara-belanja');
+Route::get('blog', [App\Http\Controllers\Customer\BlogController::class, 'index'])->name('blog');
+Route::get('detail-blog', [App\Http\Controllers\Customer\DetailBlogController::class, 'index'])->name('detail-blog');
+Route::get('faq-product', [App\Http\Controllers\Customer\FAQProductController::class, 'index'])->name('faq-product');
+Route::get('faq-toko-kami', [App\Http\Controllers\Customer\FAQTokoKamiController::class, 'index'])->name('faq-toko-kami');
+Route::get('/product/category/{slug}', [App\Http\Controllers\Customer\CategoryProductController::class, 'index'])->name('category-product');
 
-Route::get('ajax', function () {
-    return view('ajax');
-});
-Route::post('/postajax', 'AjaxController@post');
-
-Route::get('/cara-belanja', function () {
-    return view('pages.customer.cara-belanja', [
-        "title" => "Cara Belanja",
-        "page" => "cara-belanja"
-    ]);
-});
-
-Route::get('/faq-product', function () {
-    return view('pages.customer.faq-product', [
-        "title" => "FAQ Product",
-        "page"  => "faq-product"
-    ]);
-});
-
-Route::get('/faq-toko-kami', function () {
-    return view('pages.customer.faq-toko-kami', [
-        "title" => "FAQ Toko Kami",
-        "page"  => "faq-toko-kami"
-    ]);
-});
-
-Route::get('/blog', function () {
-    return view('pages.customer.blog', [
-        "title" => "Blog",
-        "page"  => "blog"
-    ]);
-});
+Route::post('/ajax-endpoint', [App\Http\Controllers\Customer\AjaxController::class, 'ajaxMethod'])->name('ajax.endpoint');

@@ -25,6 +25,7 @@ class ProductController extends Controller
             "title" => "Product",
             "page" => "products",
             "product_subcategories" => $product_subcategories,
+            "body_class" => "archive tax-product_cat term-market term-316 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12"
         ]);
     }
 

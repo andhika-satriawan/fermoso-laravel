@@ -1022,21 +1022,18 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class=header-end>
+                        <div class="header-end">
                             <div class="ovic-menu-wapper horizontal">
-                                <ul id=menu-01-submenu-2 class="ovic-menu header-submenu header_submenu_2 ovic-menu">
-                                    <li id=menu-item-355
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
-                                        <a href="https://kuteshop.kutethemes.net/my-account/?demo=7"
-                                            data-megamenu=0><span class=text>My account</span></a></li>
-                                    <li id=menu-item-356
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356"><a
-                                            href=# class=disable-link data-megamenu=0><span
-                                                class=text>Serverices</span></a></li>
-                                    <li id=menu-item-357
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357"><a
-                                            href=# class=disable-link data-megamenu=0><span
-                                                class=text>Support</span></a></li>
+                                <ul id="menu-01-submenu-2" class="ovic-menu header-submenu header_submenu_2 ovic-menu">
+                                    <li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
+                                        <a href="<?= url('/my-account/register') ?>" data-megamenu="0"><span class="text">Register</span></a>
+                                    </li>
+                                    <li id="menu-item-356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356">
+                                        <a href="<?= url('/my-account/login') ?>" class=disable-link data-megamenu="0"><span class="text">Login</span></a>
+                                    </li>
+                                    <li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357">
+                                        <a href="#" class="disable-link" data-megamenu="0"><span class="text">Support</span></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1177,7 +1174,8 @@
                                         <a href="<?= url('/cara-belanja') ?>" data-megamenu="239">Cara Belanja</a>
                                     </li>
                                     <li id="menu-item-193"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193">
+                                        class="menu-item {{ $page === 'faq-product' || $page === 'faq-toko-kami' ? 'current_page_item' : '' }}
+                                        menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193">
                                         <a class="disable-link" data-megamenu="0">FAQ</a>
                                         <ul class=sub-menu>
                                             <li id=menu-item-324

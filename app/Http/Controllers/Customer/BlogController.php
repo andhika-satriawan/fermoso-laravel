@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ProductSubcategory;
 
 class BlogController extends Controller
 {
@@ -12,7 +13,13 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        return view('pages.customer.blog', [
+            "title" => "Blog",
+            "page" => "blog",
+            "product_subcategories" => $product_subcategories,
+        ]);
     }
 
     /**

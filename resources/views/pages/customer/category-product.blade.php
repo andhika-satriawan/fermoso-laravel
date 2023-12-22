@@ -14,6 +14,8 @@
         href=https://kuteshop.kutethemes.net/feed/>
     <link rel=alternate type=application/rss+xml title="KuteShop &raquo; Comments Feed"
         href=https://kuteshop.kutethemes.net/comments/feed/>
+    <link rel=alternate type=application/rss+xml title="KuteShop &raquo; Market Category Feed"
+        href="https://kuteshop.kutethemes.net/product-category/market/?demo=21/feed/">
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/a5ff7.css" media="all">
     <style id="wp-block-library-theme-inline-css">
         .wp-block-audio figcaption {
@@ -705,8 +707,7 @@
         !important;font-variant:normal !important;text-transform:none !important;line-height:1
         !important;font-style:normal !important;-webkit-font-smoothing:antialiased
         !important;-moz-osx-font-smoothing:grayscale !important}</style>
-        <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/53f0a.css" media="all">
-        <style id="kuteshop-main-inline-css">/*<![CDATA[*/body{--main-color-h:345;--main-color-s:100%;--main-color-l:60%;--default-color:#222;--main-color-b:#e52e5c;--main-color-t:#fff;--main-h-fw:700}@media (max-width:1499px) and (min-width:992px){body{}}@media (min-width: 1230px){body{--main-container:1170px}body.wcfm-store-page .site
+        <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/53f0a.css" media="all"><style id=kuteshop-main-inline-css>/*<![CDATA[*/body{--main-color-h:345;--main-color-s:100%;--main-color-l:60%;--default-color:#222;--main-color-b:#e52e5c;--main-color-t:#fff;--main-h-fw:700}@media (max-width:1499px) and (min-width:992px){body{}}@media (min-width: 1230px){body{--main-container:1170px}body.wcfm-store-page .site
 
         #main {
             width: 1200px !important
@@ -720,7 +721,6 @@
         /*]]>*/
     </style>
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/5fa7e.css" media="all">
-
     @verbatim
     <script type="text/template" id="tmpl-ovic-notice-popup">
         <# if ( data.img_url != '' ) { #>
@@ -735,24 +735,24 @@
             {{{data.content}}}
         </p>
     </script> 
-    <script type=text/template id=tmpl-variation-template>
-        <div class=woocommerce-variation-description>{{{ data.variation.variation_description }}}</div>
-        <div class=woocommerce-variation-price>{{{ data.variation.price_html }}}</div>
-        <div class=woocommerce-variation-availability>{{{ data.variation.availability_html }}}</div>
-    </script>
+    <script type="text/template" id="tmpl-variation-template">
+        <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+        <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+        <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+    </script> 
     @endverbatim
-
-    <script type=text/template id=tmpl-unavailable-variation-template>
+    <script type="text/template" id="tmpl-unavailable-variation-template>"
         <p>Sorry, this product is unavailable. Please choose a different combination.</p>
-    </script>
-    <script id=jquery-core-js-extra>
+    </script> 
+
+    <script id="jquery-core-js-extra">
         var xlwcty = {
             "ajax_url": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
             "version": "2.17.0",
             "wc_version": "8.3.1"
         };
     </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/82fd8.js></script>
+    <script src="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/82fd8.js"></script>
     <script id=wp-util-js-extra>
         var _wpUtilSettings = {
             "ajax": {
@@ -760,18 +760,18 @@
             }
         };
     </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/76d15.js></script>
-    <script id=wc-add-to-cart-js-extra>
+    <script src="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/76d15.js"></script>
+    <script id="wc-add-to-cart-js-extra">
         var wc_add_to_cart_params = {
             "ajax_url": "\/wp-admin\/admin-ajax.php",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
             "i18n_view_cart": "View cart",
-            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
+            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
             "is_cart": "",
             "cart_redirect_after_add": "no"
         };
     </script>
-    <script id=woocommerce-js-extra>
+    <script id="woocommerce-js-extra">
         var woocommerce_params = {
             "ajax_url": "\/wp-admin\/admin-ajax.php",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
@@ -787,13 +787,14 @@
             "i18n_view_cart": "View cart",
             "i18n_add_to_cart": "Add to cart",
             "i18n_select_options": "Select options",
-            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
+            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
             "is_cart": "",
             "cart_redirect_after_add": "no",
             "enable_ajax_add_to_cart": "yes"
         };
     </script>
     <link rel=https://api.w.org/ href=https://kuteshop.kutethemes.net/wp-json/>
+    <link rel=alternate type=application/json href=https://kuteshop.kutethemes.net/wp-json/wp/v2/product_cat/316>
     <link rel=EditURI type=application/rsd+xml title=RSD href=https://kuteshop.kutethemes.net/xmlrpc.php?rsd>
     <meta name="generator" content="WordPress 6.4.2">
     <meta name="generator" content="WooCommerce 8.3.1">
@@ -834,7 +835,7 @@
 </head>
 
 <body data-rsssl=1
-    class="blog wp-embed-responsive theme-kuteshop woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
+    class="archive tax-product_cat term-market term-316 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
     <a href=# class=overlay-body aria-hidden=true></a>
     <div id=page class=site>
         <div class="header-banner">
@@ -961,7 +962,7 @@
                                         <a href="<?= url('/my-account/register') ?>" data-megamenu="0"><span class="text">Register</span></a>
                                     </li>
                                     <li id="menu-item-356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356">
-                                        <a href="<?= url('/my-account/login') ?>" class=disable-link data-megamenu="0"><span class="text">Login</span></a>
+                                        <a href="<?= url('/my-account/register') ?>" class=disable-link data-megamenu="0"><span class="text">Login</span></a>
                                     </li>
                                     <li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357">
                                         <a href="#" class="disable-link" data-megamenu="0"><span class="text">Support</span></a>
@@ -973,18 +974,17 @@
                 </div>
             </div>
             <div class="header-section header-mid">
-                <div class=container>
-                    <div class=header-inner>
-                        <h1 class="logo">
+                <div class="container">
+                    <div class="header-inner">
+                        <div class="logo">
                             <a href="<?= url('/') ?>">
                                 <figure class="logo-image">
                                     <img alt="Logo Fermoso" src={{ asset('images/logo.jpg') }} class="_rw">
                                 </figure>
                             </a>
-                        </h1>
+                        </div>
                         <div class="block-search">
-                            <div
-                                class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
+                            <div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
                                 <form class="search-form dgwt-wcas-search-form" role="search" method="get"
                                     action="#">
                                     <div class="category">
@@ -1003,9 +1003,8 @@
                                         <input type="hidden" name="post_type" value="product">
                                         <div class="search-input">
                                             <input id="dgwt-wcas-search-input-1d63" type="search"
-                                                class="input-text dgwt-wcas-search-input" name="s"
-                                                value="" placeholder="Search for products..."
-                                                autocomplete="off" data-custom-params>
+                                                class="input-text dgwt-wcas-search-input" name="s" value=""
+                                                placeholder="Search for products..." autocomplete="off" data-custom-params>
                                             <span class="input-focus"></span>
                                             <div class="dgwt-wcas-preloader"></div>
                                         </div>
@@ -1018,19 +1017,19 @@
                         <div class=header-control>
                             <div class=inner-control>
                                 <div class="block-minicart kuteshop-dropdown main-bora-2">
-                                    <a class="woo-cart-link icon-link" href=https://kuteshop.kutethemes.net/cart/
+                                    <a class="woo-cart-link icon-link" href="<?= url('/') ?>/cart/"
                                         data-kuteshop=kuteshop-dropdown>
                                         <span class="icon main-icon-cart1">
-                                            <span class=count>0</span>
+                                            <span class=count>3</span>
                                         </span>
                                         <span class=content>
                                             <span class=text>
                                                 Shopping Cart </span>
                                             <span class=item>
-                                                <span class=count>0</span>
+                                                <span class=count>3</span>
                                                 items - </span>
                                             <span class=total><span class="woocommerce-Price-amount amount"><bdi><span
-                                                            class=woocommerce-Price-currencySymbol>&#36;</span>0.00</bdi></span></span>
+                                                            class=woocommerce-Price-currencySymbol>&#36;</span>1,230.00</bdi></span></span>
                                         </span>
                                     </a>
                                     <div class="widget woocommerce widget_shopping_cart">
@@ -1072,11 +1071,6 @@
                                                 </li>
                                             @endforeach
                                         </ul>
-                                    </div>
-                                    <div class=view-all-menu>
-                                        <a href=javascript:void(0); data-items=11 data-less=Close
-                                            data-more="All Categories" class="btn-view-all open-menu">All Categories
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1129,1127 +1123,713 @@
                 </div>
             </div>
         </header>
-        <div id="content" class="container site-content sidebar-left style-grid blog-page">
-            <nav class=woocommerce-breadcrumb>
-                <a href="<?= url('/cara-belanja') ?>">Home</a><span
-                    class=delimiter></span>Blog</nav>
-            <div id="primary" class="content-area">
-                <main id="main" class="site-main">
-                    <div class="blog-content blog-grid response-content"
-                        style="--blog-columns: 2; --blog-space: 15px;">
-                        <article
-                            class="post-item style-01 post-4495 post type-post status-publish format-standard has-post-thumbnail hentry category-sunglasses tag-sunglasses">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                            22 Feb </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses3-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sunglasses/?demo=21"
-                                                rel=tag>Sunglasses</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21">How
-                                            to Choose Sunglasses for the Beach</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21&#038;text=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21&#038;description=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses3.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Smart kitchen appliances are currently used by many families. Smart kitchen
-                                        appliances will not only bring a luxurious beauty to the...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-4484 post type-post status-publish format-standard has-post-thumbnail hentry category-sunglasses tag-sunglasses">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                            22 Feb </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses-2-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sunglasses/?demo=21"
-                                                rel=tag>Sunglasses</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21">Eye-wear
-                                            Tips To Master Your Zoom Calls</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21&#038;text=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21&#038;description=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses-2.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Smart kitchen appliances are currently used by many families. Smart kitchen
-                                        appliances will not only bring a luxurious beauty to the...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-4476 post type-post status-publish format-standard has-post-thumbnail hentry category-sunglasses">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                            22 Feb </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sunglasses/?demo=21"
-                                                rel=tag>Sunglasses</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21">Beautiful
-                                            Girl In Stylish Sunglasses At Sunset</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21&#038;text=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21&#038;description=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Smart kitchen appliances are currently used by many families. Smart kitchen
-                                        appliances will not only bring a luxurious beauty to the...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3912 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion-bg">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                            11 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-3-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/fashion-bg/?demo=21"
-                                                rel=tag>Fashion Bg</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21">What
-                                            Is Long Exposure Photography</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21&#038;text=Have%20you%20ever%20seen landscape%20images%20where%20the%20water%20looks%20soft,%20silky%20and%20smooth?%20Or%20perhaps%20an%20image%20showing light%20trails through%20a%20city%20scene?%20Then%20you’ve%20seen long%20exposure%20photography.%20It’s%20easy%20to%20create%20and%20doesn’t%20need%20heavy manipulation.%20In%20this%20article,%20we’ll%20show%20you%20how%20to%20do%20it%20yourself.%20There%20are%20many%20ways%20we%20can%20use%20this%20technique%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21&#038;description=Have%20you%20ever%20seen landscape%20images%20where%20the%20water%20looks%20soft,%20silky%20and%20smooth?%20Or%20perhaps%20an%20image%20showing light%20trails through%20a%20city%20scene?%20Then%20you’ve%20seen long%20exposure%20photography.%20It’s%20easy%20to%20create%20and%20doesn’t%20need%20heavy manipulation.%20In%20this%20article,%20we’ll%20show%20you%20how%20to%20do%20it%20yourself.%20There%20are%20many%20ways%20we%20can%20use%20this%20technique%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-3.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Have you ever seen landscape images where the water looks soft, silky and
-                                        smooth? Or perhaps an image showing light trails through a city...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3892 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion-bg">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                            11 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-9-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/fashion-bg/?demo=21"
-                                                rel=tag>Fashion Bg</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21">How
-                                            to Use Foreground, Middle ground, and Background in Photography</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21&#038;text=You%20can%20use%20foreground,%20middle%20ground,%20and%20background%20to%20add%20depth%20and%20dimension%20to%20the%20image.%20These%20are%20often%20used%20in%20landscape%20photography.%20But%20they%20are%20also%20useful%20in%20other%20genres%20of%20photography.%20Depth%20and%20dimension%20in%20any%20image%20add%20more%20interest%20in%20the%20eyes%20of%20the%20viewer.%20It%20makes%20them%20pause%20to%20take%20in%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21&#038;description=You%20can%20use%20foreground,%20middle%20ground,%20and%20background%20to%20add%20depth%20and%20dimension%20to%20the%20image.%20These%20are%20often%20used%20in%20landscape%20photography.%20But%20they%20are%20also%20useful%20in%20other%20genres%20of%20photography.%20Depth%20and%20dimension%20in%20any%20image%20add%20more%20interest%20in%20the%20eyes%20of%20the%20viewer.%20It%20makes%20them%20pause%20to%20take%20in%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-9.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        You can use foreground, middle ground, and background to add depth and dimension
-                                        to the image. These are often used in...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3884 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion-bg">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                            11 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-2-1-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/fashion-bg/?demo=21"
-                                                rel=tag>Fashion Bg</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21">What
-                                            Is Moira Pattern in Photos?</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21&#038;text=Have%20you%20ever%20looked%20at%20your%20photo%20and%20seen%20unusual%20lines%20or%20colours?%20This%20is%20a%20moiré%20pattern,%20and%20it%20can%20be%20an%20annoying%20part%20of%20any%20photographer’s%20job.%20There%20are%20many%20ways%20to%20spot,%20avoid,%20and%20remove%20moiré.%20You%20won’t%20need%20to%20worry%20about%20moiré%20patterns%20at%20all%20if%20you%20use%20the%20right%20techniques.%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21&#038;description=Have%20you%20ever%20looked%20at%20your%20photo%20and%20seen%20unusual%20lines%20or%20colours?%20This%20is%20a%20moiré%20pattern,%20and%20it%20can%20be%20an%20annoying%20part%20of%20any%20photographer’s%20job.%20There%20are%20many%20ways%20to%20spot,%20avoid,%20and%20remove%20moiré.%20You%20won’t%20need%20to%20worry%20about%20moiré%20patterns%20at%20all%20if%20you%20use%20the%20right%20techniques.%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-2-1.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Have you ever looked at your photo and seen unusual lines or colours? This is a
-                                        moiré pattern, and it can...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3845 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion-bg">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                            11 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-1-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/fashion-bg/?demo=21"
-                                                rel=tag>Fashion Bg</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21">How
-                                            to promote your videos for free via website</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21&#038;text=“I%20can%20promote%20my%20videos%20for%20free?”%20you%20might%20be%20saying.%20Well,%20though%20nothing%20in%20business%20or%20life%20is%20really%20free,%20there%20are%20still%20ways%20you%20can%20get%20more%20reach%20for%20less%20cost.%20Your%20results%20depend%20as%20much%20on%20the%20content%20of%20your%20video%20as%20on%20how%20well%20you%20promote%20it.%20If%20your%20video%20is%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/how-to-promote-your-videos-for-free-via-website/?demo=21&#038;description=“I%20can%20promote%20my%20videos%20for%20free?”%20you%20might%20be%20saying.%20Well,%20though%20nothing%20in%20business%20or%20life%20is%20really%20free,%20there%20are%20still%20ways%20you%20can%20get%20more%20reach%20for%20less%20cost.%20Your%20results%20depend%20as%20much%20on%20the%20content%20of%20your%20video%20as%20on%20how%20well%20you%20promote%20it.%20If%20your%20video%20is%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-1.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        “I can promote my videos for free?” you might be saying. Well, though nothing in
-                                        business or life is really free,...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3796 post type-post status-publish format-standard has-post-thumbnail hentry category-sport">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/10/?demo=21">
-                                            10 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-3-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sport/?demo=21"
-                                                rel=tag>Sport</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21">Intense
-                                            10 Minute Kettlebell Workout</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21&#038;text=Key%20Takeaways%20This%2010-Minute%20Kettlebell%20Workout%20is%20a%20tried%20and%20tested%20total%20body%20workout.%20And%20yes,%20you%20can%20really%20get%20a%20great%20workout%20in%20just%2010%20minutes.%20For%20Beginner,%20Intermediate%20&#038;%20Advanced%20Levels:%20This%20program%20can%20be%20tailored%20to%20your%20individual%20fitness%20level%20by%20simply%20using%20a%20lighter%20kettlebell%20weight%20or%20a%20heavier%20kettlebell%20weight.%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/intense-10-minute-kettlebell-workout/?demo=21&#038;description=Key%20Takeaways%20This%2010-Minute%20Kettlebell%20Workout%20is%20a%20tried%20and%20tested%20total%20body%20workout.%20And%20yes,%20you%20can%20really%20get%20a%20great%20workout%20in%20just%2010%20minutes.%20For%20Beginner,%20Intermediate%20&#038;%20Advanced%20Levels:%20This%20program%20can%20be%20tailored%20to%20your%20individual%20fitness%20level%20by%20simply%20using%20a%20lighter%20kettlebell%20weight%20or%20a%20heavier%20kettlebell%20weight.%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-3.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Key Takeaways This 10-Minute Kettlebell Workout is a tried and tested total body
-                                        workout. And yes, you can really get a...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3773 post type-post status-publish format-standard has-post-thumbnail hentry category-sport tag-machine">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/10/?demo=21">
-                                            10 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-2-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sport/?demo=21"
-                                                rel=tag>Sport</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21">Why
-                                            Physical Fitness is Important</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21&#038;text=There’s%20more%20to%20fitness%20than%20just%20being%20physically%20fit.%20Mental%20fitness%20is%20an%20equal%20part%20to%20the%20concept%20of%20fitness%20–%20and%20those%20that%20are%20fit%20both%20physically%20as%20well%20as%20mentally,%20are%20less%20prone%20to%20a%20variety%20of%20common%20medial%20problems.%20But,%20to%20become%20fit%20mentally,%20it’s%20good%20to%20start%20with%20getting%20fit%20physically.%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/why-physical-fitness-is-important/?demo=21&#038;description=There’s%20more%20to%20fitness%20than%20just%20being%20physically%20fit.%20Mental%20fitness%20is%20an%20equal%20part%20to%20the%20concept%20of%20fitness%20–%20and%20those%20that%20are%20fit%20both%20physically%20as%20well%20as%20mentally,%20are%20less%20prone%20to%20a%20variety%20of%20common%20medial%20problems.%20But,%20to%20become%20fit%20mentally,%20it’s%20good%20to%20start%20with%20getting%20fit%20physically.%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-2.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        There’s more to fitness than just being physically fit. Mental fitness is an
-                                        equal part to the concept of fitness –...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-3753 post type-post status-publish format-standard has-post-thumbnail hentry category-sport">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2022/05/10/?demo=21">
-                                            10 May </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-1-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/sport/?demo=21"
-                                                rel=tag>Sport</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21">20
-                                            cardio exercises to do at home</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (0) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21&#038;text=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/20-cardio-exercises-to-do-at-home/?demo=21&#038;description=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/SP-blog-1.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Smart kitchen appliances are currently used by many families. Smart kitchen
-                                        appliances will not only bring a luxurious beauty to the...</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="post-item style-01 post-155 post type-post status-publish format-standard has-post-thumbnail hentry category-appliances tag-market">
-                            <div class=post-inner>
-                                <div class=post-thumb>
-                                    <div class="post-meta post-date">
-                                        <a href="https://kuteshop.kutethemes.net/2021/07/13/?demo=21">
-                                            13 Jul </a>
-                                    </div>
-                                    <a href="https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21"
-                                        class="thumb-link effect background-zoom">
-                                        <figure>
-                                            <img width=390 height=246
-                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/post-1-390x246.jpg
-                                                class="attachment-390x246 size-390x246 wp-post-image" alt loading=lazy>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class=post-info>
-                                    <div class="cat-list category post_cat">
-                                        <div class=inner><a
-                                                href="https://kuteshop.kutethemes.net/category/appliances/?demo=21"
-                                                rel=tag>Appliances</a></div>
-                                    </div>
-                                    <h2 class="post-title"><a
-                                            href="https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21">Electrolux&#8217;s
-                                            Award Winning Kettlet and Dryer Pair</a></h2>
-                                    <div class=post-metas>
-                                        <div class="post-meta post-author">
-                                            <a class=author
-                                                href="https://kuteshop.kutethemes.net/author/admin/?demo=21">
-                                                <span class=icon></span> Admin </a>
-                                        </div>
-                                        <div class="post-meta post-comment">
-                                            <a href="https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21#comments"
-                                                class=comment>
-                                                <span class=icon></span> (5) </a>
-                                        </div>
-                                        <div class="post-meta post-share-button">
-                                            <a href=javascript:void(0) class=toggle>
-                                                <span class=icon></span> </a>
-                                            <div class=ovic-share-socials>
-                                                <div class=inner>
-                                                    <a class=facebook
-                                                        href="https://www.facebook.com/sharer.php?u=https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-facebook"></span>
-                                                        <span class=text>Facebook</span>
-                                                    </a>
-                                                    <a class=twitter
-                                                        href="https://twitter.com/share?url=https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21&#038;text=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-twitter"></span>
-                                                        <span class=text>Twitter</span>
-                                                    </a>
-                                                    <a class=pinterest
-                                                        href="https://pinterest.com/pin/create/button/?url=https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21&#038;description=Smart%20kitchen%20appliances%20are%20currently%20used%20by%20many%20families.%20Smart%20kitchen%20appliances%20will%20not%20only%20bring%20a%20luxurious%20beauty%20to%20the%20kitchen,%20but%20it%20will%20also%20create%20unexpected%20amenities%20and%20utilities%20for%20you%20to%20use,%20especially,%20it%20also%20saves%20a%20lot%20of%20space%20for%20It’s%20your%20small%20kitchen.%20Built-in%20hood%20is%20a%20slim%20and%20modern%20%5B&hellip;%5D&#038;media=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/post-1.jpg"
-                                                        onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
-                                                        <span class="icon fa fa-pinterest-square"></span>
-                                                        <span class=text>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=post-excerpt>
-                                        Smart kitchen appliances are currently used by many families. Smart kitchen
-                                        appliances will not only bring a luxurious beauty to the...</div>
-                                </div>
-                            </div>
-                        </article>
+        <div id="content" class="container site-content sidebar-left shop-page">
+            <nav class="woocommerce-breadcrumb">
+                <a href="<?= url('/') ?>">Home</a><span class="delimiter"></span>
+                {{ $title }}
+            </nav>
+            <div id=primary class=content-area>
+                <main id=main class=site-main>
+                    <header class=woocommerce-products-header></header>
+                    <div class=woocommerce-notices-wrapper></div>
+                    <div class="shop-control shop-before-control">
+                        <h1 class="page-title entry-title">
+                            <span>{{ $title }}</span>
+                        </h1>
+                        <div class=display-per-page-inline>
+                            <p class=title>Show:</p>
+                            <form class=per-page-form method=GET
+                                action=https://kuteshop.kutethemes.net/product-category/market/>
+                                <button type=submit name=product_per_page value=3 class=button>
+                                    03 </button>
+                                / <button type=submit name=product_per_page value=6 class=button>
+                                    06 </button>
+                                / <button type=submit name=product_per_page value=9 class=button>
+                                    09 </button>
+                                / <button type=submit name=product_per_page value=12 class=button>
+                                    12 </button>
+                                / <button type=submit name=product_per_page value=-1 class=button>
+                                    All </button>
+                                <input type=hidden name=shop_page_layout value=grid><input type=hidden name=demo
+                                    value=21>
+                            </form>
+                        </div>
+                        <div class=display-mode-control>
+                            <form class=display-mode method=get
+                                action=https://kuteshop.kutethemes.net/product-category/market/>
+                                <button type=submit value=list name=shop_page_layout class="mode-list ">
+                                    <span class=icon>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </button>
+                                <button type=submit value=grid name=shop_page_layout class="mode-grid active">
+                                    <span class=icon>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </button>
+                                <input type=hidden name=demo value=21>
+                            </form>
+                        </div>
+                        <div class=display-sort-by>
+                            <form class=woocommerce-ordering method=get>
+                                <select name=orderby class=orderby aria-label="Shop order">
+                                    <option value=popularity>Popularity</option>
+                                    <option value=rating>Average Rating</option>
+                                    <option value=date selected=selected>Latest</option>
+                                    <option value=price>Price: Low To High</option>
+                                    <option value=price-desc>Price: High To Low</option>
+                                    <option value=sale>Sale</option>
+                                    <option value=on-sale>On-Sale</option>
+                                    <option value=feature>Feature</option>
+                                </select>
+                                <input type=hidden name=paged value=1>
+                                <input type=hidden name=shop_page_layout value=grid><input type=hidden name=demo
+                                    value=21>
+                            </form>
+                        </div>
                     </div>
-                    <div class=pagination-wrap></div>
+                    <ul class="products shop-page response-content columns-3 ovic-products style-01 border-full">
+                        @foreach ($products as $product)
+                            <li data-product_id="{{ $product->id }}"
+                                class="product-item style-01 rtwpvs-product product type-product post-{{ $product->id }} status-publish first instock product_cat-for-women product_cat-summer-dresses product_tag-market has-post-thumbnail shipping-taxable purchasable product-type-variable">
+                                <div class="product-inner product-01 add-cart-01">
+                                    <div class="product-thumb tooltip-wrap tooltip-start">
+                                        <div class="thumb-wrapper">
+                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
+                                                href="{{ url('product/' . $product->slug) }}">
+                                                <figure class="primary-thumb">
+                                                    <img width="850" height="1021"
+                                                        src="{{ Storage::url($product->photo) }}"
+                                                        class="attachment-850x1021 size-850x1021 wp-post-image" alt
+                                                        loading="lazy">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="group-button style-01 popup">
+                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-{{ $product->id }}  wishlist-fragment on-first-load"
+                                                data-fragment-ref={{ $product->id }}
+                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:{{ $product->id }},&quot;parent_product_id&quot;:{{ $product->id }},&quot;product_type&quot;:&quot;variable&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+                                                <div class=yith-wcwl-add-button>
+                                                    <a href="?add_to_wishlist={{ $product->id }}&#038;_wpnonce=66865b33fb"
+                                                        class="add_to_wishlist single_add_to_wishlist" data-product-id="{{ $product->id }}"
+                                                        data-product-type=variable data-original-product-id="{{ $product->id }}"
+                                                        data-title="Wishlist" rel="nofollow">
+                                                        <i class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
+                                                        <span>Wishlist</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="woocommerce product compare-button"><a
+                                                    href="{{ $product->slug }}?action=yith-woocompare-add-product&id={{ $product->id }}"
+                                                    class="compare button" data-product_id="{{ $product->id }}" rel=nofollow>Compare</a>
+                                            </div>
+                                            <a href="#" class="button yith-wcqv-button" data-product_id="{{ $product->id }}">Quick View</a>
+                                        </div>
+                                        <span class=add-to-cart data-title="Select options">
+                                            <a href="{{ $product->name }}"
+                                                data-quantity="1"
+                                                class="button product_type_variable add_to_cart_button rtwpvs_add_to_cart rtwpvs_ajax_add_to_cart"
+                                                data-product_id="{{ $product->id }}" data-product_sku="{{ $product->details->first()->sku }}"
+                                                aria-label="Select options for &ldquo;Women’s Cocktail Dress&rdquo;"
+                                                aria-describedby="This product has multiple variants. The options may be chosen on the product page"
+                                                rel="nofollow" data-variation_id data-variation>Select options</a>
+                                        </span>
+                                    </div>
+                                    <div class="product-info equal-elem">
+                                        <h2 class="product-title">
+                                            <a href="{{ $product->slug }}">{{ $product->name }}</a>
+                                        </h2>
+                                        <div class="star-rating-wrap">
+                                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
+                                                <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
+                                            </div>
+                                            <strong class="rating-count">01</strong>
+                                        </div>
+                                        <span class="price">
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">Rp</span>
+                                                    {{ $product->details->first()->price }}
+                                                </bdi>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div class="shop-control shop-after-control">
+                        <div class="woocommerce-pagination pagination-nav type-pagination">
+                            <ul class=page-numbers>
+                                <li><span aria-current=page class="page-numbers current">1</span></li>
+                                <li><a class=page-numbers
+                                        href="https://kuteshop.kutethemes.net/product-category/market/page/2/?shop_page_layout=grid&#038;demo=21">2</a>
+                                </li>
+                                <li><a class=page-numbers
+                                        href="https://kuteshop.kutethemes.net/product-category/market/page/3/?shop_page_layout=grid&#038;demo=21">3</a>
+                                </li>
+                                <li><span class="page-numbers dots">&hellip;</span></li>
+                                <li><a class=page-numbers
+                                        href="https://kuteshop.kutethemes.net/product-category/market/page/8/?shop_page_layout=grid&#038;demo=21">8</a>
+                                </li>
+                                <li><a class=page-numbers
+                                        href="https://kuteshop.kutethemes.net/product-category/market/page/9/?shop_page_layout=grid&#038;demo=21">9</a>
+                                </li>
+                                <li><a class="next page-numbers"
+                                        href="https://kuteshop.kutethemes.net/product-category/market/page/2/?shop_page_layout=grid&#038;demo=21">Next</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class=woocommerce-result-count>
+                            Showing 1&ndash;18 of 154 results</p>
+                    </div>
                 </main>
             </div>
-            <aside id=secondary class="widget-area widget-area" role=complementary aria-label="Post Sidebar">
+            <aside id=secondary class="widget-area shop-widget-area" role=complementary aria-label="Shop Sidebar">
                 <div class=sidebar-inner>
-                    <div id=search-3 class="widget widget_search">
-                        <h2 class="widget-title"><span class=text>Search</span><span class=arrow></span></h2>
-                        <form role=search method=get class=search-form action=https://kuteshop.kutethemes.net/>
-                            <input type=search id=search-form-658302a7b7538 class=search-field
-                                placeholder=Search&hellip; value name=s>
-                            <button type=submit class=search-submit>Search</button>
-                        </form>
-                    </div>
-                    <div id=categories-3 class="widget widget_categories">
+                    <div id=woocommerce_product_categories-2 class="widget woocommerce widget_product_categories">
                         <h2 class="widget-title"><span class=text>Categories</span><span class=arrow></span></h2>
-                        <ul>
-                            <li class="cat-item cat-item-1"><a
-                                    href="https://kuteshop.kutethemes.net/category/appliances/?demo=21">Appliances</a>
-                                (1)
+                        <ul class=product-categories>
+                            @foreach ($product_subcategories as $product_subcategory)
+                                <li class="cat-item  cat-item-{{ $product_subcategory->id }} {{ $product_subcategory->slug === $page ? 'current-cat' : '' }}">
+                                    <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                        {{ $product_subcategory->name }}</a>
+                                    <span class=count>({{ $product_subcategory->product_count }})</span>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div id=ovic_woocommerce_layered_nav-3 class="widget ovic_widget_layered_nav widget_layered_nav">
+                        <h2 class="widget-title"><span class=text>Size</span><span class=arrow></span></h2>
+                        <ul class=woocommerce-widget-layered-nav-list>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=s">S</a>
+                                <span class=count>(71)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=m">M</a>
+                                <span class=count>(71)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=l">L</a>
+                                <span class=count>(71)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=xl">XL</a>
+                                <span class=count>(71)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=2xl">2XL</a>
+                                <span class=count>(70)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=xxl">XXL</a>
+                                <span class=count>(70)</span></li>
+                            <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel=nofollow
+                                    href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_size=3xl">3XL</a>
+                                <span class=count>(70)</span></li>
+                        </ul>
+                    </div>
+                    <div id=ovic_woocommerce_layered_nav-2 class="widget ovic_widget_layered_nav widget_layered_nav">
+                        <h2 class="widget-title"><span class=text>Color</span><span class=arrow></span></h2>
+                        <div class="box-group group-color">
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=red"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #ff0000"></i>
+                                <span class=term-name>Red</span>
+                                <span class=count>(68)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=black"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #000000"></i>
+                                <span class=term-name>Black</span>
+                                <span class=count>(69)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=blue"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #2196f3"></i>
+                                <span class=term-name>Blue</span>
+                                <span class=count>(67)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=brown"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #795548"></i>
+                                <span class=term-name>Brown</span>
+                                <span class=count>(69)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=green"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #9fac76"></i>
+                                <span class=term-name>Green</span>
+                                <span class=count>(68)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=yellow"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #fdd835"></i>
+                                <span class=term-name>Yellow</span>
+                                <span class=count>(69)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=cyan"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #01bdae"></i>
+                                <span class=term-name>Cyan</span>
+                                <span class=count>(67)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=white"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #ffffff"></i>
+                                <span class=term-name>White</span>
+                                <span class=count>(68)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=beige"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #f6deb8"></i>
+                                <span class=term-name>Beige</span>
+                                <span class=count>(67)</span> </a>
+                            <a class=term-color
+                                href="https://kuteshop.kutethemes.net/product-category/market/?demo=21&#038;filter_color=grey"
+                                style="font-size: 16px">
+                                <i style="display:inline-block;width:24px;height:24px;background-color: #cccccc"></i>
+                                <span class=term-name>Grey</span>
+                                <span class=count>(68)</span> </a>
+                        </div>
+                    </div>
+                    <div id=woocommerce_product_brand-2
+                        class="widget woocommerce widget_product_brand widget_product_categories">
+                        <h2 class="widget-title"><span class=text>Manufatures</span><span class=arrow></span></h2>
+                        <ul class="product-categories list">
+                            <li class="cat-item cat-item-360 cat-parent"><a
+                                    href="https://kuteshop.kutethemes.net/product-brand/market/?demo=21">Market</a>
+                                <span class=count>(135)</span>
+                                <ul class=children>
+                                    <li class="cat-item cat-item-362 cat-parent"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/market/digital/?demo=21">Digital</a>
+                                        <span class=count>(30)</span>
+                                        <ul class=children>
+                                            <li class="cat-item cat-item-283"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-7/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-7-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Canon</a> <span
+                                                    class=count>(4)</span></li>
+                                            <li class="cat-item cat-item-285"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-9/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-9-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Daikin</a> <span
+                                                    class=count>(3)</span></li>
+                                            <li class="cat-item cat-item-282"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-6/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-6-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Dell</a> <span
+                                                    class=count>(0)</span></li>
+                                            <li class="cat-item cat-item-281"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-5/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-5-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">LG</a> <span
+                                                    class=count>(3)</span></li>
+                                            <li class="cat-item cat-item-280"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-4/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-4-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Nokia</a> <span
+                                                    class=count>(1)</span></li>
+                                            <li class="cat-item cat-item-284"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-8/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-8-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Oppo</a> <span
+                                                    class=count>(2)</span></li>
+                                            <li class="cat-item cat-item-278"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-2/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-2-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Samsung</a> <span
+                                                    class=count>(4)</span></li>
+                                            <li class="cat-item cat-item-279"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-3/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-3-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Sharp</a> <span
+                                                    class=count>(6)</span></li>
+                                            <li class="cat-item cat-item-277"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/digital/05-brand-1/?demo=21"><img
+                                                        width=146 height=50
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1.png 146w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/05-brand-1-84x29.png 84w"
+                                                        sizes="(max-width: 146px) 100vw, 146px">Sony</a> <span
+                                                    class=count>(7)</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="cat-item cat-item-363 cat-parent"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/market/fashion/?demo=21">Fashion</a>
+                                        <span class=count>(105)</span>
+                                        <ul class=children>
+                                            <li class="cat-item cat-item-209"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/guerlain/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-guerlain-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Guerlain</a> <span
+                                                    class=count>(23)</span></li>
+                                            <li class="cat-item cat-item-210"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/hermes/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-hermes-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Hermes</a> <span
+                                                    class=count>(7)</span></li>
+                                            <li class="cat-item cat-item-211"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/gucci/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-gucci-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Gucci</a> <span
+                                                    class=count>(34)</span></li>
+                                            <li class="cat-item cat-item-212"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/etro/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-etro-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Etro</a> <span
+                                                    class=count>(10)</span></li>
+                                            <li class="cat-item cat-item-213"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/paul-smith/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-paul-smith-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Paul Smith</a> <span
+                                                    class=count>(16)</span></li>
+                                            <li class="cat-item cat-item-214"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/cartier/?demo=21"><img
+                                                        width=117 height=40
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier.png 117w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-86x29.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-64x22.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-88x30.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/tab-cartier-84x29.png 84w"
+                                                        sizes="(max-width: 117px) 100vw, 117px">Cartier</a> <span
+                                                    class=count>(17)</span></li>
+                                            <li class="cat-item cat-item-215"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/inside-fashion/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-inside-fashion-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Inside Fashion</a>
+                                                <span class=count>(5)</span></li>
+                                            <li class="cat-item cat-item-216"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/lack/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-lack-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Lack</a> <span
+                                                    class=count>(18)</span></li>
+                                            <li class="cat-item cat-item-217"><a
+                                                    href="https://kuteshop.kutethemes.net/product-brand/market/fashion/chanel/?demo=21"><img
+                                                        width=180 height=100
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel.png
+                                                        class="attachment-full size-full wp-post-image" alt
+                                                        decoding=async loading=lazy
+                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel.png 180w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-86x48.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-64x36.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-88x49.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/brand-chanel-84x47.png 84w"
+                                                        sizes="(max-width: 180px) 100vw, 180px">Chanel</a> <span
+                                                    class=count>(34)</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="cat-item cat-item-189"><a
-                                    href="https://kuteshop.kutethemes.net/category/fashion-bg/?demo=21">Fashion Bg</a>
-                                (4)
+                            <li class="cat-item cat-item-361 cat-parent"><a
+                                    href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/?demo=21">Fashion
+                                    Bg</a> <span class=count>(6)</span>
+                                <ul class=children>
+                                    <li class="cat-item cat-item-306"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-3/?demo=21"><img
+                                                width=139 height=95
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-11-84x57.png 84w"
+                                                sizes="(max-width: 139px) 100vw, 139px">Bike Club</a> <span
+                                            class=count>(0)</span></li>
+                                    <li class="cat-item cat-item-304"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-1/?demo=21"><img
+                                                width=139 height=95
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-9-84x57.png 84w"
+                                                sizes="(max-width: 139px) 100vw, 139px">Lumber Jack</a> <span
+                                            class=count>(4)</span></li>
+                                    <li class="cat-item cat-item-305"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-2/?demo=21"><img
+                                                width=139 height=95
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-10-84x57.png 84w"
+                                                sizes="(max-width: 139px) 100vw, 139px">Retro Races</a> <span
+                                            class=count>(2)</span></li>
+                                    <li class="cat-item cat-item-307"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/fashion-bg/fashion-bg-4/?demo=21"><img
+                                                width=139 height=95
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12.png 139w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-86x59.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-64x44.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/fas_bg-img-12-84x57.png 84w"
+                                                sizes="(max-width: 139px) 100vw, 139px">Woody Nature</a> <span
+                                            class=count>(0)</span></li>
+                                </ul>
                             </li>
-                            <li class="cat-item cat-item-190"><a
-                                    href="https://kuteshop.kutethemes.net/category/sport/?demo=21">Sport</a> (3)
-                            </li>
-                            <li class="cat-item cat-item-194"><a
-                                    href="https://kuteshop.kutethemes.net/category/sunglasses/?demo=21">Sunglasses</a>
-                                (3)
+                            <li class="cat-item cat-item-135 cat-parent"><a
+                                    href="https://kuteshop.kutethemes.net/product-brand/appliances-2/?demo=21">Appliances</a>
+                                <span class=count>(49)</span>
+                                <ul class=children>
+                                    <li class="cat-item cat-item-136"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/cross/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand1-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Cross</a> <span
+                                            class=count>(5)</span></li>
+                                    <li class="cat-item cat-item-137"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/acqua-di-parma/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand2-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Acqua Di Parma</a> <span
+                                            class=count>(1)</span></li>
+                                    <li class="cat-item cat-item-138"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/febreze/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand3-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Febreze</a> <span
+                                            class=count>(1)</span></li>
+                                    <li class="cat-item cat-item-139"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/woll/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand4-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">WOLL</a> <span
+                                            class=count>(6)</span></li>
+                                    <li class="cat-item cat-item-140"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/the-north-face/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand5-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">The North Face</a> <span
+                                            class=count>(1)</span></li>
+                                    <li class="cat-item cat-item-141"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/gateman/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6.jpg
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6.jpg 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-86x44.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-64x33.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-88x45.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand6-84x43.jpg 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Gateman</a> <span
+                                            class=count>(21)</span></li>
+                                    <li class="cat-item cat-item-142"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/furniture-m/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand7-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Furniture</a> <span
+                                            class=count>(14)</span></li>
+                                    <li class="cat-item cat-item-143"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/microwave/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand8-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Microwave</a> <span
+                                            class=count>(2)</span></li>
+                                    <li class="cat-item cat-item-144"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/kettlet/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand9-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Kettlet</a> <span
+                                            class=count>(1)</span></li>
+                                    <li class="cat-item cat-item-145"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/appliances/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand10-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Appliances</a> <span
+                                            class=count>(5)</span></li>
+                                    <li class="cat-item cat-item-146"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/lighting/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand11-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Lighting</a> <span
+                                            class=count>(3)</span></li>
+                                    <li class="cat-item cat-item-147"><a
+                                            href="https://kuteshop.kutethemes.net/product-brand/appliances-2/ipad-m/?demo=21"><img
+                                                width=124 height=63
+                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12.png
+                                                class="attachment-full size-full wp-post-image" alt decoding=async
+                                                loading=lazy
+                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12.png 124w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-86x44.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-64x33.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-88x45.png 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/brand12-84x43.png 84w"
+                                                sizes="(max-width: 124px) 100vw, 124px">Ipad</a> <span
+                                            class=count>(2)</span></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
-                    <div id=ovic_blog-2 class="widget ovic-blog">
-                        <h2 class="widget-title"><span class=text>Recent Posts</span><span class=arrow></span></h2>
-                        <div class="ovic-blog style-01">
-                            <div class=content-post>
-                                <article
-                                    class="blog-item style-01 format-standard post-4495 post type-post status-publish has-post-thumbnail hentry category-sunglasses tag-sunglasses">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses3-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21">How
-                                                    to Choose Sunglasses for the Beach</a></h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                                        February 22, 2023 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/how-to-choose-sunglasses-for-the-beach/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="blog-item style-01 format-standard post-4484 post type-post status-publish has-post-thumbnail hentry category-sunglasses tag-sunglasses">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses-2-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21">Eye-wear
-                                                    Tips To Master Your Zoom Calls</a></h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                                        February 22, 2023 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/eye-wear-tips-to-master-your-zoom-calls/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="blog-item style-01 format-standard post-4476 post type-post status-publish has-post-thumbnail hentry category-sunglasses">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2023/02/imgs-blog-Sunglasses-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21">Beautiful
-                                                    Girl In Stylish Sunglasses At Sunset</a></h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2023/02/22/?demo=21">
-                                                        February 22, 2023 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/beautiful-girl-in-stylish-sunglasses-at-sunset/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="blog-item style-01 format-standard post-3912 post type-post status-publish has-post-thumbnail hentry category-fashion-bg">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-3-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21">What
-                                                    Is Long Exposure Photography</a></h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                                        May 11, 2022 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/what-is-long-exposure-photography/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="blog-item style-01 format-standard post-3892 post type-post status-publish has-post-thumbnail hentry category-fashion-bg">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-9-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21">How
-                                                    to Use Foreground, Middle ground, and Background in Photography</a>
-                                            </h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                                        May 11, 2022 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/how-to-use-foreground-middle-ground-and-background-in-photography/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="blog-item style-01 format-standard post-3884 post type-post status-publish has-post-thumbnail hentry category-fashion-bg">
-                                    <div class=post-inner>
-                                        <div class=post-thumb>
-                                            <a href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21"
-                                                class="thumb-link effect background-zoom">
-                                                <figure>
-                                                    <img width=90 height=57
-                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/FS-BLOG-2-1-90x57.jpg
-                                                        class="attachment-90x57 size-90x57 wp-post-image" alt
-                                                        loading=lazy>
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class=post-info>
-                                            <h2 class="post-title"><a
-                                                    href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21">What
-                                                    Is Moira Pattern in Photos?</a></h2>
-                                            <div class=post-metas>
-                                                <div class="post-meta post-date">
-                                                    <a href="https://kuteshop.kutethemes.net/2022/05/11/?demo=21">
-                                                        May 11, 2022 </a>
-                                                </div>
-                                                <div class="post-meta post-comment">
-                                                    <a href="https://kuteshop.kutethemes.net/what-is-moira-pattern-in-photos/?demo=21#comments"
-                                                        class=comment>
-                                                        <span class=icon></span> (0) </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                    <div id=tag_cloud-2 class="widget widget_tag_cloud">
-                        <h2 class="widget-title"><span class=text>Popular Tags</span><span class=arrow></span></h2>
-                        <div class=tagcloud><a href="https://kuteshop.kutethemes.net/tag/machine/?demo=21"
-                                class="tag-cloud-link tag-link-359 tag-link-position-1" style="font-size: 8pt;"
-                                aria-label="machine (1 item)">machine</a>
-                            <a href="https://kuteshop.kutethemes.net/tag/market/?demo=21"
-                                class="tag-cloud-link tag-link-155 tag-link-position-2" style="font-size: 8pt;"
-                                aria-label="Market (1 item)">Market</a>
-                            <a href="https://kuteshop.kutethemes.net/tag/sunglasses/?demo=21"
-                                class="tag-cloud-link tag-link-309 tag-link-position-3" style="font-size: 22pt;"
-                                aria-label="Sunglasses (2 items)">Sunglasses</a>
-                        </div>
-                    </div>
-                    <div id=media_gallery-2 class="widget widget_media_gallery">
-                        <h2 class="widget-title"><span class=text>Our Instagram</span><span class=arrow></span></h2>
-                        <div id=gallery-1 class='gallery galleryid-4495 gallery-columns-4 gallery-size-full'>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
+                    <div id=media_image-2 class="widget widget_media_image"><a
+                            href=https://kuteshop.kutethemes.net/><img width=330 height=190
+                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1.jpg
+                                class="image wp-image-60  attachment-full size-full wp-post-image" alt
+                                style="max-width: 100%; height: auto;" decoding=async loading=lazy
+                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1.jpg 330w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-300x173.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-220x127.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-86x50.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-64x37.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-88x51.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/widget-1-84x48.jpg 84w"
+                                sizes="(max-width: 330px) 100vw, 330px"></a></div>
+                    <div id=woocommerce_products-2 class="widget woocommerce widget_products">
+                        <h2 class="widget-title"><span class=text>Special Offers!</span><span class=arrow></span></h2>
+                        <ul class=product_list_widget>
+                            <li>
+                                <a href=https://kuteshop.kutethemes.net/product/womens-cocktail-dress/>
+                                    <img width=850 height=1021
+                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-04.jpg
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt decoding=async loading=lazy> <span class=product-title>Women’s Cocktail
+                                        Dress</span>
+                                </a>
+                                <div class=star-rating-wrap>
+                                    <div class=star-rating role=img aria-label="Rated 4.00 out of 5"><span
+                                            style=width:80%>Rated <strong class=rating>4.00</strong> out of 5</span>
+                                    </div><strong class=rating-count>01</strong>
                                 </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams2-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
+                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                            class=woocommerce-Price-currencySymbol>&#36;</span>189.00</bdi></span>
+                                &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
+                                            class=woocommerce-Price-currencySymbol>&#36;</span>219.00</bdi></span>
+                            </li>
+                            <li>
+                                <a href=https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/>
+                                    <img width=850 height=1021
+                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-05.jpg
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt decoding=async loading=lazy> <span class=product-title>Dresses flowers
+                                        Pattern</span>
+                                </a>
+                                <div class=star-rating-wrap>
+                                    <div class=star-rating role=img aria-label="Rated 5.00 out of 5"><span
+                                            style=width:100%>Rated <strong class=rating>5.00</strong> out of 5</span>
+                                    </div><strong class=rating-count>01</strong>
                                 </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams3-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
+                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                            class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span>
+                                &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
+                                            class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span>
+                            </li>
+                            <li>
+                                <a href=https://kuteshop.kutethemes.net/product/sleeveless-dress/>
+                                    <img width=850 height=1021
+                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02.jpg
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt decoding=async loading=lazy
+                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02.jpg 850w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02-199x239.jpg 199w"
+                                        sizes="(max-width: 850px) 100vw, 850px"> <span class=product-title>Sleeveless
+                                        Dress</span>
+                                </a>
+                                <div class=star-rating-wrap>
+                                    <div class=star-rating role=img aria-label="Rated 5.00 out of 5"><span
+                                            style=width:100%>Rated <strong class=rating>5.00</strong> out of 5</span>
+                                    </div><strong class=rating-count>01</strong>
                                 </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams4-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
+                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                            class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span>
+                            </li>
+                            <li>
+                                <a href=https://kuteshop.kutethemes.net/product/short-sleeve-dress/>
+                                    <img width=850 height=1021
+                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-03.jpg
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt decoding=async loading=lazy> <span class=product-title>Short-Sleeve
+                                        Dress</span>
+                                </a>
+                                <div class=star-rating-wrap>
+                                    <div class=star-rating role=img aria-label="Rated 3.00 out of 5"><span
+                                            style=width:60%>Rated <strong class=rating>3.00</strong> out of 5</span>
+                                    </div><strong class=rating-count>01</strong>
                                 </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams5-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
-                                </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams6-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
-                                </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams7-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
-                                </div>
-                            </figure>
-                            <figure class=gallery-item>
-                                <div class='gallery-icon landscape'>
-                                    <a href=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8.jpg><img
-                                            width=500 height=367
-                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8.jpg
-                                            class="attachment-full size-full wp-post-image" alt decoding=async
-                                            loading=lazy
-                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8.jpg 500w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-300x220.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-210x154.jpg 210w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-86x63.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-64x47.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-88x65.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/Instagrams8-84x62.jpg 84w"
-                                            sizes="(max-width: 500px) 100vw, 500px"></a>
-                                </div>
-                            </figure>
-                        </div>
+                                <del aria-hidden=true><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span></del>
+                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span></ins>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </aside>
         </div>
+        <div class=container></div>
         <footer class="footer footer-01">
             <div class=container>
                 <div data-elementor-type=wp-post data-elementor-id=332 class="elementor elementor-332">
@@ -2266,8 +1846,8 @@
                                             <div class="elementor-column-wrap elementor-element-populated">
                                                 <div class=elementor-widget-wrap>
                                                     <div class="elementor-element elementor-element-1e90de1 none elementor-widget elementor-widget-image"
-                                                        data-id="1e90de1" data-element_type="widget"
-                                                        data-widget_type="image.default">
+                                                        data-id=1e90de1 data-element_type=widget
+                                                        data-widget_type=image.default>
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-image">
                                                                 <img width="213" height="54"
@@ -2606,7 +2186,7 @@
                                                                                     tabindex=-1
                                                                                     autocomplete=off></label><input
                                                                                 type=hidden name=_mc4wp_timestamp
-                                                                                value=1703084711><input type=hidden
+                                                                                value=1702967005><input type=hidden
                                                                                 name=_mc4wp_form_id value=93><input
                                                                                 type=hidden name=_mc4wp_form_element_id
                                                                                 value=mc4wp-form-1>
@@ -2621,7 +2201,8 @@
                                                         data-id=371e90e data-element_type=widget
                                                         data-widget_type=heading.default>
                                                         <div class=elementor-widget-container>
-                                                            <h3 class="elementor-heading-title elementor-size-default">
+                                                            <h3
+                                                                class="elementor-heading-title elementor-size-default">
                                                                 LET’S SOCIALIZE</h3>
                                                         </div>
                                                     </div>
@@ -2629,7 +2210,8 @@
                                                         data-id=b6c8dfd data-element_type=widget
                                                         data-widget_type=social-icons.default>
                                                         <div class=elementor-widget-container>
-                                                            <div class="elementor-social-icons-wrapper elementor-grid">
+                                                            <div
+                                                                class="elementor-social-icons-wrapper elementor-grid">
                                                                 <span class=elementor-grid-item>
                                                                     <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-14a8d20"
                                                                         target=_blank>
@@ -2840,9 +2422,7 @@
                                                         data-widget_type=text-editor.default>
                                                         <div class=elementor-widget-container>
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>Copyrights © Fermoso. All Rights Reserved. Designed
-                                                                    by <a href="https://fermoso.com/" target="_blank"
-                                                                        rel="noopener">Fermoso.com</a></p>
+                                                                <p>Copyrights © Fermoso. All Rights Reserved. Designed by <a href="<?= url('/') ?>" target="_blank" rel="noopener">Fermoso.com</a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2863,7 +2443,7 @@
             69 </a>
         <div class=ovic-sales-popup></div>
     </div>
-    <a href="/blog/?blog_list_style=grid&demo=21&d=rtl" class=ovic-rtl-button>Change to <span>RTL</span></a>
+    <a href="/product-category/market/?shop_page_layout=grid&demo=21&d=rtl" class="ovic-rtl-button" style="display: none">Change to <span>RTL</span></a>
     <div id=ovic-menu-mobile-1 class="ovic-menu-clone-wrap mobile-main-menu loaded"
         data-locations=[&quot;primary-menu&quot;,&quot;01-vertical-menu&quot;] data-default=primary>
         <div class=head-menu-mobile>
@@ -2885,7 +2465,7 @@
                 data-main-title="Main Menu">
                 Main Menu </span><a href=# class="ovic-menu-close-btn ovic-menu-close-panels">x</a></div>
         <div class=ovic-menu-panels>
-            <div id=ovic-menu-panel-main-658302a7f16cb class='ovic-menu-panel ovic-menu-panel-main'>
+            <div id=ovic-menu-panel-main-658136dd95628 class='ovic-menu-panel ovic-menu-panel-main'>
                 <ul class=depth-0>
                     <li
                         class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
@@ -3204,8 +2784,9 @@
                                                                                     <ul id=menu-shop-layout-1
                                                                                         class="menu ovic-menu">
                                                                                         <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277">
+                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-277">
                                                                                             <a href="https://kuteshop.kutethemes.net/product-category/market/?shop_page_layout=grid&#038;demo=21"
+                                                                                                aria-current=page
                                                                                                 data-megamenu=0>Grid</a>
                                                                                         </li>
                                                                                         <li
@@ -3555,9 +3136,8 @@
                                                                                                 data-megamenu=0>Standard</a>
                                                                                         </li>
                                                                                         <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-231">
+                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231">
                                                                                             <a href="https://kuteshop.kutethemes.net/blog/?blog_list_style=grid&#038;demo=21"
-                                                                                                aria-current=page
                                                                                                 data-megamenu=0>Grid</a>
                                                                                         </li>
                                                                                         <li
@@ -3805,8 +3385,8 @@
                 "@type": "ListItem",
                 "position": 2,
                 "item": {
-                    "name": "Blog",
-                    "@id": "https:\/\/kuteshop.kutethemes.net\/blog\/?blog_list_style=grid&amp;demo=21"
+                    "name": "Market",
+                    "@id": "https:\/\/kuteshop.kutethemes.net\/product-category\/market\/?demo=21"
                 }
             }]
         }
@@ -3884,14 +3464,14 @@
                 "load_fragments": "load_fragments"
             },
             "nonce": {
-                "add_to_wishlist_nonce": "8c9596793b",
-                "remove_from_wishlist_nonce": "a5e8fd17ac",
-                "reload_wishlist_and_adding_elem_nonce": "25bdb7fdb7",
-                "load_mobile_nonce": "d806ddb240",
-                "delete_item_nonce": "d4398be0bf",
-                "save_title_nonce": "9f5ee09755",
-                "save_privacy_nonce": "9bda6fb7e3",
-                "load_fragments_nonce": "55b4f25868"
+                "add_to_wishlist_nonce": "cdbba028c6",
+                "remove_from_wishlist_nonce": "d5ee8f2d70",
+                "reload_wishlist_and_adding_elem_nonce": "a1f0dfe13c",
+                "load_mobile_nonce": "9960254da5",
+                "delete_item_nonce": "0242ebfd46",
+                "save_title_nonce": "d225b55b0b",
+                "save_privacy_nonce": "e558edc50f",
+                "load_fragments_nonce": "0d9bb84fc1"
             },
             "redirect_after_ask_estimate": "",
             "ask_estimate_redirect_url": "https:\/\/kuteshop.kutethemes.net"
@@ -3911,9 +3491,9 @@
     <script id=ovic-core-js-extra>
         var ovic_core_params = {
             "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "security": "857498340b",
+            "security": "b971ac6478",
             "ovic_ajax_url": "\/?ovic-ajax=%%endpoint%%",
-            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
+            "cart_url": "http:\/\/127.0.0.1:8000\/cart\/",
             "cart_redirect_after_add": "no",
             "ajax_single_add_to_cart": "1",
             "is_preview": "",
@@ -3922,7 +3502,7 @@
                 "added_to_cart_text": "Product has been added to cart!",
                 "added_to_wishlist_text": "Product added!",
                 "removed_from_wishlist_text": "Product has been removed from wishlist!",
-                "wishlist_url": "https:\/\/kuteshop.kutethemes.net\/wishlist\/",
+                "wishlist_url": "http:\/\/127.0.0.1:8000\/wishlist\/",
                 "browse_wishlist_text": "Browse",
                 "growl_notice_text": "Notice!",
                 "removed_cart_text": "Product Removed",
@@ -3960,7 +3540,7 @@
         var rtwpvs_params = {
             "is_product_page": "",
             "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "nonce": "cdc9f41f5f",
+            "nonce": "f0d7d771c7",
             "reselect_clear": "",
             "archive_swatches": "1",
             "enable_ajax_archive_variation": "",
@@ -3982,7 +3562,7 @@
     <script id=kuteshop-js-extra>
         var kuteshop_params = {
             "ajaxurl": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
-            "security": "cddf656210",
+            "security": "3fa15c0cde",
             "kuteshop_ajax_url": "\/?kuteshop-ajax=%%endpoint%%",
             "ajax_comment": "",
             "tab_warning": "<strong>Warning!<\/strong> Can not Load Data.",
@@ -4267,7 +3847,7 @@
     <script id=megamenu-frontend-js-extra>
         var ovic_ajax_megamenu = {
             "ajaxurl": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
-            "security": "39325e0a85",
+            "security": "48ed6739ea",
             "load_menu": "",
             "delay": "",
             "resize": "",
@@ -4511,7 +4091,7 @@
             },
             "post": {
                 "id": 0,
-                "title": "Blog &#8211; KuteShop",
+                "title": "Market &#8211; KuteShop",
                 "excerpt": ""
             }
         };

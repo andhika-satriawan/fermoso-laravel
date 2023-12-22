@@ -6,21 +6,30 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\ProductSubcategory;
+use App\Models\ProductDetail;
 
-class HomeController extends Controller
+class CategoryProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($slug)
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
 
-        return view('pages.customer.home', [
-            "title" => "Home",
-            "page" => "home",
+        $current_subcategory = ProductSubcategory::where('slug', $slug)->firstOrFail();
+
+        $products = Product::where('product_subcategory_id', $current_subcategory->id)->get();
+
+        foreach ($product_subcategories as $product_subcategory) {
+            $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
+        }
+
+        return view('pages.customer.category-product', [
+            "title" => $current_subcategory->name,
+            "page" => $current_subcategory->slug,
             "product_subcategories" => $product_subcategories,
-            "body_class" => "home page-template page-template-elementor_header_footer page page-id-21 wp-embed-responsive theme-kuteshop woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-template-full-width elementor-kit-12 elementor-page elementor-page-21"
+            'products' => $products,
         ]);
     }
 
