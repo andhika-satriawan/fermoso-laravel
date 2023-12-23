@@ -56,4 +56,14 @@ class Customer extends Authenticatable
     {
         return $this->hasMany(Transaction::class, 'customer_id', 'id');
     }
+
+    /**
+     * Get all of the carts for the Customer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function carts(): HasMany
+    {
+        return $this->hasMany(Cart::class, 'customer_id', 'id');
+    }
 }
