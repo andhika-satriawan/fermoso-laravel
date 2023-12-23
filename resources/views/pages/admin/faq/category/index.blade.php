@@ -10,7 +10,7 @@
       <h6>View/Search {{ $page_info['title'] }}</h6>
     </div>
     <div class="page-btn">
-      <a href="{{ route('admin.theme.services.create') }}" class="btn btn-added">
+      <a href="{{ route('admin.faq.category.create') }}" class="btn btn-added">
         <img
           src="{{ asset('admin/img/icons/plus.svg')}}"
           class="me-1"
@@ -42,15 +42,16 @@
                                 <span class="checkmarks"></span>
                             </label>
                         </th>
-                        <th>Icon</th>
-                        <th>Title</th>
+                        <th>Category Name</th>
+                        <th>Category Slug</th>
+                        <th>Created At</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($services as $service)
+                    @foreach ($categories as $category)
                     <tr>
-                        <td width="5%">
+                        <td>
                             <label class="checkboxs">
                                 <input type="checkbox" />
                                 <span class="checkmarks"></span>
@@ -59,18 +60,19 @@
                         <td class="productimgname">
                             <a href="javascript:void(0);" class="product-img">
                                 <img
-                                src="{{ Storage::url($service->icon) }}"
-                                alt="product"
+                                    src="{{ asset('admin/img/product/noimage.png')}}"
+                                    alt="product"
                                 />
                             </a>
-                            <a href="javascript:void(0);">{{ $service->title }}</a>
+                            <a href="javascript:void(0);">{{ $category->name }}</a>
                         </td>
-                        <td>{{ $service->description }}</td>
+                        <td>{{ $category->slug }}</td>
+                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $category->created_at)->format('M d, Y, H:i:s') }}</td>
                         <td>
-                            <a class="me-3" href="{{ route('admin.theme.services.edit', $service->id)}}">
+                            <a class="me-3" href="{{ route('admin.faq.category.edit', $category->id)}}">
                                 <img src="{{ asset('admin/img/icons/edit.svg')}}" alt="img" />
                             </a>
-                            <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $service->id }})">
+                            <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $category->id }})">
                                 <img src="{{asset('admin/img/icons/delete.svg')}}" alt="img" />
                             </a>
                         </td>
@@ -122,7 +124,7 @@
 
                 $.ajax({
                     type: 'DELETE',
-                    url: '{{ route("admin.theme.services.index") }}/' + id,
+                    url: '{{ route("admin.faq.category.index") }}/' + id,
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content'),
                     },

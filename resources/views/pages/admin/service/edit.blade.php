@@ -13,7 +13,7 @@
 
         <div class="card upload-product">
             <div class="card-body">
-                <form action="{{ route('admin.theme.services.update', $item->id) }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                <form action="{{ route('admin.service.update', $item->id) }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
                     <div class="row">
@@ -53,7 +53,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-submit me-2">Submit</button>
-                                <a href="{{ route('admin.theme.services.index') }}" class="btn btn-cancel">Cancel</a>
+                                <a href="{{ route('admin.service.index') }}" class="btn btn-cancel">Cancel</a>
                             </div>
                         </div>
                     </div>

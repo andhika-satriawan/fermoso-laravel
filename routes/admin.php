@@ -22,7 +22,27 @@ Route::prefix('admin')
                     Route::resource('subcategory', App\Http\Controllers\Admin\ProductSubcategoryController::class);
                 });
 
-            Route::get('sales', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('sales');
+            Route::resource('service', App\Http\Controllers\Admin\ServiceController::class);
+            Route::resource('slider', App\Http\Controllers\Admin\SliderController::class);
+
+            Route::prefix('article')
+                ->name('article.')
+                ->group(function () {
+                    Route::resource('blog', App\Http\Controllers\Admin\ArticleController::class);
+                    Route::resource('category', App\Http\Controllers\Admin\ArticleCategoryController::class);
+                });
+
+            Route::prefix('faq')
+                ->name('faq.')
+                ->group(function () {
+                    Route::resource('list', App\Http\Controllers\Admin\FaqController::class);
+                    Route::resource('category', App\Http\Controllers\Admin\FaqCategoryController::class);
+                });
+
+            Route::resource('customer', App\Http\Controllers\Admin\CustomerController::class);
+            Route::resource('sales', App\Http\Controllers\Admin\SalesController::class);
+
+            // Route::get('sales', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('sales');
             Route::post('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
 
             Route::prefix('theme')
@@ -30,7 +50,7 @@ Route::prefix('admin')
                 ->group(function () {
                     Route::resource('header', App\Http\Controllers\Admin\ThemeHeaderController::class);
                     Route::resource('slider', App\Http\Controllers\Admin\ThemeSliderController::class);
-                    Route::resource('services', App\Http\Controllers\Admin\ThemeServicesController::class);
+                    
                     Route::resource('footer', App\Http\Controllers\Admin\ThemeFooterController::class);
                 });
         });
