@@ -14,7 +14,7 @@ class AuthController extends Controller
 
     public function __construct()
     {
-        $this->page_info['title'] = 'Product Category';
+        $this->page_info['title'] = 'Authenticationn';
     }
 
     /**

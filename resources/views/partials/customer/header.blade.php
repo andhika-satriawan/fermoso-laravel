@@ -1060,6 +1060,16 @@
                             <div class="ovic-menu-wapper horizontal">
                                 <ul id="menu-01-submenu-2"
                                     class="ovic-menu header-submenu header_submenu_2 ovic-menu">
+                                    @auth
+                                    <form method="POST" action="{{ route('logout') }}" id="logoutForm">
+                                        @csrf
+                                    </form>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">
+                                            <span class="text">Logout</span>
+                                        </a>
+                                    </li>
+                                    @else
                                     <li id="menu-item-355"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
                                         <a href="<?= url('/my-account/register') ?>" data-megamenu="0"><span
@@ -1070,6 +1080,7 @@
                                         <a href="<?= url('/my-account/register') ?>" class=disable-link
                                             data-megamenu="0"><span class="text">Login</span></a>
                                     </li>
+                                    @endauth
                                     <li id="menu-item-357"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357">
                                         <a href="#" class="disable-link" data-megamenu="0"><span

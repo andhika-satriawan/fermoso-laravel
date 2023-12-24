@@ -24,6 +24,7 @@ Route::middleware('guest:web')->group(function () {
 
 // MUST LOGGED IN
 Route::middleware('auth:web')->group(function () {
+    Route::post('logout', [App\Http\Controllers\Customer\AuthController::class, 'logout'])->name('logout');
 });
 Route::get('cart', [App\Http\Controllers\Customer\CartController::class, 'index'])->name('cart');
 
