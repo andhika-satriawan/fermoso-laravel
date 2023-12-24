@@ -1208,83 +1208,73 @@
                                 <div class="u-columns col2-set" id=customer_login>
                                     <div class="u-column2 col-2">
                                         <h2>Register</h2>
-                                        <form method="post"
-                                            class="woocommerce-form woocommerce-form-register register">
+
+                                        @if($errors->any())
+                                        <ul class="woocommerce-error" role="alert">
+                                            @foreach ($errors->all() as $error)
+                                                <li>
+                                                    <strong>Error:</strong> {{ $error }}.
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                        @endif
+
+                                        <form action="{{ route('register.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                                            @csrf
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_username">Nama <span class="required">*</span></label>
-                                                <input type="text"
+                                                <label for="name">Nama <span class="required">*</span></label>
+                                                <input 
                                                     class="woocommerce-Input woocommerce-Input--text input-text"
-                                                    name="username" id="reg_username" autocomplete="username"
-                                                    value="">
+                                                    type="text"
+                                                    name="name"
+                                                    value="{{ old('name') }}" 
+                                                    id="name" 
+                                                    autocomplete="name"
+                                                >
                                             </p>
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_username">Status Pribadi / Clinic<span
-                                                        class="required">*</span></label>
-                                                <select name="cars" id="cars">
-                                                    <option value="pribadi">Pribadi</option>
-                                                    <option value="clinic">Klinik</option>
+                                                <label for="type">Status Pribadi / Clinic<span class="required">*</span></label>
+                                                <select name="type" id="type">
+                                                    <option value="Pribadi" @if (old('type') == 'Pribadi') selected @endif>Pribadi</option>
+                                                    <option value="Clinic" @if (old('type') == 'Clinic') selected @endif>Klinik</option>
                                                 </select>
                                             </p>
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_username">No. Whatsapp Aktif<span
+                                                <label for="phone">No. Whatsapp Aktif<span
                                                         class="required">*</span></label>
                                                 <input type="tel"
                                                     class="woocommerce-Input woocommerce-Input--text input-text"
-                                                    name="phone" id="reg_username" autocomplete="phone"
-                                                    value="" placeholder="08xxxxxxxxxx">
-                                            </p>
-                                            <p
-                                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_username">Alamat <span
-                                                        class="required">*</span></label>
-                                                <textarea type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
-                                                    id="reg_username" autocomplete="username" value=""></textarea>
-                                            </p>
-                                            <p
-                                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_username">Patokan Alamat <span
-                                                        class="required">*</span></label>
-                                                <textarea type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
-                                                    id="reg_username" autocomplete="username" value=""></textarea>
+                                                    name="phone" id="phone" autocomplete="phone"
+                                                    value="{{ old('phone') }}" placeholder="08xxxxxxxxxx">
                                             </p>
 
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_email">Email address&nbsp;<span
-                                                        class="required">*</span></label>
+                                                <label for="email">Email address&nbsp;<span class="required">*</span></label>
                                                 <input type="email"
                                                     class="woocommerce-Input woocommerce-Input--text input-text"
-                                                    name="email" id="reg_email" autocomplete="email"
-                                                    value="">
+                                                    name="email" id="email" autocomplete="email"
+                                                    value="{{ old('email') }}">
                                             </p>
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_password">Password&nbsp;<span
+                                                <label for="password">Password&nbsp;<span
                                                         class="required">*</span></label>
                                                 <span class="password-input"><input type="password"
                                                         class="woocommerce-Input woocommerce-Input--text input-text"
-                                                        name="password" id="reg_password"
+                                                        name="password" id="password"
                                                         autocomplete="new-password"><span
                                                         class="show-password-input"></span></span>
                                             </p>
                                             <div class="woocommerce-privacy-policy-text">
                                                 <p>Your personal data will be used to support your experience throughout
-                                                    this
-                                                    website, to manage access to your account, and for other purposes
-                                                    described
-                                                    in our <a href="https://kuteshop.kutethemes.net/privacy-policy/"
-                                                        class="woocommerce-privacy-policy-link"
-                                                        target="_blank">privacy
-                                                        policy</a>.</p>
+                                                    this website, to manage access to your account, and for other purposes
+                                                    described in our <a href="/privacy-policy/" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.</p>
                                             </div>
                                             <p class="woocommerce-form-row form-row">
-                                                <input type="hidden" id="woocommerce-register-nonce"
-                                                    name="woocommerce-register-nonce" value="6a54ffd1b3"><input
-                                                    type="hidden" name="_wp_http_referer"
-                                                    value="/my-account/?demo=21">
                                                 <button type="submit"
                                                     class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"
                                                     name="register" value="Register">Register</button>
