@@ -38,7 +38,7 @@ class AuthController extends Controller
 
         if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('/')
+            return redirect()->route('home')
                 ->with('success', 'Login success!');
             // return redirect()->intended(RouteServiceProvider::HOME);
         }
@@ -70,5 +70,19 @@ class AuthController extends Controller
     public function register_store(Request $request)
     {
         //
+    }
+
+    /**
+     * Destroy an authenticated session.
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return to_route('login');
     }
 }

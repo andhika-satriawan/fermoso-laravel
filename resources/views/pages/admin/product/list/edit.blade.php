@@ -22,9 +22,10 @@
                 </div>
             @endforeach
 
-            <form action="{{ route('admin.product.list.store') }}" id="formSubmission" method="post" id=""
+            <form action="{{ route('admin.product.list.update', $item->id) }}" id="formSubmission" method="post" id=""
                 enctype="multipart/form-data">
                 @csrf
+                @method('PATCH')
                 <div class="row upload-product">
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="card image-uploader">
@@ -39,7 +40,7 @@
                                 @enderror
                             </div>
                             <img class="card-img-top image-uploader-preview"
-                                src="{{ asset('admin/img/product/upload.png') }}">
+                                src="{{ Storage::url($item->photo) }}">
                         </div>
                     </div>
 
@@ -48,6 +49,7 @@
                             <div class="card image-uploader">
                                 <div class="card-body">
                                     <h5 class="card-title">Image {{ $image_no }}</h5>
+                                    <input type="hidden" name="productImages[{{ $loop->index }}][id]" value="{{ isset($item->images[$loop->index]) != null ? $item->images[$loop->index]->id : '' }}">
                                     <input
                                         class="form-control file-uploader @error("{{ 'productImages[' . $loop->index . '][photo]' }}") is-invalid @enderror"
                                         type="file" accept="image/*"
@@ -60,7 +62,7 @@
                                     @enderror
                                 </div>
                                 <img class="card-img-top image-uploader-preview"
-                                    src="{{ old('productImages[' . $loop->index . '][photo]') != '' ? old('productImages[' . $loop->index . '][photo]') : asset('admin/img/product/upload.png') }}">
+                                    src="{{ isset($item->images[$loop->index]) != null ? Storage::url($item->images[$loop->index]->image) : asset('admin/img/product/upload.png') }}">
                             </div>
                         </div>
                     @endforeach
@@ -77,7 +79,7 @@
                                         <div class="input-groupicon">
                                             <input class="form-control @error('product_name') is-invalid @enderror"
                                                 type="text" name="product_name" placeholder="Product Name"
-                                                value="{{ old('product_name') }}" />
+                                                value="{{ $item->name }}" />
                                             @error('product_name')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -89,9 +91,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Description <span class="text-danger">*</span></label>
-                                        <textarea id="description" name="description" class="form-control ckeditor @error('description') is-invalid @enderror">
-                                        {{ old('description') }}
-                                    </textarea>
+                                        <textarea id="description" name="description" class="form-control ckeditor @error('description') is-invalid @enderror">{{ $item->description }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -113,7 +113,7 @@
                                                 <input type="number"
                                                     class="form-control @error('description') is-invalid @enderror"
                                                     placeholder="Width" aria-label="Width" aria-describedby="width"
-                                                    name="width" value="{{ old('width') }}">
+                                                    name="width" value="{{ $item->details[0]->width }}">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text">cm</span>
                                                 </div>
@@ -132,7 +132,7 @@
                                                 <input type="number"
                                                     class="form-control @error('length') is-invalid @enderror"
                                                     placeholder="Length" aria-label="Length" aria-describedby="lenght"
-                                                    name="length" value="{{ old('length') }}">
+                                                    name="length" value="{{ $item->details[0]->length }}">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text" id="length">cm</span>
                                                 </div>
@@ -151,7 +151,7 @@
                                                 <input type="number"
                                                     class="form-control @error('height') is-invalid @enderror"
                                                     placeholder="Height" aria-label="Height" aria-describedby="height"
-                                                    name="height" value="{{ old('height') }}">
+                                                    name="height" value="{{ $item->details[0]->height }}">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text" id="height">cm</span>
                                                 </div>
@@ -170,7 +170,7 @@
                                                 <input type="number"
                                                     class="form-control @error('weight') is-invalid @enderror"
                                                     placeholder="Weight" aria-label="Weight" aria-describedby="weight"
-                                                    name="weight" value="{{ old('weight') }}">
+                                                    name="weight" value="{{ $item->details[0]->weight }}">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text" id="weight">gram</span>
                                                 </div>
@@ -198,7 +198,7 @@
                                                     class="form-control @error('video_file') is-invalid @enderror"
                                                     placeholder="Video File" aria-label="Video File"
                                                     aria-describedby="video_file" name="video_url"
-                                                    value="{{ old('video_file') }}">
+                                                    value="{{ $item->video_file }}">
                                             </div>
                                             @error('video_file')
                                                 <div class="text-danger">
@@ -215,7 +215,7 @@
                                                     class="form-control @error('video_youtube_url') is-invalid @enderror"
                                                     placeholder="Video Youtube URL" aria-label="Video Youtube URL"
                                                     aria-describedby="video_youtube_url" name="video_youtube_url"
-                                                    value="{{ old('video_youtube_url') }}">
+                                                    value="{{ $item->video_youtube_url }}">
                                             </div>
                                             @error('video_youtube_url')
                                                 <div class="text-danger">
@@ -242,7 +242,7 @@
                                                 <optgroup label="{{ $category->name }}">
                                                     @foreach ($category->subcategories as $subcategory)
                                                         <option value="{{ $subcategory->id }}"
-                                                            @if ($subcategory->id == old('product_subcategory_id')) selected @endif>
+                                                            @if ($subcategory->id == $item->product_subcategory_id) selected @endif>
                                                             {{ $subcategory->name }}
                                                         </option>
                                                     @endforeach
@@ -260,9 +260,9 @@
                                     <div class="form-group">
                                         <label>Status <span class="text-danger">*</span></label>
                                         <select class="select @error('status') is-invalid @enderror" name="status">
-                                            <option value="1">Deactivated</option>
-                                            <option value="2" selected>Active</option>
-                                            <option value="3">Draft</option>
+                                            <option value="1" @if ($item->status == "1") selected @endif>Deactivated</option>
+                                            <option value="2" @if ($item->status == "2") selected @endif>Active</option>
+                                            <option value="3" @if ($item->status == "3") selected @endif>Draft</option>
                                         </select>
                                         @error('product_subcategory_id')
                                             <div class="text-danger">
@@ -303,44 +303,47 @@
                                             </tr>
                                         </thead>
                                         <tbody id="tbodyVariant">
+                                            @foreach ($item->details as $variant)
                                             <tr id="element-variant">
                                                 <td>
+                                                    <input type="hidden" class="product-detail-id" name="productDetails[{{ $loop->index }}][id]" value="{{ $variant->id }}">
                                                     <input type="text" class="product-detail-name"
-                                                        placeholder="Product Name" name="productDetails[0][name]"
-                                                        value="{{ old('productDetails[0][name]') }}" required>
+                                                        placeholder="Product Name" name="productDetails[{{ $loop->index }}][name]"
+                                                        value="{{ $variant->name }}" required>
                                                 </td>
                                                 <td>
                                                     <input type="text" class="product-detail-price" placeholder="Rp"
-                                                        name="productDetails[0][price]"
-                                                        value="{{ old('productDetails[0][price]') }}" required>
+                                                        name="productDetails[{{ $loop->index }}][price]"
+                                                        value="{{ $variant->price }}" required>
                                                 </td>
                                                 <td>
                                                     <input type="text" class="product-detail-discount-price"
-                                                        placeholder="Rp" name="productDetails[0][discount_price]"
-                                                        value="{{ old('productDetails[0][discount_price]') }}">
+                                                        placeholder="Rp" name="productDetails[{{ $loop->index }}][discount_price]"
+                                                        value="{{ $variant->discount_price }}">
                                                 </td>
                                                 <td>
                                                     <input type="number" class="product-detail-stock" placeholder="Pcs"
-                                                        name="productDetails[0][stock]"
-                                                        value="{{ old('productDetails[0][stock]') }}" required>
+                                                        name="productDetails[{{ $loop->index }}][stock]"
+                                                        value="{{ $variant->stock }}" required>
                                                 </td>
                                                 <td>
                                                     <input type="text" class="product-detail-sku" placeholder="SKU"
-                                                        name="productDetails[0][sku]"
-                                                        value="{{ old('productDetails[0][sku]') }}" required>
+                                                        name="productDetails[{{ $loop->index }}][sku]"
+                                                        value="{{ $variant->sku }}" required>
                                                 </td>
                                                 <td class="upload-product">
                                                     <input class="upload-file-variant" type="file" accept="image/*"
-                                                        name="productDetails[0][photo_variant]"
+                                                        name="productDetails[{{ $loop->index }}][photo_variant]"
                                                         onchange="showPreviewVariant(event)">
                                                     <img class="card-img-top card-img-variant"
-                                                        src="{{ asset('admin/img/product/upload.png') }}"
+                                                        src="{{ Storage::url($variant->image) }}"
+                                                        {{-- src="{{ asset('admin/img/product/upload.png') }}" --}}
                                                         alt="Card image cap">
                                                 </td>
                                                 <td>
                                                     <div class="form-check form-switch">
                                                         <input class="form-check-input" type="checkbox" role="switch"
-                                                            name="productDetails[0][status]" value="1" checked>
+                                                            name="productDetails[{{ $loop->index }}][status]" value="1" @if ($variant->status == 1) checked @endif>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -350,6 +353,7 @@
                                                     </a>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -523,6 +527,10 @@
                     InputType[i].value = '';
                 }
             }
+
+            let productId = clone.querySelector(".product-detail-id");
+            productId.name = `productDetails[${rows.length-1}][id]`;
+            productId.value = ``;
 
             let productName = clone.querySelector(".product-detail-name");
             productName.name = `productDetails[${rows.length-1}][name]`;

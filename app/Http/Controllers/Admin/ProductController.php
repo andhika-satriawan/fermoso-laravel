@@ -76,6 +76,7 @@ class ProductController extends Controller
             'productDetails.*.name' => 'required|string',
             'productDetails.*.price' => 'required|numeric',
             'productDetails.*.discount_price' => 'nullable|numeric',
+            'productDetails.*.stock' => 'nullable|numeric',
             'productDetails.*.photo_variant' => 'nullable|mimes:jpg,bmp,png,webp',
             'productImages.*.photo' => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
@@ -117,45 +118,42 @@ class ProductController extends Controller
             try {
 
                 // PRODUCT DETAIL
-                $productDetailsIndex = 0;
-                foreach ($request->productDetails as $productDetail) {
+                foreach ($request->productDetails as $productDetailKey => $productDetail) {
                     $product_detail = new ProductDetail;
                     $product_detail->product_id = $product->id;
-                    $product_detail->sku = $productDetail['sku'];
-                    $product_detail->name = $productDetail['name'];
-                    $product_detail->price = $productDetail['price'];
+                    $product_detail->sku    = $productDetail['sku'];
+                    $product_detail->stock  = $productDetail['stock'];
+                    $product_detail->name   = $productDetail['name'];
+                    $product_detail->price  = $productDetail['price'];
                     $product_detail->discount_price = $productDetail['discount_price'];
                     $product_detail->weight = $request->weight;
-                    $product_detail->width = $request->width;
+                    $product_detail->width  = $request->width;
                     $product_detail->length = $request->length;
                     $product_detail->height = $request->height;
                     $product_detail->status = 1;
 
-                    if ($request->hasFile('productDetails.' . $productDetailsIndex . '.photo_variant')) {
-                        $filenameWithExt    = $request->file('productDetails.' . $productDetailsIndex . '.photo_variant')->getClientOriginalName();
+                    if ($request->hasFile('productDetails.' . $productDetailKey . '.photo_variant')) {
+                        $filenameWithExt    = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->getClientOriginalName();
                         $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-                        $extension          = $request->file('productDetails.' . $productDetailsIndex . '.photo_variant')->getClientOriginalExtension();
+                        $extension          = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->getClientOriginalExtension();
                         $fileNameToStore    = $product_slug . '-' . Str::slug($productDetail['name']) . '-' . hexdec(uniqid()) . '.' . $extension;
-                        $pathFile           = $request->file('productDetails.' . $productDetailsIndex . '.photo_variant')->storeAs('assets/product/variant', $fileNameToStore, 'public');
+                        $pathFile           = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->storeAs('assets/product/variant', $fileNameToStore, 'public');
 
                         // Add value
                         $product_detail->image = $pathFile;
                     }
 
                     $product_detail->save();
-
-                    $productDetailsIndex++;
                 }
 
                 // PRODUCT IMAGES
-                $productImagesIndex = 0;
-                foreach ($request->productImages as $productImage) {
-                    if ($request->hasFile('productImages.' . $productImagesIndex . '.photo')) {
-                        $filenameWithExt    = $request->file('productImages.' . $productImagesIndex . '.photo')->getClientOriginalName();
+                foreach ($request->productImages as $productImageKey => $productImage) {
+                    if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
+                        $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
                         $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-                        $extension          = $request->file('productImages.' . $productImagesIndex . '.photo')->getClientOriginalExtension();
+                        $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
                         $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
-                        $pathFile           = $request->file('productImages.' . $productImagesIndex . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
+                        $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
 
                         // Add value
                         $product_image = new ProductImage;
@@ -192,16 +190,13 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        $categories = ProductCategory::orderBy('name', 'ASC')->with('product_subcategories')->get();
-        $item = Product::findOrFail($id);
-        $item_detail = ProductDetail::where('product_id', $item->id)->first();
-        $item_images = ProductImage::where('product_id', $item->id)->get();
+        $categories = ProductCategory::orderBy('name', 'ASC')->with('subcategories')->get();
+        $item = Product::with(['details', 'images'])->withCount(['details', 'images'])->findOrFail($id);
 
-        return view($this->route_path . 'edit', [
+        return view($this->view_path . 'edit', [
+            'page_info' => $this->page_info,
             'categories' => $categories,
             'item'  => $item,
-            'item_detail'  => $item_detail,
-            'item_images' => $item_images
         ]);
     }
 
@@ -210,7 +205,131 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'photo'         => 'nullable|mimes:jpg,bmp,png,webp',
+            'product_name'  => 'required|string|max:255|unique:App\Models\Product,name,' . $id . '',
+            'product_subcategory_id' => 'required|exists:App\Models\ProductSubcategory,id',
+            'description'   => 'required|string',
+            'video_file'    => 'nullable|mimes:mp4,avi',
+            'video_youtube_url' => 'nullable|string',
+            'weight'        => 'required|numeric',
+            'width'         => 'required|numeric',
+            'length'        => 'required|numeric',
+            'height'        => 'required|numeric',
+            'status'        => 'required|numeric',
+            'productDetails' => 'required|array|min:1',
+            'productDetails.*.sku'      => 'required|string',
+            'productDetails.*.name'     => 'required|string',
+            'productDetails.*.price'    => 'required|numeric',
+            'productDetails.*.discount_price'   => 'nullable|numeric',
+            'productDetails.*.stock'    => 'nullable|numeric',
+            'productDetails.*.photo_variant'    => 'nullable|mimes:jpg,bmp,png,webp',
+            'productImages.*.photo'     => 'nullable|mimes:jpg,bmp,png,webp',
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        $product_slug = Str::slug($request->product_name);
+
+        $product->product_subcategory_id = $request->product_subcategory_id;
+        $product->name = $request->product_name;
+        $product->slug = $product_slug;
+        $product->description = $request->description;
+        $product->video_youtube_url = $request->video_youtube_url;
+        $product->status = $request->status;
+
+        if ($request->hasFile('video_file')) {
+            $videoFileNameWithExt       = $request->file('video_file')->getClientOriginalName();
+            $videoFileName              = pathinfo($videoFileNameWithExt, PATHINFO_FILENAME);
+            $videoFileExtension         = $request->file('video_file')->getClientOriginalExtension();
+            $videoFileNameToStore       = $product_slug . '-' . time() . '.' . $videoFileExtension;
+            $pathVideoFile              = $request->file('video_file')->storeAs('assets/product/video', $videoFileNameToStore, 'public');
+
+            // Add value
+            $product->video_url = $pathVideoFile;
+        }
+
+        if ($request->hasFile('photo')) {
+            $filenameWithExt    = $request->file('photo')->getClientOriginalName();
+            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension          = $request->file('photo')->getClientOriginalExtension();
+            $fileNameToStore    = $product_slug . '-' . time() . '.' . $extension;
+            $pathFile           = $request->file('photo')->storeAs('assets/product/single', $fileNameToStore, 'public');
+
+            // Add value
+            $product->photo = $pathFile;
+        }
+
+        if ($product->save()) {
+            try {
+
+                // PRODUCT DETAIL
+                foreach ($request->productDetails as $productDetailKey => $productDetail) {
+                    if (ProductDetail::where('id', $productDetail['id'])->exists()) {
+                        $product_detail = ProductDetail::findOrFail($productDetail['id']);
+                    } else {
+                        $product_detail = new ProductDetail;
+                    }
+                    $product_detail->product_id = $product->id;
+                    $product_detail->sku    = $productDetail['sku'];
+                    $product_detail->stock  = $productDetail['stock'];
+                    $product_detail->name   = $productDetail['name'];
+                    $product_detail->price  = $productDetail['price'];
+                    $product_detail->discount_price = $productDetail['discount_price'];
+                    $product_detail->weight = $request->weight;
+                    $product_detail->width  = $request->width;
+                    $product_detail->length = $request->length;
+                    $product_detail->height = $request->height;
+                    $product_detail->status = 1;
+
+                    if ($request->hasFile('productDetails.' . $productDetailKey . '.photo_variant')) {
+                        $filenameWithExt    = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->getClientOriginalName();
+                        $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                        $extension          = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->getClientOriginalExtension();
+                        $fileNameToStore    = $product_slug . '-' . Str::slug($productDetail['name']) . '-' . hexdec(uniqid()) . '.' . $extension;
+                        $pathFile           = $request->file('productDetails.' . $productDetailKey . '.photo_variant')->storeAs('assets/product/variant', $fileNameToStore, 'public');
+
+                        // Add value
+                        $product_detail->image = $pathFile;
+                    }
+
+                    $product_detail->save();
+                }
+
+                // PRODUCT IMAGES
+                foreach ($request->productImages as $productImageKey => $productImage) {
+                    if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
+                        $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
+                        $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                        $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
+                        $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
+                        $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
+
+                        // Add value
+                        if (ProductImage::where('id', $productImage['id'])->exists()) {
+                            $product_image = ProductImage::findOrFail($productImage['id']);
+                        } else {
+                            $product_image = new ProductImage;
+                        }
+                        $product_image->product_id = $product->id;
+                        $product_image->image = $pathFile;
+                        $product_image->save();
+                    }
+                }
+            } catch (\Exception $e) {
+                $item = Product::findOrFail($product->id);
+
+                // if (!$item->delete()) {
+                //     return redirect()->back()->withErrors(['product' => 'Failed to delete product!']);
+                // }
+
+                return redirect()->back()->withErrors(['product' => $e->getMessage()]);
+                // return to_route($this->route_path . 'index')->withErrors(['product' => $e->getMessage()]);
+            }
+        }
+
+        return to_route($this->route_path . 'index')
+            ->with('success', $this->page_info['title'] . ' data has been updated successfully');
     }
 
     /**

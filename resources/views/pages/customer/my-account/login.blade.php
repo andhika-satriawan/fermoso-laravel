@@ -1208,21 +1208,41 @@
                                 <div class="u-columns col2-set" id=customer_login>
                                     <div class="u-column1 col-1">
                                         <h2>Login</h2>
-                                        <form class="woocommerce-form woocommerce-form-login login" method=post>
-                                            <p
-                                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for=username>Username or email address&nbsp;<span
-                                                        class=required>*</span></label>
-                                                <input type=text
+
+                                        @if($errors->any())
+                                        <ul class="woocommerce-error" role="alert">
+                                            @foreach ($errors->all() as $error)
+                                                <li>
+                                                    <strong>Error:</strong> {{ $error }}.
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                        @endif
+
+
+                                        <form action="{{ route('login.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                                            @csrf
+                                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for=username>Email Address&nbsp;<span class=required>*</span></label>
+                                                <input 
                                                     class="woocommerce-Input woocommerce-Input--text input-text"
-                                                    name=username id=username autocomplete=username value>
+                                                    type="text"
+                                                    name="email" 
+                                                    value="{{ old('email') }}" 
+                                                    id="email" 
+                                                    autocomplete="email"
+                                                >
                                             </p>
                                             <p
                                                 class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for=password>Password&nbsp;<span class=required>*</span></label>
-                                                <input class="woocommerce-Input woocommerce-Input--text input-text"
-                                                    type=password name=password id=password
-                                                    autocomplete=current-password>
+                                                <label for="password">Password&nbsp;<span class=required>*</span></label>
+                                                <input 
+                                                    class="woocommerce-Input woocommerce-Input--text input-text"
+                                                    type="password"
+                                                    name="password"
+                                                    value="{{ old('password') }}"
+                                                    id="password"
+                                                    autocomplete="current-password">
                                             </p>
                                             <p class=form-row>
                                                 <label
@@ -1232,12 +1252,9 @@
                                                         name=rememberme type=checkbox id=rememberme value=forever>
                                                     <span>Remember me</span>
                                                 </label>
-                                                <input type=hidden id=woocommerce-login-nonce
-                                                    name=woocommerce-login-nonce value=04d848a544><input type=hidden
-                                                    name=_wp_http_referer value="/my-account/?demo=21"> <button
-                                                    type=submit
-                                                    class="woocommerce-button button woocommerce-form-login__submit"
-                                                    name=login value="Log in">Log in</button>
+                                                <button id="woocommerce-login-nonce" class="woocommerce-button button woocommerce-form-login__submit" type="submit">
+                                                    Log In
+                                                </button>
                                             </p>
                                             <p class="woocommerce-LostPassword lost_password">
                                                 <a href="<?= url('/my-account/lost-password') ?>">Lost your password?</a>
