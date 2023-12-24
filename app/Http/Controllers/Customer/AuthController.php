@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
-
+use Illuminate\Support\Facades\Hash;
+use App\Models\Customer;
 use App\Models\ProductSubcategory;
 
 class AuthController extends Controller
@@ -69,7 +70,23 @@ class AuthController extends Controller
      */
     public function register_store(Request $request)
     {
-        //
+        $credentials = $request->validate([
+            'name'      => 'required|string|max:255',
+            'type'      => 'required|string|max:255',
+            'email'     => 'required|email|unique:App\Models\Customer,email',
+            'password'  => 'required|string|max:255',
+            'phone'     => 'required|string|max:255',
+        ]);
+
+        $customer = new Customer;
+        $customer->name     = $request->name;
+        $customer->type     = $request->type;
+        $customer->email    = $request->email;
+        $customer->password = Hash::make($request->password);
+        $customer->phone    = $request->phone;
+        $customer->save();
+
+        return to_route('login')->with('success', 'Registration success!');
     }
 
     /**
