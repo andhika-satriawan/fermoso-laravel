@@ -1157,7 +1157,8 @@
                 <div class=container>
                     <div class=header-inner>
                         <div class=header-vertical>
-                            <div class="box-nav-vertical kuteshop-dropdown always-open">
+                            <div
+                                class="box-nav-vertical kuteshop-dropdown {{ $page === 'home' ? 'always-open' : '' }}">
                                 <a href=# data-kuteshop=kuteshop-dropdown class=block-title>
                                     <span class="icon ovic-icon-menu"><span
                                             class=inner><span></span><span></span><span></span></span></span>
