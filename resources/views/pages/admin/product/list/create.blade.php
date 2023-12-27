@@ -292,14 +292,14 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Variant Name <span class="text-danger">*</span></th>
+                                                <th scope="col" id="variant_name_head">Variant Name <span class="text-danger">*</span></th>
                                                 <th scope="col">Price <span class="text-danger">*</span></th>
                                                 <th scope="col">Discounted Price</th>
                                                 <th scope="col">Stock <span class="text-danger">*</span></th>
                                                 <th scope="col">SKU <span class="text-danger">*</span></th>
-                                                <th scope="col">Image</th>
+                                                <th scope="col" id="variant_image_head">Image</th>
                                                 <th scope="col">Status</th>
-                                                <th scope="col">Remove</th>
+                                                <th scope="col" id="variant_delete_head">Remove</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tbodyVariant">
@@ -344,7 +344,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a onclick="deleteRow(event)" class="me-3 confirm-text">
+                                                    <a onclick="deleteRow(event)" class="me-3 product-detail-delete confirm-text">
                                                         <img src="{{ asset('admin/img/icons/delete.svg') }}"
                                                             alt="img">
                                                     </a>
@@ -483,6 +483,7 @@
             // $("#btnSubmitForm").click(function(){
             //     $('#formSubmission').submit()
             // });
+            changeProductVariant();
         });
 
         $(".image-uploader-preview").on("click", function() {
@@ -548,10 +549,35 @@
 
             let productStatusVariant = clone.querySelector(".form-check-input");
             productStatusVariant.name = `productDetails[${rows.length-1}][status]`;
+
+            changeProductVariant();
+        }
+
+        function changeProductVariant() {
+            const rowCount = $('#tbodyVariant > tr').length;
+            console.log('Lalala ' + rowCount);
+            if (rowCount > 1) {
+                $('.product-detail-name').attr( {type: "text", placeholder: "Ukuran S", required: true} );
+                $('.product-detail-name').closest("td").show();
+                $('.upload-file-variant').closest("td").show();
+                $('.product-detail-delete').closest("td").show();
+                $('#variant_name_head').show();
+                $('#variant_image_head').show();
+                $('#variant_delete_head').show();
+            } else {
+                $('.product-detail-name').attr( {type: "hidden", placeholder: "DEFAULT", value: "DEFAULT", required: false} );
+                $('.product-detail-name').closest("td").hide();
+                $('.upload-file-variant').closest("td").hide();
+                $('.product-detail-delete').closest("td").hide();
+                $('#variant_name_head').hide();
+                $('#variant_image_head').hide();
+                $('#variant_delete_head').hide();
+            }
         }
 
         function deleteRow(event) {
             event.target.parentNode.parentNode.parentNode.remove();
+            changeProductVariant();
         }
     </script>
 @endpush
