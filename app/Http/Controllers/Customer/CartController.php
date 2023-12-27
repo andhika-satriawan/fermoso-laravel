@@ -22,6 +22,16 @@ class CartController extends Controller
         ]);
     }
 
+    public function checkout()
+    {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        return view('pages.customer.checkout', [
+            "page"  => "checkout",
+            "product_subcategories" => $product_subcategories,
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel=profile href=https://gmpg.org/xfn/11>
+    <script>
+        document.documentElement.className = document.documentElement.className + ' yes-js js_active js'
+    </script>
+    <title>{{ $title }} - FERMOSO</title>
+
+    @include('partials.customer.style-script-header')
+    @stack('addon-style-single-post')
+</head>
+
+<body data-rsssl="1" class="{{ $body_class }}">
+    <a href="#" class="overlay-body" aria-hidden="true"></a>
+    <div id="page" class="site">
+        @include('partials.customer.header')
+
+        @yield('content')
+
+        @include('partials.customer.footer')
+
+        <a href="#" class="backtotop action-to-top"></a>
+    </div>
+    @include('partials.customer.style-script-footer')
+</body>
+
+</html>

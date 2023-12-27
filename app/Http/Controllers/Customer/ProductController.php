@@ -22,10 +22,8 @@ class ProductController extends Controller
         }
 
         return view('pages.customer.products', [
-            "title" => "Product",
-            "page" => "products",
+            "page" => "category-page",
             "product_subcategories" => $product_subcategories,
-            "body_class" => "archive tax-product_cat term-market term-316 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12"
         ]);
     }
 
@@ -45,13 +43,41 @@ class ProductController extends Controller
         //
     }
 
+    public function category($slug)
+    {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $current_subcategory = ProductSubcategory::where('slug', $slug)->firstOrFail();
+        $products = Product::where('product_subcategory_id', $current_subcategory->id)->get();
+
+        foreach ($product_subcategories as $product_subcategory) {
+            $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
+        }
+
+        return view('pages.customer.category-product', [
+            "page" => $current_subcategory->slug,
+            "product_subcategories" => $product_subcategories,
+            "products" => $products,
+            "current_subcategory" => $current_subcategory,
+        ]);
+    }
+
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory'])->firstOrFail();
+        $related_products = Product::whereHas('product_subcategory', function ($query) use ($product) {
+            $query->where('name', $product->product_subcategory->name);
+        })->where('id', '<>', $product->id)->get();
+        $products = Product::get();
+
         return view('pages.customer.detail-product', [
-            "title" => "Detail Product",
+            "product_subcategories" => $product_subcategories,
+            "product" => $product,
+            "products" => $products,
+            "related_products" => $related_products,
             "page" => "detail-product",
         ]);
     }

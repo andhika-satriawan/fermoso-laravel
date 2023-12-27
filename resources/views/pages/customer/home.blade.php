@@ -1,4063 +1,1095 @@
-@include('partials.customer.header')
-        <div data-elementor-type=wp-page data-elementor-id=21 class="elementor elementor-21">
-            <div class=elementor-inner>
-                <div class=elementor-section-wrap>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-183dc51 elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                        data-id=183dc51 data-element_type=section>
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class=elementor-row>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3510b5f elementor-hidden-tablet elementor-hidden-mobile elementor-hidden-mobile_extra none"
-                                    data-id=3510b5f data-element_type=column>
-                                    <div class=elementor-column-wrap>
-                                        <div class=elementor-widget-wrap></div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b4e3a0f none"
-                                    data-id=b4e3a0f data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-6692909 none elementor-widget elementor-widget-slider_revolution"
-                                                data-id=6692909 data-element_type=widget
-                                                data-widget_type=slider_revolution.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class=wp-block-themepunch-revslider>
-                                                        <p class=rs-p-wp-fix></p>
-                                                        <rs-module-wrap id=rev_slider_6_1_wrapper data-source=gallery
-                                                            style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-                                                            <rs-module id=rev_slider_6_1 style data-version=6.6.14>
-                                                                <rs-slides
-                                                                    style="overflow: hidden; position: absolute;">
-                                                                    <rs-slide style="position: absolute;"
-                                                                        data-key=rs-11 data-title=Slide
-                                                                        data-thumb=https://kuteshop.b-cdn.net/wp-content/uploads/revslider/home-01/01-slide-3-50x100.jpg
-                                                                        data-anim=d:20;f:slidebased;
-                                                                        data-in=prst:rndany;o:-0.5;y:(15%);sx:0.8;sy:0.8;row:5;col:5;>
-                                                                        <img fetchpriority=high decoding=async
-                                                                            src=https://kuteshop.b-cdn.net/wp-content/plugins/revslider/public/assets/assets/dummy.png
-                                                                            alt title=01-slide-3.jpg width=666
-                                                                            height=450
-                                                                            class="rev-slidebg tp-rs-img rs-lazyload"
-                                                                            data-lazyload=https://kuteshop.b-cdn.net/wp-content/uploads/revslider/home-01/01-slide-3.jpg
-                                                                            data-no-retina>
-                                                                        <rs-group id=slider-6-slide-11-layer-8
-                                                                            data-type=group data-xy=x:c;y:m;
-                                                                            data-text=w:normal; data-dim=w:100%;h:100%;
-                                                                            data-rsp_o=off data-wrpcls=ovic-wrap
-                                                                            data-rsp_bd=off data-frame_0=o:1;
-                                                                            data-frame_999=o:0;st:w;sA:9000;
-                                                                            style=z-index:11;><rs-layer
-                                                                                id=slider-6-slide-11-layer-7
-                                                                                data-type=text data-color=#000000
-                                                                                data-xy=x:r;yo:49px,49px,49px,19px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:16;l:22;fw:600;a:center;
-                                                                                data-dim=w:310px,310px,310px,190px;
-                                                                                data-rsp_o=off data-rsp_bd=off
-                                                                                data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;o:0;rX:90deg;oZ:-50;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;oZ:-50;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:10;font-family:'Open Sans';">WE’VE
-                                                                                TAKE A<br>
-                                                                                FURTHER
-                                                                            </rs-layer><rs-layer
-                                                                                id=slider-6-slide-11-layer-11
-                                                                                data-type=text
-                                                                                data-xy=x:r;yo:94px,94px,94px,66px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:30,30,30,27;l:33,33,33,30;fw:600;a:center;
-                                                                                data-dim=w:310px,310px,310px,190px;
-                                                                                data-rsp_o=off data-rsp_bd=off
-                                                                                data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;o:0;rX:90deg;oZ:-50;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;oZ:-50;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:9;font-family:'Open Sans';">20%
-                                                                                OFF<br>
-                                                                                ACCESSORIES
-                                                                            </rs-layer><a id=slider-6-slide-11-layer-12
-                                                                                class="rs-layer rev-btn"
-                                                                                href="https://kuteshop.kutethemes.net/shop/?demo=21"
-                                                                                target=_self data-type=button
-                                                                                data-xy=x:r;xo:101px,101px,101px,36px;yo:189px,189px,189px,150px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:14;l:24;fw:600;a:center;
-                                                                                data-dim=minh:0px,0px,0px,none;
-                                                                                data-rsp_o=off data-rsp_bd=off
-                                                                                data-padding=t:3;r:15;b:3;l:15;
-                                                                                data-frame_0=rX:70deg;oZ:-50;
-                                                                                data-frame_0_chars=d:5;y:cyc(-100||100);o:0;
-                                                                                data-frame_1=oZ:-50;e:power4.inOut;sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;dir:middletoedge;d:10;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                data-frame_hover=bgc:#e52e5c;bor:0px,0px,0px,0px;sp:0ms;
-                                                                                style="z-index:8;background-color:#ff3366;font-family:'Open Sans';">SHOP
-                                                                                NOW
-                                                                            </a></rs-group> </rs-slide>
-                                                                    <rs-slide style="position: absolute;"
-                                                                        data-key=rs-12 data-title=Slide
-                                                                        data-thumb=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-slide-1-50x100.jpg
-                                                                        data-anim=d:30;ms:1210;f:edges;
-                                                                        data-in=prst:rndany;o:0;x:cyc(-10|10);y:cyc(-10|10);sx:4;sy:4;row:20;col:20;
-                                                                        data-d3=f:incube;d:vertical;z:450;t:30;>
-                                                                        <img decoding=async
-                                                                            src=https://kuteshop.b-cdn.net/wp-content/plugins/revslider/public/assets/assets/dummy.png
-                                                                            alt title=01-slide-1 width=666 height=450
-                                                                            class="rev-slidebg tp-rs-img rs-lazyload"
-                                                                            data-lazyload=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-slide-1.jpg
-                                                                            data-no-retina>
-                                                                        <rs-group id=slider-6-slide-12-layer-0
-                                                                            data-type=group data-xy=x:c;y:m;
-                                                                            data-text=w:normal; data-dim=w:100%;h:100%;
-                                                                            data-rsp_o=off data-wrpcls=ovic-wrap
-                                                                            data-rsp_bd=off data-frame_0=o:1;
-                                                                            data-frame_999=o:0;st:w;sA:9000;
-                                                                            style=z-index:12;><a
-                                                                                id=slider-6-slide-12-layer-4
-                                                                                class="rs-layer rev-btn"
-                                                                                href="https://kuteshop.kutethemes.net/shop/?demo=21"
-                                                                                target=_self data-type=button
-                                                                                data-color=#000000
-                                                                                data-xy=xo:96px,96px,96px,92px;y:m;yo:50px,50px,50px,70px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:15;l:24;a:center;
-                                                                                data-dim=minh:0px,0px,0px,none;
-                                                                                data-rsp_o=off data-rsp_bd=off
-                                                                                data-padding=r:10;l:10;
-                                                                                data-border=bos:solid;boc:#000000;bow:3px,3px,3px,3px;
-                                                                                data-frame_0=y:100%;
-                                                                                data-frame_0_mask=u:t;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_mask=u:t;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                data-frame_hover=c:#fff;bgc:#ff3366;boc:#ff3366;bor:0px,0px,0px,0px;bos:solid;bow:3px,3px,3px,3px;sp:0ms;
-                                                                                style="z-index:11;background-color:rgba(255,255,255,0);font-family:'Open Sans';">SHOP
-                                                                                NOW
-                                                                            </a><rs-layer id=slider-6-slide-12-layer-3
-                                                                                data-type=text data-color=#000000
-                                                                                data-xy=y:m;yo:-50px,-50px,-50px,-19px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:18;l:20;a:center;
-                                                                                data-dim=w:298px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;o:0;rX:-90deg;oZ:-50;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;oZ:-50;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:10;font-family:'Open Sans';">ENJOY
-                                                                                UP TO 35% OFF
-                                                                            </rs-layer><rs-layer
-                                                                                id=slider-6-slide-12-layer-2
-                                                                                data-type=text data-color=#000000
-                                                                                data-xy=xo:29px;y:m;yo:-101px,-101px,-101px,-70px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:46;l:58;ls:3px;fw:700;a:center;
-                                                                                data-dim=w:240px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-padding=l:3;
-                                                                                data-border=bos:solid;boc:#000000;bow:2px,2px,2px,2px;
-                                                                                data-frame_0=y:bottom;sX:2;sY:2;rZ:70deg;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:9;font-family:'Open Sans';">BIG
-                                                                                SALE
-                                                                            </rs-layer><rs-layer
-                                                                                id=slider-6-slide-12-layer-1
-                                                                                data-type=text data-color=#000000
-                                                                                data-xy=y:m;yo:-148px,-148px,-148px,-117px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:13;l:20;ls:5px;a:center;
-                                                                                data-dim=w:298px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-padding=l:2;
-                                                                                data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;o:0;rX:90deg;oZ:-50;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;oZ:-50;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:8;font-family:'Open Sans';">NEW
-                                                                                COLLECTION
-                                                                            </rs-layer></rs-group> </rs-slide>
-                                                                    <rs-slide style="position: absolute;"
-                                                                        data-key=rs-13 data-title=Slide
-                                                                        data-thumb=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-slide-2-50x100.jpg
-                                                                        data-anim=d:80;ms:2000;f:center;
-                                                                        data-filter=e:late2;b:3;
-                                                                        data-in=prst:rndany;o:0;y:cyc(-100%|0|100%);sx:cyc(1|0|1);sy:cyc(1|0|1);row:3;
-                                                                        data-d3=f:incube;d:vertical;z:450;t:20;su:true;sc:#9e9e9e;>
-                                                                        <img decoding=async
-                                                                            src=https://kuteshop.b-cdn.net/wp-content/plugins/revslider/public/assets/assets/dummy.png
-                                                                            alt title=01-slide-2 width=666 height=450
-                                                                            class="rev-slidebg tp-rs-img rs-lazyload"
-                                                                            data-lazyload=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-slide-2.jpg
-                                                                            data-no-retina>
-                                                                        <rs-group id=slider-6-slide-13-layer-0
-                                                                            data-type=group data-xy=x:c;y:m;
-                                                                            data-text=w:normal; data-dim=w:100%;h:100%;
-                                                                            data-rsp_o=off data-wrpcls=ovic-wrap
-                                                                            data-rsp_bd=off data-frame_0=o:1;
-                                                                            data-frame_999=o:0;st:w;sA:9000;
-                                                                            style=z-index:12;><a
-                                                                                id=slider-6-slide-13-layer-4
-                                                                                class="rs-layer rev-btn"
-                                                                                href="https://kuteshop.kutethemes.net/shop/?demo=21"
-                                                                                target=_self data-type=button
-                                                                                data-color=#ffcd95
-                                                                                data-xy=xo:133px,133px,133px,53px;y:m;yo:39px,39px,39px,50px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:14;l:24;a:center;
-                                                                                data-dim=minh:0px,0px,0px,none;
-                                                                                data-rsp_o=off data-rsp_bd=off
-                                                                                data-padding=t:6;r:15;b:6;l:15;
-                                                                                data-frame_0=y:100%;
-                                                                                data-frame_0_mask=u:t;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_mask=u:t;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                data-frame_hover=c:#fff;bgc:#ff3366;bor:0px,0px,0px,0px;sp:0ms;
-                                                                                style="z-index:11;background-color:#3e2c1c;font-family:'Open Sans';">SHOP
-                                                                                THE COLLECTION
-                                                                            </a><rs-layer id=slider-6-slide-13-layer-3
-                                                                                data-type=text data-color=#000000
-                                                                                data-xy=xo:80px,80px,80px,0;y:m;yo:-37px,-37px,-37px,-26px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:14;l:18;a:center;
-                                                                                data-dim=w:290px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;x:105%;o:1;rY:45deg;rZ:90deg;
-                                                                                data-frame_0_mask=u:t;
-                                                                                data-frame_1=sp:500;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;rZ:0deg;
-                                                                                data-frame_1_mask=u:t;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:10;font-family:'Open Sans';">Pellentesque
-                                                                                posuere orci lobortis<br>
-                                                                                scelerisque blandit. Donec id tellus
-                                                                                laci
-                                                                            </rs-layer><rs-layer
-                                                                                id=slider-6-slide-13-layer-6
-                                                                                data-type=shape
-                                                                                data-xy=xo:205px,205px,205px,125px;y:m;yo:-68px,-68px,-68px,-57px;
-                                                                                data-pos=a data-text=w:normal;
-                                                                                data-dim=w:45px;h:2px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-frame_999=o:0;st:w;
-                                                                                style=z-index:9;background-color:#3e2c1c;>
-                                                                            </rs-layer><rs-layer
-                                                                                id=slider-6-slide-13-layer-5
-                                                                                data-type=text data-color=#3e2c1c
-                                                                                data-xy=xo:80px,80px,80px,0;y:m;yo:-95px,-95px,-95px,-84px;
-                                                                                data-pos=a
-                                                                                data-text=w:normal;s:30;l:40;ls:6px;fw:700;a:center;
-                                                                                data-dim=w:290px; data-rsp_o=off
-                                                                                data-rsp_bd=off data-padding=l:7;
-                                                                                data-frame_0=o:1;
-                                                                                data-frame_0_chars=d:5;o:0;rX:90deg;oZ:-50;
-                                                                                data-frame_1=sp:1750;
-                                                                                data-frame_1_chars=e:power4.inOut;d:10;oZ:-50;
-                                                                                data-frame_999=o:0;st:w;
-                                                                                style="z-index:8;font-family:'Open Sans';">MILANCELOS
-                                                                            </rs-layer></rs-group> </rs-slide>
-                                                                </rs-slides>
-                                                            </rs-module>
-                                                            <script>
-                                                                setREVStartSize({
-                                                                    c: 'rev_slider_6_1',
-                                                                    rl: [1240, 1240, 1240, 768],
-                                                                    el: [450, 450, 450, 350],
-                                                                    gw: [666, 666, 666, 768],
-                                                                    gh: [450, 450, 450, 350],
-                                                                    type: 'standard',
-                                                                    justify: '',
-                                                                    layout: 'fullwidth',
-                                                                    mh: "0"
-                                                                });
-                                                                if (window.RS_MODULES !== undefined && window.RS_MODULES.modules !== undefined && window.RS_MODULES.modules[
-                                                                        "revslider61"] !== undefined) {
-                                                                    window.RS_MODULES.modules["revslider61"].once = false;
-                                                                    window.revapi6 = undefined;
-                                                                    if (window.RS_MODULES.checkMinimal !== undefined) window.RS_MODULES.checkMinimal()
-                                                                }
-                                                            </script>
-                                                        </rs-module-wrap>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-569b0f7 elementor-hidden-phone none"
-                                    data-id=569b0f7 data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-349635c elementor-widget elementor-widget-image"
-                                                data-id=349635c data-element_type=widget data-widget_type=image.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class=elementor-image>
-                                                        <a class="effect plus-zoom"
-                                                            href="https://kuteshop.kutethemes.net/shop/?demo=21">
-                                                            <img loading=lazy decoding=async width=234 height=450
-                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2.jpg
-                                                                class="attachment-full size-full wp-image-530 wp-post-image"
-                                                                alt
-                                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2.jpg 234w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-156x300.jpg 156w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-80x154.jpg 80w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-86x165.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-64x123.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-88x169.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-2-84x162.jpg 84w"
-                                                                sizes="(max-width: 234px) 100vw, 234px"> </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-48a8249 elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                        data-id=48a8249 data-element_type=section
-                        data-settings={&quot;background_background&quot;:&quot;classic&quot;}>
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class=elementor-row>
-                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ee9e56c col-sm-6 col-ts-12 none"
-                                    data-id=ee9e56c data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-fe95517 none elementor-widget elementor-widget-ovic_iconbox"
-                                                data-id=fe95517 data-element_type=widget
-                                                data-widget_type=ovic_iconbox.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-iconbox style-01 effect bounce-in">
-                                                        <div class=inner>
-                                                            <div class="icon image-effect">
-                                                                <i aria-hidden=true class=" main-icon-airplane"></i>
-                                                            </div>
-                                                            <div class=content>
-                                                                <h3 class="title">FREE SHIPPING</h3>
-                                                                <p class=desc>On order over $200</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-01e11ee col-sm-6 col-ts-12 none"
-                                    data-id=01e11ee data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-162d874 none elementor-widget elementor-widget-ovic_iconbox"
-                                                data-id=162d874 data-element_type=widget
-                                                data-widget_type=ovic_iconbox.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-iconbox style-01 effect bounce-in">
-                                                        <div class=inner>
-                                                            <div class="icon image-effect">
-                                                                <i aria-hidden=true class=" main-icon-time-2"></i>
-                                                            </div>
-                                                            <div class=content>
-                                                                <h3 class="title">30-DAY RETURN</h3>
-                                                                <p class=desc>Moneyback guarantee</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-52aae9f col-sm-6 col-ts-12 none"
-                                    data-id=52aae9f data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-c6dc341 none elementor-widget elementor-widget-ovic_iconbox"
-                                                data-id=c6dc341 data-element_type=widget
-                                                data-widget_type=ovic_iconbox.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-iconbox style-01 effect bounce-in">
-                                                        <div class=inner>
-                                                            <div class="icon image-effect">
-                                                                <i aria-hidden=true class=" main-icon-support-2"></i>
-                                                            </div>
-                                                            <div class=content>
-                                                                <h3 class="title">24/7 SUPPORT</h3>
-                                                                <p class=desc>Online consultations</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4dc520a col-sm-6 col-ts-12 none"
-                                    data-id=4dc520a data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-34c6298 none elementor-widget elementor-widget-ovic_iconbox"
-                                                data-id=34c6298 data-element_type=widget
-                                                data-widget_type=ovic_iconbox.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-iconbox style-01 effect bounce-in">
-                                                        <div class=inner>
-                                                            <div class="icon image-effect">
-                                                                <i aria-hidden=true class=" main-icon-umbrella"></i>
-                                                            </div>
-                                                            <div class=content>
-                                                                <h3 class="title">SAFE SHOPPING</h3>
-                                                                <p class=desc>Safe Shopping Guarantee</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-d02859a elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                        data-id=d02859a data-element_type=section>
-                        <div class="elementor-container elementor-column-gap-extended">
-                            <div class=elementor-row>
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-86af5bf col-sm-8 col-xs-12 none"
-                                    data-id=86af5bf data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-76e360a rating-not-yes offset-64 none elementor-widget elementor-widget-ovic_tabs"
-                                                data-id=76e360a data-element_type=widget
-                                                data-widget_type=ovic_tabs.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-tab ovic-tabs style-01 arrows-02 arrows-top">
-                                                        <div class=tabs-head>
-                                                            <ul class=tabs-list>
-                                                                <li class="tab-item active">
-                                                                    <a class="tab-link loaded"
-                                                                        href=#tab-09e710a-6581595d5b145 data-ajax=1
-                                                                        data-animate=fadeIn
-                                                                        data-section="{&quot;ovic_products&quot;:{&quot;target&quot;:&quot;products&quot;,&quot;ids&quot;:&quot;2213,2215,2218,2220,2222&quot;,&quot;orderby&quot;:&quot;ID&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;category&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;carousel&quot;:{&quot;slidesToShow&quot;:3,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:30,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:10,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-15&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;custom&quot;,&quot;product_custom_thumb_width&quot;:850,&quot;product_custom_thumb_height&quot;:1021,&quot;slide_nav&quot;:&quot;nav-02 nav-top&quot;}}">
-                                                                        <span class=title>BEST SELLERS</span>
-                                                                        <span class=hover></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class=tab-item>
-                                                                    <a class=tab-link href=#tab-989c50d-6581595d5b17d
-                                                                        data-ajax=1 data-animate=fadeIn
-                                                                        data-section="{&quot;ovic_products&quot;:{&quot;target&quot;:&quot;sale_products&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;ids&quot;:null,&quot;category&quot;:&quot;&quot;,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:3,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:30,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:10,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-15&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;custom&quot;,&quot;product_custom_thumb_width&quot;:850,&quot;product_custom_thumb_height&quot;:1021,&quot;slide_nav&quot;:&quot;nav-02 nav-top&quot;}}">
-                                                                        <span class=title>ON SALE</span>
-                                                                        <span class=hover></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class=tab-item>
-                                                                    <a class=tab-link href=#tab-8fef63a-6581595d5b1a1
-                                                                        data-ajax=1 data-animate=fadeIn
-                                                                        data-section="{&quot;ovic_products&quot;:{&quot;category&quot;:&quot;fashion&quot;,&quot;content&quot;:&quot;product&quot;,&quot;selected_media&quot;:&quot;image&quot;,&quot;selected_icon&quot;:null,&quot;link&quot;:null,&quot;class&quot;:&quot;&quot;,&quot;template_id&quot;:&quot;&quot;,&quot;target&quot;:&quot;recent_products&quot;,&quot;ids&quot;:null,&quot;category_brand&quot;:null,&quot;limit&quot;:6,&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;carousel&quot;:{&quot;slidesToShow&quot;:3,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:30,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:10,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]},&quot;list_style&quot;:&quot;owl&quot;,&quot;overflow_visible&quot;:&quot;&quot;,&quot;slides_rows_space&quot;:&quot;rows-space-15&quot;,&quot;product_style&quot;:&quot;style-01&quot;,&quot;product_image_size&quot;:&quot;custom&quot;,&quot;product_custom_thumb_width&quot;:850,&quot;product_custom_thumb_height&quot;:1021,&quot;slide_nav&quot;:&quot;nav-02 nav-top&quot;}}">
-                                                                        <span class=title>NEW PRODUCTS</span>
-                                                                        <span class=hover></span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class=tabs-container>
-                                                            <div class="tab-panel active" id=tab-09e710a-6581595d5b145>
-                                                                <div data-id=products_6581595d5b234
-                                                                    class="ovic-products  nav-02 nav-top style-01 border-full">
-                                                                    <div class="woocommerce columns-3 ">
-                                                                        <ul class="products products equal-container better-height product-list-owl owl-slick rows-space-15"
-                                                                            data-limit=6
-                                                                            data-slick={&quot;slidesToShow&quot;:3,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:30,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:10,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]}
-                                                                            style=--show:3;--margin:30px;--show-landscape:2;--margin-landscape:30px;--show-portrait:3;--margin-portrait:15px;--show-mobile:2;--margin-mobile:10px;>
-                                                                            <li data-product_id=2213
-                                                                                class="product-item style-01 product type-product post-2213 status-publish first instock product_cat-casual-dresses product_cat-for-women product_cat-summer-dresses product_tag-market has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                                                                <div
-                                                                                    class="product-inner product-01 add-cart-01">
-                                                                                    <div
-                                                                                        class="product-thumb tooltip-wrap tooltip-start">
-                                                                                        <div class=thumb-wrapper>
-                                                                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                href="https://kuteshop.kutethemes.net/product/daily-womens-dress/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
-                                                                                                    <img decoding=async
-                                                                                                        width=850
-                                                                                                        height=1021
-                                                                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-06-850x1021.jpg
-                                                                                                        class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
-                                                                                                </figure>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="group-button style-01 popup">
-                                                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2213  wishlist-fragment on-first-load"
-                                                                                                data-fragment-ref=2213
-                                                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2213,&quot;parent_product_id&quot;:2213,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                <div
-                                                                                                    class=yith-wcwl-add-button>
-                                                                                                    <a href="?add_to_wishlist=2213&#038;_wpnonce=cdbba028c6"
-                                                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                                                        data-product-id=2213
-                                                                                                        data-product-type=simple
-                                                                                                        data-original-product-id=2213
-                                                                                                        data-title=Wishlist
-                                                                                                        rel=nofollow>
-                                                                                                        <i
-                                                                                                            class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                        <span>Wishlist</span>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="woocommerce product compare-button">
-                                                                                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2213"
-                                                                                                    class="compare button"
-                                                                                                    data-product_id=2213
-                                                                                                    rel=nofollow>Compare</a>
-                                                                                            </div><a href=#
-                                                                                                class="button yith-wcqv-button"
-                                                                                                data-product_id=2213>Quick
-                                                                                                View</a>
-                                                                                        </div>
-                                                                                        <span class=add-to-cart
-                                                                                            data-title="Add to cart"><a
-                                                                                                href="https://kuteshop.kutethemes.net/?add-to-cart=2213"
-                                                                                                data-quantity=1
-                                                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                                data-product_id=2213
-                                                                                                data-product_sku=MK-FS-001
-                                                                                                aria-label="Add &ldquo;Daily Women’s Dress&rdquo; to your cart"
-                                                                                                aria-describedby
-                                                                                                rel=nofollow>Add to
-                                                                                                cart</a></span>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
-                                                                                        <h2 class="product-title"><a
-                                                                                                href="https://kuteshop.kutethemes.net/product/daily-womens-dress/?demo=21">Daily
-                                                                                                Women’s Dress</a></h2>
-                                                                                        <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
-                                                                                                aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
-                                                                                                    <strong
-                                                                                                        class=rating>3.00</strong>
-                                                                                                    out of 5</span>
-                                                                                            </div><strong
-                                                                                                class=rating-count>01</strong>
-                                                                                        </div>
-                                                                                        <span class=price><span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li data-product_id=2215
-                                                                                class="product-item style-01 product type-product post-2215 status-publish instock product_cat-for-women product_cat-skirts product_cat-summer-dresses product_tag-market has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                                                                <div
-                                                                                    class="product-inner product-01 add-cart-01">
-                                                                                    <div
-                                                                                        class="product-thumb tooltip-wrap tooltip-start">
-                                                                                        <div class=product-labels><span
-                                                                                                class="onsale product-label"><span
-                                                                                                    class=text>Sale</span><span
-                                                                                                    class=percent><span
-                                                                                                        class=minus>-</span>8<span
-                                                                                                        class=symbol>%</span></span></span>
-                                                                                        </div>
-                                                                                        <div class=thumb-wrapper>
-                                                                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                href="https://kuteshop.kutethemes.net/product/short-sleeve-dress/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
-                                                                                                    <img decoding=async
-                                                                                                        width=850
-                                                                                                        height=1021
-                                                                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-03-850x1021.jpg
-                                                                                                        class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
-                                                                                                </figure>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="group-button style-01 popup">
-                                                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2215  wishlist-fragment on-first-load"
-                                                                                                data-fragment-ref=2215
-                                                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2215,&quot;parent_product_id&quot;:2215,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                <div
-                                                                                                    class=yith-wcwl-add-button>
-                                                                                                    <a href="?add_to_wishlist=2215&#038;_wpnonce=cdbba028c6"
-                                                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                                                        data-product-id=2215
-                                                                                                        data-product-type=simple
-                                                                                                        data-original-product-id=2215
-                                                                                                        data-title=Wishlist
-                                                                                                        rel=nofollow>
-                                                                                                        <i
-                                                                                                            class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                        <span>Wishlist</span>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="woocommerce product compare-button">
-                                                                                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2215"
-                                                                                                    class="compare button"
-                                                                                                    data-product_id=2215
-                                                                                                    rel=nofollow>Compare</a>
-                                                                                            </div><a href=#
-                                                                                                class="button yith-wcqv-button"
-                                                                                                data-product_id=2215>Quick
-                                                                                                View</a>
-                                                                                        </div>
-                                                                                        <span class=add-to-cart
-                                                                                            data-title="Add to cart"><a
-                                                                                                href="https://kuteshop.kutethemes.net/?add-to-cart=2215"
-                                                                                                data-quantity=1
-                                                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                                data-product_id=2215
-                                                                                                data-product_sku=MK-FS-002
-                                                                                                aria-label="Add &ldquo;Short-Sleeve Dress&rdquo; to your cart"
-                                                                                                aria-describedby
-                                                                                                rel=nofollow>Add to
-                                                                                                cart</a></span>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
-                                                                                        <h2 class="product-title"><a
-                                                                                                href="https://kuteshop.kutethemes.net/product/short-sleeve-dress/?demo=21">Short-Sleeve
-                                                                                                Dress</a></h2>
-                                                                                        <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
-                                                                                                aria-label="Rated 3.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:60%>Rated
-                                                                                                    <strong
-                                                                                                        class=rating>3.00</strong>
-                                                                                                    out of 5</span>
-                                                                                            </div><strong
-                                                                                                class=rating-count>01</strong>
-                                                                                        </div>
-                                                                                        <span class=price><del
-                                                                                                aria-hidden=true><span
-                                                                                                    class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                            class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span></del>
-                                                                                            <ins><span
-                                                                                                    class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                            class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span></ins></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li data-product_id=2218
-                                                                                class="product-item style-01 product type-product post-2218 status-publish last instock product_cat-for-women product_cat-summer-dresses product_tag-market has-post-thumbnail shipping-taxable product-type-external">
-                                                                                <div
-                                                                                    class="product-inner product-01 add-cart-01">
-                                                                                    <div
-                                                                                        class="product-thumb tooltip-wrap tooltip-start">
-                                                                                        <div class=thumb-wrapper>
-                                                                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                href="https://kuteshop.kutethemes.net/product/sleeveless-dress/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
-                                                                                                    <img decoding=async
-                                                                                                        width=850
-                                                                                                        height=1021
-                                                                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-02-850x1021.jpg
-                                                                                                        class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
-                                                                                                </figure>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="group-button style-01 popup">
-                                                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2218  wishlist-fragment on-first-load"
-                                                                                                data-fragment-ref=2218
-                                                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2218,&quot;parent_product_id&quot;:2218,&quot;product_type&quot;:&quot;external&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                <div
-                                                                                                    class=yith-wcwl-add-button>
-                                                                                                    <a href="?add_to_wishlist=2218&#038;_wpnonce=cdbba028c6"
-                                                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                                                        data-product-id=2218
-                                                                                                        data-product-type=external
-                                                                                                        data-original-product-id=2218
-                                                                                                        data-title=Wishlist
-                                                                                                        rel=nofollow>
-                                                                                                        <i
-                                                                                                            class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                        <span>Wishlist</span>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="woocommerce product compare-button">
-                                                                                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2218"
-                                                                                                    class="compare button"
-                                                                                                    data-product_id=2218
-                                                                                                    rel=nofollow>Compare</a>
-                                                                                            </div><a href=#
-                                                                                                class="button yith-wcqv-button"
-                                                                                                data-product_id=2218>Quick
-                                                                                                View</a>
-                                                                                        </div>
-                                                                                        <span class=add-to-cart
-                                                                                            data-title="Buy product"><a
-                                                                                                href="https://themeforest.net/user/kutethemes/portfolio?direction=desc&#038;order_by=sortable_at&#038;page=1&#038;view=grid"
-                                                                                                data-quantity=1
-                                                                                                class="button product_type_external"
-                                                                                                data-product_id=2218
-                                                                                                data-product_sku=MK-FS-003
-                                                                                                aria-label="Buy &ldquo;Sleeveless Dress&rdquo;"
-                                                                                                aria-describedby
-                                                                                                rel=nofollow>Buy
-                                                                                                product</a></span>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
-                                                                                        <h2 class="product-title"><a
-                                                                                                href="https://kuteshop.kutethemes.net/product/sleeveless-dress/?demo=21">Sleeveless
-                                                                                                Dress</a></h2>
-                                                                                        <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
-                                                                                                aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
-                                                                                                    <strong
-                                                                                                        class=rating>5.00</strong>
-                                                                                                    out of 5</span>
-                                                                                            </div><strong
-                                                                                                class=rating-count>01</strong>
-                                                                                        </div>
-                                                                                        <span class=price><span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li data-product_id=2220
-                                                                                class="product-item style-01 product type-product post-2220 status-publish first instock product_cat-blouses product_cat-for-women product_tag-market has-post-thumbnail shipping-taxable product-type-grouped">
-                                                                                <div
-                                                                                    class="product-inner product-01 add-cart-01">
-                                                                                    <div
-                                                                                        class="product-thumb tooltip-wrap tooltip-start">
-                                                                                        <div class=thumb-wrapper>
-                                                                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                href="https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
-                                                                                                    <img decoding=async
-                                                                                                        width=850
-                                                                                                        height=1021
-                                                                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-05-850x1021.jpg
-                                                                                                        class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
-                                                                                                </figure>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="group-button style-01 popup">
-                                                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2220  wishlist-fragment on-first-load"
-                                                                                                data-fragment-ref=2220
-                                                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2220,&quot;parent_product_id&quot;:2220,&quot;product_type&quot;:&quot;grouped&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                <div
-                                                                                                    class=yith-wcwl-add-button>
-                                                                                                    <a href="?add_to_wishlist=2220&#038;_wpnonce=cdbba028c6"
-                                                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                                                        data-product-id=2220
-                                                                                                        data-product-type=grouped
-                                                                                                        data-original-product-id=2220
-                                                                                                        data-title=Wishlist
-                                                                                                        rel=nofollow>
-                                                                                                        <i
-                                                                                                            class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                        <span>Wishlist</span>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="woocommerce product compare-button">
-                                                                                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2220"
-                                                                                                    class="compare button"
-                                                                                                    data-product_id=2220
-                                                                                                    rel=nofollow>Compare</a>
-                                                                                            </div><a href=#
-                                                                                                class="button yith-wcqv-button"
-                                                                                                data-product_id=2220>Quick
-                                                                                                View</a>
-                                                                                        </div>
-                                                                                        <span class=add-to-cart
-                                                                                            data-title="View products"><a
-                                                                                                href=https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/
-                                                                                                data-quantity=1
-                                                                                                class="button product_type_grouped"
-                                                                                                data-product_id=2220
-                                                                                                data-product_sku=MK-FS-004
-                                                                                                aria-label="View products in the &ldquo;Dresses flowers Pattern&rdquo; group"
-                                                                                                aria-describedby
-                                                                                                rel=nofollow>View
-                                                                                                products</a></span>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
-                                                                                        <h2 class="product-title"><a
-                                                                                                href="https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/?demo=21">Dresses
-                                                                                                flowers Pattern</a></h2>
-                                                                                        <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
-                                                                                                aria-label="Rated 5.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:100%>Rated
-                                                                                                    <strong
-                                                                                                        class=rating>5.00</strong>
-                                                                                                    out of 5</span>
-                                                                                            </div><strong
-                                                                                                class=rating-count>01</strong>
-                                                                                        </div>
-                                                                                        <span class=price><span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>230.00</bdi></span>
-                                                                                            &ndash; <span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>250.00</bdi></span></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li data-product_id=2222
-                                                                                class="product-item style-01 rtwpvs-product product type-product post-2222 status-publish instock product_cat-for-women product_cat-summer-dresses product_tag-market has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                                                                <div
-                                                                                    class="product-inner product-01 add-cart-01">
-                                                                                    <div
-                                                                                        class="product-thumb tooltip-wrap tooltip-start">
-                                                                                        <div class=thumb-wrapper>
-                                                                                            <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?demo=21">
-                                                                                                <figure
-                                                                                                    class=primary-thumb>
-                                                                                                    <img decoding=async
-                                                                                                        width=850
-                                                                                                        height=1021
-                                                                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/fa-h1-04-850x1021.jpg
-                                                                                                        class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                        alt
-                                                                                                        loading=lazy>
-                                                                                                </figure>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="group-button style-01 popup">
-                                                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2222  wishlist-fragment on-first-load"
-                                                                                                data-fragment-ref=2222
-                                                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2222,&quot;parent_product_id&quot;:2222,&quot;product_type&quot;:&quot;variable&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                <div
-                                                                                                    class=yith-wcwl-add-button>
-                                                                                                    <a href="?add_to_wishlist=2222&#038;_wpnonce=cdbba028c6"
-                                                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                                                        data-product-id=2222
-                                                                                                        data-product-type=variable
-                                                                                                        data-original-product-id=2222
-                                                                                                        data-title=Wishlist
-                                                                                                        rel=nofollow>
-                                                                                                        <i
-                                                                                                            class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                        <span>Wishlist</span>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="woocommerce product compare-button">
-                                                                                                <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2222"
-                                                                                                    class="compare button"
-                                                                                                    data-product_id=2222
-                                                                                                    rel=nofollow>Compare</a>
-                                                                                            </div><a href=#
-                                                                                                class="button yith-wcqv-button"
-                                                                                                data-product_id=2222>Quick
-                                                                                                View</a>
-                                                                                        </div>
-                                                                                        <span class=add-to-cart
-                                                                                            data-title="Select options"><a
-                                                                                                href=https://kuteshop.kutethemes.net/product/womens-cocktail-dress/
-                                                                                                data-quantity=1
-                                                                                                class="button product_type_variable add_to_cart_button rtwpvs_add_to_cart rtwpvs_ajax_add_to_cart"
-                                                                                                data-product_id=2222
-                                                                                                data-product_sku=MK-FS-005
-                                                                                                aria-label="Select options for &ldquo;Women’s Cocktail Dress&rdquo;"
-                                                                                                aria-describedby="This product has multiple variants. The options may be chosen on the product page"
-                                                                                                rel=nofollow
-                                                                                                data-variation_id
-                                                                                                data-variation>Select
-                                                                                                options</a></span>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="product-info equal-elem">
-                                                                                        <h2 class="product-title"><a
-                                                                                                href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?demo=21">Women’s
-                                                                                                Cocktail Dress</a></h2>
-                                                                                        <div class=star-rating-wrap>
-                                                                                            <div class=star-rating
-                                                                                                role=img
-                                                                                                aria-label="Rated 4.00 out of 5">
-                                                                                                <span
-                                                                                                    style=width:80%>Rated
-                                                                                                    <strong
-                                                                                                        class=rating>4.00</strong>
-                                                                                                    out of 5</span>
-                                                                                            </div><strong
-                                                                                                class=rating-count>01</strong>
-                                                                                        </div>
-                                                                                        <span class=price><span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>189.00</bdi></span>
-                                                                                            &ndash; <span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class=woocommerce-Price-currencySymbol>&#36;</span>219.00</bdi></span></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class=tab-panel id=tab-989c50d-6581595d5b17d></div>
-                                                            <div class=tab-panel id=tab-8fef63a-6581595d5b1a1></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c29ca10 col-sm-4 col-xs-12 none"
-                                    data-id=c29ca10 data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-83320f1 rating-not-yes none elementor-widget elementor-widget-ovic_products"
-                                                data-id=83320f1 data-element_type=widget
-                                                data-widget_type=ovic_products.default>
-                                                <div class=elementor-widget-container>
-                                                    <div data-id=products_137 class="ovic-products   style-02">
-                                                        <div class=sc-title><span class=icon></span>
-                                                            <h2 class="title">LATEST DEALS</h2>
-                                                        </div>
-                                                        <div class="woocommerce columns-3 ">
-                                                            <ul class="products products equal-container better-height product-list-owl owl-slick rows-space-0"
-                                                                data-limit=3
-                                                                data-slick={&quot;slidesToShow&quot;:1,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:15,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]}
-                                                                style=--show:1;--margin:30px;--show-portrait:2;--margin-portrait:15px;--show-mobile:1;--margin-mobile:15px;>
-                                                                <li data-product_id=2207
-                                                                    class="product-item style-02 product type-product post-2207 status-publish first instock product_cat-smartphone-tablets product_tag-market has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                                                    <div class="product-inner product-01 add-cart-01">
-                                                                        <div class="ovic-countdown style-04">
-                                                                            <div class=kuteshop-countdown-wrapper>
-                                                                                <div class=kuteshop-countdown
-                                                                                    data-datetime="12/21/2023 08:50:37"
-                                                                                    data-params={&quot;hrs_text&quot;:&quot;Hrs&quot;,&quot;mins_text&quot;:&quot;Mins&quot;,&quot;secs_text&quot;:&quot;Secs&quot;}>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="product-thumb tooltip-wrap tooltip-start">
-                                                                            <div class=product-labels><span
-                                                                                    class="onsale product-label"><span
-                                                                                        class=text>Sale</span><span
-                                                                                        class=percent><span
-                                                                                            class=minus>-</span>35<span
-                                                                                            class=symbol>%</span></span></span>
-                                                                            </div>
-                                                                            <div class=thumb-wrapper>
-                                                                                <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                    href="https://kuteshop.kutethemes.net/product/iphon-pro-max-128gb/?demo=21">
-                                                                                    <figure class=primary-thumb><img
-                                                                                            decoding=async width=792
-                                                                                            height=780
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-01-792x780.jpg
-                                                                                            class="attachment-792x780 size-792x780 wp-post-image"
-                                                                                            alt loading=lazy></figure>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="group-button style-01 popup">
-                                                                                <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2207  wishlist-fragment on-first-load"
-                                                                                    data-fragment-ref=2207
-                                                                                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2207,&quot;parent_product_id&quot;:2207,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                    <div class=yith-wcwl-add-button>
-                                                                                        <a href="?add_to_wishlist=2207&#038;_wpnonce=cdbba028c6"
-                                                                                            class="add_to_wishlist single_add_to_wishlist"
-                                                                                            data-product-id=2207
-                                                                                            data-product-type=simple
-                                                                                            data-original-product-id=2207
-                                                                                            data-title=Wishlist
-                                                                                            rel=nofollow>
-                                                                                            <i
-                                                                                                class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                            <span>Wishlist</span>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div
-                                                                                    class="woocommerce product compare-button">
-                                                                                    <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2207"
-                                                                                        class="compare button"
-                                                                                        data-product_id=2207
-                                                                                        rel=nofollow>Compare</a></div><a
-                                                                                    href=#
-                                                                                    class="button yith-wcqv-button"
-                                                                                    data-product_id=2207>Quick View</a>
-                                                                            </div>
-                                                                            <span class=add-to-cart
-                                                                                data-title="Add to cart"><a
-                                                                                    href="https://kuteshop.kutethemes.net/?add-to-cart=2207"
-                                                                                    data-quantity=1
-                                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                    data-product_id=2207
-                                                                                    data-product_sku=MK-DG-001
-                                                                                    aria-label="Add &ldquo;Iphon Pro Max 128GB&rdquo; to your cart"
-                                                                                    aria-describedby rel=nofollow>Add to
-                                                                                    cart</a></span>
-                                                                        </div>
-                                                                        <div class="product-info equal-elem">
-                                                                            <h2 class="product-title"><a
-                                                                                    href="https://kuteshop.kutethemes.net/product/iphon-pro-max-128gb/?demo=21">Iphon
-                                                                                    Pro Max 128GB</a></h2>
-                                                                            <div class=star-rating-wrap>
-                                                                                <div class=star-rating role=img
-                                                                                    aria-label="Rated 4.25 out of 5">
-                                                                                    <span style=width:85%>Rated <strong
-                                                                                            class=rating>4.25</strong>
-                                                                                        out of 5</span></div><strong
-                                                                                    class=rating-count>04</strong>
-                                                                            </div>
-                                                                            <span class=price><del
-                                                                                    aria-hidden=true><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>569.99</bdi></span></del>
-                                                                                <ins><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>369.99</bdi></span></ins></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-product_id=2291
-                                                                    class="product-item style-02 product type-product post-2291 status-publish instock product_cat-smartphone-tablets product_tag-market has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                                                    <div class="product-inner product-01 add-cart-01">
-                                                                        <div class="ovic-countdown style-04">
-                                                                            <div class=kuteshop-countdown-wrapper>
-                                                                                <div class=kuteshop-countdown
-                                                                                    data-datetime="12/21/2023 08:50:37"
-                                                                                    data-params={&quot;hrs_text&quot;:&quot;Hrs&quot;,&quot;mins_text&quot;:&quot;Mins&quot;,&quot;secs_text&quot;:&quot;Secs&quot;}>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="product-thumb tooltip-wrap tooltip-start">
-                                                                            <div class=product-labels><span
-                                                                                    class="onsale product-label"><span
-                                                                                        class=text>Sale</span><span
-                                                                                        class=percent><span
-                                                                                            class=minus>-</span>23<span
-                                                                                            class=symbol>%</span></span></span>
-                                                                            </div>
-                                                                            <div class=thumb-wrapper>
-                                                                                <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                    href="https://kuteshop.kutethemes.net/product/iphone-10-rsx-max-256gb/?demo=21">
-                                                                                    <figure class=primary-thumb><img
-                                                                                            decoding=async width=792
-                                                                                            height=780
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-h1-06-792x780.jpg
-                                                                                            class="attachment-792x780 size-792x780 wp-post-image"
-                                                                                            alt loading=lazy></figure>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="group-button style-01 popup">
-                                                                                <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2291  wishlist-fragment on-first-load"
-                                                                                    data-fragment-ref=2291
-                                                                                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2291,&quot;parent_product_id&quot;:2291,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                    <div class=yith-wcwl-add-button>
-                                                                                        <a href="?add_to_wishlist=2291&#038;_wpnonce=cdbba028c6"
-                                                                                            class="add_to_wishlist single_add_to_wishlist"
-                                                                                            data-product-id=2291
-                                                                                            data-product-type=simple
-                                                                                            data-original-product-id=2291
-                                                                                            data-title=Wishlist
-                                                                                            rel=nofollow>
-                                                                                            <i
-                                                                                                class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                            <span>Wishlist</span>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div
-                                                                                    class="woocommerce product compare-button">
-                                                                                    <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2291"
-                                                                                        class="compare button"
-                                                                                        data-product_id=2291
-                                                                                        rel=nofollow>Compare</a></div><a
-                                                                                    href=#
-                                                                                    class="button yith-wcqv-button"
-                                                                                    data-product_id=2291>Quick View</a>
-                                                                            </div>
-                                                                            <span class=add-to-cart
-                                                                                data-title="Add to cart"><a
-                                                                                    href="https://kuteshop.kutethemes.net/?add-to-cart=2291"
-                                                                                    data-quantity=1
-                                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                    data-product_id=2291
-                                                                                    data-product_sku=MK-DG-005
-                                                                                    aria-label="Add &ldquo;Iphone 10 Rsx Max 256GB&rdquo; to your cart"
-                                                                                    aria-describedby rel=nofollow>Add to
-                                                                                    cart</a></span>
-                                                                        </div>
-                                                                        <div class="product-info equal-elem">
-                                                                            <h2 class="product-title"><a
-                                                                                    href="https://kuteshop.kutethemes.net/product/iphone-10-rsx-max-256gb/?demo=21">Iphone
-                                                                                    10 Rsx Max 256GB</a></h2>
-                                                                            <div class=star-rating-wrap>
-                                                                                <div class=star-rating role=img
-                                                                                    aria-label="Rated 4.00 out of 5">
-                                                                                    <span style=width:80%>Rated <strong
-                                                                                            class=rating>4.00</strong>
-                                                                                        out of 5</span></div><strong
-                                                                                    class=rating-count>01</strong>
-                                                                            </div>
-                                                                            <span class=price><del
-                                                                                    aria-hidden=true><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>350.00</bdi></span></del>
-                                                                                <ins><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>269.00</bdi></span></ins></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-product_id=2619
-                                                                    class="product-item style-02 product type-product post-2619 status-publish last instock product_cat-smartphone-tablets product_tag-market has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                                                    <div class="product-inner product-01 add-cart-01">
-                                                                        <div class="ovic-countdown style-04">
-                                                                            <div class=kuteshop-countdown-wrapper>
-                                                                                <div class=kuteshop-countdown
-                                                                                    data-datetime="12/21/2023 08:50:37"
-                                                                                    data-params={&quot;hrs_text&quot;:&quot;Hrs&quot;,&quot;mins_text&quot;:&quot;Mins&quot;,&quot;secs_text&quot;:&quot;Secs&quot;}>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="product-thumb tooltip-wrap tooltip-start">
-                                                                            <div class=product-labels><span
-                                                                                    class="onsale product-label"><span
-                                                                                        class=text>Sale</span><span
-                                                                                        class=percent><span
-                                                                                            class=minus>-</span>34<span
-                                                                                            class=symbol>%</span></span></span>
-                                                                            </div>
-                                                                            <div class=thumb-wrapper>
-                                                                                <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                    href="https://kuteshop.kutethemes.net/product/mobile-double-flash/?demo=21">
-                                                                                    <figure class=primary-thumb><img
-                                                                                            decoding=async width=792
-                                                                                            height=780
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/digi-01-792x780.jpg
-                                                                                            class="attachment-792x780 size-792x780 wp-post-image"
-                                                                                            alt loading=lazy></figure>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="group-button style-01 popup">
-                                                                                <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2619  wishlist-fragment on-first-load"
-                                                                                    data-fragment-ref=2619
-                                                                                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2619,&quot;parent_product_id&quot;:2619,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                    <div class=yith-wcwl-add-button>
-                                                                                        <a href="?add_to_wishlist=2619&#038;_wpnonce=cdbba028c6"
-                                                                                            class="add_to_wishlist single_add_to_wishlist"
-                                                                                            data-product-id=2619
-                                                                                            data-product-type=simple
-                                                                                            data-original-product-id=2619
-                                                                                            data-title=Wishlist
-                                                                                            rel=nofollow>
-                                                                                            <i
-                                                                                                class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                            <span>Wishlist</span>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div
-                                                                                    class="woocommerce product compare-button">
-                                                                                    <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2619"
-                                                                                        class="compare button"
-                                                                                        data-product_id=2619
-                                                                                        rel=nofollow>Compare</a></div><a
-                                                                                    href=#
-                                                                                    class="button yith-wcqv-button"
-                                                                                    data-product_id=2619>Quick View</a>
-                                                                            </div>
-                                                                            <span class=add-to-cart
-                                                                                data-title="Add to cart"><a
-                                                                                    href="https://kuteshop.kutethemes.net/?add-to-cart=2619"
-                                                                                    data-quantity=1
-                                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                    data-product_id=2619
-                                                                                    data-product_sku=MK-DG-0010
-                                                                                    aria-label="Add &ldquo;Mobile Double Flash&rdquo; to your cart"
-                                                                                    aria-describedby rel=nofollow>Add to
-                                                                                    cart</a></span>
-                                                                        </div>
-                                                                        <div class="product-info equal-elem">
-                                                                            <h2 class="product-title"><a
-                                                                                    href="https://kuteshop.kutethemes.net/product/mobile-double-flash/?demo=21">Mobile
-                                                                                    Double Flash</a></h2>
-                                                                            <span class=price><del
-                                                                                    aria-hidden=true><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>450.00</bdi></span></del>
-                                                                                <ins><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class=woocommerce-Price-currencySymbol>&#36;</span>299.00</bdi></span></ins></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-6b578e0 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                        data-id=6b578e0 data-element_type=section
-                        data-settings={&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}>
-                        <div class="elementor-container elementor-column-gap-extended">
-                            <div class=elementor-row>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-47248f3 none"
-                                    data-id="47248f3" data-element_type="column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            @foreach ($product_subcategories as $product_subcategory)
-                                            <div class="elementor-element elementor-element-3aa7727 rating-not-yes hide-border-wrap none elementor-widget elementor-widget-ovic_tabs"
-                                                data-id="3aa7727" data-element_type="widget"
-                                                data-widget_type="ovic_tabs.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="ovic-tab ovic-tabs style-02">
-                                                        <div class="tabs-head">
-                                                            <h2 class="tab-title">
-                                                                <span class="icon-tab">
-                                                                    <i aria-hidden="true" class="main-icon-dress"></i>
-                                                                </span>
-                                                                {{ $product_subcategory->name }}
-                                                            </h2>
+@extends('layouts.customer.main')
 
-                                                            <div class=tab-control>
-                                                                <span class="main-icon-ladder icon"></span>
-                                                                <a class=section-up href=javascript:void(0)>
-                                                                    <span class="fa fa-angle-up"></span>
-                                                                </a>
-                                                                <a class=section-down href=javascript:void(0)>
-                                                                    <span class="fa fa-angle-down"></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="tab-banner top">
-                                                            <a href=#>
-                                                                <figure class="effect plus-zoom">
-                                                                    <img loading="lazy" width="585" height="65"
-                                                                        src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25.jpg"
-                                                                        class="attachment-full size-full wp-post-image" alt
-                                                                        decoding="async"
-                                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-25-84x9.jpg 84w"
-                                                                        sizes="(max-width: 585px) 100vw, 585px">
-                                                                </figure>
-                                                                <figure class="effect plus-zoom">
-                                                                    <img loading="lazy" width="585" height="65"
-                                                                        src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26.jpg"
-                                                                        class="attachment-full size-full wp-post-image" alt
-                                                                        decoding="async"
-                                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26.jpg 585w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-300x33.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-220x24.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-86x10.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-64x7.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-26-84x9.jpg 84w"
-                                                                        sizes="(max-width: 585px) 100vw, 585px">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                        <div class="tab-content">
-                                                            <div class="tab-banner left">
-                                                                <span class="text-feature">
-                                                                    <span class="text">FEATURED</span>
-                                                                </span>
-                                                                <div class="inner-content" data-slick>
-                                                                    <a href="#" class="effect&#x20;border-scale">
-                                                                        <figure>
-                                                                            <img loading="lazy" width="234"
-                                                                                height="350"
-                                                                                src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4.jpg"
-                                                                                class="attachment-full size-full wp-post-image"
-                                                                                alt decoding="async"
-                                                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4.jpg 234w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-201x300.jpg 201w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-103x154.jpg 103w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-86x129.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-64x96.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-88x132.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-4-84x126.jpg 84w"
-                                                                                sizes="(max-width: 234px) 100vw, 234px">
-                                                                        </figure>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tabs-container">
-                                                                <div class="tab-panel active"
-                                                                    id="tab-{{ $product_subcategory->id }}">
-                                                                    <div data-id="products_{{ $product_subcategory->id }}"
-                                                                        class="ovic-products style-01 border-full">
-                                                                        <div class="woocommerce columns-3">
-                                                                            <ul class="products products equal-container better-height product-list-owl owl-slick rows-space-0"
-                                                                                data-limit="6"
-                                                                                data-slick="{&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:1,&quot;slidesMargin&quot;:0,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]}"
-                                                                                style="--show:4;--margin:0px;--show-ipad:3;--margin-ipad:0px;--show-landscape:4;--margin-landscape:0px;--show-portrait:3;--margin-portrait:0px;--show-mobile:2;--margin-mobile:0px;">
-                                                                                @foreach ($product_subcategory->products as $product)
-                                                                                    <li data-product_id="{{ $product->id }}"
-                                                                                        class="product-item style-01 product type-product post-{{ $product->id }} status-publish first instock product_cat-summer-dresses product_cat-for-women product_tag-market has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                                                                        <div
-                                                                                            class="product-inner product-01 add-cart-01">
-                                                                                            <div
-                                                                                                class="product-thumb tooltip-wrap tooltip-start">
-                                                                                                <div class="thumb-wrapper">
-                                                                                                    <a class="thumb-link hover-zoom woocommerce-product-gallery__image"
-                                                                                                        href="{{ url('product/' . $product->slug) }}">
-                                                                                                        <figure
-                                                                                                            class="primary-thumb">
-                                                                                                            <img decoding="async"
-                                                                                                                width="850"
-                                                                                                                height="1021"
-                                                                                                                src="{{ Storage::url($product->photo) }}"
-                                                                                                                class="attachment-850x1021 size-850x1021 wp-post-image"
-                                                                                                                alt
-                                                                                                                loading="lazy">
-                                                                                                        </figure>
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="group-button style-01 popup">
-                                                                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2225 wishlist-fragment on-first-load"
-                                                                                                        data-fragment-ref="2225"
-                                                                                                        data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:2225,&quot;parent_product_id&quot;:2225,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;main-icon-heart1 ovic-wl-icon&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                                                        <div
-                                                                                                            class="yith-wcwl-add-button">
-                                                                                                            <a href="?add_to_wishlist=2225&#038;_wpnonce=5f8ed4cfa2"
-                                                                                                                class="add_to_wishlist single_add_to_wishlist"
-                                                                                                                data-product-id="2225"
-                                                                                                                data-product-type="simple"
-                                                                                                                data-original-product-id="2225"
-                                                                                                                data-title="Wishlist"
-                                                                                                                rel="nofollow">
-                                                                                                                <i
-                                                                                                                    class="yith-wcwl-icon fa main-icon-heart1 ovic-wl-icon"></i>
-                                                                                                                <span>Wishlist</span>
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="woocommerce product compare-button">
-                                                                                                        <a href="https://kuteshop.kutethemes.net?action=yith-woocompare-add-product&id=2225"
-                                                                                                            class="compare button"
-                                                                                                            data-product_id="2225"
-                                                                                                            rel=nofollow>Compare</a>
-                                                                                                    </div>
-                                                                                                    <a href="#"
-                                                                                                        class="button yith-wcqv-button"
-                                                                                                        data-product_id="2225">Quick
-                                                                                                        View</a>
-                                                                                                </div>
-                                                                                                <span class="add-to-cart"
-                                                                                                    data-title="Add to cart">
-                                                                                                    <a href="https://kuteshop.kutethemes.net/?add-to-cart=2225"
-                                                                                                        data-quantity="1"
-                                                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                                                        data-product_id="2225"
-                                                                                                        data-product_sku="MK-FS-006"
-                                                                                                        aria-label="Add &ldquo;Black Autum Dresses&rdquo; to your cart"
-                                                                                                        aria-describedby
-                                                                                                        rel="nofollow">
-                                                                                                        Add to cart
-                                                                                                    </a>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="product-info equal-elem">
-                                                                                                <h2 class="product-title">
-                                                                                                    <a
-                                                                                                        href="{{ url('product/' . $product->slug) }}">
-                                                                                                        {{ $product->name }}
-                                                                                                    </a>
-                                                                                                </h2>
-                                                                                                <div
-                                                                                                    class="star-rating-wrap">
-                                                                                                    <div class="star-rating"
-                                                                                                        role="img"
-                                                                                                        aria-label="Rated 3.00 out of 5">
-                                                                                                        <span
-                                                                                                            style="width:60%">Rated
-                                                                                                            <strong
-                                                                                                                class="rating">3.00</strong>
-                                                                                                            out of 5
-                                                                                                        </span>
-                                                                                                    </div>
-                                                                                                    <strong
-                                                                                                        class="rating-count">01</strong>
-                                                                                                </div>
-                                                                                                <span class="price">
-                                                                                                    <spancl
-                                                                                                        ass="woocommerce-Price-amount amount">
-                                                                                                        <bdi>
-                                                                                                            <span
-                                                                                                                class=woocommerce-Price-currencySymbol>Rp</span>
+@section('title')
+    Home
+@endsection
 
-                                                                                                            {{ $product->details->first()->price }}
-
-                                                                                                        </bdi>
-                                                                                                    </spancl>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                @endforeach
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8e922ba none"
-                                    data-id=8e922ba data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-6623a50 elementor-widget elementor-widget-image"
-                                                data-id=6623a50 data-element_type=widget data-widget_type=image.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class=elementor-image>
-                                                        <a class="effect overlay-plus" href=#>
-                                                            <img loading=lazy decoding=async width=570 height=120
-                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15.jpg
-                                                                class="attachment-full size-full wp-image-666 wp-post-image"
-                                                                alt
-                                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15.jpg 570w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-300x63.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-220x46.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-86x18.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-64x13.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-88x19.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-15-84x18.jpg 84w"
-                                                                sizes="(max-width: 570px) 100vw, 570px"> </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-043162a none"
-                                    data-id=043162a data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-eb0d9ac elementor-widget elementor-widget-image"
-                                                data-id=eb0d9ac data-element_type=widget data-widget_type=image.default>
-                                                <div class=elementor-widget-container>
-                                                    <div class=elementor-image>
-                                                        <a class="effect overlay-plus" href=#>
-                                                            <img loading=lazy decoding=async width=570 height=120
-                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16.jpg
-                                                                class="attachment-full size-full wp-image-667 wp-post-image"
-                                                                alt
-                                                                srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16.jpg 570w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-300x63.jpg 300w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-220x46.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-86x18.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-64x13.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-88x19.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-16-84x18.jpg 84w"
-                                                                sizes="(max-width: 570px) 100vw, 570px"> </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-2e654dd elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                    data-id="2e654dd" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class=elementor-row>
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1b7121a none"
-                                    data-id=1b7121a data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class=elementor-widget-wrap>
-                                            <div class="elementor-element elementor-element-d815dee nav-02 nav-top offset-54 none elementor-widget elementor-widget-ovic_title"
-                                                style="padding-top: 20px" data-id="d815dee" data-element_type="widget"
-                                                data-widget_type="ovic_title.default">
-                                                <div class=elementor-widget-container>
-                                                    <div class="ovic-title style-01">
-                                                        <h2 class="title">
-                                                            HOT CATEGORIES</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-16d9585 nav-02 nav-top offset-54 none"
-                                    data-id=16d9585 data-element_type=column>
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="owl-slick rows-space-30 elementor-widget-wrap"
-                                            data-slick={&quot;slidesToShow&quot;:4,&quot;infinite&quot;:false,&quot;arrows&quot;:true,&quot;rows&quot;:2,&quot;slidesMargin&quot;:30,&quot;speed&quot;:500,&quot;responsive&quot;:[{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:30,&quot;rows&quot;:2,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:15,&quot;rows&quot;:2,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:15,&quot;rows&quot;:2,&quot;vertical&quot;:false}}]}
-                                            style=--show:4;--margin:30px;--show-landscape:3;--margin-landscape:30px;--show-portrait:2;--margin-portrait:15px;--show-mobile:1;--margin-mobile:15px;>
-
-                                            @foreach ($product_subcategories as $product_subcategory)
-                                                <div class="elementor-element elementor-element-9971a94 none elementor-widget elementor-widget-ovic_category"
-                                                    data-id="{{ $product_subcategory->id }}" data-element_type="widget"
-                                                    data-widget_type="ovic_category.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="ovic-category style-01 equal-container better-height">
-                                                            <div class="top-category">
-                                                                <a href="{{ $product_subcategory->slug }}" class="thumb">
-                                                                    <img loading="lazy" width="270" height="110"
-                                                                        src="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17.jpg"
-                                                                        class="attachment-full size-full wp-post-image" alt
-                                                                        decoding="async"
-                                                                        srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17.jpg 270w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-220x90.jpg 220w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-86x35.jpg 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-64x26.jpg 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-88x36.jpg 88w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-268x110.jpg 268w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-img-17-84x34.jpg 84w"
-                                                                        sizes="(max-width: 270px) 100vw, 270px">
-                                                                </a>
-                                                                <h3 class="title">{{ $product_subcategory->name }}</h3>
-                                                                <a href="{{ $product_subcategory->slug }}"
-                                                                    class="button">SHOP NOW </a>
-                                                            </div>
-                                                            <ul class=list-category>
-                                                                @foreach ($product_subcategory->products as $product)
-                                                                    @if ($loop->index < 4)
-                                                                        <li>
-                                                                            <a
-                                                                                href="{{ $product->slug }}">{{ $product->name }}</a>
-                                                                        </li>
-                                                                    @endif
-                                                                @endforeach
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <footer class="footer footer-01">
-            <div class=container>
-                <div data-elementor-type=wp-post data-elementor-id=332 class="elementor elementor-332">
-                    <div class=elementor-inner>
-                        <div class=elementor-section-wrap>
-                            <section
-                                class="elementor-section elementor-top-section elementor-element elementor-element-4058170 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                data-id=4058170 data-element_type=section
-                                data-settings={&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}>
-                                <div class="elementor-container elementor-column-gap-extended">
-                                    <div class=elementor-row>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-37f693b none"
-                                            data-id=37f693b data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <div class="elementor-element elementor-element-1e90de1 none elementor-widget elementor-widget-image"
-                                                        data-id=1e90de1 data-element_type=widget
-                                                        data-widget_type=image.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class=elementor-image>
-                                                                <img width=213 height=54
-                                                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo-1-foot.png
-                                                                    class="attachment-full size-full wp-image-912 wp-post-image"
-                                                                    alt loading=lazy
-                                                                    srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo-1-foot.png 213w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo-1-foot-86x22.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo-1-foot-64x16.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/logo-1-foot-84x21.png 84w"
-                                                                    sizes="(max-width: 213px) 100vw, 213px">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <section
-                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-3e41e3f elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                                        data-id=3e41e3f data-element_type=section>
-                                                        <div class="elementor-container elementor-column-gap-no">
-                                                            <div class=elementor-row>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-12686ed none"
-                                                                    data-id=12686ed data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-9133473 none elementor-widget elementor-widget-heading"
-                                                                                data-id=9133473 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <h3
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        Address:</h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-518322c none"
-                                                                    data-id=518322c data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-a64aaa4 elementor-widget__width-initial elementor-widget-tablet__width-inherit none elementor-widget elementor-widget-heading"
-                                                                                data-id=a64aaa4 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <p
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        Example Street 68, Mahattan, New
-                                                                                        York, USA.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                    <section
-                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-cf6383e elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                                        data-id=cf6383e data-element_type=section>
-                                                        <div class="elementor-container elementor-column-gap-no">
-                                                            <div class=elementor-row>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-86ad259 none"
-                                                                    data-id=86ad259 data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-a382a9d none elementor-widget elementor-widget-heading"
-                                                                                data-id=a382a9d data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <h3
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        Phone:</h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-88fa6d5 none"
-                                                                    data-id=88fa6d5 data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-3b8f002 none elementor-widget elementor-widget-heading"
-                                                                                data-id=3b8f002 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <p
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        <a
-                                                                                            href=tel:+00%20123%20456%20789>+00
-                                                                                            123 456 789</a></p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                    <section
-                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-79337fd elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                                        data-id=79337fd data-element_type=section>
-                                                        <div class="elementor-container elementor-column-gap-no">
-                                                            <div class=elementor-row>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ec3adb4 none"
-                                                                    data-id=ec3adb4 data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-069ee12 none elementor-widget elementor-widget-heading"
-                                                                                data-id=069ee12 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <h3
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        Email:</h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38cd41a none"
-                                                                    data-id=38cd41a data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-b928ff0 none elementor-widget elementor-widget-heading"
-                                                                                data-id=b928ff0 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <p
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        <a
-                                                                                            href=mailto:support@business.com>support@business.com</a>
-                                                                                    </p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-984706c none"
-                                            data-id=984706c data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <div class="elementor-element elementor-element-b85c931 none elementor-widget elementor-widget-ovic_menu"
-                                                        data-id=b85c931 data-element_type=widget
-                                                        data-widget_type=ovic_menu.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class="ovic-custommenu style-02 wpb_content_element vc_wp_custommenu"
-                                                                data-name="01 Footer - Company">
-                                                                <div class="widget widget_nav_menu">
-                                                                    <h3 class="widget-title"><span
-                                                                            class=text>COMPANY</span></h3>
-                                                                    <div class="ovic-menu-wapper horizontal">
-                                                                        <ul id=menu-01-footer-company
-                                                                            class="menu ovic-menu">
-                                                                            <li id=menu-item-358
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358">
-                                                                                <a href="https://kuteshop.kutethemes.net/about-us/?demo=21"
-                                                                                    data-megamenu=0>About Us</a></li>
-                                                                            <li id=menu-item-361
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-361">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>Testimonials</a>
-                                                                            </li>
-                                                                            <li id=menu-item-362
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-362">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>Affiliate
-                                                                                    Program</a></li>
-                                                                            <li id=menu-item-360
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360">
-                                                                                <a href="https://kuteshop.kutethemes.net/terms-conditions/?demo=21"
-                                                                                    data-megamenu=0>Terms &#038;
-                                                                                    Conditions</a></li>
-                                                                            <li id=menu-item-359
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359">
-                                                                                <a href="https://kuteshop.kutethemes.net/contact-us/?demo=21"
-                                                                                    data-megamenu=0>Contact Us</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-fc787cf none"
-                                            data-id=fc787cf data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <div class="elementor-element elementor-element-bbb1397 none elementor-widget elementor-widget-ovic_menu"
-                                                        data-id=bbb1397 data-element_type=widget
-                                                        data-widget_type=ovic_menu.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class="ovic-custommenu style-02 wpb_content_element vc_wp_custommenu"
-                                                                data-name="01 Footer - My Account">
-                                                                <div class="widget widget_nav_menu">
-                                                                    <h3 class="widget-title"><span class=text>MY
-                                                                            ACCOUNT</span></h3>
-                                                                    <div class="ovic-menu-wapper horizontal">
-                                                                        <ul id=menu-01-footer-my-account
-                                                                            class="menu ovic-menu">
-                                                                            <li id=menu-item-1130
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1130">
-                                                                                <a href="https://kuteshop.kutethemes.net/my-account/orders/?demo=21"
-                                                                                    data-megamenu=0>My Order</a></li>
-                                                                            <li id=menu-item-1126
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1126">
-                                                                                <a href="https://kuteshop.kutethemes.net/wishlist/?demo=21"
-                                                                                    data-megamenu=0>My Wishlist</a></li>
-                                                                            <li id=menu-item-1127
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1127">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>My Credit Slip</a>
-                                                                            </li>
-                                                                            <li id=menu-item-1128
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1128">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>My Addresses</a>
-                                                                            </li>
-                                                                            <li id=menu-item-1129
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1129">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>My Personal Info</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-50efb26 none"
-                                            data-id=50efb26 data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <div class="elementor-element elementor-element-7802909 none elementor-widget elementor-widget-ovic_menu"
-                                                        data-id=7802909 data-element_type=widget
-                                                        data-widget_type=ovic_menu.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class="ovic-custommenu style-02 wpb_content_element vc_wp_custommenu"
-                                                                data-name="01 Footer - Support">
-                                                                <div class="widget widget_nav_menu">
-                                                                    <h3 class="widget-title"><span
-                                                                            class=text>SUPPORT</span></h3>
-                                                                    <div class="ovic-menu-wapper horizontal">
-                                                                        <ul id=menu-01-footer-support
-                                                                            class="menu ovic-menu">
-                                                                            <li id=menu-item-368
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-368">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>New User Guide</a>
-                                                                            </li>
-                                                                            <li id=menu-item-370
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-370">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>Help Center</a></li>
-                                                                            <li id=menu-item-369
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-369">
-                                                                                <a href="https://kuteshop.kutethemes.net/privacy-policy/?demo=21"
-                                                                                    data-megamenu=0>Refund Policy</a>
-                                                                            </li>
-                                                                            <li id=menu-item-371
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-371">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>Report Spam</a></li>
-                                                                            <li id=menu-item-372
-                                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-372">
-                                                                                <a href=# class=disable-link
-                                                                                    data-megamenu=0>FAQs</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-72584d8 none"
-                                            data-id=72584d8 data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <div class="elementor-element elementor-element-27fd78e none elementor-widget elementor-widget-ovic_newsletter"
-                                                        data-id=27fd78e data-element_type=widget
-                                                        data-widget_type=ovic_newsletter.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class="ovic-newsletter style-01">
-                                                                <div class=inner>
-                                                                    <h3 class="title">NEWSLETTER</h3>
-                                                                    <div class=content>
-                                                                        <script>
-                                                                            (function() {
-                                                                                window.mc4wp = window.mc4wp || {
-                                                                                    listeners: [],
-                                                                                    forms: {
-                                                                                        on: function(evt, cb) {
-                                                                                            window.mc4wp.listeners.push({
-                                                                                                event: evt,
-                                                                                                callback: cb
-                                                                                            });
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            })();
-                                                                        </script>
-                                                                        <form id=mc4wp-form-1
-                                                                            class="mc4wp-form mc4wp-form-93"
-                                                                            method=post data-id=93
-                                                                            data-name="default form">
-                                                                            <div class=mc4wp-form-fields> <label
-                                                                                    class="text-field field-email">
-                                                                                    <input
-                                                                                        class="input-text email-newsletter"
-                                                                                        type=email name=EMAIL
-                                                                                        required=required
-                                                                                        placeholder="Your email address">
-                                                                                    <span class=input-focus></span>
-                                                                                </label>
-                                                                                <button type=submit
-                                                                                    class=submit-newsletter value>
-                                                                                    OK </button>
-                                                                            </div><label
-                                                                                style="display: none !important;">Leave
-                                                                                this field empty if you're human: <input
-                                                                                    type=text name=_mc4wp_honeypot value
-                                                                                    tabindex=-1
-                                                                                    autocomplete=off></label><input
-                                                                                type=hidden name=_mc4wp_timestamp
-                                                                                value=1702975837><input type=hidden
-                                                                                name=_mc4wp_form_id value=93><input
-                                                                                type=hidden name=_mc4wp_form_element_id
-                                                                                value=mc4wp-form-1>
-                                                                            <div class=mc4wp-response></div>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-371e90e none elementor-widget elementor-widget-heading"
-                                                        data-id=371e90e data-element_type=widget
-                                                        data-widget_type=heading.default>
-                                                        <div class=elementor-widget-container>
-                                                            <h3
-                                                                class="elementor-heading-title elementor-size-default">
-                                                                LET’S SOCIALIZE</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-b6c8dfd elementor-shape-square elementor-grid-5 main-bg-hover none elementor-widget elementor-widget-social-icons"
-                                                        data-id=b6c8dfd data-element_type=widget
-                                                        data-widget_type=social-icons.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div
-                                                                class="elementor-social-icons-wrapper elementor-grid">
-                                                                <span class=elementor-grid-item>
-                                                                    <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-14a8d20"
-                                                                        target=_blank>
-                                                                        <span
-                                                                            class=elementor-screen-only>Facebook-f</span>
-                                                                        <i class="fab fa-facebook-f"></i> </a>
-                                                                </span>
-                                                                <span class=elementor-grid-item>
-                                                                    <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-67c7ad8"
-                                                                        target=_blank>
-                                                                        <span class=elementor-screen-only>Twitter</span>
-                                                                        <i class="fab fa-twitter"></i> </a>
-                                                                </span>
-                                                                <span class=elementor-grid-item>
-                                                                    <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-e7a0d92"
-                                                                        target=_blank>
-                                                                        <span class=elementor-screen-only>Youtube</span>
-                                                                        <i class="fab fa-youtube"></i> </a>
-                                                                </span>
-                                                                <span class=elementor-grid-item>
-                                                                    <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-6c45962"
-                                                                        target=_blank>
-                                                                        <span
-                                                                            class=elementor-screen-only>Instagram</span>
-                                                                        <i class="fab fa-instagram"></i> </a>
-                                                                </span>
-                                                                <span class=elementor-grid-item>
-                                                                    <a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest-p elementor-repeater-item-2aec99e"
-                                                                        target=_blank>
-                                                                        <span
-                                                                            class=elementor-screen-only>Pinterest-p</span>
-                                                                        <i class="fab fa-pinterest-p"></i> </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-8a5f66f none"
-                                            data-id=8a5f66f data-element_type=column>
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class=elementor-widget-wrap>
-                                                    <section
-                                                        class="elementor-section elementor-inner-section elementor-element elementor-element-442ba9b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                                        data-id=442ba9b data-element_type=section>
-                                                        <div class="elementor-container elementor-column-gap-no">
-                                                            <div class=elementor-row>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c81bf57 none"
-                                                                    data-id=c81bf57 data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class=elementor-widget-wrap>
-                                                                            <div class="elementor-element elementor-element-50b5fd4 none elementor-widget elementor-widget-heading"
-                                                                                data-id=50b5fd4 data-element_type=widget
-                                                                                data-widget_type=heading.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <h3
-                                                                                        class="elementor-heading-title elementor-size-default">
-                                                                                        ACCEPTED PAYMENT METHODS:</h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2c509a7 none"
-                                                                    data-id=2c509a7 data-element_type=column>
-                                                                    <div
-                                                                        class="elementor-column-wrap elementor-element-populated">
-                                                                        <div class="owl-slick rows-space-0 elementor-widget-wrap"
-                                                                            data-slick={&quot;slidesToShow&quot;:9,&quot;infinite&quot;:true,&quot;arrows&quot;:false,&quot;rows&quot;:1,&quot;slidesMargin&quot;:1,&quot;autoplaySpeed&quot;:3000,&quot;speed&quot;:500,&quot;autoplay&quot;:true,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:7,&quot;slidesMargin&quot;:1,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:1,&quot;rows&quot;:1,&quot;vertical&quot;:false}},{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:1,&quot;rows&quot;:1,&quot;vertical&quot;:false}}]}
-                                                                            style=--show:9;--margin:1px;--show-ipad:7;--margin-ipad:1px;--show-landscape:5;--margin-landscape:1px;--show-mobile:3;--margin-mobile:1px;>
-                                                                            <div class="elementor-element elementor-element-9580756 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=9580756 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=99 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-1.png
-                                                                                            class="attachment-full size-full wp-image-859 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-1.png 99w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-1-86x39.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-1-64x29.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-1-84x38.png 84w"
-                                                                                            sizes="(max-width: 99px) 100vw, 99px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-008a637 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=008a637 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=99 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-2.png
-                                                                                            class="attachment-full size-full wp-image-860 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-2.png 99w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-2-86x39.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-2-64x29.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-2-84x38.png 84w"
-                                                                                            sizes="(max-width: 99px) 100vw, 99px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-0cf3feb effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=0cf3feb data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=99 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-3.png
-                                                                                            class="attachment-full size-full wp-image-861 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-3.png 99w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-3-86x39.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-3-64x29.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-3-84x38.png 84w"
-                                                                                            sizes="(max-width: 99px) 100vw, 99px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-31c0b04 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=31c0b04 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=95 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-4.png
-                                                                                            class="attachment-full size-full wp-image-862 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-4.png 95w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-4-86x41.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-4-64x30.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-4-84x40.png 84w"
-                                                                                            sizes="(max-width: 95px) 100vw, 95px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-8bb3968 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=8bb3968 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=78 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-5.png
-                                                                                            class="attachment-full size-full wp-image-863 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-5.png 78w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-5-64x37.png 64w"
-                                                                                            sizes="(max-width: 78px) 100vw, 78px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-6562da7 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=6562da7 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=81 height=43
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-6.png
-                                                                                            class="attachment-full size-full wp-image-864 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-6.png 81w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-6-64x34.png 64w"
-                                                                                            sizes="(max-width: 81px) 100vw, 81px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-a23eeed effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=a23eeed data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=91 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-7.png
-                                                                                            class="attachment-full size-full wp-image-865 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-7.png 91w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-7-86x43.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-7-64x32.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-7-84x42.png 84w"
-                                                                                            sizes="(max-width: 91px) 100vw, 91px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-c91284e effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=c91284e data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=99 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-8.png
-                                                                                            class="attachment-full size-full wp-image-866 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-8.png 99w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-8-86x39.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-8-64x29.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-8-84x38.png 84w"
-                                                                                            sizes="(max-width: 99px) 100vw, 99px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-a936186 effect bounce-in elementor-widget elementor-widget-image"
-                                                                                data-id=a936186 data-element_type=widget
-                                                                                data-widget_type=image.default>
-                                                                                <div class=elementor-widget-container>
-                                                                                    <div class=elementor-image>
-                                                                                        <img width=108 height=45
-                                                                                            src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-9.png
-                                                                                            class="attachment-full size-full wp-image-867 wp-post-image"
-                                                                                            alt loading=lazy
-                                                                                            srcset="https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-9.png 108w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-9-86x36.png 86w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-9-64x27.png 64w, https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/01-pay-9-84x35.png 84w"
-                                                                                            sizes="(max-width: 108px) 100vw, 108px">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                    
-                                                    <div class="elementor-element elementor-element-602df33 default-color none elementor-widget elementor-widget-text-editor"
-                                                        data-id=602df33 data-element_type=widget
-                                                        data-widget_type=text-editor.default>
-                                                        <div class=elementor-widget-container>
-                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>Copyrights © Fermoso. All Rights Reserved. Designed by <a href="https://fermoso.com/" target="_blank" rel="noopener">Fermoso.com</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <a href=# class="backtotop action-to-top"></a> <a class=ovic-purchase-button
-            href=https://1.envato.market/WEdOn target=_blank>
-            <small class=symbol>$</small>
-            69 </a>
-        <div class=ovic-sales-popup></div>
-    </div>
-    <script>
-        window.RS_MODULES = window.RS_MODULES || {};
-        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-        window.RS_MODULES.defered = true;
-        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-        window.RS_MODULES.type = 'compiled';
-    </script> 
-    <a href="/?d=rtl" class="ovic-rtl-button" style="display: none">Change to <span>RTL</span></a>
-    <div id=ovic-menu-mobile-1 class="ovic-menu-clone-wrap mobile-main-menu loaded"
-        data-locations=[&quot;primary-menu&quot;,&quot;01-vertical-menu&quot;] data-default=primary>
-        <div class=head-menu-mobile>
-            <a href=https://kuteshop.kutethemes.net/my-account/ class="action login">
-                <span class="icon main-icon-enter"></span>
-                Login </a>
-            <a href=https://kuteshop.kutethemes.net/my-account/ class=avatar>
-                <figure>
-                    <img src="https://secure.gravatar.com/avatar/?s=60&#038;d=mm&#038;r=g" alt="Avatar Mobile">
-                </figure>
-            </a>
-            <div class=author>
-                <a href=https://kuteshop.kutethemes.net/my-account/ class=name>
-                    Guest <span class=email>Example@email.com</span>
-                </a>
-            </div>
-        </div>
-        <div class=ovic-menu-panels-actions-wrap><span class=ovic-menu-current-panel-title
-                data-main-title="Main Menu">
-                Main Menu </span><a href=# class="ovic-menu-close-btn ovic-menu-close-panels">x</a></div>
-        <div class=ovic-menu-panels>
-            <div id=ovic-menu-panel-main-6581595ddaa13 class='ovic-menu-panel ovic-menu-panel-main'>
-                <ul class=depth-0>
-                    <li
-                        class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item menu-item menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-121></a><a class=menu-link
-                            href=https://kuteshop.kutethemes.net/>Home</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-191></a><a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/?demo=21'>Shop</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-192></a><a class=menu-link
-                            href='https://kuteshop.kutethemes.net/blog/?demo=21'>Blog</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-193 disable-link'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-193></a><a class=menu-link href>Pages</a>
-                    </li>
-                    <li
-                        class='item-end menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-194'>
-                        <a class=menu-link href='https://1.envato.market/WEdOn?demo=21'>Buy KuteShop !</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-448 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/electronic/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
-                                    class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Electronics</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-447 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/sport/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-2.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Sports &
-                            Outdoors</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-439 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/digital/smartphone-tablets/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-3.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Smartphone
-                            &amp; Tablets</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-445 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/health-beauty/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-4.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Health
-                            &amp; Beauty</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-441 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/fashion/bags-shoes/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-5.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Bags &amp;
-                            Shoes</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-443 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/toys-hobbies/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-6.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Toys &amp;
-                            Hobbies</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-438 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/digital/networking-plus/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-7.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Networking
-                            Plus</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-437 menu-item-icon-image'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-437></a><a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/digital/laptops-plus/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-8.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Laptops
-                            Plus</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-444 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/jewelry/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-9.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Jewelry &
-                            Watches</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-440 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/electronic/lights-lamps/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-10.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Lights
-                            &amp; Lamps</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-436 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/digital/cameras-photo/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-11.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Cameras
-                            &amp; Photo</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-451 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/digital/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
-                                    class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Digital</a></li>
-                    <li
-                        class='menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-449 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/furniture/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-10.png
-                                    class="icon-image wp-post-image" alt decoding=async
-                                    loading=lazy></span>Furniture</a></li>
-                    <li
-                        class='hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-450 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/fashion/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-1.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Fashion &
-                            Clothing</a></li>
-                    <li
-                        class='hide menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item menu-item-442 menu-item-icon-image'>
-                        <a class=menu-link
-                            href='https://kuteshop.kutethemes.net/product-category/market/food-drink/?demo=21'><span
-                                class="icon icon-img"><img width=16 height=16
-                                    src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/08/01-menu-2.png
-                                    class="icon-image wp-post-image" alt decoding=async loading=lazy></span>Food &amp;
-                            Drink</a></li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-121 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-1>
-                    <li
-                        class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item menu-item menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <div class="sub-menu megamenu" data-responsive=.megamenu-wrap style=width:830px;>
-                            <div data-elementor-type=wp-post data-elementor-id=464 class="elementor elementor-464">
-                                <div class=elementor-inner>
-                                    <div class=elementor-section-wrap>
-                                        <section
-                                            class="elementor-section elementor-top-section elementor-element elementor-element-60906931 section-follow-header menu-follow-header elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                            data-id=60906931 data-element_type=section>
-                                            <div class="elementor-container elementor-column-gap-extended">
-                                                <div class=elementor-row>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1973c27 none"
-                                                        data-id=1973c27 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-b25c9fc none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=b25c9fc data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Home - 1">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Homepage</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-home-3
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-21 current_page_item menu-item-470">
-                                                                                            <a href=https://kuteshop.kutethemes.net/
-                                                                                                aria-current=page
-                                                                                                data-megamenu=0>Market
-                                                                                                01</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-965">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-02/
-                                                                                                data-megamenu=0>Market
-                                                                                                02</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-03/
-                                                                                                data-megamenu=0>Market
-                                                                                                03</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-963">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-04/
-                                                                                                data-megamenu=0>Market
-                                                                                                04</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-962">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-05/
-                                                                                                data-megamenu=0>Market
-                                                                                                05</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3415">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-06/
-                                                                                                data-megamenu=0>Market
-                                                                                                06</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3e5f51f4 none"
-                                                        data-id=3e5f51f4 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-722b416c none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=722b416c data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Home - 2">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Homepage</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-home-4
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4970">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-market-square/
-                                                                                                data-megamenu=0>Market
-                                                                                                07</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-fashion-bg/
-                                                                                                data-megamenu=0>Fashion
-                                                                                                Bg</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3413">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-furniture/
-                                                                                                data-megamenu=0>Furniture</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3414">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-sport/
-                                                                                                data-megamenu=0>Sport</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4632">
-                                                                                            <a href=https://kuteshop.kutethemes.net/home-sunglasses/
-                                                                                                data-megamenu=0>Sunglasses</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7225a2db none"
-                                                        data-id=7225a2db data-element_type=column>
-                                                        <div class=elementor-column-wrap>
-                                                            <div class=elementor-widget-wrap></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7c736d5c none"
-                                                        data-id=7c736d5c data-element_type=column>
-                                                        <div class=elementor-column-wrap>
-                                                            <div class=elementor-widget-wrap></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-191 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-2>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <div class="sub-menu megamenu" data-responsive=.megamenu-wrap style=width:1030px;>
-                            <div data-elementor-type=wp-post data-elementor-id=240 class="elementor elementor-240">
-                                <div class=elementor-inner>
-                                    <div class=elementor-section-wrap>
-                                        <section
-                                            class="elementor-section elementor-top-section elementor-element elementor-element-ee1a11f section-follow-header menu-follow-header elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                            data-id=ee1a11f data-element_type=section>
-                                            <div class="elementor-container elementor-column-gap-extended">
-                                                <div class=elementor-row>
-                                                    <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-75a0bcf none"
-                                                        data-id=75a0bcf data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-29524e7b none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=29524e7b data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Layout">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Layout</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-layout-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?shop_page_layout=grid&#038;demo=21"
-                                                                                                data-megamenu=0>Grid</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-276">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?shop_page_layout=list&#038;demo=21"
-                                                                                                data-megamenu=0>List</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-b083f81 none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=b083f81 data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Hover Item">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Hover Items</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-hover-item-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-282">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=change&#038;demo=21"
-                                                                                                data-megamenu=0>Change
-                                                                                                Image</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=zoom&#038;demo=21"
-                                                                                                data-megamenu=0>Zoom
-                                                                                                Image</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover=slide&#038;demo=21"
-                                                                                                data-megamenu=0>Slide
-                                                                                                Image</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?product_hover&#038;demo=21"
-                                                                                                data-megamenu=0>No
-                                                                                                Hover</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-5a198f1b none"
-                                                        data-id=5a198f1b data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-5b6560ed none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=5b6560ed data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Sidebar">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Sidebar</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-sidebar-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=left&#038;demo=21"
-                                                                                                data-megamenu=0>Left
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=right&#038;demo=21"
-                                                                                                data-megamenu=0>Right
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-288">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?sidebar_shop_layout=full&#038;product_loop_columns=4&#038;product_per_page=24&#038;demo=21"
-                                                                                                data-megamenu=0>No
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?sticky_sidebar=1&#038;product_per_page=40&#038;demo=21"
-                                                                                                data-megamenu=0>Sticky
-                                                                                                Sidebar</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-6c7abdf none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=6c7abdf data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Pagination">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Pagination</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-pagination-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=load_more&#038;demo=21"
-                                                                                                data-megamenu=0>Load
-                                                                                                More</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=pagination&#038;demo=21"
-                                                                                                data-megamenu=0>Default
-                                                                                                Pagination</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product-category/market/?woocommerce_pagination=infinite&#038;demo=21"
-                                                                                                data-megamenu=0>Infinite
-                                                                                                Scroll</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-7a6412c9 none"
-                                                        data-id=7a6412c9 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-1a962a97 none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=1a962a97 data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Other Pages">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Other Pages</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-other-pages-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
-                                                                                            <a href="https://kuteshop.kutethemes.net/cart/?demo=21"
-                                                                                                data-megamenu=0>Cart</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
-                                                                                            <a href="https://kuteshop.kutethemes.net/checkout/?demo=21"
-                                                                                                data-megamenu=0>Checkout</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
-                                                                                            <a href="https://kuteshop.kutethemes.net/wishlist/?demo=21"
-                                                                                                data-megamenu=0>Wishlist</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
-                                                                                            <a href="https://kuteshop.kutethemes.net/order-tracking/?demo=21"
-                                                                                                data-megamenu=0>Order
-                                                                                                Tracking</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-14be8bbd none"
-                                                        data-id=14be8bbd data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-581b450a none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=581b450a data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Product Layout">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Product Layout</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-product-layout-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-298">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=standard&#038;demo=21"
-                                                                                                data-megamenu=0>Standard</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=grid&#038;demo=21"
-                                                                                                data-megamenu=0>Grid
-                                                                                                Gallery</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=slide&#038;demo=21"
-                                                                                                data-megamenu=0>Slide
-                                                                                                Gallery</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-301">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_thumbnail=sticky&#038;demo=21"
-                                                                                                data-megamenu=0>Sticky
-                                                                                                Summary</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-302">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?single_product_tabs=show-all&#038;demo=21"
-                                                                                                data-megamenu=0>Tabs
-                                                                                                Show All</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?sidebar_product_layout=left&#038;woo_related_desktop=4&#038;woo_related_laptop=3&#038;woo_related_ipad=3&#038;demo=21"
-                                                                                                data-megamenu=0>Has
-                                                                                                Sidebar</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-a728f58 none"
-                                                        data-id=a728f58 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-a061651 none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=a061651 data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Shop - Product Featured">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Product
-                                                                                        Feature</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-shop-product-featured-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3984">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/daily-womens-dress/?demo=21"
-                                                                                                data-megamenu=0>Simple</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3983">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/womens-cocktail-dress/?demo=21"
-                                                                                                data-megamenu=0>Variable</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3985">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/dresses-flowers-pattern/?demo=21"
-                                                                                                data-megamenu=0>Grouped</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3986">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/sleeveless-dress/?demo=21"
-                                                                                                data-megamenu=0>External/Affiliate</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-3987">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/short-sleeve-dress/?demo=21"
-                                                                                                data-megamenu=0>On
-                                                                                                Sale</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-product menu-item-4432">
-                                                                                            <a href="https://kuteshop.kutethemes.net/product/dresses-summer-floral/?demo=21"
-                                                                                                data-megamenu=0>Has
-                                                                                                Bundle</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-192 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-3>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu'>
-                        <div class="sub-menu megamenu" data-responsive=.megamenu-wrap style=width:830px;>
-                            <div data-elementor-type=wp-post data-elementor-id=239 class="elementor elementor-239">
-                                <div class=elementor-inner>
-                                    <div class=elementor-section-wrap>
-                                        <section
-                                            class="elementor-section elementor-top-section elementor-element elementor-element-1a40ef2 section-follow-header menu-follow-header elementor-section-boxed elementor-section-height-default elementor-section-height-default none"
-                                            data-id=1a40ef2 data-element_type=section>
-                                            <div class="elementor-container elementor-column-gap-extended">
-                                                <div class=elementor-row>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-23d56f2 none"
-                                                        data-id=23d56f2 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-4e27c8f none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=4e27c8f data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Blog - Layout">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Layout</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-blog-layout-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_list_style=standard&#038;demo=21"
-                                                                                                data-megamenu=0>Standard</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_list_style=grid&#038;demo=21"
-                                                                                                data-megamenu=0>Grid</a>
-                                                                                        </li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_list_style=list&#038;demo=21"
-                                                                                                data-megamenu=0>List</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f16ec95 none"
-                                                        data-id=f16ec95 data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-0ab352e none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=0ab352e data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Blog - Sidebar">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Sidebar</span></h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-blog-sidebar-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=left&#038;demo=21"
-                                                                                                data-megamenu=0>Left
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=right&#038;demo=21"
-                                                                                                data-megamenu=0>Right
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?sidebar_blog_layout=full&#038;blog_list_column=3&#038;demo=21"
-                                                                                                data-megamenu=0>No
-                                                                                                Sidebar</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-237">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?sticky_sidebar=1&#038;blog_list_style=standard&#038;demo=21"
-                                                                                                data-megamenu=0>Sticky
-                                                                                                Sidebar</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f97e2bf none"
-                                                        data-id=f97e2bf data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-d76780f none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=d76780f data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Blog - Pagination">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Pagination</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-blog-pagination-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-248">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=pagination&#038;demo=21"
-                                                                                                data-megamenu=0>Default
-                                                                                                Pagination</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=load_more&#038;demo=21"
-                                                                                                data-megamenu=0>Load
-                                                                                                More</a></li>
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-247">
-                                                                                            <a href="https://kuteshop.kutethemes.net/blog/?blog_pagination=infinite&#038;demo=21"
-                                                                                                data-megamenu=0>Infinite
-                                                                                                Scroll</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-536f3fd none"
-                                                        data-id=536f3fd data-element_type=column>
-                                                        <div
-                                                            class="elementor-column-wrap elementor-element-populated">
-                                                            <div class=elementor-widget-wrap>
-                                                                <div class="elementor-element elementor-element-7da0552 none elementor-widget elementor-widget-ovic_menu"
-                                                                    data-id=7da0552 data-element_type=widget
-                                                                    data-widget_type=ovic_menu.default>
-                                                                    <div class=elementor-widget-container>
-                                                                        <div class="ovic-custommenu default wpb_content_element vc_wp_custommenu"
-                                                                            data-name="Blog - Post">
-                                                                            <div class="widget widget_nav_menu">
-                                                                                <h3 class="widget-title"><span
-                                                                                        class=text>Post Single</span>
-                                                                                </h3>
-                                                                                <div
-                                                                                    class="ovic-menu-wapper horizontal">
-                                                                                    <ul id=menu-blog-post-1
-                                                                                        class="menu ovic-menu">
-                                                                                        <li
-                                                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-238">
-                                                                                            <a href="https://kuteshop.kutethemes.net/electroluxs-award-winning-kettlet-and-dryer-pair/?demo=21"
-                                                                                                data-megamenu=0>Standard</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-193 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-4>
-                    <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item menu-item-324'><a
-                            class=menu-link href='https://kuteshop.kutethemes.net/my-account/?demo=21'>My account</a>
-                    </li>
-                    <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-325'><a
-                            class=menu-link href='/404-error?demo=21'>404 Error</a></li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-437 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-5>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-452 disable-link'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-452></a><a class=menu-link href=#>Laptop
-                            Window</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-453 disable-link'>
-                        <a class=ovic-menu-next-panel href=#ovic-menu-panel-453></a><a class=menu-link
-                            href=#>Macbook</a></li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-452 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-6>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-457 disable-link'>
-                        <a class=menu-link href=#>Laptop HP</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-458 disable-link'>
-                        <a class=menu-link href=#>Laptop Lenovo</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-454 disable-link'>
-                        <a class=menu-link href=#>Laptop Dell</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-455 disable-link'>
-                        <a class=menu-link href=#>Laptop Acer</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-456 disable-link'>
-                        <a class=menu-link href=#>Laptop Asus</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-459 disable-link'>
-                        <a class=menu-link href=#>Laptop MSI</a></li>
-                </ul>
-            </div>
-            <div id=ovic-menu-panel-453 class='ovic-menu-panel ovic-menu-sub-panel ovic-menu-hidden'>
-                <ul class=depth-7>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-460 disable-link'>
-                        <a class=menu-link href=#>Macbook Air</a></li>
-                    <li
-                        class='menu-item menu-item-type-custom menu-item-object-custom menu-item menu-item-461 disable-link'>
-                        <a class=menu-link href=#>Macbook Pro</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <script>
-        var xlwcty_info = [];
-    </script>
-    <script>
-        (function() {
-            function maybePrefixUrlField() {
-                const value = this.value.trim()
-                if (value !== '' && value.indexOf('http') !== 0) {
-                    this.value = 'http://' + value
-                }
-            }
-            const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
-            for (let j = 0; j < urlFields.length; j++) {
-                urlFields[j].addEventListener('blur', maybePrefixUrlField)
-            }
-        })();
-    </script>
-    <div id=yith-quick-view-modal>
-        <div class=yith-quick-view-overlay></div>
-        <div class=yith-wcqv-wrapper>
-            <div class=yith-wcqv-main>
-                <div class=yith-wcqv-head>
-                    <a href=# id=yith-quick-view-close class=yith-wcqv-close>X</a>
-                </div>
-                <div id=yith-quick-view-content class="woocommerce single-product"></div>
-            </div>
-        </div>
-    </div>
-    <script>
-        (function() {
-            var c = document.body.className;
-            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-            document.body.className = c;
-        })();
-    </script>
-    <script>
-        if (typeof revslider_showDoubleJqueryError === "undefined") {
-            function revslider_showDoubleJqueryError(sliderID) {
-                console.log(
-                    "You have some jquery.js library include that comes after the Slider Revolution files js inclusion."
-                    );
-                console.log("To fix this, you can:");
-                console.log(
-                    "1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on"
-                    );
-                console.log("2. Find the double jQuery.js inclusion and remove it");
-                return "Double Included jQuery Library";
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600%2C400%2C700%7CRoboto:400&display=swap"
-        rel=stylesheet property=stylesheet media=all type=text/css>
-    <div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-        <div class=pswp__bg></div>
-        <div class=pswp__scroll-wrap>
-            <div class=pswp__container>
-                <div class=pswp__item></div>
-                <div class=pswp__item></div>
-                <div class=pswp__item></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class=pswp__top-bar>
-                    <div class=pswp__counter></div>
-                    <button class="pswp__button pswp__button--close" aria-label="Close (Esc)"></button>
-                    <button class="pswp__button pswp__button--share" aria-label=Share></button>
-                    <button class="pswp__button pswp__button--fs" aria-label="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" aria-label="Zoom in/out"></button>
-                    <div class=pswp__preloader>
-                        <div class=pswp__preloader__icn>
-                            <div class=pswp__preloader__cut>
-                                <div class=pswp__preloader__donut></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class=pswp__share-tooltip></div>
-                </div>
-                <button class="pswp__button pswp__button--arrow--left" aria-label="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" aria-label="Next (arrow right)"></button>
-                <div class=pswp__caption>
-                    <div class=pswp__caption__center></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/22b88.css" media="all">
-    <style id="rs-plugin-settings-inline-css">
-        #rev_slider_6_1_wrapper .ares.tp-bullets {}
-
-        #rev_slider_6_1_wrapper .ares.tp-bullets:before {
-            content: ' ';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            padding: 10px;
-            margin-left: -10px;
-            margin-top: -10px;
-            box-sizing: content-box
+@push('addon-style')
+    <style>
+        li.item-3 .description {
+            margin-left: 26px;
+            padding-top: 70px;
+            text-align: center;
+            float: left;
+            max-width: 290px;
         }
 
-        #rev_slider_6_1_wrapper .ares .tp-bullet {
-            width: 12px;
-            height: 12px;
-            position: absolute;
-            background: #ccc;
-            border-radius: 50%;
-            cursor: pointer;
-            box-sizing: content-box
-        }
-
-        #rev_slider_6_1_wrapper .ares .tp-bullet.rs-touchhover,
-        #rev_slider_6_1_wrapper .ares .tp-bullet.selected {
-            background: #222
-        }
-
-        #rev_slider_6_1_wrapper .ares .tp-bullet-title {
-            position: absolute;
-            color: #888;
+        li.item-3 span.title {
             font-size: 12px;
-            padding: 0px 10px;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: normal;
+            letter-spacing: 6px;
+        }
+
+        li.item-3 span.subtitle {
+            font-weight: bold;
+            display: block;
+            border: 2px solid #333;
+            font-size: 48px;
+            line-height: 60px;
+            padding: 0 15px;
+            margin-bottom: 8px;
+        }
+
+        li.item-3 span.des {
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        li.item-3 .description .btn {
+            background-color: transparent;
+            line-height: 24px;
+            padding: 0 15px;
+            font-size: 15px;
+            display: inline-block;
+            font-weight: 300;
+            border: 3px solid #333333;
+            color: #333333;
+            margin-top: 70px;
+            text-decoration: none;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        li.item-2 .description {
+            float: right;
+            padding-right: 64px;
+            padding-top: 50px;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        li.item-2 span.title {
+            display: block;
+            text-transform: uppercase;
             font-weight: 600;
-            right: 27px;
-            top: -4px;
-            background: rgba(255, 255, 255, 0.75);
-            visibility: hidden;
-            transform: translatex(-20px);
-            -webkit-transform: translatex(-20px);
-            transition: transform 0.3s;
-            -webkit-transition: transform 0.3s;
-            line-height: 20px;
-            white-space: nowrap
+            margin-bottom: 2px;
+            font-size: 16px;
+            color: #333333;
         }
 
-        #rev_slider_6_1_wrapper .ares .tp-bullet-title:after {
-            width: 0px;
-            height: 0px;
-            border-style: solid;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
-            content: ' ';
-            position: absolute;
-            right: -10px;
-            top: 0px
+        li.item-2 span.subtitle {
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 27px;
+            color: #fff;
+            line-height: 1.12;
         }
 
-        #rev_slider_6_1_wrapper .ares .tp-bullet.rs-touchhover .tp-bullet-title {
-            visibility: visible;
-            transform: translatex(0px);
-            -webkit-transform: translatex(0px)
+        li.item-2 .description .btn {
+            line-height: 36px;
+            background-color: #e1195f;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: 600;
         }
 
-        #rev_slider_6_1_wrapper .ares .tp-bullet.selected.rs-touchhover .tp-bullet-title {
-            background: #222
+        li.item-1 .description {
+            margin-right: 30px;
+            padding-top: 70px;
+            text-align: center;
+            float: right;
+            max-width: 270px;
         }
 
-        #rev_slider_6_1_wrapper .ares .tp-bullet.selected.rs-touchhover .tp-bullet-title:after {
-            border-color: transparent transparent transparent #222
+        li.item-1 span.title {
+            font-size: 30px;
+            display: block;
+            margin-bottom: 0px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
-        #rev_slider_6_1_wrapper .ares.tp-bullets.rs-touchhover .tp-bullet-title {
-            visibility: hidden
+        li.item-1 span.subtitle {
+            font-weight: normal;
+            display: block;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-transform: capitalize;
         }
 
-        #rev_slider_6_1_wrapper .ares.tp-bullets.rs-touchhover .tp-bullet.rs-touchhover .tp-bullet-title {
-            visibility: visible;
-            transform: translateX(0px) translatey(0px);
-            -webkit-transform: translateX(0px) translatey(0px)
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-vertical.nav-pos-hor-left .tp-bullet-title {
-            right: auto;
-            left: 27px;
-            transform: translatex(20px);
-            -webkit-transform: translatex(20px)
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-vertical.nav-pos-hor-left .tp-bullet-title:after {
-            border-width: 10px 10px 10px 0 !important;
-            border-color: transparent rgba(255, 255, 255, 0.75) transparent transparent;
-            right: auto !important;
-            left: -10px !important
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-vertical.nav-pos-hor-left .tp-bullet.selected.rs-touchhover .tp-bullet-title:after {
-            border-color: transparent #222 transparent transparent !important
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-center .tp-bullet-title,
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-bottom .tp-bullet-title {
-            top: -35px;
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%) translateY(-10px);
-            -webkit-transform: translateX(-50%) translateY(-10px)
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-center .tp-bullet-title:after,
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-bottom .tp-bullet-title:after {
-            border-width: 10px 10px 0px 10px;
-            border-color: rgba(255, 255, 255, 0.75) transparent transparent transparent;
-            right: auto;
-            left: 50%;
-            margin-left: -10px;
-            top: auto;
-            bottom: -10px
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-center .tp-bullet.selected.rs-touchhover .tp-bullet-title:after,
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-bottom .tp-bullet.selected.rs-touchhover .tp-bullet-title:after {
-            border-color: #222 transparent transparent transparent
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-center .tp-bullet.rs-touchhover .tp-bullet-title,
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-bottom .tp-bullet.rs-touchhover .tp-bullet-title {
-            transform: translateX(-50%) translatey(0px);
-            -webkit-transform: translateX(-50%) translatey(0px)
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-title {
-            top: 25px;
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%) translateY(10px);
-            -webkit-transform: translateX(-50%) translateY(10px)
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-title:after {
-            border-width: 0 10px 10px 10px;
-            border-color: transparent transparent rgba(255, 255, 255, 0.75) transparent;
-            right: auto;
-            left: 50%;
-            margin-left: -10px;
-            bottom: auto;
-            top: -10px
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-top .tp-bullet.selected.rs-touchhover .tp-bullet-title:after {
-            border-color: transparent transparent #222 transparent
-        }
-
-        #rev_slider_6_1_wrapper .ares.nav-dir-horizontal.nav-pos-ver-top .tp-bullet.rs-touchhover .tp-bullet-title {
-            transform: translateX(-50%) translatey(0px);
-            -webkit-transform: translateX(-50%) translatey(0px)
+        li.item-1 .description .btn {
+            background-color: #849dc5;
+            color: #fff;
+            line-height: 36px;
+            padding: 0 19px;
+            font-size: 16px;
+            font-weight: 600;
         }
     </style>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/86a82.js></script>
-    <script id=jquery-yith-wcwl-js-extra>
-        var yith_wcwl_l10n = {
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "redirect_to_cart": "no",
-            "yith_wcwl_button_position": "add-to-cart",
-            "multi_wishlist": "",
-            "hide_add_button": "1",
-            "enable_ajax_loading": "",
-            "ajax_loader_url": "https:\/\/kuteshop.kutethemes.net\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg",
-            "remove_from_wishlist_after_add_to_cart": "1",
-            "is_wishlist_responsive": "1",
-            "time_to_close_prettyphoto": "3000",
-            "fragments_index_glue": ".",
-            "reload_on_found_variation": "1",
-            "mobile_media_query": "768",
-            "labels": {
-                "cookie_disabled": "We are sorry, but this feature is available only if cookies on your browser are enabled.",
-                "added_to_cart_message": "<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"
-            },
-            "actions": {
-                "add_to_wishlist_action": "add_to_wishlist",
-                "remove_from_wishlist_action": "remove_from_wishlist",
-                "reload_wishlist_and_adding_elem_action": "reload_wishlist_and_adding_elem",
-                "load_mobile_action": "load_mobile",
-                "delete_item_action": "delete_item",
-                "save_title_action": "save_title",
-                "save_privacy_action": "save_privacy",
-                "load_fragments": "load_fragments"
-            },
-            "nonce": {
-                "add_to_wishlist_nonce": "cdbba028c6",
-                "remove_from_wishlist_nonce": "d5ee8f2d70",
-                "reload_wishlist_and_adding_elem_nonce": "a1f0dfe13c",
-                "load_mobile_nonce": "9960254da5",
-                "delete_item_nonce": "0242ebfd46",
-                "save_title_nonce": "d225b55b0b",
-                "save_privacy_nonce": "e558edc50f",
-                "load_fragments_nonce": "0d9bb84fc1"
-            },
-            "redirect_after_ask_estimate": "",
-            "ask_estimate_redirect_url": "https:\/\/kuteshop.kutethemes.net"
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/51e91.js></script>
-    <script id=contact-form-7-js-extra>
-        var wpcf7 = {
-            "api": {
-                "root": "https:\/\/kuteshop.kutethemes.net\/wp-json\/",
-                "namespace": "contact-form-7\/v1"
-            },
-            "cached": "1"
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/99814.js></script>
-    <script id=ovic-core-js-extra>
-        var ovic_core_params = {
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "security": "b971ac6478",
-            "ovic_ajax_url": "\/?ovic-ajax=%%endpoint%%",
-            "cart_url": "https:\/\/kuteshop.kutethemes.net\/cart\/",
-            "cart_redirect_after_add": "no",
-            "ajax_single_add_to_cart": "1",
-            "is_preview": "",
-            "growl_notice": {
-                "view_cart": "View cart",
-                "added_to_cart_text": "Product has been added to cart!",
-                "added_to_wishlist_text": "Product added!",
-                "removed_from_wishlist_text": "Product has been removed from wishlist!",
-                "wishlist_url": "https:\/\/kuteshop.kutethemes.net\/wishlist\/",
-                "browse_wishlist_text": "Browse",
-                "growl_notice_text": "Notice!",
-                "removed_cart_text": "Product Removed",
-                "growl_duration": 3000
-            }
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/d526b.js></script>
-    <script id=yith-woocompare-main-js-extra>
-        var yith_woocompare = {
-            "ajaxurl": "\/?wc-ajax=%%endpoint%%",
-            "actionadd": "yith-woocompare-add-product",
-            "actionremove": "yith-woocompare-remove-product",
-            "actionview": "yith-woocompare-view-table",
-            "actionreload": "yith-woocompare-reload-product",
-            "added_label": "Added",
-            "table_title": "Product Comparison",
-            "auto_open": "yes",
-            "loader": "https:\/\/kuteshop.kutethemes.net\/wp-content\/plugins\/yith-woocommerce-compare\/assets\/images\/loader.gif",
-            "button_text": "Compare",
-            "cookie_name": "yith_woocompare_list_1",
-            "close_label": "Close"
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/19969.js></script>
-    <script id=yith-wcqv-frontend-js-extra>
-        var yith_qv = {
-            "ajaxurl": "\/wp-admin\/admin-ajax.php",
-            "loader": "https:\/\/kuteshop.kutethemes.net\/wp-content\/plugins\/yith-woocommerce-quick-view\/assets\/image\/qv-loader.gif",
-            "lang": ""
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/27b55.js></script>
-    <script id=rtwpvs-js-extra>
-        var rtwpvs_params = {
-            "is_product_page": "",
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "nonce": "f0d7d771c7",
-            "reselect_clear": "",
-            "archive_swatches": "1",
-            "enable_ajax_archive_variation": "",
-            "archive_swatches_enable_single_attribute": "",
-            "archive_swatches_single_attribute": "",
-            "archive_swatches_display_event": "click",
-            "archive_image_selector": ".wp-post-image, .attachment-woocommerce_thumbnail",
-            "archive_add_to_cart_text": "",
-            "archive_add_to_cart_select_options": "",
-            "archive_product_wrapper": ".rtwpvs-product,.product-item",
-            "archive_product_price_selector": ".price",
-            "archive_add_to_cart_button_selector": ".rtwpvs_add_to_cart, .add_to_cart_button",
-            "enable_variation_url": "",
-            "enable_archive_variation_url": "",
-            "has_wc_bundles": ""
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/ce135.js></script>
-    <script id=kuteshop-js-extra>
-        var kuteshop_params = {
-            "ajaxurl": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
-            "security": "3fa15c0cde",
-            "kuteshop_ajax_url": "\/?kuteshop-ajax=%%endpoint%%",
-            "ajax_comment": "",
-            "tab_warning": "<strong>Warning!<\/strong> Can not Load Data.",
-            "is_mobile": "",
-            "is_preview": "",
-            "sticky_menu": "jquery",
-            "disable_equal": "",
-            "sales_popup": [{
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/sport-h1-03.jpg",
-                    "title": "Comfortable Shoes",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/comfortable-shoes\/"
-                },
-                "name": "John Joe",
-                "address": "California",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-01-1.jpg",
-                    "title": "Dresses-Summer Floral",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/dresses-summer-floral\/"
-                },
-                "name": "Andree JR",
-                "address": "Vancouver",
-                "time": "50 minutes ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-01-1.jpg",
-                    "title": "Dresses-Summer Floral",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/dresses-summer-floral\/"
-                },
-                "name": "Selena",
-                "address": "Monterray",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-03.jpg",
-                    "title": "Short-Sleeve Dress",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/short-sleeve-dress\/"
-                },
-                "name": "JayKaly",
-                "address": "California",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-05.jpg",
-                    "title": "Dresses flowers Pattern",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/dresses-flowers-pattern\/"
-                },
-                "name": "John JR",
-                "address": "Australia",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-11.jpg",
-                    "title": "Black Autum Dresses",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/black-autum-dresses\/"
-                },
-                "name": "Nolan",
-                "address": "Armenia",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fa-h1-10.jpg",
-                    "title": "Classic Solid Sweater",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/classic-solid-sweater\/"
-                },
-                "name": "Darius",
-                "address": "Azerbaijan",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/sport-h1-02.jpg",
-                    "title": "Men\u2019s Superior Sneaker",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/mens-superior-sneaker\/"
-                },
-                "name": "Engelbert",
-                "address": "Barbados",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/sport-h1-05.jpg",
-                    "title": "Badminton Rackets",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/badminton-rackets\/"
-                },
-                "name": "Shanley",
-                "address": "Azerbaijan",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/elec-h1-01.jpg",
-                    "title": "White Front-Load Washer",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/white-front-load-washer\/"
-                },
-                "name": "Samson",
-                "address": "Brazil",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/elec-h1-02.jpg",
-                    "title": "Sanyer Refrigerator 150L",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/sanyer-refrigerator-150l\/"
-                },
-                "name": "Darryl",
-                "address": "Chile",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/elec-h1-03.jpg",
-                    "title": "Smart Tivi Sany 8K Full HD",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/smart-tivi-sany-8k-full-hd\/"
-                },
-                "name": "Adonis",
-                "address": "Denmark",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/elec-h1-05.jpg",
-                    "title": "Sun-house Rice Cooker",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/sun-house-rice-cooker\/"
-                },
-                "name": "Alexander",
-                "address": "DR Congo",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/digi-h1-07.jpg",
-                    "title": "Digital Camera Full Frame",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/digital-camera-full-frame\/"
-                },
-                "name": "Fergal",
-                "address": "Finland",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/digi-h1-06.jpg",
-                    "title": "Iphone 10 Rsx Max 256GB",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/iphone-10-rsx-max-256gb\/"
-                },
-                "name": "Delvin",
-                "address": "Ethiopia",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/digi-h1-03.jpg",
-                    "title": "Camera Sonic 4K Full HD",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/camera-sonic-4k-full-hd\/"
-                },
-                "name": "Kane",
-                "address": "Germany",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/digi-h1-05.jpg",
-                    "title": "Tablet Air 10.5inch 5G",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/tablet-air-10-5inch-5g\/"
-                },
-                "name": "Maynard",
-                "address": "Greece",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fur-h1-03.jpg",
-                    "title": "Wooden TV Frame 65 inch",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/wooden-tv-frame-65-inch\/"
-                },
-                "name": "Jocelyn",
-                "address": "Guyana",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fur-h1-02.jpg",
-                    "title": "Bedroom Decoration Lights",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/bedroom-decoration-lights\/"
-                },
-                "name": "Raymond",
-                "address": "\tIceland",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fur-h1-01.jpg",
-                    "title": "Lincoln Leadership Chair",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/lincoln-leadership-chair\/"
-                },
-                "name": "Robert",
-                "address": "Indonesia",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/jewel-03.jpg",
-                    "title": "Circle Pendant Necklace",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/circle-pendant-necklace-2\/"
-                },
-                "name": "Stephen",
-                "address": "Ireland",
-                "time": "3 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/jewel-h1-08.jpg",
-                    "title": "Ring Platinum Plated",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/ring-platinum-plated\/"
-                },
-                "name": "Titus",
-                "address": "Italy",
-                "time": "3 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/fur-h1-04.jpg",
-                    "title": "Felt Padded Armchair",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/felt-padded-armchair\/"
-                },
-                "name": "Eric",
-                "address": "Holy See",
-                "time": "2 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/jewel-h1-03.jpg",
-                    "title": "Platinum Doka Earrings",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/platinum-doka-earrings\/"
-                },
-                "name": "Jonathan",
-                "address": "Kazakhstan",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/jewel-h1-02.jpg",
-                    "title": "Black Pearls Necklace",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/black-pearls-necklace\/"
-                },
-                "name": "Mathew",
-                "address": "Kyrgyzstan",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/jewel-h1-06.jpg",
-                    "title": "Diamond Ring Eternity Bands",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/diamond-ring-eternity-bands\/"
-                },
-                "name": "Daniel",
-                "address": "Lesotho",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/bag-03.jpg",
-                    "title": "Simple Super Bag",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/simple-super-bag\/"
-                },
-                "name": "Gabriel",
-                "address": "Malaysia",
-                "time": "3 days ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/bag-02-1.jpg",
-                    "title": "Leather Handbags Small",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/leather-handbags-small-2\/"
-                },
-                "name": "Timothy",
-                "address": "Maldives",
-                "time": "1 day ago"
-            }, {
-                "product": {
-                    "image": "https:\/\/kuteshop.kutethemes.net\/wp-content\/uploads\/2021\/08\/other-04.jpg",
-                    "title": "Pretty Nautilus De Toilette",
-                    "link": "https:\/\/kuteshop.kutethemes.net\/product\/pretty-nautilus-de-toilette\/"
-                },
-                "name": "Zachary",
-                "address": "Mexico",
-                "time": "2 days ago"
-            }],
-            "sales_popup_close": "1",
-            "sales_popup_hover": "1",
-            "sales_popup_display": "8",
-            "sales_popup_delay": "random",
-            "sales_popup_delay_min": "2",
-            "sales_popup_delay_max": "8",
-            "sales_popup_1": "in",
-            "sales_popup_2": "purchased",
-            "sales_popup_3": "Verified"
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/cc4bd.js></script>
-    <script id=megamenu-frontend-js-extra>
-        var ovic_ajax_megamenu = {
-            "ajaxurl": "https:\/\/kuteshop.kutethemes.net\/wp-admin\/admin-ajax.php",
-            "security": "48ed6739ea",
-            "load_menu": "",
-            "delay": "",
-            "resize": "",
-            "load_megamenu": ""
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/c8e70.js></script>
-    <script id=jquery-dgwt-wcas-js-extra>
-        var dgwt_wcas = {
-            "labels": {
-                "post": "Post",
-                "page": "Page",
-                "vendor": "Vendor",
-                "product_plu": "Products",
-                "post_plu": "Posts",
-                "page_plu": "Pages",
-                "vendor_plu": "Vendors",
-                "sku_label": "SKU:",
-                "sale_badge": "Sale",
-                "vendor_sold_by": "Sold by:",
-                "featured_badge": "Featured",
-                "in": "in",
-                "read_more": "continue reading",
-                "no_results": "\"No results\"",
-                "no_results_default": "No results",
-                "show_more": "See all products...",
-                "show_more_details": "See all products...",
-                "search_placeholder": "Search for products...",
-                "submit": "Search",
-                "search_hist": "Your search history",
-                "search_hist_clear": "Clear",
-                "tax_product_cat_plu": "Categories",
-                "tax_product_cat": "Category",
-                "tax_product_tag_plu": "Tags",
-                "tax_product_tag": "Tag"
-            },
-            "ajax_search_endpoint": "\/?wc-ajax=dgwt_wcas_ajax_search",
-            "ajax_details_endpoint": "\/?wc-ajax=dgwt_wcas_result_details",
-            "ajax_prices_endpoint": "\/?wc-ajax=dgwt_wcas_get_prices",
-            "action_search": "dgwt_wcas_ajax_search",
-            "action_result_details": "dgwt_wcas_result_details",
-            "action_get_prices": "dgwt_wcas_get_prices",
-            "min_chars": "3",
-            "width": "auto",
-            "show_details_panel": "",
-            "show_images": "1",
-            "show_price": "1",
-            "show_desc": "",
-            "show_sale_badge": "",
-            "show_featured_badge": "",
-            "dynamic_prices": "",
-            "is_rtl": "",
-            "show_preloader": "1",
-            "show_headings": "1",
-            "preloader_url": "",
-            "taxonomy_brands": "",
-            "img_url": "https:\/\/kuteshop.kutethemes.net\/wp-content\/plugins\/ajax-search-for-woocommerce\/assets\/img\/",
-            "is_premium": "",
-            "layout_breakpoint": "992",
-            "mobile_overlay_breakpoint": "1",
-            "mobile_overlay_wrapper": "body",
-            "mobile_overlay_delay": "0",
-            "debounce_wait_ms": "400",
-            "send_ga_events": "1",
-            "enable_ga_site_search_module": "",
-            "magnifier_icon": "\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"\n\t\t\t\t\t xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\t\t\t\t\t viewBox=\"0 0 51.539 51.361\" xml:space=\"preserve\">\n\t\t             <path \t\t\t\t\t\t d=\"M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26 S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082 c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "magnifier_icon_pirx": "\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\">\n\t\t\t\t\t<path d=\" M 16.722523,17.901412 C 16.572585,17.825208 15.36088,16.670476 14.029846,15.33534 L 11.609782,12.907819 11.01926,13.29667 C 8.7613237,14.783493 5.6172703,14.768302 3.332423,13.259528 -0.07366363,11.010358 -1.0146502,6.5989684 1.1898146,3.2148776\n\t\t\t\t\t\t  1.5505179,2.6611594 2.4056498,1.7447266 2.9644271,1.3130497 3.4423015,0.94387379 4.3921825,0.48568469 5.1732652,0.2475835 5.886299,0.03022609 6.1341883,0 7.2037391,0 8.2732897,0 8.521179,0.03022609 9.234213,0.2475835 c 0.781083,0.23810119 1.730962,0.69629029 2.208837,1.0654662\n\t\t\t\t\t\t  0.532501,0.4113763 1.39922,1.3400096 1.760153,1.8858877 1.520655,2.2998531 1.599025,5.3023778 0.199549,7.6451086 -0.208076,0.348322 -0.393306,0.668209 -0.411622,0.710863 -0.01831,0.04265 1.065556,1.18264 2.408603,2.533307 1.343046,1.350666 2.486621,2.574792 2.541278,2.720279 0.282475,0.7519\n\t\t\t\t\t\t  -0.503089,1.456506 -1.218488,1.092917 z M 8.4027892,12.475062 C 9.434946,12.25579 10.131043,11.855461 10.99416,10.984753 11.554519,10.419467 11.842507,10.042366 12.062078,9.5863882 12.794223,8.0659672 12.793657,6.2652398 12.060578,4.756293 11.680383,3.9737304 10.453587,2.7178427\n\t\t\t\t\t\t  9.730569,2.3710306 8.6921295,1.8729196 8.3992147,1.807606 7.2037567,1.807606 6.0082984,1.807606 5.7153841,1.87292 4.6769446,2.3710306 3.9539263,2.7178427 2.7271301,3.9737304 2.3469352,4.756293 1.6138384,6.2652398 1.6132726,8.0659672 2.3454252,9.5863882 c 0.4167354,0.8654208 1.5978784,2.0575608\n\t\t\t\t\t\t  2.4443766,2.4671358 1.0971012,0.530827 2.3890403,0.681561 3.6130134,0.421538 z\n\t\t\t\t\t\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "history_icon": "\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"18\" height=\"16\">\n\t\t\t\t\t<g transform=\"translate(-17.498822,-36.972165)\">\n\t\t\t\t\t\t<path \t\t\t\t\t\t\td=\"m 26.596964,52.884295 c -0.954693,-0.11124 -2.056421,-0.464654 -2.888623,-0.926617 -0.816472,-0.45323 -1.309173,-0.860824 -1.384955,-1.145723 -0.106631,-0.400877 0.05237,-0.801458 0.401139,-1.010595 0.167198,-0.10026 0.232609,-0.118358 0.427772,-0.118358 0.283376,0 0.386032,0.04186 0.756111,0.308336 1.435559,1.033665 3.156285,1.398904 4.891415,1.038245 2.120335,-0.440728 3.927688,-2.053646 4.610313,-4.114337 0.244166,-0.737081 0.291537,-1.051873 0.293192,-1.948355 0.0013,-0.695797 -0.0093,-0.85228 -0.0806,-1.189552 -0.401426,-1.899416 -1.657702,-3.528366 -3.392535,-4.398932 -2.139097,-1.073431 -4.69701,-0.79194 -6.613131,0.727757 -0.337839,0.267945 -0.920833,0.890857 -1.191956,1.27357 -0.66875,0.944 -1.120577,2.298213 -1.120577,3.35859 v 0.210358 h 0.850434 c 0.82511,0 0.854119,0.0025 0.974178,0.08313 0.163025,0.109516 0.246992,0.333888 0.182877,0.488676 -0.02455,0.05927 -0.62148,0.693577 -1.32651,1.40957 -1.365272,1.3865 -1.427414,1.436994 -1.679504,1.364696 -0.151455,-0.04344 -2.737016,-2.624291 -2.790043,-2.784964 -0.05425,-0.16438 0.02425,-0.373373 0.179483,-0.477834 0.120095,-0.08082 0.148717,-0.08327 0.970779,-0.08327 h 0.847035 l 0.02338,-0.355074 c 0.07924,-1.203664 0.325558,-2.153721 0.819083,-3.159247 1.083047,-2.206642 3.117598,-3.79655 5.501043,-4.298811 0.795412,-0.167616 1.880855,-0.211313 2.672211,-0.107576 3.334659,0.437136 6.147035,3.06081 6.811793,6.354741 0.601713,2.981541 -0.541694,6.025743 -2.967431,7.900475 -1.127277,0.871217 -2.441309,1.407501 -3.893104,1.588856 -0.447309,0.05588 -1.452718,0.06242 -1.883268,0.01225 z m 3.375015,-5.084703 c -0.08608,-0.03206 -2.882291,-1.690237 -3.007703,-1.783586 -0.06187,-0.04605 -0.160194,-0.169835 -0.218507,-0.275078 L 26.639746,45.549577 V 43.70452 41.859464 L 26.749,41.705307 c 0.138408,-0.195294 0.31306,-0.289155 0.538046,-0.289155 0.231638,0 0.438499,0.109551 0.563553,0.298452 l 0.10019,0.151342 0.01053,1.610898 0.01053,1.610898 0.262607,0.154478 c 1.579961,0.929408 2.399444,1.432947 2.462496,1.513106 0.253582,0.322376 0.140877,0.816382 -0.226867,0.994404 -0.148379,0.07183 -0.377546,0.09477 -0.498098,0.04986 z\"\/>\n\t\t\t\t\t<\/g>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "close_icon": "\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24\" viewBox=\"0 0 24 24\"\n\t\t\t\t\t width=\"24\">\n\t\t\t\t\t<path \t\t\t\t\t\td=\"M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "back_icon": "\t\t\t\t<svg class=\"\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 16 16\">\n\t\t\t\t\t<path \t\t\t\t\t\td=\"M14 6.125H3.351l4.891-4.891L7 0 0 7l7 7 1.234-1.234L3.35 7.875H14z\" fill-rule=\"evenodd\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "preloader_icon": "\t\t\t\t<svg class=\"dgwt-wcas-loader-circular \" viewBox=\"25 25 50 50\">\n\t\t\t\t\t<circle class=\"dgwt-wcas-loader-circular-path\" cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\"\n\t\t\t\t\t\t stroke-miterlimit=\"10\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "voice_search_inactive_icon": "\t\t\t\t<svg class=\"dgwt-wcas-voice-search-mic-inactive\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24\"\n\t\t\t\t\t width=\"24\">\n\t\t\t\t\t<path \t\t\t\t\t\td=\"M12 13Q11.15 13 10.575 12.425Q10 11.85 10 11V5Q10 4.15 10.575 3.575Q11.15 3 12 3Q12.85 3 13.425 3.575Q14 4.15 14 5V11Q14 11.85 13.425 12.425Q12.85 13 12 13ZM12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8Q12 8 12 8ZM11.5 20.5V16.975Q9.15 16.775 7.575 15.062Q6 13.35 6 11H7Q7 13.075 8.463 14.537Q9.925 16 12 16Q14.075 16 15.538 14.537Q17 13.075 17 11H18Q18 13.35 16.425 15.062Q14.85 16.775 12.5 16.975V20.5ZM12 12Q12.425 12 12.713 11.712Q13 11.425 13 11V5Q13 4.575 12.713 4.287Q12.425 4 12 4Q11.575 4 11.288 4.287Q11 4.575 11 5V11Q11 11.425 11.288 11.712Q11.575 12 12 12Z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "voice_search_active_icon": "\t\t\t\t<svg class=\"dgwt-wcas-voice-search-mic-active\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24\"\n\t\t\t\t\t width=\"24\">\n\t\t\t\t\t<path \t\t\t\t\t\td=\"M12 13Q11.15 13 10.575 12.425Q10 11.85 10 11V5Q10 4.15 10.575 3.575Q11.15 3 12 3Q12.85 3 13.425 3.575Q14 4.15 14 5V11Q14 11.85 13.425 12.425Q12.85 13 12 13ZM11.5 20.5V16.975Q9.15 16.775 7.575 15.062Q6 13.35 6 11H7Q7 13.075 8.463 14.537Q9.925 16 12 16Q14.075 16 15.538 14.537Q17 13.075 17 11H18Q18 13.35 16.425 15.062Q14.85 16.775 12.5 16.975V20.5Z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "voice_search_disabled_icon": "\t\t\t\t<svg class=\"dgwt-wcas-voice-search-mic-disabled\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24\" width=\"24\">\n\t\t\t\t\t<path \t\t\t\t\t\td=\"M16.725 13.4 15.975 12.625Q16.1 12.325 16.2 11.9Q16.3 11.475 16.3 11H17.3Q17.3 11.75 17.138 12.337Q16.975 12.925 16.725 13.4ZM13.25 9.9 9.3 5.925V5Q9.3 4.15 9.875 3.575Q10.45 3 11.3 3Q12.125 3 12.713 3.575Q13.3 4.15 13.3 5V9.7Q13.3 9.75 13.275 9.8Q13.25 9.85 13.25 9.9ZM10.8 20.5V17.025Q8.45 16.775 6.875 15.062Q5.3 13.35 5.3 11H6.3Q6.3 13.075 7.763 14.537Q9.225 16 11.3 16Q12.375 16 13.312 15.575Q14.25 15.15 14.925 14.4L15.625 15.125Q14.9 15.9 13.913 16.4Q12.925 16.9 11.8 17.025V20.5ZM19.925 20.825 1.95 2.85 2.675 2.15 20.65 20.125Z\"\/>\n\t\t\t\t<\/svg>\n\t\t\t\t",
-            "custom_params": {},
-            "convert_html": "1",
-            "suggestions_wrapper": "body",
-            "show_product_vendor": "",
-            "disable_hits": "",
-            "disable_submit": "",
-            "fixer": {
-                "broken_search_ui": true,
-                "broken_search_ui_ajax": true,
-                "broken_search_ui_hard": false,
-                "broken_search_elementor_popups": true,
-                "broken_search_jet_mobile_menu": true,
-                "broken_search_browsers_back_arrow": true,
-                "force_refresh_checkout": true
-            },
-            "voice_search_enabled": "",
-            "voice_search_lang": "en-US",
-            "show_recently_searched_products": "",
-            "show_recently_searched_phrases": ""
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/76278.js></script>
-    <script id=wc-cart-fragments-js-extra>
-        var wc_cart_fragments_params = {
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
-            "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
-            "cart_hash_key": "wc_cart_hash_c0e3087a08441ed108f05c6e1bf6c55f",
-            "fragment_name": "wc_fragments_c0e3087a08441ed108f05c6e1bf6c55f",
-            "request_timeout": "5000"
-        };
-    </script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/f20ba.js></script>
-    <script id=wc-single-product-js-extra>
-        var wc_single_product_params = {
-            "i18n_required_rating_text": "Please select a rating",
-            "review_rating_required": "yes",
-            "flexslider": {
-                "rtl": false,
-                "animation": "slide",
-                "smoothHeight": true,
-                "directionNav": false,
-                "controlNav": "thumbnails",
-                "slideshow": false,
-                "animationSpeed": 500,
-                "animationLoop": false,
-                "allowOneSlide": false
-            },
-            "zoom_enabled": "1",
-            "zoom_options": [],
-            "photoswipe_enabled": "1",
-            "photoswipe_options": {
-                "shareEl": false,
-                "closeOnScroll": false,
-                "history": false,
-                "hideAnimationDuration": 0,
-                "showAnimationDuration": 0
-            },
-            "flexslider_enabled": "1"
-        };
-    </script>
-    <script defer src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/97db7.js></script>
-    <script src=https://kuteshop.b-cdn.net/wp-content/cache/minify/1/0e7af.js></script>
-    <script id=elementor-frontend-js-before>
-        var elementorFrontendConfig = {
-            "environmentMode": {
-                "edit": false,
-                "wpPreview": false,
-                "isScriptDebug": false
-            },
-            "i18n": {
-                "shareOnFacebook": "Share on Facebook",
-                "shareOnTwitter": "Share on Twitter",
-                "pinIt": "Pin it",
-                "download": "Download",
-                "downloadImage": "Download image",
-                "fullscreen": "Fullscreen",
-                "zoom": "Zoom",
-                "share": "Share",
-                "playVideo": "Play Video",
-                "previous": "Previous",
-                "next": "Next",
-                "close": "Close",
-                "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
-                "a11yCarouselPrevSlideMessage": "Previous slide",
-                "a11yCarouselNextSlideMessage": "Next slide",
-                "a11yCarouselFirstSlideMessage": "This is the first slide",
-                "a11yCarouselLastSlideMessage": "This is the last slide",
-                "a11yCarouselPaginationBulletMessage": "Go to slide"
-            },
-            "is_rtl": false,
-            "breakpoints": {
-                "xs": 0,
-                "sm": 480,
-                "md": 768,
-                "lg": 1200,
-                "xl": 1440,
-                "xxl": 1600
-            },
-            "responsive": {
-                "breakpoints": {
-                    "mobile": {
-                        "label": "Mobile Portrait",
-                        "value": 767,
-                        "default_value": 767,
-                        "direction": "max",
-                        "is_enabled": true
-                    },
-                    "mobile_extra": {
-                        "label": "Mobile Landscape",
-                        "value": 991,
-                        "default_value": 880,
-                        "direction": "max",
-                        "is_enabled": true
-                    },
-                    "tablet": {
-                        "label": "Tablet Portrait",
-                        "value": 1199,
-                        "default_value": 1024,
-                        "direction": "max",
-                        "is_enabled": true
-                    },
-                    "tablet_extra": {
-                        "label": "Tablet Landscape",
-                        "value": 1200,
-                        "default_value": 1200,
-                        "direction": "max",
-                        "is_enabled": false
-                    },
-                    "laptop": {
-                        "label": "Laptop",
-                        "value": 1366,
-                        "default_value": 1366,
-                        "direction": "max",
-                        "is_enabled": false
-                    },
-                    "widescreen": {
-                        "label": "Widescreen",
-                        "value": 2400,
-                        "default_value": 2400,
-                        "direction": "min",
-                        "is_enabled": false
-                    }
-                }
-            },
-            "version": "3.17.3",
-            "is_static": false,
-            "experimentalFeatures": {
-                "additional_custom_breakpoints": true
-            },
-            "urls": {
-                "assets": "https:\/\/kuteshop.kutethemes.net\/wp-content\/plugins\/elementor\/assets\/"
-            },
-            "swiperClass": "swiper-container",
-            "settings": {
-                "page": [],
-                "editorPreferences": []
-            },
-            "kit": {
-                "active_breakpoints": ["viewport_mobile", "viewport_mobile_extra", "viewport_tablet"],
-                "viewport_mobile_extra": 991,
-                "viewport_tablet": 1199,
-                "global_image_lightbox": "yes",
-                "lightbox_enable_counter": "yes",
-                "lightbox_enable_fullscreen": "yes",
-                "lightbox_enable_zoom": "yes",
-                "lightbox_enable_share": "yes",
-                "lightbox_title_src": "title",
-                "lightbox_description_src": "description"
-            },
-            "post": {
-                "id": 21,
-                "title": "KuteShop%20%E2%80%93%20Multipurpose%20WooCommerce%20Theme",
-                "excerpt": "",
-                "featuredImage": false
-            }
-        };
-    </script>
-    <script src="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/bcf3d.js"></script>
-    @verbatim
-    <script>
-        var tpj = jQuery;
-        var revapi6;
-        if (window.RS_MODULES === undefined) window.RS_MODULES = {};
-        if (RS_MODULES.modules === undefined) RS_MODULES.modules = {};
-        RS_MODULES.modules["revslider61"] = {
-            once: RS_MODULES.modules["revslider61"] !== undefined ? RS_MODULES.modules["revslider61"].once : undefined,
-            init: function() {
-                window.revapi6 = window.revapi6 === undefined || window.revapi6 === null || window.revapi6
-                    .length === 0 ? document.getElementById("rev_slider_6_1") : window.revapi6;
-                if (window.revapi6 === null || window.revapi6 === undefined || window.revapi6.length == 0) {
-                    window.revapi6initTry = window.revapi6initTry === undefined ? 0 : window.revapi6initTry + 1;
-                    if (window.revapi6initTry < 20) requestAnimationFrame(function() {
-                        RS_MODULES.modules["revslider61"].init()
-                    });
-                    return;
-                }
-                window.revapi6 = jQuery(window.revapi6);
-                if (window.revapi6.revolution == undefined) {
-                    revslider_showDoubleJqueryError("rev_slider_6_1");
-                    return;
-                }
-                revapi6.revolutionInit({
-                    revapi: "revapi6",
-                    DPR: "dpr",
-                    visibilityLevels: "1240,1240,1240,768",
-                    gridwidth: "666,666,666,768",
-                    gridheight: "450,450,450,350",
-                    lazyType: "smart",
-                    spinner: "spinner7",
-                    perspective: 600,
-                    perspectiveType: "global",
-                    keepBPHeight: true,
-                    spinnerclr: "#000000",
-                    editorheight: "450,450,450,350",
-                    responsiveLevels: "1240,1240,1240,768",
-                    ajaxUrl: "https://kuteshop.kutethemes.net/wp-admin/admin-ajax.php",
-                    progressBar: {
-                        disableProgressBar: true
-                    },
-                    navigation: {
-                        wheelCallDelay: 1000,
-                        touch: {
-                            touchenabled: true,
-                            touchOnDesktop: true
-                        },
-                        bullets: {
-                            enable: true,
-                            tmp: "<span class=\"tp-bullet-title\">{{ title }}</span>",
-                            style: "ares",
-                            h_align: "right",
-                            h_offset: 15,
-                            v_offset: 15
-                        }
-                    },
-                    viewPort: {
-                        global: true,
-                        globalDist: "-200px",
-                        enable: false
-                    },
-                    fallbacks: {
-                        allowHTML5AutoPlayOnAndroid: true
-                    },
-                });
-            }
-        }
-        if (window.RS_MODULES.checkMinimal !== undefined) {
-            window.RS_MODULES.checkMinimal();
-        };
-    </script>
-    @endverbatim
-    <div class="xlwcty_header_passed" style='display: none;'></div>
-</body>
+@endpush
 
-</html>
+@section('content')
+    <!-- Home slideder-->
+    <div id="home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 slider-left"></div>
+                <div class="col-sm-9 header-top-right">
+                    <div class="homeslider">
+                        <div class="content-slide">
+                            <ul id="contenhomeslider">
+                                @foreach ($sliders as $slider)
+                                    <li class="item-{{ $slider->id }}"
+                                        style="background-image: url({{ Storage::url($slider->image) }}); height: 453px;">
+                                        <div class="description">
+                                            <span class="title">{{ $slider->title }} </span>
+                                            {!! $slider->description !!}
+                                            <a href="{{ $slider->link }}" class="btn">SHOP NOW</a>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-banner banner-opacity">
+                        <a href="#"><img alt="Funky roots" src="customer/assets/data/ads1.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Home slideder-->
+    <!-- servives -->
+    <div class="container">
+        <div class="service ">
+            @foreach ($services as $service)
+                <div class="col-xs-6 col-sm-3 service-item">
+                    <div class="icon">
+                        <img alt="services" src="{{ Storage::url($service->icon) }}" />
+                    </div>
+                    <div class="info">
+                        <a href="#">
+                            <h3>{{ $service->title }}</h3>
+                        </a>
+                        <span>{{ $service->description }}</span>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    <!-- end services -->
+
+    <div class="page-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 page-top-left">
+                    <div class="popular-tabs">
+                        <ul class="nav-tab">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">BEST SELLERS</a></li>
+                            <li><a data-toggle="tab" href="#tab-2">ON SALE</a></li>
+                            <li><a data-toggle="tab" href="#tab-3">New products</a></li>
+                        </ul>
+                        <div class="tab-container">
+                            <div id="tab-1" class="tab-panel active">
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
+                                    data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
+                                    data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/bs1.jpg" />
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                            <div class="group-price">
+                                                <span class="product-new">NEW</span>
+                                                <span class="product-sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Sexy Lady</a></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/bs2.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Perfect Dress</a></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/bs3.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="group-price">
+                                            <span class="product-new">NEW</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Fresh Summer</a></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/bs4.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Flowers Dress</a></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab-2" class="tab-panel">
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                    data-nav = "true" data-margin = "30" data-autoplayTimeout="1000"
+                                    data-autoplayHoverPause = "true"
+                                    data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p48.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p49.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p50.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p51.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab-3" class="tab-panel">
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                    data-nav = "true" data-margin = "30" data-autoplayTimeout="1000"
+                                    data-autoplayHoverPause = "true"
+                                    data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p60.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p61.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p62.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#"><img class="img-responsive" alt="product"
+                                                    src="customer/assets/data/p63.jpg" /></a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart" href="#">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="#">Maecenas consequat mauris</a>
+                                            </h5>
+                                            <div class="content_price">
+                                                <span class="price product-price">$38,95</span>
+                                                <span class="price old-price">$52,00</span>
+                                            </div>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 page-top-right">
+                    <div class="latest-deals">
+                        <h2 class="latest-deal-title">latest deals</h2>
+                        <div class="latest-deal-content">
+                            <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
+                                data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
+                                data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":1}}'>
+                                <li>
+                                    <div class="count-down-time" data-countdown="2015/06/27"></div>
+                                    <div class="left-block">
+                                        <a href="#"><img class="img-responsive" alt="product"
+                                                src="customer/assets/data/ld1.jpg" /></a>
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" class="search" href="#"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a title="Add to Cart" href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Maecenas consequat mauris</a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price">$38,95</span>
+                                            <span class="price old-price">$52,00</span>
+                                            <span class="colreduce-percentage">(-10%)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-down-time" data-countdown="2015/06/27 9:20:00"></div>
+                                    <div class="left-block">
+                                        <a href="#"><img class="img-responsive" alt="product"
+                                                src="customer/assets/data/ld2.jpg" /></a>
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" class="search" href="#"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a title="Add to Cart" href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Maecenas consequat mauris</a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price">$38,95</span>
+                                            <span class="price old-price">$52,00</span>
+                                            <span class="colreduce-percentage">(-90%)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-down-time" data-countdown="2015/06/27 9:20:00"></div>
+                                    <div class="left-block">
+                                        <a href="#"><img class="img-responsive" alt="product"
+                                                src="customer/assets/data/ld3.jpg" /></a>
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" class="search" href="#"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a title="Add to Cart" href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Maecenas consequat mauris</a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price">$38,95</span>
+                                            <span class="price old-price">$52,00</span>
+                                            <span class="colreduce-percentage">(-20%)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="content-page">
+        <div class="container">
+            <!-- featured category fashion -->
+            @foreach ($product_subcategories as $key => $product_subcategory)
+                @php
+                    $menu_classes = ['nav-menu-red', 'nav-menu-green', 'nav-menu-orange', 'nav-menu-blue', 'nav-menu-blue2', 'nav-menu-gray'];
+                    $class_index = $key % count($menu_classes);
+                    $current_menu_class = $menu_classes[$class_index];
+                @endphp
+
+                <div class="category-featured">
+                    <nav class="navbar nav-menu {{ $current_menu_class }} show-brand">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-brand">
+                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                    <img alt="fashion" src="customer/assets/data/fashion.png" />
+                                    {{ $product_subcategory->name }}
+                                </a>
+                            </div>
+                            <span class="toggle-menu"></span>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse"></div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                        <div id="elevator-1" class="floor-elevator">
+                            <a href="#" class="btn-elevator up disabled fa fa-angle-up"></a>
+                            <a href="#elevator-2" class="btn-elevator down fa fa-angle-down"></a>
+                        </div>
+                    </nav>
+                    <div class="category-banner">
+                        <div class="col-sm-6 banner">
+                            <a href="#"><img alt="ads2" class="img-responsive"
+                                    src="customer/assets/data/ads2.jpg" /></a>
+                        </div>
+                        <div class="col-sm-6 banner">
+                            <a href="#"><img alt="ads2" class="img-responsive"
+                                    src="customer/assets/data/ads3.jpg" /></a>
+                        </div>
+                    </div>
+                    <div class="product-featured clearfix">
+                        <div class="banner-featured">
+                            <div class="featured-text"><span>featured</span></div>
+                            <div class="banner-img">
+                                <a href="#"><img alt="Featurered 1" src="customer/assets/data/f1.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="product-featured-content">
+                            <div class="product-featured-list">
+                                <div class="tab-container">
+                                    <!-- tab product -->
+                                    <div class="tab-panel active" id="tab-4">
+                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                            data-nav = "true" data-margin = "0" data-autoplayTimeout="1000"
+                                            data-autoplayHoverPause = "true"
+                                            data-responsive='{
+                                                "0":{"items":2},
+                                                "420":{"items":2},
+                                                "600":{"items":3},
+                                                "768":{"items":3},
+                                                "992":{"items":3},
+                                                "1200":{"items":4}
+                                            }'>
+                                            @foreach ($product_subcategory->products as $product)
+                                                <li>
+                                                    <div class="left-block">
+                                                        <a href="{{ url('product/' . $product->slug) }}">
+                                                            <img class="img-responsive" alt="product"
+                                                                src="{{ Storage::url($product->photo) }}" /></a>
+                                                        <div class="quick-view">
+                                                            <a title="Add to my wishlist" class="heart"
+                                                                href="#"></a>
+                                                            <a title="Add to compare" class="compare" href="#"></a>
+                                                            <a title="Quick view" class="search" href="#"></a>
+                                                        </div>
+                                                        <div class="add-to-cart">
+                                                            <a title="Add to Cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right-block">
+                                                        <h5 class="product-name"><a
+                                                                href="{{ url('product/' . $product->slug) }}">{{ $product->name }}</a>
+                                                        </h5>
+                                                        <div class="content_price">
+                                                            <span
+                                                                class="price product-price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                            <span class="price old-price">$52,00</span>
+                                                        </div>
+                                                        <div class="product-star">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-half-o"></i>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <!-- tab product -->
+                                    <div class="tab-panel" id="tab-5">
+                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                            data-nav = "true" data-margin = "0" data-autoplayTimeout="1000"
+                                            data-autoplayHoverPause = "true"
+                                            data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/04_nice-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Nice Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/05_flowers-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Flowers Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/06_red-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Red Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/01_blue-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Blue Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/02_yellow-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Yellow Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/03_cyan-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Cyan Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/04_nice-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Nice Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/05_flowers-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Flowers Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-block">
+                                                    <a href="#">
+                                                        <img class="img-responsive" alt="product"
+                                                            src="customer/assets/data/06_red-dress.jpg" /></a>
+                                                    <div class="quick-view">
+                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to compare" class="compare" href="#"></a>
+                                                        <a title="Quick view" class="search" href="#"></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a title="Add to Cart" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right-block">
+                                                    <h5 class="product-name"><a href="#">Red Dress</a></h5>
+                                                    <div class="content_price">
+                                                        <span class="price product-price">$38,95</span>
+                                                        <span class="price old-price">$52,00</span>
+                                                    </div>
+                                                    <div class="product-star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            <!-- end featured category fashion -->
+
+            <!-- Baner bottom -->
+            <div class="row banner-bottom">
+                <div class="col-sm-6">
+                    <div class="banner-boder-zoom">
+                        <a href="#"><img alt="ads" class="img-responsive"
+                                src="customer/assets/data/ads17.jpg" /></a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="banner-boder-zoom">
+                        <a href="#"><img alt="ads" class="img-responsive"
+                                src="customer/assets/data/ads18.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end banner bottom -->
+        </div>
+    </div>
+
+    <div id="content-wrap">
+        <div class="container">
+            <div id="hot-categories" class="row">
+                <div class="col-sm-12 group-title-box">
+                    <h2 class="group-title ">
+                        <span>Hot categories</span>
+                    </h2>
+                </div>
+
+                @foreach ($product_subcategories as $product_subcategory)
+                    <div class="col-sm-6  col-lg-3 cate-box">
+                        <div class="cate-tit">
+                            <div class="div-1" style="width: 46%;">
+                                <div class="cate-name-wrap">
+                                    <p class="cate-name">{{ $product_subcategory->name }}</p>
+                                </div>
+                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}"
+                                    class="cate-link link-active" data-ac="flipInX"><span>shop
+                                        now</span></a>
+                            </div>
+                            <div class="div-2">
+                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                    <img src="customer/assets/data/cate-product1.png"
+                                        alt="{{ $product_subcategory->name }}" class="hot-cate-img" />
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="cate-content">
+                            <ul>
+                                @foreach ($product_subcategory->products as $product)
+                                    @if ($loop->index < 4)
+                                        <li>
+                                            <a href="{{ url('product/' . $product->slug) }}">{{ $product->name }}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div> <!-- /.cate-box -->
+                @endforeach
+            </div> <!-- /#hot-categories -->
+
+        </div> <!-- /.container -->
+    </div>
+@endsection

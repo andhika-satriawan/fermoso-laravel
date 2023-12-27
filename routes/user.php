@@ -16,10 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest:web')->group(function () {
     Route::get('my-account/login', [App\Http\Controllers\Customer\AuthController::class, 'login'])->name('login');
     Route::post('my-account/login', [App\Http\Controllers\Customer\AuthController::class, 'login_store'])->name('login.store');
-    Route::get('my-account/lost-password', [App\Http\Controllers\Customer\LostPasswordController::class, 'lostPassword'])->name('lost-password');
-
     Route::get('my-account/register', [App\Http\Controllers\Customer\AuthController::class, 'register'])->name('register');
     Route::post('my-account/register', [App\Http\Controllers\Customer\AuthController::class, 'register_store'])->name('register.store');
+    Route::get('my-account/lost-password', [App\Http\Controllers\Customer\AuthController::class, 'lostpassword'])->name('lost-password.lostpassword');
+
+    Route::get('my-account/', [App\Http\Controllers\Customer\MyAccountController::class, 'index'])->name('dashboard.index');
+    Route::get('my-account/orders', [App\Http\Controllers\Customer\MyAccountController::class, 'order'])->name('order.order');
+    Route::get('my-account/addresses', [App\Http\Controllers\Customer\MyAccountController::class, 'addresses'])->name('addresses.addresses');
+    Route::get('my-account/edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account.editaccount');
+    Route::get('my-account/edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account.editaccount');
 });
 
 // MUST LOGGED IN
@@ -27,17 +32,15 @@ Route::middleware('auth:web')->group(function () {
     Route::post('logout', [App\Http\Controllers\Customer\AuthController::class, 'logout'])->name('logout');
 });
 Route::get('cart', [App\Http\Controllers\Customer\CartController::class, 'index'])->name('cart');
+Route::get('checkout', [App\Http\Controllers\Customer\CartController::class, 'checkout'])->name('checkout.checkout');
 
 // OPEN FOR ALL
 Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])->name('home');
 Route::get('products', [App\Http\Controllers\Customer\ProductController::class, 'index'])->name('product');
-Route::get('detail-product', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('product.detail');
-Route::get('/product/{slug}', [App\Http\Controllers\Customer\DetailProductController::class, 'index'])->name('detail.index');
-Route::get('cara-belanja', [App\Http\Controllers\Customer\CaraBelanjaController::class, 'index'])->name('cara-belanja');
-Route::get('blog', [App\Http\Controllers\Customer\BlogController::class, 'index'])->name('blog');
-Route::get('detail-blog', [App\Http\Controllers\Customer\DetailBlogController::class, 'index'])->name('detail-blog');
-Route::get('faq-product', [App\Http\Controllers\Customer\FAQProductController::class, 'index'])->name('faq-product');
-Route::get('faq-toko-kami', [App\Http\Controllers\Customer\FAQTokoKamiController::class, 'index'])->name('faq-toko-kami');
-Route::get('/product/category/{slug}', [App\Http\Controllers\Customer\CategoryProductController::class, 'index'])->name('category-product');
-
-Route::post('/ajax-endpoint', [App\Http\Controllers\Customer\AjaxController::class, 'ajaxMethod'])->name('ajax.endpoint');
+Route::get('/product/{slug}', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('detail.show');
+Route::get('/product/category/{slug}', [App\Http\Controllers\Customer\ProductController::class, 'category'])->name('category-product.category');
+Route::get('blog', [App\Http\Controllers\Customer\BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\Customer\BlogController::class, 'show'])->name('blog.show');
+Route::get('cara-belanja', [App\Http\Controllers\Customer\OnePageController::class, 'carabelanja'])->name('cara-belanja.carabelanja');
+Route::get('faq-product', [App\Http\Controllers\Customer\OnePageController::class, 'faqproduct'])->name('faq-product.faqproduct');
+Route::get('faq-toko-kami', [App\Http\Controllers\Customer\OnePageController::class, 'faqtokokami'])->name('faq-toko-kami.faqtokokami');

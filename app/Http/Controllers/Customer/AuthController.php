@@ -24,6 +24,7 @@ class AuthController extends Controller
             "title" => "Login",
             "page"  => "login",
             "product_subcategories" => $product_subcategories,
+            "body_class" => "page-template-default page page-id-9 wp-embed-responsive theme-kuteshop woocommerce-account woocommerce-page woocommerce-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12 e--ua-blink e--ua-chrome e--ua-webkit"
         ]);
     }
 
@@ -62,6 +63,7 @@ class AuthController extends Controller
             "title" => "Register",
             "page"  => "register",
             "product_subcategories" => $product_subcategories,
+            "body_class" => "page-template-default page page-id-9 wp-embed-responsive theme-kuteshop woocommerce-account woocommerce-page woocommerce-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12 e--ua-blink e--ua-chrome e--ua-webkit"
         ]);
     }
 
@@ -101,5 +103,15 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return to_route('login');
+    }
+
+    public function lostpassword()
+    {
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+
+        return view('pages.customer.my-account.lost-password', [
+            "page" => "lost-password",
+            "product_subcategories" => $product_subcategories,
+        ]);
     }
 }

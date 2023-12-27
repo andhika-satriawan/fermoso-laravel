@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ProductSubcategory;
+use App\Models\Article;
+use App\Models\MasterArticleCategory;
+use App\Models\MasterArticleTag;
 
 class BlogController extends Controller
 {
@@ -14,11 +17,17 @@ class BlogController extends Controller
     public function index()
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $articles = Article::with(['tags', 'categories'])
+            ->orderBy('created_at', 'desc')
+            ->limit(6)
+            ->get();
 
         return view('pages.customer.blog', [
+            "product_subcategories" => $product_subcategories,
             "title" => "Blog",
             "page" => "blog",
-            "product_subcategories" => $product_subcategories,
+            "articles" => $articles,
+
         ]);
     }
 
@@ -41,9 +50,22 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
-        //
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $article = Article::where('slug', $slug)->with(['tags', 'categories'])->firstOrFail();
+        $relatedArticles = Article::where('id', '<>', $article->id)->limit(9)->get();
+        $allCategories = MasterArticleCategory::all();
+        $allTags = MasterArticleTag::all();
+
+        return view('pages.customer.detail-blog', [
+            "product_subcategories" => $product_subcategories,
+            "article" => $article,
+            "page" => "detail-blog",
+            "relatedArticles" => $relatedArticles,
+            "allCategories" => $allCategories,
+            "allTags" => $allTags,
+        ]);
     }
 
     /**
