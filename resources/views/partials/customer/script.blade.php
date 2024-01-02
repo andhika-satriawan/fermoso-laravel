@@ -162,11 +162,7 @@
 
     });
 
-    if ($('#selectVariant').length) {
-        $("#selectVariant").change(function(){
-            console.log($(this).val())
-        });
-    }  
+    
 </script>
 @endauth
 <script>

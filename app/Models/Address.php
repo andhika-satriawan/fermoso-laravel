@@ -14,7 +14,7 @@ class Address extends Model
 {
     use HasFactory;
 
-    public $table = 'kelurahans';
+    public $table = 'addresses';
 
     protected $fillable = [
         'customer_id',
@@ -30,4 +30,34 @@ class Address extends Model
         'latitude',
         'longitude',
     ];
+
+    /**
+     * Get the province that owns the Address
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function province(): BelongsTo
+    {
+        return $this->belongsTo(Province::class, 'province_id', 'id');
+    }
+
+    /**
+     * Get the city that owns the Address
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(City::class, 'city_id', 'id');
+    }
+
+    /**
+     * Get the kecamatan that owns the Address
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function kecamatan(): BelongsTo
+    {
+        return $this->belongsTo(Kecamatan::class, 'kecamatan_id', 'id');
+    }
 }

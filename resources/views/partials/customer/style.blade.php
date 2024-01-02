@@ -27,4 +27,22 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
+    .btn-fermoso {
+        font-size: 14px;
+        line-height: 18px;
+        color: white;
+        padding: 0;
+        font-weight: normal;
+        background: #666;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+        padding: 10px 25px;
+    }
+
+    .btn-fermoso:hover {
+        background: #F36;
+        color: white;
+    }
 </style>

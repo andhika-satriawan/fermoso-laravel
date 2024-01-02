@@ -94,7 +94,7 @@
                                     <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <button class="button"><i class="fa fa-user"></i> Buat Akun</button>
+                                <button class="button" type="submit"><i class="fa fa-user"></i> Buat Akun</button>
                             </form>
                         </div>
                     </div>

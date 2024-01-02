@@ -34,10 +34,10 @@
                     <table class="table table-bordered table-responsive cart_summary">
                         <thead>
                             <tr>
-                                <th class="cart_product">Product</th>
-                                <th>Description</th>
-                                <th>Avail.</th>
-                                <th>Unit price</th>
+                                <th class="cart_product">Produk</th>
+                                <th>Rincian</th>
+                                <th>Stok</th>
+                                <th>Unit harga</th>
                                 <th>Qty</th>
                                 <th>Total</th>
                                 <th class="action"><i class="fa fa-trash-o"></i></th>
@@ -61,23 +61,28 @@
                                     @if ($cart->product_detail->stock > 5)
                                     <span class="label label-success">In stock: {{ $cart->product_detail->stock }}</span>
                                     @elseif ($cart->product_detail->stock > 0)
-                                    <span class="label label-warning">Stock will run out</span>
+                                    <span class="label label-warning">Remaining: {{ $cart->product_detail->stock }}</span>
                                     @else
                                     <span class="label label-danger">Out of stock</span>
                                     @endif
                                 </td>
                                 <td class="price item-price">
+                                    @if ($cart->product_detail->discount_price > 0 )
+                                    <span class="price">Rp {{ number_format($cart->product_detail->discount_price) }}</span>
+                                    <s class="old-price text-danger">Rp {{ number_format($cart->product_detail->price) }}</s>
+                                    @else
                                     <span>Rp {{ number_format($cart->product_detail->price) }}</span>
+                                    @endif
                                 </td>
                                 <td class="qty">
                                     <input class="cart-product-id" type="hidden" name="product_id[]" value="{{ $cart->product_id }}">
                                     <input class="cart-product-detail-id" type="hidden" name="product_detail_id[]" value="{{ $cart->product_detail_id }}">
                                     <input class="form-control input-sm cart-quantity" name="quantity[]" type="text" value="{{ $cart->quantity }}">
-                                    <a href="#" class="cart-increase" data-item-price="{{ $cart->product_detail->price }}"><i class="fa fa-caret-up"></i></a>
-                                    <a href="#" class="cart-decrease" data-item-price="{{ $cart->product_detail->price }}"><i class="fa fa-caret-down"></i></a>
+                                    <a href="#" class="cart-increase" data-item-price="{{ $cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price }}"><i class="fa fa-caret-up"></i></a>
+                                    <a href="#" class="cart-decrease" data-item-price="{{ $cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price }}"><i class="fa fa-caret-down"></i></a>
                                 </td>
                                 <td class="price total-item-price">
-                                    <span>Rp {{ number_format($cart->product_detail->price * $cart->quantity) }}</span>
+                                    <span>Rp {{ number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity) }}</span>
                                 </td>
                                 <td class="action">
                                     <a href="#" onclick="deleteCartItem('{{ $cart->product_id }}', '{{ $cart->product_detail_id }}')">Delete item</a>

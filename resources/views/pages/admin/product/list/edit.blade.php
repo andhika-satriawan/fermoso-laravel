@@ -197,7 +197,7 @@
                                                 <input type="file"
                                                     class="form-control @error('video_file') is-invalid @enderror"
                                                     placeholder="Video File" aria-label="Video File"
-                                                    aria-describedby="video_file" name="video_url"
+                                                    aria-describedby="video_file" name="video_file"
                                                     value="{{ $item->video_file }}">
                                             </div>
                                             @error('video_file')

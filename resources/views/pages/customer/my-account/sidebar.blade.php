@@ -39,24 +39,26 @@
 
 <div class="box-left">
     <ul>
-        <li class="{{ $page === 'dashboard' ? 'active' : '' }}">
-            <a href="{{ url('/my-account') }}">Dashboard</a>
+        <li class="{{ request()->is('my-account/dashboard*') ? 'active' : '' }}">
+            <a href="{{ route('my_account.dashboard') }}">Dashboard</a>
         </li>
-        <li class="{{ $page === 'orders' ? 'active' : '' }}">
-            <a href="{{ url('/my-account/orders') }}">Orders</a>
+        <li class="{{ request()->is('my-account/orders*') ? 'active' : '' }}">
+            <a href="{{ route('my_account.order') }}">Orders</a>
         </li>
-        <li class="{{ $page === 'addresses' ? 'active' : '' }}">
-            <a href="{{ url('/my-account/addresses') }}">
-                Addresses</a>
+        <li class="{{ 
+                request()->is('my-account/addresses*') || 
+                request()->is('my-account/add-address*') ||
+                request()->is('my-account/address*') ? 'active' : '' }}">
+            <a href="{{ route('my_account.address') }}">Addresses</a>
         </li>
-        <li class="{{ $page === 'edit-account' ? 'active' : '' }}">
-            <a href="{{ url('/my-account/edit-account') }}">Account details</a>
+        <li class="{{ request()->is('my-account/edit-account*') ? 'active' : '' }}">
+            <a href="{{ route('my_account.edit_account') }}">Account details</a>
         </li>
         <li>
             <form method="POST" action="{{ route('logout') }}" id="logoutForm">
                 @csrf
             </form>
-            <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
+            <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()" style="cursor: pointer">Logout</a>
         </li>
     </ul>
 </div>

@@ -86,14 +86,21 @@
                                     @if ($product->details->first()->discount_price > 0 )
                                         <span class="price">Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}</span>
                                         <span class="old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                        <span class="discount">-30%</span>
+                                        <span class="discount">-{{ number_format((($product->details->first()->price-$product->details->first()->discount_price)/$product->details->first()->price)*100, 0, ',', '.') }}%</span>
                                     @else
                                         <span class="price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
                                     @endif
                                 </div>
                                 <div class="info-orther">
-                                    <p>SKU: #{{ $product->details[0]->sku }}</p>
-                                    <p>Availability: <span class="in-stock">{{ $product->details->first()->stock }}</span>
+                                    <p id="SKUSelected">SKU: #{{ $product->details[0]->sku }}</p>
+                                    <p id="StockSelected">
+                                        @if ($product->details->first()->stock > 5)
+                                        Availability: <span class="in-stock">{{ $product->details->first()->stock }}</span>
+                                        @elseif ($product->details->first()->stock > 0)
+                                        <span class="in-stock text-warning">Remaining: {{ $product->details->first()->stock }}</span>
+                                        @else
+                                        <span class="text-danger">Out of stock</span>
+                                        @endif
                                     </p>
                                     <p>Condition: New</p>
                                 </div>
@@ -124,10 +131,12 @@
                                             <div class="attributes">
                                                 <div class="attribute-label">Opsi:</div>
                                                 <div class="attribute-list">
-                                                    <select name="product_detail_id" id="selectVariant">
+                                                    <select name="product_detail_id" id="selectVariant" required>
                                                         <option value="">Pilih Opsi</option>
                                                         @foreach ($product->details as $variant)
-                                                        <option value="{{ $variant->id }}">{{ $variant->name }}</option>
+                                                        <option value="{{ $variant->id }}" @if ($variant->stock == 0) disabled @endif>
+                                                            {{ $variant->name }}
+                                                        </option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -175,6 +184,9 @@
                                 <li>
                                     <a aria-expanded="true" data-toggle="tab" href="#information">information</a>
                                 </li>
+                                <li>
+                                    <a data-toggle="tab" href="#video-reels">video</a>
+                                </li>
                                 {{-- <li>
                                     <a data-toggle="tab" href="#reviews">reviews</a>
                                 </li>
@@ -204,6 +216,25 @@
                                             <td>Colorful Dress</td>
                                         </tr>
                                     </table>
+                                </div>
+                                <div id="video-reels" class="tab-panel embed-responsive embed-responsive-16by9">
+                                    @if (isset($product->video_youtube_url))
+                                        <div class="plyr__video-embed embed-responsive-item" id="player">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/{{ $product->video_youtube_url }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                            ></iframe>
+                                        </div>
+                                    @elseif (isset($product->video_url))
+                                        <video id="player" playsinline controls data-poster="{{ Storage::url($product->photo) }}">
+                                            <source src="{{ Storage::url($product->video_url) }}" type="video/{{ pathinfo($product->video_url, PATHINFO_EXTENSION) }}" />
+                                        </video>
+                                    @else
+                                        Video tidak tersedia
+                                    @endif
+                                    
                                 </div>
                                 {{-- <div id="reviews" class="tab-panel">
                                     <div class="product-comments-block-tab">
@@ -394,8 +425,71 @@
     </div>
 @endsection
 
+@push('addon-style')
+    <link rel="stylesheet" type="text/css" href="{{ asset('customer/assets/lib/plyr/plyr.css') }}" />
+@endpush
+
 @push('addon-script')
     <script type="text/javascript" src="{{ asset('customer/assets/lib/jquery.elevatezoom.js') }}"></script>
     <script type="text/javascript" src="{{ asset('customer/assets/lib/jquery-ui/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('customer/assets/lib/fancyBox/jquery.fancybox.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('customer/assets/lib/plyr/plyr.js') }}"></script>
+    <script>
+        if ($('#selectVariant').length) {
+            $("#selectVariant").change(function(){
+
+                const product_detail_id = $(this).val();
+
+                $.ajax({
+                    type: 'GET',
+                    url: '{{ route("api.product.variant.show", ":id") }}/'.replace(':id', product_detail_id),
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content')
+                    },
+                    dataType: 'JSON',
+                    error: function(error) {
+                        console.log(error);
+                        Swal.fire("Error!", 'Something is wrong', "error");
+                    },
+                    success: function (response) {
+                        // console.log(response)
+                        if (response.success == true) {
+
+                            const responseData = response.data;
+
+                            if (responseData.discount_price > 0) {
+                                $('#productPriceGroup').html('')
+                                    .prepend(`
+                                        <span class="price">Rp ${responseData.discount_price.toLocaleString()}</span>
+                                        <span class="old-price">Rp ${responseData.price.toLocaleString()}</span>
+                                        <span class="discount">-${(((responseData.price-responseData.discount_price)/responseData.price)*100).toLocaleString()}%</span>
+                                    `);
+                                $('#SKUSelected').text(`SKU: #${responseData.sku}`);
+                            } else {
+                                $('#productPriceGroup').html('')
+                                    .prepend(`
+                                        <span class="price">Rp ${responseData.price.toLocaleString()}</span>
+                                    `);
+                                $('#SKUSelected').text(`SKU: #${responseData.sku}`);
+                            }
+
+                            if (responseData.stock > 5) {
+                                $('#StockSelected').html('').prepend(`Availability: <span class="in-stock">${responseData.stock}</span>`);
+                            }
+                            else if (responseData.stock > 0) {
+                                $('#StockSelected').html('').prepend(`<span class="in-stock text-warning">Remaining: ${responseData.stock}</span>`);
+                            }
+                            else {
+                                $('#StockSelected').html('').prepend(`<span class="text-danger">Out of Stock</span>`);
+                            }
+
+                        } else {
+                            console.log(response)
+                            Swal.fire("Error!", response.message, "error");
+                        }
+                    }
+                })
+            });
+        }  
+    </script>
 @endpush

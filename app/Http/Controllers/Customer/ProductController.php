@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 use App\Models\ProductSubcategory;
 use App\Models\Product;
+use App\Models\ProductDetail;
 
 class ProductController extends Controller
 {
@@ -96,6 +97,28 @@ class ProductController extends Controller
             'success'   => true,
             'message'   => "List of all product subcategories",
             'data'      => $product_subcategories
+        ], Response::HTTP_OK);
+    }
+
+    public function show_api($id)
+    {
+        $product = Product::where('id', $id)->with(['details'])->firstOrFail();
+
+        return response()->json([
+            'success'   => true,
+            'message'   => "Product detail",
+            'data'      => $product
+        ], Response::HTTP_OK);
+    }
+
+    public function variant_show_api($id)
+    {
+        $product_detail = ProductDetail::where('id', $id)->with(['product'])->firstOrFail();
+
+        return response()->json([
+            'success'   => true,
+            'message'   => "Product variant detail",
+            'data'      => $product_detail
         ], Response::HTTP_OK);
     }
 

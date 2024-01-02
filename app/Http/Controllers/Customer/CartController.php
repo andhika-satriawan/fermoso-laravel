@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Models\Cart;
 use App\Models\ProductSubcategory;
 use App\Models\ProductDetail;
+use App\Models\Address;
 
 class CartController extends Controller
 {
@@ -44,12 +46,104 @@ class CartController extends Controller
 
     public function checkout()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $addresses = Address::where('customer_id', Auth::id())->orderBy('id', 'DESC')->get();
 
+        $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->orderBy('id', 'DESC')->get();
+        $total_carts = array_sum(array_map(function($item) {
+            $actual_price = $item['product_detail']['discount_price'] > 0 ? $item['product_detail']['discount_price'] : $item['product_detail']['price'];
+            return $item['quantity'] * $actual_price;
+        }, $carts->toArray()));
+
+        // if (count($addresses) == 0) {
+        //     return to_route('my_account.add_address')
+        //     ->with('error', 'Please add your address');
+        // }
+        
         return view('pages.customer.checkout', [
             "page"  => "checkout",
-            "product_subcategories" => $product_subcategories,
+            "addresses" => $addresses,
+            "carts" => $carts,
+            "total_carts"  => $total_carts
         ]);
+    }
+
+    /**
+     * Check Ongkir API
+     */
+    public function ongkir_option_api(Request $request)
+    {
+        $validated = $request->validate([
+            'address_id'    => 'required|numeric|exists:App\Models\Address,id',
+            'courier'       => 'required|string|in:jne,tiki,sicepat',
+        ]);
+
+        $address = Address::where([
+            ['id', $request->address_id],
+            ['customer_id', Auth::id()],
+        ])->firstOrFail();
+
+        $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->get();
+
+        // Weight
+        $total_weight = array_sum(array_map(function($item) {
+            return $item['quantity'] * $item['product_detail']['weight'];
+        }, $carts->toArray()));
+
+        // Volume Weight
+        $total_volume_weight = array_sum(array_map(function($item) {
+
+            $dimension_width    = $item['product_detail']['width'];
+            $dimension_length   = $item['product_detail']['length'];
+            $dimension_height   = $item['product_detail']['height'];
+
+            if (
+                (isset($dimension_width) && $dimension_width > 0) &&
+                (isset($dimension_length) && $dimension_length > 0) &&
+                (isset($dimension_height) && $dimension_height > 0)
+            ) {
+                $total_dimension = $dimension_width * $dimension_length * $dimension_height;
+                return $item['quantity'] * (($total_dimension/6000) * 1000);
+            }
+            else {
+                return 0;
+            }
+        }, $carts->toArray()));
+
+        $final_weight = $total_weight > $total_volume_weight ? $total_weight : $total_volume_weight;
+
+        $checkOngkir = Http::withHeaders([
+            'key' => '96e52c934743fbdec35dd879a0d7d40a',
+        ])->post('https://pro.rajaongkir.com/api/cost', [
+            'origin' => 153,
+            'originType' => 'city',
+            'destination' => $address->kecamatan->id,
+            'destinationType' => 'subdistrict',
+            'weight' => $final_weight,
+            'courier' => $request->courier,
+        ]);
+
+        $response = $checkOngkir->json();
+
+        return response()->json([
+            'success'       => true,
+            'message'       => "List of shipping option",
+            'data'          => $response['rajaongkir'],
+        ], Response::HTTP_OK);
+
+    }
+
+    public function checkout_store(Request $request)
+    {
+        $validated = $request->validate([
+            'address_id'        => 'required|numeric|exists:App\Models\Address,id',
+            'courier'           => 'required|string',
+            'service'           => 'required|string',
+            'shipping_price'    => 'required|numeric',
+            'coupon_code'       => 'nullable|string',
+        ]);
+
+        dd("Sukses");
+
     }
 
     /**
