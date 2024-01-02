@@ -4,6 +4,60 @@
     Checkout
 @endsection
 
+@push('addon-style')
+    <style>
+        a.add-address {
+            color: #ff3366;
+            font-weight: bold;
+        }
+
+        .box-border .row {
+            margin-top: 15px;
+        }
+
+        .address-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            clear: both;
+            background: #f6f6f6;
+        }
+
+        .address-item input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+        }
+
+        .address-item input:checked+label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .address-item input {
+            float: right;
+        }
+
+        .address-item h4 {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .address-item h5 {
+            font-weight: bold;
+            color: #666;
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+
+        .address-item a {
+            color: #ff3366;
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="columns-container">
         <div class="container" id="columns">
@@ -20,33 +74,33 @@
             </h2>
             <!-- ../page heading-->
             <div class="page-content checkout-page">
-                <h3 class="checkout-sep">1. Checkout Method</h3>
+                <h3 class="checkout-sep">1. Pilih Alamat Tujuan Kamu</h3>
                 <div class="box-border">
+                    <a href="#" class="add-address">Tambah Alamat</a>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <h4>Checkout as a Guest or Register</h4>
-                            <p>Register with us for future convenience:</p>
-                            <ul>
-                                <li><label><input type="radio" name="radio1">Checkout as Guest</label></li>
-                                <li><label><input type="radio" name="radio1">Register</label></li>
-                            </ul>
-                            <br>
-                            <h4>Register and save time!</h4>
-                            <p>Register with us for future convenience:</p>
-                            <p><i class="fa fa-check-circle text-primary"></i> Fast and easy check out</p>
-                            <p><i class="fa fa-check-circle text-primary"></i> Easy access to your order history and status
-                            </p>
-                            <button class="button">Continue</button>
+                        <div class="col-sm-4">
+                            <div class="address-item">
+                                <input type="radio" id="alamat1" name="alamat" value="Alamat 1">
+                                <label for="alamat1">
+                                    <h4>Rumah</h4>
+                                    <h5>John</h5>
+                                    <p>JL. Ciputat Raya No.64, RT.02 / RW.12. Kebayoran Lama, Jakarta Selatan, DKI Jakarta
+                                    </p>
+                                    <a href="#">Edit</a>
+                                </label>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <h4>Login</h4>
-                            <p>Already registered? Please log in below:</p>
-                            <label>Email address</label>
-                            <input type="text" class="form-control input">
-                            <label>Password</label>
-                            <input type="password" class="form-control input">
-                            <p><a href="#">Forgot your password?</a></p>
-                            <button class="button">Login</button>
+                        <div class="col-sm-4">
+                            <div class="address-item">
+                                <input type="radio" id="alamat2" name="alamat" value="Alamat 2">
+                                <label for="alamat2">
+                                    <h4>Kantor</h4>
+                                    <h5>John</h5>
+                                    <p>JL. Ciputat Raya No.64, RT.02 / RW.12. Kebayoran Lama, Jakarta Selatan, DKI Jakarta
+                                    </p>
+                                    <a href="#">Edit</a>
+                                </label>
+                            </div>
                         </div>
 
                     </div>
