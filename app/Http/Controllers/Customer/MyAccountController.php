@@ -13,41 +13,29 @@ class MyAccountController extends Controller
      */
     public function index()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
         return view('pages.customer.my-account.index', [
             "page"  => "dashboard",
-            "product_subcategories" => $product_subcategories,
         ]);
     }
 
     public function order()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
         return view('pages.customer.my-account.orders', [
             "page"  => "orders",
-            "product_subcategories" => $product_subcategories,
         ]);
     }
 
     public function addresses()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
         return view('pages.customer.my-account.addresses', [
             "page"  => "addresses",
-            "product_subcategories" => $product_subcategories,
         ]);
     }
 
     public function editaccount()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
         return view('pages.customer.my-account.edit-account', [
             "page"  => "edit-account",
-            "product_subcategories" => $product_subcategories,
         ]);
     }
 

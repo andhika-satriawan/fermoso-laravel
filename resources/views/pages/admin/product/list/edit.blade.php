@@ -292,42 +292,42 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Variant Name <span class="text-danger">*</span></th>
+                                                <th scope="col" id="variant_name_head">Variant Name <span class="text-danger">*</span></th>
                                                 <th scope="col">Price <span class="text-danger">*</span></th>
                                                 <th scope="col">Discounted Price</th>
                                                 <th scope="col">Stock <span class="text-danger">*</span></th>
                                                 <th scope="col">SKU <span class="text-danger">*</span></th>
-                                                <th scope="col">Image</th>
+                                                <th scope="col" id="variant_image_head">Image</th>
                                                 <th scope="col">Status</th>
-                                                <th scope="col">Remove</th>
+                                                <th scope="col" id="variant_delete_head">Remove</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tbodyVariant">
                                             @foreach ($item->details as $variant)
                                             <tr id="element-variant">
                                                 <td>
-                                                    <input type="hidden" class="product-detail-id" name="productDetails[{{ $loop->index }}][id]" value="{{ $variant->id }}">
-                                                    <input type="text" class="product-detail-name"
+                                                    <input type="hidden" class="form-control product-detail-id" name="productDetails[{{ $loop->index }}][id]" value="{{ $variant->id }}">
+                                                    <input type="text" class="form-control product-detail-name"
                                                         placeholder="Product Name" name="productDetails[{{ $loop->index }}][name]"
                                                         value="{{ $variant->name }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-price" placeholder="Rp"
+                                                    <input type="text" class="form-control product-detail-price" placeholder="Rp"
                                                         name="productDetails[{{ $loop->index }}][price]"
                                                         value="{{ $variant->price }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-discount-price"
+                                                    <input type="text" class="form-control product-detail-discount-price"
                                                         placeholder="Rp" name="productDetails[{{ $loop->index }}][discount_price]"
                                                         value="{{ $variant->discount_price }}">
                                                 </td>
                                                 <td>
-                                                    <input type="number" class="product-detail-stock" placeholder="Pcs"
+                                                    <input type="number" class="form-control product-detail-stock" placeholder="Pcs"
                                                         name="productDetails[{{ $loop->index }}][stock]"
                                                         value="{{ $variant->stock }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-sku" placeholder="SKU"
+                                                    <input type="text" class="form-control product-detail-sku" placeholder="SKU"
                                                         name="productDetails[{{ $loop->index }}][sku]"
                                                         value="{{ $variant->sku }}" required>
                                                 </td>
@@ -336,8 +336,7 @@
                                                         name="productDetails[{{ $loop->index }}][photo_variant]"
                                                         onchange="showPreviewVariant(event)">
                                                     <img class="card-img-top card-img-variant"
-                                                        src="{{ Storage::url($variant->image) }}"
-                                                        {{-- src="{{ asset('admin/img/product/upload.png') }}" --}}
+                                                        src="{{ isset($variant->image) ? Storage::url($variant->image) : asset('admin/img/product/upload.png') }}"
                                                         alt="Card image cap">
                                                 </td>
                                                 <td>
@@ -480,13 +479,12 @@
     @endif
     {{-- CKEditor --}}
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             // $("#btnSubmitForm").click(function(){
             //     $('#formSubmission').submit()
             // });
+            changeProductVariant();
         });
 
         $(".image-uploader-preview").on("click", function() {
@@ -556,10 +554,35 @@
 
             let productStatusVariant = clone.querySelector(".form-check-input");
             productStatusVariant.name = `productDetails[${rows.length-1}][status]`;
+
+            changeProductVariant();
+        }
+
+        function changeProductVariant() {
+            const rowCount = $('#tbodyVariant > tr').length;
+            console.log('Lalala ' + rowCount);
+            if (rowCount > 1) {
+                $('.product-detail-name').attr( {type: "text", placeholder: "Ukuran S", required: true} );
+                $('.product-detail-name').closest("td").show();
+                $('.upload-file-variant').closest("td").show();
+                $('.product-detail-delete').closest("td").show();
+                $('#variant_name_head').show();
+                $('#variant_image_head').show();
+                $('#variant_delete_head').show();
+            } else {
+                $('.product-detail-name').attr( {type: "hidden", placeholder: "DEFAULT", value: "DEFAULT", required: false} );
+                $('.product-detail-name').closest("td").hide();
+                $('.upload-file-variant').closest("td").hide();
+                $('.product-detail-delete').closest("td").hide();
+                $('#variant_name_head').hide();
+                $('#variant_image_head').hide();
+                $('#variant_delete_head').hide();
+            }
         }
 
         function deleteRow(event) {
             event.target.parentNode.parentNode.parentNode.remove();
+            changeProductVariant();
         }
     </script>
 @endpush

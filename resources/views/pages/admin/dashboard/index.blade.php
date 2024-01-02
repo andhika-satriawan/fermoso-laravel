@@ -289,8 +289,6 @@
 @endpush
 
 @push('addon-script')
-    <!-- Sweetalert 2 -->
-    <script src="{{ asset('admin/plugins/sweetalert/sweetalert2.all.min.js') }}"></script>
     @if ($message = Session::get('success'))
         <script type="text/javascript">
             Swal.fire({

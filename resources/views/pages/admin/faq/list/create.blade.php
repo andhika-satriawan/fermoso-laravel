@@ -242,9 +242,6 @@
     @endif
     <!-- CKEditor -->
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-    
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {

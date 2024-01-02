@@ -261,10 +261,6 @@
 @push('addon-script')
     {{-- CKEditor --}}
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
-    <!-- Sweetalert 2 -->
-    <script src="{{ asset('admin/plugins/sweetalert/sweetalert2.all.min.js') }}"></script>
     @if ($message = Session::get('success'))
         <script type="text/javascript">
             Swal.fire({

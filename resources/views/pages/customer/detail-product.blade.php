@@ -40,12 +40,24 @@
                                         <ul class="owl-carousel" data-items="3" data-nav="true" data-dots="false"
                                             data-margin="21" data-loop="false">
                                             @foreach ($product->details as $product_detail)
+                                                @if ($product_detail->image)
                                                 <li>
                                                     <a href="{{ url('product/' . $product->slug) }}"
                                                         data-image="{{ Storage::url($product_detail->image) }}"
                                                         data-zoom-image="{{ Storage::url($product_detail->image) }}">
                                                         <img id="product-zoom"
                                                             src="{{ Storage::url($product_detail->image) }}" />
+                                                    </a>
+                                                </li>
+                                                @endif
+                                            @endforeach
+                                            @foreach ($product->images as $product_image)
+                                                <li>
+                                                    <a href="{{ url('product/' . $product->slug) }}"
+                                                        data-image="{{ Storage::url($product_image->image) }}"
+                                                        data-zoom-image="{{ Storage::url($product_image->image) }}">
+                                                        <img id="product-zoom"
+                                                            src="{{ Storage::url($product_image->image) }}" />
                                                     </a>
                                                 </li>
                                             @endforeach
@@ -65,19 +77,19 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-half-o"></i>
                                     </div>
-                                    <div class="comments-advices">
+                                    {{-- <div class="comments-advices">
                                         <a href="#">Based on 3 ratings</a>
                                         <a href="#"><i class="fa fa-pencil"></i> write a review</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="product-price-group">
                                     <span
                                         class="price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                    <span class="old-price">$52.00</span>
-                                    <span class="discount">-30%</span>
+                                    {{-- <span class="old-price">$52.00</span>
+                                    <span class="discount">-30%</span> --}}
                                 </div>
                                 <div class="info-orther">
-                                    <p>Item Code: #453217907</p>
+                                    <p>SKU: #{{ $product->details[0]->sku }}</p>
                                     <p>Availability: <span class="in-stock">{{ $product->details->first()->stock }}</span>
                                     </p>
                                     <p>Condition: New</p>
@@ -85,73 +97,72 @@
                                 <div class="product-desc">
                                     {!! $product->description !!}
                                 </div>
-                                <div class="form-option">
-                                    <p class="form-option-title">Available Options:</p>
-                                    <div class="attributes">
-                                        <div class="attribute-label">Color:</div>
-                                        <div class="attribute-list">
-                                            <ul class="list-color">
-                                                <li style="background:#0c3b90;"><a href="#">red</a></li>
-                                                <li style="background:#036c5d;" class="active"><a href="#">red</a>
-                                                </li>
-                                                <li style="background:#5f2363;"><a href="#">red</a></li>
-                                                <li style="background:#ffc000;"><a href="#">red</a></li>
-                                                <li style="background:#36a93c;"><a href="#">red</a></li>
-                                                <li style="background:#ff0000;"><a href="#">red</a></li>
-                                            </ul>
+                                
+                                @if ($errors->any())
+                                    @foreach ($errors->all() as $error)
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <strong>Error!</strong> {{ $error }}
                                         </div>
-                                    </div>
-                                    <div class="attributes">
-                                        <div class="attribute-label">Qty:</div>
-                                        <div class="attribute-list product-qty">
-                                            <div class="qty">
-                                                <input id="option-product-qty" type="text" value="1">
-                                            </div>
-                                            <div class="btn-plus">
-                                                <a href="#" class="btn-plus-up">
-                                                    <i class="fa fa-caret-up"></i>
-                                                </a>
-                                                <a href="#" class="btn-plus-down">
-                                                    <i class="fa fa-caret-down"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="attributes">
-                                        <div class="attribute-label">Size:</div>
-                                        <div class="attribute-list">
-                                            <select>
-                                                <option value="1">X</option>
-                                                <option value="2">XL</option>
-                                                <option value="3">XXL</option>
-                                            </select>
-                                            <a id="size_chart" class="fancybox"
-                                                href="{{ Storage::url($product->photo) }}">Size
-                                                Chart</a>
-                                        </div>
+                                    @endforeach
+                                @endif
 
+                                <form action="{{ route('cart.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-option">
+                                        <div class="attributes">
+                                            <div class="attribute-label">Qty:</div>
+                                            <div class="attribute-list">
+                                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                                <input id="option-product-qty" class="form-control" type="number" name="quantity" value="1" min="1">
+                                            </div>
+                                        </div>
+                                        @if (count($product->details) > 1)
+                                            <div class="attributes">
+                                                <div class="attribute-label">Size:</div>
+                                                <div class="attribute-list">
+                                                    <select name="product_detail_id">
+                                                        @foreach ($product->details as $variant)
+                                                        <option value="{{ $variant->id }}">{{ $variant->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    <a id="size_chart" class="fancybox"
+                                                        href="{{ Storage::url($product->photo) }}">Size
+                                                        Chart</a>
+                                                </div>
+    
+                                            </div>
+                                        @else
+                                            <input type="hidden" name="product_detail_id" value="{{ $product->details[0]->id }}">
+                                        @endif
                                     </div>
-                                </div>
-                                <div class="form-action">
-                                    <div class="button-group">
-                                        <a class="btn-add-cart" href="#">Add to cart</a>
+                                    <div class="form-action">
+                                        <div class="button-group">
+                                            <div class="loader" style="display: none"></div>
+                                            @auth
+                                            <button class="btn-add-cart" type="submit">Add to cart</button>
+                                            @else
+                                            <a class="btn-add-cart" href="{{ route('login') }}">Add to cart</a>
+                                            @endauth
+                                        </div>
+                                        {{-- <div class="button-group">
+                                            <a class="wishlist" href="#"><i class="fa fa-heart-o"></i>
+                                                <br>Wishlist</a>
+                                            <a class="compare" href="#"><i class="fa fa-signal"></i>
+                                                <br>
+                                                Compare</a>
+                                        </div> --}}
                                     </div>
-                                    <div class="button-group">
-                                        <a class="wishlist" href="#"><i class="fa fa-heart-o"></i>
-                                            <br>Wishlist</a>
-                                        <a class="compare" href="#"><i class="fa fa-signal"></i>
-                                            <br>
-                                            Compare</a>
-                                    </div>
-                                </div>
-                                <div class="form-share">
+                                </form>
+
+                                {{-- <div class="form-share">
                                     <div class="sendtofriend-print">
                                         <a href="javascript:print();"><i class="fa fa-print"></i> Print</a>
                                         <a href="#"><i class="fa fa-envelope-o fa-fw"></i>Send to a friend</a>
                                     </div>
                                     <div class="network-share">
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!-- tab product -->
@@ -163,7 +174,7 @@
                                 <li>
                                     <a aria-expanded="true" data-toggle="tab" href="#information">information</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a data-toggle="tab" href="#reviews">reviews</a>
                                 </li>
                                 <li>
@@ -171,22 +182,11 @@
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#guarantees">guarantees</a>
-                                </li>
+                                </li> --}}
                             </ul>
                             <div class="tab-container">
                                 <div id="product-detail" class="tab-panel active">
-                                    <p>Morbi mollis tellus ac sapien. Nunc nec neque. Praesent nec nisl a purus blandit
-                                        viverra. Nunc nec neque. Pellentesque auctor neque nec urna.</p>
-
-                                    <p>Curabitur suscipit suscipit tellus. Cras id dui. Nam ipsum risus, rutrum vitae,
-                                        vestibulum eu, molestie vel, lacus. Class aptent taciti sociosqu ad litora torquent
-                                        per conubia nostra, per inceptos hymenaeos. Maecenas vestibulum mollis diam.</p>
-
-                                    <p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae
-                                        euismod ligula urna in dolor. Sed lectus. Phasellus leo dolor, tempus non, auctor
-                                        et, hendrerit quis, nisi. Nam at tortor in tellus interdum sagittis. Pellentesque
-                                        egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor
-                                        orci leo non est.</p>
+                                    {!! $product->description !!}
                                 </div>
                                 <div id="information" class="tab-panel">
                                     <table class="table table-bordered">
@@ -204,7 +204,7 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div id="reviews" class="tab-panel">
+                                {{-- <div id="reviews" class="tab-panel">
                                     <div class="product-comments-block-tab">
                                         <div class="comment row">
                                             <div class="col-sm-3 author">
@@ -284,7 +284,7 @@
                                     <p>Maecenas vestibulum mollis diam. In consectetuer turpis ut velit. Curabitur at lacus
                                         ac velit ornare lobortis. Praesent ac sem eget est egestas volutpat. Nam eget dui.
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!-- ./tab product -->
@@ -335,7 +335,7 @@
                         </div>
                         <!-- ./box product -->
                         <!-- box product -->
-                        <div class="page-product-box">
+                        {{-- <div class="page-product-box">
                             <h3 class="heading">You might also like</h3>
                             <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
                                 data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
@@ -378,7 +378,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                        </div>
+                        </div> --}}
                         <!-- ./box product -->
                     </div>
                     <!-- Product -->

@@ -17,7 +17,41 @@
         @csrf
         @method('PATCH')
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="card image-uploader">
+                        <div class="card-body">
+                            <label for="image" class="form-label">Image <span class="text-danger">*</span></label>
+                            <input class="form-control file-uploader @error('image') is-invalid @enderror" type="file" accept="image/*" name="image"
+                                value="{{ old('image') }}">
+                            @error('image')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                            <img class="card-img-top image-uploader-preview"
+                                src="{{ isset($item->image) ? Storage::url($item->image) : asset('admin/img/product/noimage.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="card image-uploader">
+                        <div class="card-body">
+                            <label for="featured_image" class="form-label">Featured Image <span class="text-danger">*</span></label>
+                            <input class="form-control file-uploader @error('featured_image') is-invalid @enderror" type="file" accept="image/*" name="featured_image"
+                                value="{{ old('featured_image') }}">
+                            @error('featured_image')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                            <img class="card-img-top image-uploader-preview"
+                            src="{{ isset($item->featured_image) ? Storage::url($item->featured_image) : asset('admin/img/product/noimage.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                     <div class="form-group">
                         <label for="category_name" class="form-label">Category Name <span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('category_name') is-invalid @enderror" id="category_name" placeholder="Category Name" name="category_name" value="{{ $item->name }}" autocomplete="off" required>
@@ -42,29 +76,49 @@
 @endsection
 
 @push('addon-style')
-<link rel="stylesheet" href="{{ asset('admin/plugins/select2/css/select2.min.css')}}" />
+<style>
+    .card img {
+        max-width: 200px;
+        display: table;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .image-uploader input.file-uploader {
+        display: none;
+    }
+
+    .image-uploader img {
+        cursor: pointer;
+    }
+</style>
 @endpush
 
 @push('prepend-script')
 @endpush
 
 @push('addon-script')
-@if ($message = Session::get('success'))
-<script type="text/javascript">
-    Swal.fire({
-        icon: 'success',
-        title: 'Success..',
-        text: '{{ $message  }}',
-    })
-</script>
-@endif
-<!-- Select2 JS -->
-<script src="{{ asset('admin/plugins/select2/js/select2.min.js')}}"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        // $("#btnSubmitForm").click(function(){
-        //     $('#formSubmission').submit()
-        // });
-    });
-</script>
+    @if ($message = Session::get('success'))
+        <script type="text/javascript">
+            Swal.fire({
+                icon: 'success',
+                title: 'Success..',
+                text: '{{ $message }}',
+            })
+        </script>
+    @endif
+    <script type="text/javascript">
+
+        $(".image-uploader-preview").on("click", function() {
+            $(this).closest(".image-uploader").find(".file-uploader").trigger('click');
+        });
+
+        $(".file-uploader").on("change", function(event) {
+            if (event.target.files.length > 0) {
+                const tmpPath = URL.createObjectURL(event.target.files[0]);
+                $(this).closest(".image-uploader").find(".image-uploader-preview").attr("src", tmpPath);
+            }
+        });
+        
+    </script>
 @endpush

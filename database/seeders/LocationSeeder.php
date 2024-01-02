@@ -50,8 +50,20 @@ class LocationSeeder extends Seeder
                 ])->get('https://pro.rajaongkir.com/api/subdistrict?city=' . $city['city_id']);
                 $subdistricts = $subdistrictQuery->json();
 
-                foreach ($subdistricts['rajaongkir']['results'] as $subdistrict) {
-                    Kecamatan::create([
+                // foreach ($subdistricts['rajaongkir']['results'] as $subdistrict) {
+                //     Kecamatan::create([
+                //         'id' => $subdistrict['subdistrict_id'],
+                //         'province_id' => $subdistrict['province_id'],
+                //         'province_name' => $subdistrict['province'],
+                //         'city_id' => $subdistrict['city_id'],
+                //         'city_name' => $subdistrict['city'],
+                //         'type' => $subdistrict['type'],
+                //         'kecamatan_name' => $subdistrict['subdistrict_name'],
+                //     ]);
+                // }
+
+                $kecamatan = array_map(function ($subdistrict) { 
+                    return [
                         'id' => $subdistrict['subdistrict_id'],
                         'province_id' => $subdistrict['province_id'],
                         'province_name' => $subdistrict['province'],
@@ -59,8 +71,10 @@ class LocationSeeder extends Seeder
                         'city_name' => $subdistrict['city'],
                         'type' => $subdistrict['type'],
                         'kecamatan_name' => $subdistrict['subdistrict_name'],
-                    ]);
-                }
+                    ]; 
+                }, $subdistricts['rajaongkir']['results']);
+
+                Kecamatan::createMany($kecamatan);
 
             }
 

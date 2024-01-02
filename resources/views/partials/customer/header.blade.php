@@ -15,11 +15,11 @@
                     <form method="POST" action="{{ route('logout') }}" id="logoutForm">
                         @csrf
                     </form>
-                    <a href="{{ url('/my-account') }}">My Account</a>
+                    <a href="{{ route('my_account.dashboard') }}">My Account</a>
                     <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
                 @else
-                    <a href="{{ url('/my-account/register') }}">Register</a>
-                    <a href="{{ url('/my-account/login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('login') }}">Login</a>
                 @endauth
             </div>
         </div>
@@ -29,17 +29,14 @@
     <div class="container main-header">
         <div class="row">
             <div class="col-xs-12 col-sm-3 logo">
-                <a href="{{ url('/') }}"><img alt="Fermoso" src="{{ asset('images/logo.jpg') }}" /></a>
+                <a href="{{ route('home') }}"><img alt="Fermoso" src="{{ asset('images/logo.jpg') }}" /></a>
             </div>
             <div class="col-xs-7 col-sm-7 header-search-box">
                 <form class="form-inline">
                     <div class="form-group form-category">
-                        <select class="select-category">
-                            <option value="2">All Categories</option>
-                            @foreach ($product_subcategories as $product_subcategory)
-                                <option class="level-0" value="{{ $product_subcategory->name }}">
-                                    {{ $product_subcategory->name }}</option>
-                            @endforeach
+                        <select class="select-category" id="selectCategory">
+                            <option value="">All Categories</option>
+                            <!-- Generated from AJAX -->
                         </select>
                     </div>
                     <div class="form-group input-serach">
@@ -49,58 +46,28 @@
                 </form>
             </div>
             <div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
-                <a class="cart-link" href="order.html">
+                <a class="cart-link" href="{{ route('cart') }}">
                     <span class="title">Shopping cart</span>
-                    <span class="total">2 items - 122.38 €</span>
-                    <span class="notify notify-left">2</span>
+                    <span class="total">0 items</span>
+                    <span class="notify notify-left">0</span>
                 </a>
-                <div class="cart-block">
+                <div class="cart-block" style="display: none">
                     <div class="cart-block-content">
-                        <h5 class="cart-title">2 Items in my cart</h5>
+                        <h5 class="cart-title">0 Items in my cart</h5>
                         <div class="cart-block-list">
                             <ul>
-                                <li class="product-info">
-                                    <div class="p-left">
-                                        <a href="#" class="remove_link"></a>
-                                        <a href="#">
-                                            <img class="img-responsive"
-                                                src="{{ asset('customer/assets/data/product-100x122.jpg') }}"
-                                                alt="p10">
-                                        </a>
-                                    </div>
-                                    <div class="p-right">
-                                        <p class="p-name">Donec Ac Tempus</p>
-                                        <p class="p-rice">61,19 €</p>
-                                        <p>Qty: 1</p>
-                                    </div>
-                                </li>
-                                <li class="product-info">
-                                    <div class="p-left">
-                                        <a href="#" class="remove_link"></a>
-                                        <a href="#">
-                                            <img class="img-responsive"
-                                                src="{{ asset('customer/assets/data/product-s5-100x122.jpg') }}"
-                                                alt="p10">
-                                        </a>
-                                    </div>
-                                    <div class="p-right">
-                                        <p class="p-name">Donec Ac Tempus</p>
-                                        <p class="p-rice">61,19 €</p>
-                                        <p>Qty: 1</p>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
-                        <div class="toal-cart">
+                        <div class="total-cart">
                             <span>Total</span>
-                            <span class="toal-price pull-right">122.38 €</span>
+                            <span class="total-price pull-right">0</span>
                         </div>
                         <div class="cart-buttons">
-                            <a href="{{ url('/cart') }}" class="btn-check-out">View Cart</a>
+                            <a href="{{ route('cart') }}" class="btn-check-out">View Cart</a>
                         </div>
-                        <div class="cart-buttons">
-                            <a href="{{ url('/checkout') }}" class="btn-check-out">Checkout</a>
-                        </div>
+                        {{-- <div class="cart-buttons">
+                            <a href="{{ route('checkout') }}" class="btn-check-out">Checkout</a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -114,18 +81,18 @@
                 <div class="col-sm-3" id="box-vertical-megamenus">
                     <div class="box-vertical-megamenus">
                         <h4 class="title">
-                            <span class="title-menu">Categories</span>
+                            <span class="title-menu">Categories s</span>
                             <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
                         </h4>
                         <div class="vertical-menu-content is-home">
-                            <ul class="vertical-menu-list">
-                                @foreach ($product_subcategories as $product_subcategory)
+                            <ul class="vertical-menu-list" id="categoryMenuList">
+                                {{-- @foreach ($product_subcategories as $product_subcategory)
                                     <li>
                                         <a href="{{ url('product/category/' . $product_subcategory->slug) }}"><img
                                                 class="icon-menu" alt="{{ $product_subcategory->name }}"
                                                 src="{{ asset('customer/assets/data/1.png') }}">{{ $product_subcategory->name }}</a>
                                     </li>
-                                @endforeach
+                                @endforeach --}}
                             </ul>
                             <div class="all-category"><span class="open-cate">All Categories</span></div>
                         </div>

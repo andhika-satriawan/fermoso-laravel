@@ -305,27 +305,27 @@
                                         <tbody id="tbodyVariant">
                                             <tr id="element-variant">
                                                 <td>
-                                                    <input type="text" class="product-detail-name"
+                                                    <input type="text" class="form-control product-detail-name"
                                                         placeholder="Product Name" name="productDetails[0][name]"
                                                         value="{{ old('productDetails[0][name]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-price" placeholder="Rp"
+                                                    <input type="text" class="form-control product-detail-price" placeholder="Rp"
                                                         name="productDetails[0][price]"
                                                         value="{{ old('productDetails[0][price]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-discount-price"
+                                                    <input type="text" class="form-control product-detail-discount-price"
                                                         placeholder="Rp" name="productDetails[0][discount_price]"
                                                         value="{{ old('productDetails[0][discount_price]') }}">
                                                 </td>
                                                 <td>
-                                                    <input type="number" class="product-detail-stock" placeholder="Pcs"
+                                                    <input type="number" class="form-control product-detail-stock" placeholder="Pcs"
                                                         name="productDetails[0][stock]"
                                                         value="{{ old('productDetails[0][stock]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="product-detail-sku" placeholder="SKU"
+                                                    <input type="text" class="form-control product-detail-sku" placeholder="SKU"
                                                         name="productDetails[0][sku]"
                                                         value="{{ old('productDetails[0][sku]') }}" required>
                                                 </td>
@@ -476,8 +476,6 @@
     @endif
     {{-- CKEditor --}}
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             // $("#btnSubmitForm").click(function(){

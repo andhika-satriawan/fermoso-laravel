@@ -11,16 +11,83 @@
             <h6>Create New {{ $page_info['title'] }}</h6>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="card">
-                <div class="card-body">
-                    <h4>Sub Category Information</h4>
-                    <form action="{{ route('admin.product.subcategory.store') }}" id="formSubmission" method="post"
-                        id="" enctype="multipart/form-data">
-                        @csrf
+    <form action="{{ route('admin.product.subcategory.store') }}" id="formSubmission" method="post"
+    id="" enctype="multipart/form-data">
+    @csrf
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
+                        <h5 class="card-title">Image (500 x 500)</h5>
+                        <input class="form-control file-uploader @error('image') is-invalid @enderror" type="file" accept="image/*" 
+                            name="image" value="{{ old('image') }}">
+                        @error('image')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
+                        <h5 class="card-title">Featured Image (234 x 350)</h5>
+                        <input class="form-control file-uploader @error('featured_image') is-invalid @enderror" type="file" accept="image/*" 
+                            name="featured_image" value="{{ old('featured_image') }}">
+                        @error('featured_image')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
+                        <h5 class="card-title">Banner Left (585 x 65)</h5>
+                        <input class="form-control file-uploader @error('banner_left') is-invalid @enderror" type="file" accept="image/*" 
+                            name="banner_left" value="{{ old('banner_left') }}">
+                        @error('banner_left')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
+                        <h5 class="card-title">Banner Right (585 x 65)</h5>
+                        <input class="form-control file-uploader @error('banner_right') is-invalid @enderror" type="file" accept="image/*" 
+                            name="banner_right" value="{{ old('banner_right') }}">
+                        @error('banner_right')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Sub Category Information</h4>
+                        
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label for="product_category_id" class="form-label">Category Name <span
                                             class="text-danger">*</span></label>
@@ -40,7 +107,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label for="subcategory_name" class="form-label">Sub Category Name <span
                                             class="text-danger">*</span></label>
@@ -63,56 +130,16 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
-
+                        
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 upload-product">
-            <div class="card image-uploader">
-                <div class="card-body">
-                    <h5 class="card-title">Icon</h5>
-                    <input class="form-control file-uploader " type="file" accept="image/*" name="photo"
-                        value="">
-                </div>
-                <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/noimage.png') }}">
-            </div>
-            <div class="card image-uploader">
-                <div class="card-body">
-                    <h5 class="card-title">Featured</h5>
-                    <input class="form-control file-uploader " type="file" accept="image/*" name="photo"
-                        value="">
-                </div>
-                <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
-            </div>
-
-            <div class="card image-uploader">
-                <div class="card-body">
-                    <h5 class="card-title">Banner Left</h5>
-                    <input class="form-control file-uploader " type="file" accept="image/*" name="photo"
-                        value="">
-                </div>
-                <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
-            </div>
-
-            <div class="card image-uploader">
-                <div class="card-body">
-                    <h5 class="card-title">Banner Right</h5>
-                    <input class="form-control file-uploader " type="file" accept="image/*" name="photo"
-                        value="">
-                </div>
-                <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
-            </div>
-        </div>
-    </div>
+    </form>
 @endsection
 
 @push('addon-style')
     <style>
-        img.file-image-preview {
-            max-height: 50px;
-        }
-
         .card img {
             max-width: 200px;
             display: table;
@@ -120,78 +147,12 @@
             padding: 20px;
         }
 
-        .upload-product input {
+        .image-uploader input.file-uploader {
             display: none;
         }
 
-        .upload-product img {
+        .image-uploader img {
             cursor: pointer;
-        }
-
-        .card .card-body {
-            border-bottom: 1px solid #e8ebed;
-        }
-
-        .card .card-body h5.card-title {
-            color: #1B2850;
-            margin: 0;
-        }
-
-        .card-body h4 {
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e8ebed;
-            margin-bottom: 20px;
-        }
-
-        .product-variant .btn-added {
-            background: #ff9f43;
-            padding: 7px 15px;
-            color: #fff;
-            font-weight: 700;
-            font-size: 14px;
-
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-
-            align-items: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-        }
-
-        .product-variant .page-btn {
-            float: right;
-        }
-
-        .product-variant .page-btn a img {
-            padding: 0;
-            margin: 0;
-        }
-
-        .product-variant h5 {
-            float: left;
-        }
-
-        .table-bordered td,
-        .table-bordered th {
-            border: 1px solid #dee2e6;
-        }
-
-        table tbody tr td input {
-            width: 100px;
-        }
-
-        .card table tbody tr td img {
-            max-width: 80px;
-            padding: 0;
-        }
-
-        input.form-check-input:hover {
-            cursor: pointer;
-        }
-
-        tr#element-variant td:last-child a {
-            pointer-events: none;
         }
     </style>
 @endpush
@@ -209,16 +170,18 @@
             })
         </script>
     @endif
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            // $("#btnSubmitForm").click(function(){
-            //     $('#formSubmission').submit()
-            // });
-            // $(function () {
-            //     $("#product_category_id").select2();
-            // });
+
+        $(".image-uploader-preview").on("click", function() {
+            $(this).closest(".image-uploader").find(".file-uploader").trigger('click');
         });
+
+        $(".file-uploader").on("change", function(event) {
+            if (event.target.files.length > 0) {
+                const tmpPath = URL.createObjectURL(event.target.files[0]);
+                $(this).closest(".image-uploader").find(".image-uploader-preview").attr("src", tmpPath);
+            }
+        });
+        
     </script>
 @endpush

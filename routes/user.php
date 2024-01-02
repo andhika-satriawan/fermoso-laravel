@@ -14,27 +14,50 @@ use Illuminate\Support\Facades\Route;
 */
 // NOT LOGGED IN ONLY
 Route::middleware('guest:web')->group(function () {
-    Route::get('my-account/login', [App\Http\Controllers\Customer\AuthController::class, 'login'])->name('login');
-    Route::post('my-account/login', [App\Http\Controllers\Customer\AuthController::class, 'login_store'])->name('login.store');
-    Route::get('my-account/register', [App\Http\Controllers\Customer\AuthController::class, 'register'])->name('register');
-    Route::post('my-account/register', [App\Http\Controllers\Customer\AuthController::class, 'register_store'])->name('register.store');
-    Route::get('my-account/lost-password', [App\Http\Controllers\Customer\AuthController::class, 'lostpassword'])->name('lost-password.lostpassword');
 
-    Route::get('my-account/', [App\Http\Controllers\Customer\MyAccountController::class, 'index'])->name('dashboard.index');
-    Route::get('my-account/orders', [App\Http\Controllers\Customer\MyAccountController::class, 'order'])->name('order.order');
-    Route::get('my-account/addresses', [App\Http\Controllers\Customer\MyAccountController::class, 'addresses'])->name('addresses.addresses');
-    Route::get('my-account/edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account.editaccount');
-    Route::get('my-account/edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account.editaccount');
+    Route::prefix('my-account')
+        ->group(function () {
+            Route::get('login', [App\Http\Controllers\Customer\AuthController::class, 'login'])->name('login');
+            Route::post('login', [App\Http\Controllers\Customer\AuthController::class, 'login_store'])->name('login.store');
+            Route::get('register', [App\Http\Controllers\Customer\AuthController::class, 'register'])->name('register');
+            Route::post('register', [App\Http\Controllers\Customer\AuthController::class, 'register_store'])->name('register.store');
+            Route::get('lost-password', [App\Http\Controllers\Customer\AuthController::class, 'lostpassword'])->name('lost_password');
+        });
 });
 
 // MUST LOGGED IN
 Route::middleware('auth:web')->group(function () {
     Route::post('logout', [App\Http\Controllers\Customer\AuthController::class, 'logout'])->name('logout');
+    Route::get('cart', [App\Http\Controllers\Customer\CartController::class, 'index'])->name('cart');
+    Route::delete('cart', [App\Http\Controllers\Customer\CartController::class, 'destroy'])->name('cart.delete');
+    Route::post('cart', [App\Http\Controllers\Customer\CartController::class, 'store'])->name('cart.store');
+    Route::get('checkout', [App\Http\Controllers\Customer\CartController::class, 'checkout'])->name('checkout');
+
+    Route::prefix('my-account')
+        ->name('my_account.')
+        ->group(function () {
+            Route::get('dashboard', [App\Http\Controllers\Customer\MyAccountController::class, 'index'])->name('dashboard');
+            Route::get('orders', [App\Http\Controllers\Customer\MyAccountController::class, 'order'])->name('order');
+            Route::get('addresses', [App\Http\Controllers\Customer\MyAccountController::class, 'addresses'])->name('address');
+            Route::get('edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account');
+        });
+
+    Route::prefix('api')
+        ->name('api.')
+        ->group(function () {
+            Route::get('cart', [App\Http\Controllers\Customer\CartController::class, 'index_api'])->name('cart');
+            Route::post('cart', [App\Http\Controllers\Customer\CartController::class, 'store_api'])->name('cart.store_api');
+        });
 });
-Route::get('cart', [App\Http\Controllers\Customer\CartController::class, 'index'])->name('cart');
-Route::get('checkout', [App\Http\Controllers\Customer\CartController::class, 'checkout'])->name('checkout.checkout');
+
 
 // OPEN FOR ALL
+Route::prefix('api')
+        ->name('api.')
+        ->group(function () {
+            Route::get('product-category', [App\Http\Controllers\Customer\ProductController::class, 'subcategory_api'])->name('product_category');
+        });
+
 Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])->name('home');
 Route::get('products', [App\Http\Controllers\Customer\ProductController::class, 'index'])->name('product');
 Route::get('/product/{slug}', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('detail.show');

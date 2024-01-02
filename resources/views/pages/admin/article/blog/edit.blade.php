@@ -278,9 +278,6 @@
     <!-- CKEditor -->
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
     
-    <!-- Select2 JS -->
-    <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
-    
     <!-- Bootstrap Tags Input -->
     {{-- <script src="{{ asset('admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script> --}}
     

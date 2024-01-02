@@ -19,7 +19,9 @@ class ProductSubcategory extends Model
         'name',
         'slug',
         'image',
-        'featured_image'
+        'featured_image',
+        'banner_left',
+        'banner_right',
     ];
 
     /**

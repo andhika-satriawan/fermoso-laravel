@@ -53,12 +53,43 @@ class ProductCategoryController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'category_name' => 'required|string|max:255',
+            'category_name'     => 'required|string|max:255',
+            'image'             => 'nullable|mimes:jpg,bmp,png,webp',
+            'featured_image'    => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
+
+        $category_slug = Str::slug($request->category_name);
+
+        if (ProductCategory::where('slug', $category_slug)->exists() == true) {
+            return redirect()->back()->withErrors(['category_name' => 'Category is already exist!']);
+        }
 
         $category = new ProductCategory;
         $category->name = $request->category_name;
-        $category->slug = Str::slug($request->category_name);
+        $category->slug = $category_slug;
+
+        if ($request->hasFile('image')) {
+            $filenameWithExt    = $request->file('image')->getClientOriginalName();
+            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension          = $request->file('image')->getClientOriginalExtension();
+            $fileNameToStore    = $category_slug . '-' . time() . '.' . $extension;
+            $pathFile           = $request->file('image')->storeAs('assets/product/category', $fileNameToStore, 'public');
+
+            // Add value
+            $category->image = $pathFile;
+        }
+
+        if ($request->hasFile('featured_image')) {
+            $featuredImage_filenameWithExt    = $request->file('featured_image')->getClientOriginalName();
+            $featuredImage_filename           = pathinfo($featuredImage_filenameWithExt, PATHINFO_FILENAME);
+            $featuredImage_extension          = $request->file('featured_image')->getClientOriginalExtension();
+            $featuredImage_fileNameToStore    = $category_slug . '-featured-img-' . time() . '.' . $featuredImage_extension;
+            $featuredImage_pathFile           = $request->file('featured_image')->storeAs('assets/product/category', $featuredImage_fileNameToStore, 'public');
+
+            // Add value
+            $category->featured_image = $featuredImage_pathFile;
+        }
+
         $category->save();
 
         return to_route($this->route_path . 'index')
@@ -92,12 +123,43 @@ class ProductCategoryController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'category_name'  => 'required|string|max:255',
+            'category_name'     => 'required|string|max:255',
+            'image'             => 'nullable|mimes:jpg,bmp,png,webp',
+            'featured_image'    => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
+
+        $category_slug = Str::slug($request->category_name);
+
+        if (ProductCategory::where('slug', $category_slug)->where('id', '<>', $id)->exists() == true) {
+            return redirect()->back()->withErrors(['category_name' => 'Category is already exist!']);
+        }
 
         $category = ProductCategory::findOrFail($id);
         $category->name = $request->category_name;
-        $category->slug = Str::slug($request->category_name);
+        $category->slug = $category_slug;
+
+        if ($request->hasFile('image')) {
+            $filenameWithExt    = $request->file('image')->getClientOriginalName();
+            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension          = $request->file('image')->getClientOriginalExtension();
+            $fileNameToStore    = $category_slug . '-' . time() . '.' . $extension;
+            $pathFile           = $request->file('image')->storeAs('assets/product/category', $fileNameToStore, 'public');
+
+            // Add value
+            $category->image = $pathFile;
+        }
+
+        if ($request->hasFile('featured_image')) {
+            $featuredImage_filenameWithExt    = $request->file('featured_image')->getClientOriginalName();
+            $featuredImage_filename           = pathinfo($featuredImage_filenameWithExt, PATHINFO_FILENAME);
+            $featuredImage_extension          = $request->file('featured_image')->getClientOriginalExtension();
+            $featuredImage_fileNameToStore    = $category_slug . '-featured-img-' . time() . '.' . $featuredImage_extension;
+            $featuredImage_pathFile           = $request->file('featured_image')->storeAs('assets/product/category', $featuredImage_fileNameToStore, 'public');
+
+            // Add value
+            $category->featured_image = $featuredImage_pathFile;
+        }
+
         $category->save();
 
         return to_route($this->route_path . 'index')

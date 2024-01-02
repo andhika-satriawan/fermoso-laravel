@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
+
 use App\Models\ProductSubcategory;
 use App\Models\Product;
 
@@ -67,19 +70,33 @@ class ProductController extends Controller
     public function show($slug)
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory'])->firstOrFail();
+        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory', 'images'])->firstOrFail();
         $related_products = Product::whereHas('product_subcategory', function ($query) use ($product) {
             $query->where('name', $product->product_subcategory->name);
         })->where('id', '<>', $product->id)->get();
-        $products = Product::get();
+        // $products = Product::get();
 
         return view('pages.customer.detail-product', [
             "product_subcategories" => $product_subcategories,
             "product" => $product,
-            "products" => $products,
+            // "products" => $products,
             "related_products" => $related_products,
             "page" => "detail-product",
         ]);
+    }
+
+    /**
+     * API resources.
+     */
+    public function subcategory_api()
+    {
+        $product_subcategories = ProductSubcategory::with(['category'])->orderBy('name', 'ASC')->get();
+        
+        return response()->json([
+            'success'   => true,
+            'message'   => "List of all product subcategories",
+            'data'      => $product_subcategories
+        ], Response::HTTP_OK);
     }
 
     /**

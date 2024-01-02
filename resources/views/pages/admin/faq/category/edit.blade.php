@@ -42,7 +42,6 @@
 @endsection
 
 @push('addon-style')
-<link rel="stylesheet" href="{{ asset('admin/plugins/select2/css/select2.min.css')}}" />
 @endpush
 
 @push('prepend-script')
@@ -58,8 +57,6 @@
     })
 </script>
 @endif
-<!-- Select2 JS -->
-<script src="{{ asset('admin/plugins/select2/js/select2.min.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         // $("#btnSubmitForm").click(function(){
