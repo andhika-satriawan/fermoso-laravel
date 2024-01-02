@@ -683,18 +683,21 @@
                     <div class="category-banner">
                         <div class="col-sm-6 banner">
                             <a href="#"><img alt="ads2" class="img-responsive"
-                                    src="customer/assets/data/ads2.jpg" /></a>
+                                    src="{{ isset($product_subcategory->banner_left) ? Storage::url($product_subcategory->banner_left) : 'customer/assets/data/ads2.jpg'}}" /></a>
+                                    
                         </div>
                         <div class="col-sm-6 banner">
                             <a href="#"><img alt="ads2" class="img-responsive"
-                                    src="customer/assets/data/ads3.jpg" /></a>
+                                    src="{{ isset($product_subcategory->banner_right) ? Storage::url($product_subcategory->banner_right) : 'customer/assets/data/ads3.jpg'}}" /></a>
                         </div>
                     </div>
                     <div class="product-featured clearfix">
                         <div class="banner-featured">
                             <div class="featured-text"><span>featured</span></div>
                             <div class="banner-img">
-                                <a href="#"><img alt="Featurered 1" src="customer/assets/data/f1.jpg" /></a>
+                                <a href="#">
+                                    <img alt="Featurered 1" src="{{ isset($product_subcategory->featured_image) ? Storage::url($product_subcategory->featured_image) : 'customer/assets/data/f1.jpg'}}" />
+                                </a>
                             </div>
                         </div>
                         <div class="product-featured-content">
@@ -716,34 +719,37 @@
                                             @foreach ($product_subcategory->products as $product)
                                                 <li>
                                                     <div class="left-block">
-                                                        <a href="{{ url('product/' . $product->slug) }}">
+                                                        <a href="{{ route('product.detail.show', $product->slug) }}">
                                                             <img class="img-responsive" alt="product"
-                                                                src="{{ Storage::url($product->photo) }}" /></a>
-                                                        <div class="quick-view">
-                                                            <a title="Add to my wishlist" class="heart"
-                                                                href="#"></a>
-                                                            <a title="Add to compare" class="compare" href="#"></a>
-                                                            <a title="Quick view" class="search" href="#"></a>
-                                                        </div>
+                                                                src="{{ Storage::url($product->photo) }}" />
+                                                        </a>
                                                         <div class="add-to-cart">
-                                                            <a title="Add to Cart" href="#">Add to Cart</a>
+                                                            <a title="Add to Cart" href="{{ route('product.detail.show', $product->slug) }}">Lihat Detail</a>
                                                         </div>
                                                     </div>
                                                     <div class="right-block">
-                                                        <h5 class="product-name"><a
-                                                                href="{{ url('product/' . $product->slug) }}">{{ $product->name }}</a>
+                                                        <h5 class="product-name">
+                                                            <a href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
                                                         </h5>
-                                                        <div class="content_price">
-                                                            <span
-                                                                class="price product-price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                                            <span class="price old-price">$52,00</span>
-                                                        </div>
                                                         <div class="product-star">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            {{-- <i class="fa fa-star-half-o"></i> --}}
+                                                        </div>
+                                                        <div class="content_price">
+                                                            @if ($product->details->first()->discount_price > 0 )
+                                                                <span class="price product-price">
+                                                                    Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
+                                                                </span>
+                                                                <span class="price old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                            @else
+                                                                <span class="price product-price">
+                                                                    Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}
+                                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1063,13 +1069,13 @@
                                 <div class="cate-name-wrap">
                                     <p class="cate-name">{{ $product_subcategory->name }}</p>
                                 </div>
-                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}"
+                                <a href="{{ route('category-product.category', $product_subcategory->slug) }}"
                                     class="cate-link link-active" data-ac="flipInX"><span>shop
                                         now</span></a>
                             </div>
                             <div class="div-2">
-                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
-                                    <img src="customer/assets/data/cate-product1.png"
+                                <a href="{{ route('category-product.category', $product_subcategory->slug) }}">
+                                    <img src="{{ isset($product_subcategory->image) ? Storage::url($product_subcategory->image) : "customer/assets/data/cate-product1.png"}}"
                                         alt="{{ $product_subcategory->name }}" class="hot-cate-img" />
                                 </a>
                             </div>
@@ -1080,7 +1086,7 @@
                                 @foreach ($product_subcategory->products as $product)
                                     @if ($loop->index < 4)
                                         <li>
-                                            <a href="{{ url('product/' . $product->slug) }}">{{ $product->name }}</a>
+                                            <a href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
                                         </li>
                                     @endif
                                 @endforeach

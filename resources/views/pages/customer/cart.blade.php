@@ -28,7 +28,7 @@
                     <li><span>05. Payment</span></li>
                 </ul> --}}
                 <div class="heading-counter warning">Your shopping cart contains:
-                    <span>{{ count((array) $carts) }} Products</span>
+                    <span>{{ count($carts) }} Products</span>
                 </div>
                 <div class="order-detail-content">
                     <table class="table table-bordered table-responsive cart_summary">

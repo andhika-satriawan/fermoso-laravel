@@ -42,7 +42,7 @@
                                             @foreach ($product->details as $product_detail)
                                                 @if ($product_detail->image)
                                                 <li>
-                                                    <a href="{{ url('product/' . $product->slug) }}"
+                                                    <a href="{{ route('product.detail.show', $product->slug) }}"
                                                         data-image="{{ Storage::url($product_detail->image) }}"
                                                         data-zoom-image="{{ Storage::url($product_detail->image) }}">
                                                         <img id="product-zoom"
@@ -53,7 +53,7 @@
                                             @endforeach
                                             @foreach ($product->images as $product_image)
                                                 <li>
-                                                    <a href="{{ url('product/' . $product->slug) }}"
+                                                    <a href="{{ route('product.detail.show', $product->slug) }}"
                                                         data-image="{{ Storage::url($product_image->image) }}"
                                                         data-zoom-image="{{ Storage::url($product_image->image) }}">
                                                         <img id="product-zoom"
@@ -82,11 +82,14 @@
                                         <a href="#"><i class="fa fa-pencil"></i> write a review</a>
                                     </div> --}}
                                 </div>
-                                <div class="product-price-group">
-                                    <span
-                                        class="price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                    {{-- <span class="old-price">$52.00</span>
-                                    <span class="discount">-30%</span> --}}
+                                <div class="product-price-group" id="productPriceGroup">
+                                    @if ($product->details->first()->discount_price > 0 )
+                                        <span class="price">Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}</span>
+                                        <span class="old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                        <span class="discount">-30%</span>
+                                    @else
+                                        <span class="price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                    @endif
                                 </div>
                                 <div class="info-orther">
                                     <p>SKU: #{{ $product->details[0]->sku }}</p>
@@ -119,16 +122,14 @@
                                         </div>
                                         @if (count($product->details) > 1)
                                             <div class="attributes">
-                                                <div class="attribute-label">Size:</div>
+                                                <div class="attribute-label">Opsi:</div>
                                                 <div class="attribute-list">
-                                                    <select name="product_detail_id">
+                                                    <select name="product_detail_id" id="selectVariant">
+                                                        <option value="">Pilih Opsi</option>
                                                         @foreach ($product->details as $variant)
                                                         <option value="{{ $variant->id }}">{{ $variant->name }}</option>
                                                         @endforeach
                                                     </select>
-                                                    <a id="size_chart" class="fancybox"
-                                                        href="{{ Storage::url($product->photo) }}">Size
-                                                        Chart</a>
                                                 </div>
     
                                             </div>
@@ -298,34 +299,37 @@
                                     <li>
                                         <div class="product-container">
                                             <div class="left-block">
-                                                <a href="{{ url('product/' . $related_product->slug) }}">
+                                                <a href="{{ route('product.detail.show', $related_product->slug) }}">
                                                     <img class="img-responsive" alt="product"
                                                         src="{{ Storage::url($related_product->photo) }}" />
                                                 </a>
-                                                <div class="quick-view">
-                                                    <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                    <a title="Add to compare" class="compare" href="#"></a>
-                                                    <a title="Quick view" class="search" href="#"></a>
-                                                </div>
                                                 <div class="add-to-cart">
-                                                    <a title="Add to Cart" href="#add">Add to Cart</a>
+                                                    <a title="Add to Cart" href="{{ route('product.detail.show', $related_product->slug) }}">Lihat Detail</a>
                                                 </div>
                                             </div>
                                             <div class="right-block">
-                                                <h5 class="product-name"><a
-                                                        href="{{ url('product/' . $related_product->slug) }}">{{ $related_product->name }}</a>
+                                                <h5 class="product-name">
+                                                    <a href="{{ route('product.detail.show', $related_product->slug) }}">{{ $related_product->name }}</a>
                                                 </h5>
                                                 <div class="product-star">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    {{-- <i class="fa fa-star-half-o"></i> --}}
                                                 </div>
                                                 <div class="content_price">
-                                                    <span
-                                                        class="price product-price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                                    <span class="price old-price">$52,00</span>
+                                                    @if ($related_product->details->first()->discount_price > 0 )
+                                                        <span class="price product-price">
+                                                            Rp {{ number_format($related_product->details->first()->discount_price, 0, ',', '.') }}
+                                                        </span>
+                                                        <span class="price old-price">Rp {{ number_format($related_product->details->first()->price, 0, ',', '.') }}</span>
+                                                    @else
+                                                        <span class="price product-price">
+                                                            Rp{{ number_format($related_product->details->first()->price, 0, ',', '.') }}
+                                                        </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

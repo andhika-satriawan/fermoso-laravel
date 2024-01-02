@@ -10,96 +10,95 @@
 
 @auth
 <script>
-    setInterval(function() {
+    // setInterval(function() {
+    // }, 5000); 
 
-        $.ajax({
-            type: 'GET',
-            url: '{{ route('api.cart') }}',
-            data: {
-                _token: $('meta[name="csrf-token"]').attr('content')
-            },
-            dataType: 'JSON',
-            error: function(error) {
-                console.log(error);
-                // Swal.fire("Error!", 'Something is wrong', "error");
-            },
-            success: function (response) {
-                if (response.success == true) {
+    $.ajax({
+        type: 'GET',
+        url: '{{ route('api.cart') }}',
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content')
+        },
+        dataType: 'JSON',
+        error: function(error) {
+            console.log(error);
+            // Swal.fire("Error!", 'Something is wrong', "error");
+        },
+        success: function (response) {
+            if (response.success == true) {
 
-                    const responseData = response.data;
+                const responseData = response.data;
 
-                    if (responseData.length > 0) {
-                        $('#cart-block .cart-block').show();
+                if (responseData.length > 0) {
+                    $('#cart-block .cart-block').show();
 
-                        const cartTotal = responseData.reduce((curr, next) => {
-                            return curr + (next.quantity * next.product_detail.price)
-                        }, 0);
-                        $('#cart-block span.total').text(`${responseData.length} item${responseData.length > 0 ? `s` : ''}`)
-                        $('#cart-block span.notify').text(`${responseData.length}`)
+                    const cartTotal = responseData.reduce((curr, next) => {
+                        return curr + (next.quantity * next.product_detail.price)
+                    }, 0);
+                    $('#cart-block span.total').text(`${responseData.length} item${responseData.length > 0 ? `s` : ''}`)
+                    $('#cart-block span.notify').text(`${responseData.length}`)
 
-                        $('#cart-block h5.cart-title').text(`${responseData.length} Items in my cart`);
+                    $('#cart-block h5.cart-title').text(`${responseData.length} Items in my cart`);
 
-                        const cartBlockList = responseData.map((e) => {
-                            return `
-                                <li class="product-info">
-                                    <div class="p-left">
-                                        <a href="{{ url('product') }}/${e.product.slug}">
-                                            <img class="img-responsive"
-                                                src="{{ Storage::url('') }}${e.product.photo}"
-                                                alt="p10">
-                                        </a>
-                                    </div>
-                                    <div class="p-right">
-                                        <p class="p-name">${e.product.name}</p>
-                                        <p class="p-rice">Rp ${parseInt(e.product_detail.price).toLocaleString()}</p>
-                                        <p>Qty: ${e.quantity}</p>
-                                    </div>
-                                </li>
-                            `;
-                        });
-                        $('#cart-block .cart-block .cart-block-list ul').html('')
-                        .prepend(cartBlockList);
+                    const cartBlockList = responseData.map((e) => {
+                        return `
+                            <li class="product-info">
+                                <div class="p-left">
+                                    <a href="{{ url('product') }}/${e.product.slug}">
+                                        <img class="img-responsive"
+                                            src="{{ Storage::url('') }}${e.product.photo}"
+                                            alt="p10">
+                                    </a>
+                                </div>
+                                <div class="p-right">
+                                    <p class="p-name">${e.product.name}</p>
+                                    <p class="p-rice">Rp ${parseInt(e.product_detail.price).toLocaleString()}</p>
+                                    <p>Qty: ${e.quantity}</p>
+                                </div>
+                            </li>
+                        `;
+                    });
+                    $('#cart-block .cart-block .cart-block-list ul').html('')
+                    .prepend(cartBlockList);
 
-                        $('#cart-block .cart-block .total-cart .total-price').text(`Rp ${parseInt(cartTotal).toLocaleString()}`)
-                        
-                    } else {
-                        $('#cart-block .cart-block').hide();
-                        $('#cart-block span.total').text(`0 items`)
-                        $('#cart-block span.notify').text(`0`)
-                        $('#cart-block h5.cart-title').text(`0 Items in my cart`);
-                    }
-
-
-                    // $('#cart-block').html('')
-                    // .prepend(categoryMenuList);
-
-                    if ($('#cartSummary').length) {
-
-                    }   
-
-                    // const 
-                    // SUCCESS
-                    // Swal.fire({
-                    //     title: 'Deleted successfully!',
-                    //     text: response.message,
-                    //     icon: 'success',
-                    //     showCancelButton: false,
-                    //     confirmButtonText: 'OK'
-                    // }).then((result) => {
-                    //     if (result.isConfirmed == true) {
-                    //         location.reload();
-                    //     }
-                    // })
-                    // END SUCCESS DELETE
-
+                    $('#cart-block .cart-block .total-cart .total-price').text(`Rp ${parseInt(cartTotal).toLocaleString()}`)
+                    
                 } else {
-                    console.log(response)
-                    // Swal.fire("Error!", response.message, "error");
+                    $('#cart-block .cart-block').hide();
+                    $('#cart-block span.total').text(`0 items`)
+                    $('#cart-block span.notify').text(`0`)
+                    $('#cart-block h5.cart-title').text(`0 Items in my cart`);
                 }
-            }
-        })
 
-    }, 5000); 
+
+                // $('#cart-block').html('')
+                // .prepend(categoryMenuList);
+
+                if ($('#cartSummary').length) {
+
+                }   
+
+                // const 
+                // SUCCESS
+                // Swal.fire({
+                //     title: 'Deleted successfully!',
+                //     text: response.message,
+                //     icon: 'success',
+                //     showCancelButton: false,
+                //     confirmButtonText: 'OK'
+                // }).then((result) => {
+                //     if (result.isConfirmed == true) {
+                //         location.reload();
+                //     }
+                // })
+                // END SUCCESS DELETE
+
+            } else {
+                console.log(response)
+                // Swal.fire("Error!", response.message, "error");
+            }
+        }
+    })
 
     $('#cartSummary .cart-increase').on('click', async function() { 
         const itemPrice         = await $(this).attr("data-item-price");
@@ -162,6 +161,12 @@
         })
 
     });
+
+    if ($('#selectVariant').length) {
+        $("#selectVariant").change(function(){
+            console.log($(this).val())
+        });
+    }  
 </script>
 @endauth
 <script>

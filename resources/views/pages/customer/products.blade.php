@@ -314,37 +314,40 @@
                                     <li class="col-sx-12 col-sm-4">
                                         <div class="product-container">
                                             <div class="left-block">
-                                                <a href="{{ url('product/' . $product->slug) }}">
-                                                    <img class="img-responsive" alt="{{ $product->name }}"
+                                                <a href="{{ route('product.detail.show', $product->slug) }}">
+                                                    <img class="img-responsive" alt="product"
                                                         src="{{ Storage::url($product->photo) }}" />
                                                 </a>
-                                                <div class="quick-view">
-                                                    <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                    <a title="Add to compare" class="compare" href="#"></a>
-                                                    <a title="Quick view" class="search" href="#"></a>
-                                                </div>
                                                 <div class="add-to-cart">
-                                                    <a title="Add to Cart" href="#add">Add to Cart</a>
+                                                    <a title="Add to Cart" href="{{ route('product.detail.show', $product->slug) }}">Lihat Detail</a>
                                                 </div>
                                             </div>
                                             <div class="right-block">
-                                                <h5 class="product-name"><a
-                                                        href="{{ url('product/' . $product->slug) }}">{{ $product->name }}</a>
+                                                <h5 class="product-name">
+                                                    <a href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
                                                 </h5>
                                                 <div class="product-star">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    {{-- <i class="fa fa-star-half-o"></i> --}}
                                                 </div>
                                                 <div class="content_price">
-                                                    <span class="price product-price">Rp
-                                                        {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                                    <span class="price old-price">$52,00</span>
+                                                    @if ($product->details->first()->discount_price > 0 )
+                                                        <span class="price product-price">
+                                                            Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
+                                                        </span>
+                                                        <span class="price old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                    @else
+                                                        <span class="price product-price">
+                                                            Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}
+                                                        </span>
+                                                    @endif
                                                 </div>
                                                 <div class="info-orther">
-                                                    <p>Item Code: #453217907</p>
+                                                    <p>SKU: #{{ $product->details->first()->sku }}</p>
                                                     <p class="availability">Availability:
                                                         <span>{{ $product->details->first()->stock }}</span>
                                                     </p>

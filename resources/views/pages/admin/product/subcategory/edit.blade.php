@@ -21,7 +21,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
-                        <h5 class="card-title">Image (500 x 500)</h5>
+                        <h5 class="card-title">Image (117 x 92)</h5>
                         <input class="form-control file-uploader @error('image') is-invalid @enderror" type="file" accept="image/*" 
                             name="image" value="{{ old('image') }}">
                         @error('image')
