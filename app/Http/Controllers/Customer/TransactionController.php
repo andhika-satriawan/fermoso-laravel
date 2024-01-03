@@ -28,7 +28,15 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'address_id'        => 'required|numeric|exists:App\Models\Address,id',
+            'courier'           => 'required|string',
+            'service'           => 'required|string',
+            'shipping_price'    => 'required|numeric',
+            'coupon_code'       => 'nullable|string',
+        ]);
+
+        dd("Sukses");
     }
 
     /**

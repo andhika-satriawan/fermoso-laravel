@@ -94,7 +94,7 @@
                     @endforeach
                 @endif
 
-                <form action="{{ route('checkout.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                <form action="{{ route('transaction.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
                 @csrf
                     <h3 class="checkout-sep">1. Pilih Alamat Tujuan Kamu</h3>
                     <div class="box-border">

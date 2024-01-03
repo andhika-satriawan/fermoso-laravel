@@ -4,6 +4,12 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Customer;
+use App\Models\Transaction;
 use App\Models\ProductSubcategory;
 
 class MyAccountController extends Controller
@@ -20,8 +26,10 @@ class MyAccountController extends Controller
 
     public function order()
     {
+        $transactions = Transaction::with(['transaction_details'])->orderBy('id', 'DESC')->get();
         return view('pages.customer.my-account.orders', [
-            "page"  => "orders",
+            "page"  => 'Orders',
+            "transactions"  => $transactions,
         ]);
     }
 
@@ -48,35 +56,46 @@ class MyAccountController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name'      => 'required|string|max:255',
+            'type'      => 'required|string|max:255',
+            'email'     => 'required|email|unique:App\Models\Customer,email,'.Auth::id().'',
+            'phone'     => 'required|string|max:255',
+        ]);
+
+        $customer = Customer::where('id', Auth::id())->firstOrFail();
+        $customer->name     = $request->name;
+        $customer->type     = $request->type;
+        $customer->email    = $request->email;
+        $customer->phone    = $request->phone;
+        $customer->save();
+
+        return to_route('my_account.dashboard')->with('success', 'Data akun berhasil diubah!');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $validated = $request->validate([
+            'password_current'  => 'required',
+            'password'          => 'required|confirmed|min:6',
+        ]);
+
+        if (Hash::check($request->password_current, Auth::user()->password)) {
+
+            $customer = Customer::where('id', Auth::id())->firstOrFail();
+            $customer->password = Hash::make($request->password);
+            $customer->save();
+
+            return to_route('my_account.dashboard')->with('success', 'Kata sandi berhasil diubah!');
+        }
+
+        return back()->withErrors([
+            'password_current' => 'Kata sandi tidak sesuai',
+        ])->onlyInput('password');
     }
 
     /**

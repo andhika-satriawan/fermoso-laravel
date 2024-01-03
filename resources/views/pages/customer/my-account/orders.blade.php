@@ -39,33 +39,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($transactions as $transaction)
                                     <tr>
                                         <td class="order_product">
-                                            <a href="#">#123</a>
+                                            <a href="#">#{{ $transaction->code }}</a>
                                         </td>
-                                        <td class="order_date">12 Desember 2024</td>
-                                        <td class="order_status">Processing</td>
-                                        <td class="price"><span>Rp300.000</span></td>
+                                        <td class="order_date">{{ $transaction->created_at }}</td>
+                                        <td class="order_status">{{ $transaction->transaction_status }}</td>
+                                        <td class="price"><span>Rp {{ $transaction->total }}</span></td>
                                         <td><a href="">View</a></td>
                                     </tr>
-                                    <tr>
-                                        <td class="order_product">
-                                            <a href="#">#123</a>
-                                        </td>
-                                        <td class="order_date">12 Desember 2024</td>
-                                        <td class="order_status">Processing</td>
-                                        <td class="price"><span>Rp300.000</span></td>
-                                        <td><a href="">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="order_product">
-                                            <a href="#">#123</a>
-                                        </td>
-                                        <td class="order_date">12 Desember 2024</td>
-                                        <td class="order_status">Processing</td>
-                                        <td class="price"><span>Rp300.000</span></td>
-                                        <td><a href="">View</a></td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

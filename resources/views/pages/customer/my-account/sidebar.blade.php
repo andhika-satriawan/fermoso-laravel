@@ -55,9 +55,9 @@
             <a href="{{ route('my_account.edit_account') }}">Account details</a>
         </li>
         <li>
-            <form method="POST" action="{{ route('logout') }}" id="logoutForm">
+            {{-- <form method="POST" action="{{ route('logout') }}" id="logoutForm">
                 @csrf
-            </form>
+            </form> --}}
             <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()" style="cursor: pointer">Logout</a>
         </li>
     </ul>

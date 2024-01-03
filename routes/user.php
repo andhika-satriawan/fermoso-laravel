@@ -32,7 +32,7 @@ Route::middleware('auth:web')->group(function () {
     Route::delete('cart', [App\Http\Controllers\Customer\CartController::class, 'destroy'])->name('cart.delete');
     Route::post('cart', [App\Http\Controllers\Customer\CartController::class, 'store'])->name('cart.store');
     Route::get('checkout', [App\Http\Controllers\Customer\CartController::class, 'checkout'])->name('checkout');
-    Route::post('checkout', [App\Http\Controllers\Customer\CartController::class, 'checkout_store'])->name('checkout.store');
+    Route::post('checkout', [App\Http\Controllers\Customer\TransactionController::class, 'store'])->name('transaction.store');
     
 
     Route::prefix('my-account')
@@ -41,6 +41,8 @@ Route::middleware('auth:web')->group(function () {
             Route::get('dashboard', [App\Http\Controllers\Customer\MyAccountController::class, 'index'])->name('dashboard');
             Route::get('orders', [App\Http\Controllers\Customer\MyAccountController::class, 'order'])->name('order');
             Route::get('edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account');
+            Route::post('edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'update'])->name('update_account');
+            Route::post('change-password', [App\Http\Controllers\Customer\MyAccountController::class, 'changePassword'])->name('change_password');
             
             // Address
             Route::get('addresses', [App\Http\Controllers\Customer\AddressController::class, 'index'])->name('address');
