@@ -26,7 +26,10 @@ class MyAccountController extends Controller
 
     public function order()
     {
-        $transactions = Transaction::with(['transaction_details'])->orderBy('id', 'DESC')->get();
+        $transactions = Transaction::where([
+            ['customer_id', Auth::id()],
+        ])->with(['transaction_details'])->orderBy('id', 'DESC')->get();
+        
         return view('pages.customer.my-account.orders', [
             "page"  => 'Orders',
             "transactions"  => $transactions,

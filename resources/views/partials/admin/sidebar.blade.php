@@ -74,13 +74,14 @@
                     </a>
                 </li>
                 
-                <li class="{{ request()->is('admin/sales*') ? 'active' : '' }}">
+                <li class="{{ request()->is('admin/settings*') ? 'active' : '' }}">
                     <a href="{{ route('admin.sales.index') }}">
                         <img src="{{ asset('admin/img/icons/settings.svg') }}" alt="img">
                         <span>Setting</span>
                     </a>
                 </li>
 
+                <!--
                 <li class="submenu">
                     <a href="javascript:void(0);">
                         <img src="{{ asset('admin/img/icons/product.svg') }}" alt="img">
@@ -105,6 +106,8 @@
                         </li>
                     </ul>
                 </li>
+                -->
+                
             </ul>
         </div>
     </div>

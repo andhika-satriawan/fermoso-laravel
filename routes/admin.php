@@ -40,7 +40,11 @@ Route::prefix('admin')
                 });
 
             Route::resource('customer', App\Http\Controllers\Admin\CustomerController::class);
-            Route::resource('sales', App\Http\Controllers\Admin\SalesController::class);
+            Route::resource('sales', App\Http\Controllers\Admin\SalesController::class)->only([
+                'index', 'show'
+            ]);
+            Route::post('update-sales-status/{id}', [App\Http\Controllers\Admin\SalesController::class, 'update_status'])->name('sales.update_status');
+            Route::post('update-sales-resi/{id}', [App\Http\Controllers\Admin\SalesController::class, 'update_resi'])->name('sales.update_resi');
 
             // Route::get('sales', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('sales');
             Route::post('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');

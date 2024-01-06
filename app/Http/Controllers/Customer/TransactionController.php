@@ -128,7 +128,15 @@ class TransactionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $transaction = Transaction::where([
+            ['id', $id],
+            ['customer_id', Auth::id()],
+        ])->firstOrFail();
+
+        return view('pages.customer.my-account.orders', [
+            "page"  => 'Order Details',
+            "item"  => $transaction,
+        ]);
     }
 
     /**
