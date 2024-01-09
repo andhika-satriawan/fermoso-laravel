@@ -131,9 +131,15 @@ class TransactionController extends Controller
         $transaction = Transaction::where([
             ['id', $id],
             ['customer_id', Auth::id()],
-        ])->firstOrFail();
+        ])
+        ->with('transaction_details')
+        ->with('transaction_details.product')
+        ->with('transaction_details.product_detail')
+        ->withSum('transaction_details', 'original_price')
+        ->withSum('transaction_details', 'price')
+        ->firstOrFail();
 
-        return view('pages.customer.my-account.orders', [
+        return view('pages.customer.my-account.order-detail', [
             "page"  => 'Order Details',
             "item"  => $transaction,
         ]);

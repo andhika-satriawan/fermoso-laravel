@@ -45,9 +45,21 @@
                                             <a href="#">#{{ $transaction->code }}</a>
                                         </td>
                                         <td class="order_date">{{ $transaction->created_at }}</td>
-                                        <td class="order_status">{{ $transaction->transaction_status }}</td>
-                                        <td class="price"><span>Rp {{ $transaction->total }}</span></td>
-                                        <td><a href="">View</a></td>
+
+                                        @if ($transaction->transaction_status == 'PENDING')
+                                        <td class="order_status text-danger"><strong>{{ $transaction->transaction_status }}</strong></td>
+                                        @elseif ($transaction->transaction_status == 'PROCESS')
+                                        <td class="order_status text-warning"><strong>{{ $transaction->transaction_status }}</strong></td>
+                                        @elseif ($transaction->transaction_status == 'SUCCESS')
+                                        <td class="order_status text-success"><strong>{{ $transaction->transaction_status }}</strong></td>
+                                        @elseif ($transaction->transaction_status == 'CANCELLED')
+                                        <td class="order_status text-secondary"><strong>{{ $transaction->transaction_status }}</strong></td>
+                                        @else
+                                        <td class="order_status text-secondary"><strong>{{ $transaction->transaction_status }}</strong></td>
+                                        @endif
+
+                                        <td class="price"><span>Rp {{ number_format($transaction->total) }}</span></td>
+                                        <td><a href="{{ route('my_account.order.detail', $transaction->id) }}">View</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

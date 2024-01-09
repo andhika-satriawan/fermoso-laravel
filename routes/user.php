@@ -39,7 +39,10 @@ Route::middleware('auth:web')->group(function () {
         ->name('my_account.')
         ->group(function () {
             Route::get('dashboard', [App\Http\Controllers\Customer\MyAccountController::class, 'index'])->name('dashboard');
+            
             Route::get('orders', [App\Http\Controllers\Customer\MyAccountController::class, 'order'])->name('order');
+            Route::get('orders/{id}', [App\Http\Controllers\Customer\TransactionController::class, 'show'])->name('order.detail');
+            
             Route::get('edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'editaccount'])->name('edit_account');
             Route::post('edit-account', [App\Http\Controllers\Customer\MyAccountController::class, 'update'])->name('update_account');
             Route::post('change-password', [App\Http\Controllers\Customer\MyAccountController::class, 'changePassword'])->name('change_password');
