@@ -97,7 +97,6 @@
                                             <tr>
                                                 <th class="cart_product">Produk</th>
                                                 <th>Rincian</th>
-                                                <th>Stok</th>
                                                 <th>Unit harga</th>
                                                 <th>Qty</th>
                                                 <th>Total</th>
@@ -115,15 +114,6 @@
                                                     <small class="cart_ref">SKU : #{{ $detail->product_detail->sku }}</small><br>
                                                     @if ($detail->product_detail->name != "DEFAULT")
                                                     <small><a href="#">Variant : {{ $detail->product_detail->name }}</a></small><br>
-                                                    @endif
-                                                </td>
-                                                <td class="cart_avail">
-                                                    @if ($detail->product_detail->stock > 5)
-                                                    <span class="label label-success">In stock: {{ $detail->product_detail->stock }}</span>
-                                                    @elseif ($cart->product_detail->stock > 0)
-                                                    <span class="label label-warning">Remaining: {{ $detail->product_detail->stock }}</span>
-                                                    @else
-                                                    <span class="label label-danger">Out of stock</span>
                                                     @endif
                                                 </td>
                                                 <td class="price item-price">
@@ -145,23 +135,23 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <td colspan="5">Subtotal</td>
+                                                <td colspan="4">Subtotal</td>
                                                 <td>Rp {{ number_format($item->transaction_details_sum_original_price) }}</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="5">Discount</td>
+                                                <td colspan="4">Discount</td>
                                                 <td>Rp {{ number_format($item->transaction_details_sum_original_price - $item->transaction_details_sum_price) }}</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="5">Total</td>
+                                                <td colspan="4">Total</td>
                                                 <td>Rp {{ number_format($item->total_price) }}</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="5">Pengiriman ({{ strtoupper($item->courier) }} - {{ $item->service }})</td>
+                                                <td colspan="4">Pengiriman ({{ strtoupper($item->courier) }} - {{ $item->service }})</td>
                                                 <td id="shippingCost">Rp {{ number_format($item->shipping_price) }}</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="5"><strong>Grand Total</strong></td>
+                                                <td colspan="4"><strong>Grand Total</strong></td>
                                                 <td><strong id="totalCost">Rp {{ number_format($item->total) }}</strong></td>
                                             </tr>
                                         </tfoot>
