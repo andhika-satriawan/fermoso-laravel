@@ -147,19 +147,21 @@ class ProductController extends Controller
                 }
 
                 // PRODUCT IMAGES
-                foreach ($request->productImages as $productImageKey => $productImage) {
-                    if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
-                        $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
-                        $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-                        $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
-                        $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
-                        $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
-
-                        // Add value
-                        $product_image = new ProductImage;
-                        $product_image->product_id = $product->id;
-                        $product_image->image = $pathFile;
-                        $product_image->save();
+                if ($request->has('productImages')) {
+                    foreach ($request->productImages as $productImageKey => $productImage) {
+                        if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
+                            $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
+                            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                            $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
+                            $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
+                            $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
+    
+                            // Add value
+                            $product_image = new ProductImage;
+                            $product_image->product_id = $product->id;
+                            $product_image->image = $pathFile;
+                            $product_image->save();
+                        }
                     }
                 }
             } catch (\Exception $e) {
@@ -297,23 +299,25 @@ class ProductController extends Controller
                 }
 
                 // PRODUCT IMAGES
-                foreach ($request->productImages as $productImageKey => $productImage) {
-                    if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
-                        $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
-                        $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-                        $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
-                        $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
-                        $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
-
-                        // Add value
-                        if (ProductImage::where('id', $productImage['id'])->exists()) {
-                            $product_image = ProductImage::findOrFail($productImage['id']);
-                        } else {
-                            $product_image = new ProductImage;
+                if ($request->has('productImages')) {
+                    foreach ($request->productImages as $productImageKey => $productImage) {
+                        if ($request->hasFile('productImages.' . $productImageKey . '.photo')) {
+                            $filenameWithExt    = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalName();
+                            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                            $extension          = $request->file('productImages.' . $productImageKey . '.photo')->getClientOriginalExtension();
+                            $fileNameToStore    = $product_slug . '-' .  hexdec(uniqid()) . '.' . $extension;
+                            $pathFile           = $request->file('productImages.' . $productImageKey . '.photo')->storeAs('assets/product/images', $fileNameToStore, 'public');
+    
+                            // Add value
+                            if (ProductImage::where('id', $productImage['id'])->exists()) {
+                                $product_image = ProductImage::findOrFail($productImage['id']);
+                            } else {
+                                $product_image = new ProductImage;
+                            }
+                            $product_image->product_id = $product->id;
+                            $product_image->image = $pathFile;
+                            $product_image->save();
                         }
-                        $product_image->product_id = $product->id;
-                        $product_image->image = $pathFile;
-                        $product_image->save();
                     }
                 }
             } catch (\Exception $e) {
