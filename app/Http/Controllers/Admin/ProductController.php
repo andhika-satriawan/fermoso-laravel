@@ -131,7 +131,7 @@ class ProductController extends Controller
                     $product_detail->width  = $request->width;
                     $product_detail->length = $request->length;
                     $product_detail->height = $request->height;
-                    $product_detail->last_update_by = Auth::user()->name;
+                    $product_detail->last_update_by = Auth::guard('admin')->user()->name;
                     $product_detail->last_update_at = Carbon::now();
                     $product_detail->status = 1;
 
@@ -301,9 +301,13 @@ class ProductController extends Controller
                     }
 
                     if (
-                        $is_product_detail_exist &&
+                        $is_product_detail_exist == true &&
                         $product_detail->isDirty(['product_id', 'sku', 'stock', 'name', 'price', 'discount_price', 'weight', 'width', 'length', 'height', 'status'])
                     ) {
+                        $product_detail->last_update_by = Auth::guard('admin')->user()->name;
+                        $product_detail->last_update_at = Carbon::now();
+                    } 
+                    else if ($is_product_detail_exist == false) {
                         $product_detail->last_update_by = Auth::guard('admin')->user()->name;
                         $product_detail->last_update_at = Carbon::now();
                     }
