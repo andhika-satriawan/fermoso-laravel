@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\File;
@@ -130,6 +131,8 @@ class ProductController extends Controller
                     $product_detail->width  = $request->width;
                     $product_detail->length = $request->length;
                     $product_detail->height = $request->height;
+                    $product_detail->last_update_by = Auth::user()->name;
+                    $product_detail->last_update_at = Carbon::now();
                     $product_detail->status = 1;
 
                     if ($request->hasFile('productDetails.' . $productDetailKey . '.photo_variant')) {
@@ -267,7 +270,9 @@ class ProductController extends Controller
 
                 // PRODUCT DETAIL
                 foreach ($request->productDetails as $productDetailKey => $productDetail) {
-                    if (ProductDetail::where('id', $productDetail['id'])->exists()) {
+
+                    $is_product_detail_exist = ProductDetail::where('id', $productDetail['id'])->exists();
+                    if ($is_product_detail_exist) {
                         $product_detail = ProductDetail::findOrFail($productDetail['id']);
                     } else {
                         $product_detail = new ProductDetail;
@@ -293,6 +298,14 @@ class ProductController extends Controller
 
                         // Add value
                         $product_detail->image = $pathFile;
+                    }
+
+                    if (
+                        $is_product_detail_exist &&
+                        $product_detail->isDirty(['product_id', 'sku', 'stock', 'name', 'price', 'discount_price', 'weight', 'width', 'length', 'height', 'status'])
+                    ) {
+                        $product_detail->last_update_by = Auth::guard('admin')->user()->name;
+                        $product_detail->last_update_at = Carbon::now();
                     }
 
                     $product_detail->save();

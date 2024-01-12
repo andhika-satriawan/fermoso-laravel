@@ -299,6 +299,7 @@
                                                 <th scope="col">SKU <span class="text-danger">*</span></th>
                                                 <th scope="col" id="variant_image_head">Image</th>
                                                 <th scope="col">Status</th>
+                                                <th scope="col">Last Update</th>
                                                 <th scope="col" id="variant_delete_head">Remove</th>
                                             </tr>
                                         </thead>
@@ -345,7 +346,15 @@
                                                             name="productDetails[{{ $loop->index }}][status]" value="1" @if ($variant->status == 1) checked @endif>
                                                     </div>
                                                 </td>
-                                                <td>
+                                                <td class="last-update">
+                                                    @if ($variant->last_update_by && $variant->last_update_at)
+                                                        by {{ $variant->last_update_by }}<br/>
+                                                        at {{ $variant->last_update_at }}
+                                                    @else
+                                                        No Data
+                                                    @endif
+                                                </td>
+                                                <td class="delete-variant">
                                                     <a onclick="deleteRow(event)" class="me-3 confirm-text">
                                                         <img src="{{ asset('admin/img/icons/delete.svg') }}"
                                                             alt="img">
@@ -555,6 +564,10 @@
             let productStatusVariant = clone.querySelector(".form-check-input");
             productStatusVariant.name = `productDetails[${rows.length-1}][status]`;
 
+            let productLastUpdate = clone.querySelector(".last-update");
+            productLastUpdate.innerHTML = '';
+            
+
             changeProductVariant();
         }
 
@@ -569,6 +582,7 @@
                 $('#variant_name_head').show();
                 $('#variant_image_head').show();
                 $('#variant_delete_head').show();
+                $('.delete-variant').show();
             } else {
                 $('.product-detail-name').attr( {type: "hidden", placeholder: "DEFAULT", value: "DEFAULT", required: false} );
                 $('.product-detail-name').closest("td").hide();
@@ -577,6 +591,7 @@
                 $('#variant_name_head').hide();
                 $('#variant_image_head').hide();
                 $('#variant_delete_head').hide();
+                $('.delete-variant').hide();
             }
         }
 

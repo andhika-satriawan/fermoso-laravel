@@ -27,6 +27,8 @@ class ProductDetail extends Model
         'length',
         'height',
         'status',
+        'last_update_by',
+        'last_update_at',
     ];
 
     /**
