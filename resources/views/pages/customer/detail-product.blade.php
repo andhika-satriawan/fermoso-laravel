@@ -6,6 +6,45 @@
 
 @push('addon-style')
     <link rel="stylesheet" type="text/css" href="{{ asset('customer/assets/lib/fancyBox/jquery.fancybox.css') }}" />
+    <style>
+        #product .pb-right-column h1.product-name {
+            font-weight: bold;
+            font-size: 34px;
+        }
+
+        #productPriceGroup {
+            padding: 15px 20px;
+            background: #eee;
+        }
+
+        #productPriceGroup span.price {
+            font-size: 30px !important;
+        }
+
+        .page-product-box ul.first-list {
+            margin-bottom: 60px;
+        }
+
+        .product-star {
+            padding-right: 20px;
+        }
+
+        span.review {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-left: 1px solid #ff3366;
+        }
+
+        span.terjual {
+            border-left: 1px solid #ff3366;
+            padding-left: 20px;
+        }
+
+        .product-comments {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -41,14 +80,14 @@
                                             data-margin="21" data-loop="false">
                                             @foreach ($product->details as $product_detail)
                                                 @if ($product_detail->image)
-                                                <li>
-                                                    <a href="{{ route('product.detail.show', $product->slug) }}"
-                                                        data-image="{{ Storage::url($product_detail->image) }}"
-                                                        data-zoom-image="{{ Storage::url($product_detail->image) }}">
-                                                        <img id="product-zoom"
-                                                            src="{{ Storage::url($product_detail->image) }}" />
-                                                    </a>
-                                                </li>
+                                                    <li>
+                                                        <a href="{{ route('product.detail.show', $product->slug) }}"
+                                                            data-image="{{ Storage::url($product_detail->image) }}"
+                                                            data-zoom-image="{{ Storage::url($product_detail->image) }}">
+                                                            <img id="product-zoom"
+                                                                src="{{ Storage::url($product_detail->image) }}" />
+                                                        </a>
+                                                    </li>
                                                 @endif
                                             @endforeach
                                             @foreach ($product->images as $product_image)
@@ -77,29 +116,37 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-half-o"></i>
                                     </div>
+                                    <span class="review">1200 Penilaian</span>
+                                    <span class="terjual">300 Terjual</span>
                                     {{-- <div class="comments-advices">
                                         <a href="#">Based on 3 ratings</a>
                                         <a href="#"><i class="fa fa-pencil"></i> write a review</a>
                                     </div> --}}
                                 </div>
                                 <div class="product-price-group" id="productPriceGroup">
-                                    @if ($product->details->first()->discount_price > 0 )
-                                        <span class="price">Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}</span>
-                                        <span class="old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                        <span class="discount">-{{ number_format((($product->details->first()->price-$product->details->first()->discount_price)/$product->details->first()->price)*100, 0, ',', '.') }}%</span>
+                                    @if ($product->details->first()->discount_price > 0)
+                                        <span class="price">Rp
+                                            {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}</span>
+                                        <span class="old-price">Rp
+                                            {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                        <span
+                                            class="discount">-{{ number_format((($product->details->first()->price - $product->details->first()->discount_price) / $product->details->first()->price) * 100, 0, ',', '.') }}%</span>
                                     @else
-                                        <span class="price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                        <span class="price">Rp
+                                            {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
                                     @endif
                                 </div>
                                 <div class="info-orther">
                                     <p id="SKUSelected">SKU: #{{ $product->details[0]->sku }}</p>
                                     <p id="StockSelected">
                                         @if ($product->details->first()->stock > 5)
-                                        Availability: <span class="in-stock">{{ $product->details->first()->stock }}</span>
+                                            Availability: <span
+                                                class="in-stock">{{ $product->details->first()->stock }}</span>
                                         @elseif ($product->details->first()->stock > 0)
-                                        <span class="in-stock text-warning">Remaining: {{ $product->details->first()->stock }}</span>
+                                            <span class="in-stock text-warning">Remaining:
+                                                {{ $product->details->first()->stock }}</span>
                                         @else
-                                        <span class="text-danger">Out of stock</span>
+                                            <span class="text-danger">Out of stock</span>
                                         @endif
                                     </p>
                                     <p>Condition: New</p>
@@ -107,24 +154,27 @@
                                 <div class="product-desc">
                                     {!! $product->description !!}
                                 </div>
-                                
+
                                 @if ($errors->any())
                                     @foreach ($errors->all() as $error)
                                         <div class="alert alert-danger alert-dismissible" role="alert">
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <button type="button" class="close" data-dismiss="alert"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <strong>Error!</strong> {{ $error }}
                                         </div>
                                     @endforeach
                                 @endif
 
-                                <form action="{{ route('cart.store') }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                                <form action="{{ route('cart.store') }}" id="formSubmission" method="post" id=""
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-option">
                                         <div class="attributes">
                                             <div class="attribute-label">Qty:</div>
                                             <div class="attribute-list">
                                                 <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                                <input id="option-product-qty" class="form-control" type="number" name="quantity" value="1" min="1">
+                                                <input id="option-product-qty" class="form-control" type="number"
+                                                    name="quantity" value="1" min="1">
                                             </div>
                                         </div>
                                         @if (count($product->details) > 1)
@@ -134,25 +184,27 @@
                                                     <select name="product_detail_id" id="selectVariant" required>
                                                         <option value="">Pilih Opsi</option>
                                                         @foreach ($product->details as $variant)
-                                                        <option value="{{ $variant->id }}" @if ($variant->stock == 0) disabled @endif>
-                                                            {{ $variant->name }}
-                                                        </option>
+                                                            <option value="{{ $variant->id }}"
+                                                                @if ($variant->stock == 0) disabled @endif>
+                                                                {{ $variant->name }}
+                                                            </option>
                                                         @endforeach
                                                     </select>
                                                 </div>
-    
+
                                             </div>
                                         @else
-                                            <input type="hidden" name="product_detail_id" value="{{ $product->details[0]->id }}">
+                                            <input type="hidden" name="product_detail_id"
+                                                value="{{ $product->details[0]->id }}">
                                         @endif
                                     </div>
                                     <div class="form-action">
                                         <div class="button-group">
                                             <div class="loader" style="display: none"></div>
                                             @auth
-                                            <button class="btn-add-cart" type="submit">Add to cart</button>
+                                                <button class="btn-add-cart" type="submit">Add to cart</button>
                                             @else
-                                            <a class="btn-add-cart" href="{{ route('login') }}">Add to cart</a>
+                                                <a class="btn-add-cart" href="{{ route('login') }}">Add to cart</a>
                                             @endauth
                                         </div>
                                         {{-- <div class="button-group">
@@ -222,19 +274,18 @@
                                         <div class="plyr__video-embed embed-responsive-item" id="player">
                                             <iframe
                                                 src="https://www.youtube.com/embed/{{ $product->video_youtube_url }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                                allowfullscreen
-                                                allowtransparency
-                                                allow="autoplay"
-                                            ></iframe>
+                                                allowfullscreen allowtransparency allow="autoplay"></iframe>
                                         </div>
                                     @elseif (isset($product->video_url))
-                                        <video id="player" playsinline controls data-poster="{{ Storage::url($product->photo) }}">
-                                            <source src="{{ Storage::url($product->video_url) }}" type="video/{{ pathinfo($product->video_url, PATHINFO_EXTENSION) }}" />
+                                        <video id="player" playsinline controls
+                                            data-poster="{{ Storage::url($product->photo) }}">
+                                            <source src="{{ Storage::url($product->video_url) }}"
+                                                type="video/{{ pathinfo($product->video_url, PATHINFO_EXTENSION) }}" />
                                         </video>
                                     @else
                                         Video tidak tersedia
                                     @endif
-                                    
+
                                 </div>
                                 {{-- <div id="reviews" class="tab-panel">
                                     <div class="product-comments-block-tab">
@@ -323,10 +374,11 @@
                         <!-- box product -->
                         <div class="page-product-box">
                             <h3 class="heading">Related Products</h3>
-                            <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
-                                data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
-                                data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
-                                @foreach ($related_products as $related_product)
+                            <ul class="product-list owl-carousel first-list" data-dots="false" data-loop="true"
+                                data-nav ="true" data-margin ="30" data-autoplayTimeout="1000"
+                                data-autoplayHoverPause ="true" data-slideBy="page"
+                                data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":6}}'>
+                                @foreach ($related_products->take(6) as $related_product)
                                     <li>
                                         <div class="product-container">
                                             <div class="left-block">
@@ -335,12 +387,15 @@
                                                         src="{{ Storage::url($related_product->photo) }}" />
                                                 </a>
                                                 <div class="add-to-cart">
-                                                    <a title="Add to Cart" href="{{ route('product.detail.show', $related_product->slug) }}">Lihat Detail</a>
+                                                    <a title="Add to Cart"
+                                                        href="{{ route('product.detail.show', $related_product->slug) }}">Lihat
+                                                        Detail</a>
                                                 </div>
                                             </div>
                                             <div class="right-block">
                                                 <h5 class="product-name">
-                                                    <a href="{{ route('product.detail.show', $related_product->slug) }}">{{ $related_product->name }}</a>
+                                                    <a
+                                                        href="{{ route('product.detail.show', $related_product->slug) }}">{{ $related_product->name }}</a>
                                                 </h5>
                                                 <div class="product-star">
                                                     <i class="fa fa-star"></i>
@@ -351,11 +406,64 @@
                                                     {{-- <i class="fa fa-star-half-o"></i> --}}
                                                 </div>
                                                 <div class="content_price">
-                                                    @if ($related_product->details->first()->discount_price > 0 )
+                                                    @if ($related_product->details->first()->discount_price > 0)
                                                         <span class="price product-price">
-                                                            Rp {{ number_format($related_product->details->first()->discount_price, 0, ',', '.') }}
+                                                            Rp
+                                                            {{ number_format($related_product->details->first()->discount_price, 0, ',', '.') }}
                                                         </span>
-                                                        <span class="price old-price">Rp {{ number_format($related_product->details->first()->price, 0, ',', '.') }}</span>
+                                                        <span class="price old-price">Rp
+                                                            {{ number_format($related_product->details->first()->price, 0, ',', '.') }}</span>
+                                                    @else
+                                                        <span class="price product-price">
+                                                            Rp{{ number_format($related_product->details->first()->price, 0, ',', '.') }}
+                                                        </span>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                            <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav ="true"
+                                data-margin ="30" data-autoplayTimeout="1000" data-autoplayHoverPause ="true"
+                                data-slideBy="page"
+                                data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":6}}'>
+                                @foreach ($related_products->slice(6) as $related_product)
+                                    <li>
+                                        <div class="product-container">
+                                            <div class="left-block">
+                                                <a href="{{ route('product.detail.show', $related_product->slug) }}">
+                                                    <img class="img-responsive" alt="product"
+                                                        src="{{ Storage::url($related_product->photo) }}" />
+                                                </a>
+                                                <div class="add-to-cart">
+                                                    <a title="Add to Cart"
+                                                        href="{{ route('product.detail.show', $related_product->slug) }}">Lihat
+                                                        Detail</a>
+                                                </div>
+                                            </div>
+                                            <div class="right-block">
+                                                <h5 class="product-name">
+                                                    <a
+                                                        href="{{ route('product.detail.show', $related_product->slug) }}">{{ $related_product->name }}</a>
+                                                </h5>
+                                                <div class="product-star">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    {{-- <i class="fa fa-star-half-o"></i> --}}
+                                                </div>
+                                                <div class="content_price">
+                                                    @if ($related_product->details->first()->discount_price > 0)
+                                                        <span class="price product-price">
+                                                            Rp
+                                                            {{ number_format($related_product->details->first()->discount_price, 0, ',', '.') }}
+                                                        </span>
+                                                        <span class="price old-price">Rp
+                                                            {{ number_format($related_product->details->first()->price, 0, ',', '.') }}</span>
                                                     @else
                                                         <span class="price product-price">
                                                             Rp{{ number_format($related_product->details->first()->price, 0, ',', '.') }}
@@ -436,13 +544,14 @@
     <script type="text/javascript" src="{{ asset('customer/assets/lib/plyr/plyr.js') }}"></script>
     <script>
         if ($('#selectVariant').length) {
-            $("#selectVariant").change(function(){
+            $("#selectVariant").change(function() {
 
                 const product_detail_id = $(this).val();
 
                 $.ajax({
                     type: 'GET',
-                    url: '{{ route("api.product.variant.show", ":id") }}/'.replace(':id', product_detail_id),
+                    url: '{{ route('api.product.variant.show', ':id') }}/'.replace(':id',
+                        product_detail_id),
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content')
                     },
@@ -451,7 +560,7 @@
                         console.log(error);
                         Swal.fire("Error!", 'Something is wrong', "error");
                     },
-                    success: function (response) {
+                    success: function(response) {
                         // console.log(response)
                         if (response.success == true) {
 
@@ -474,13 +583,16 @@
                             }
 
                             if (responseData.stock > 5) {
-                                $('#StockSelected').html('').prepend(`Availability: <span class="in-stock">${responseData.stock}</span>`);
-                            }
-                            else if (responseData.stock > 0) {
-                                $('#StockSelected').html('').prepend(`<span class="in-stock text-warning">Remaining: ${responseData.stock}</span>`);
-                            }
-                            else {
-                                $('#StockSelected').html('').prepend(`<span class="text-danger">Out of Stock</span>`);
+                                $('#StockSelected').html('').prepend(
+                                    `Availability: <span class="in-stock">${responseData.stock}</span>`
+                                );
+                            } else if (responseData.stock > 0) {
+                                $('#StockSelected').html('').prepend(
+                                    `<span class="in-stock text-warning">Remaining: ${responseData.stock}</span>`
+                                );
+                            } else {
+                                $('#StockSelected').html('').prepend(
+                                    `<span class="text-danger">Out of Stock</span>`);
                             }
 
                         } else {
@@ -490,6 +602,6 @@
                     }
                 })
             });
-        }  
+        }
     </script>
 @endpush

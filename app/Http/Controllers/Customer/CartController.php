@@ -20,7 +20,7 @@ class CartController extends Controller
     public function index()
     {
         $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->orderBy('id', 'DESC')->get();
-        $total_carts = array_sum(array_map(function($item) {
+        $total_carts = array_sum(array_map(function ($item) {
             $actual_price = $item['product_detail']['discount_price'] > 0 ? $item['product_detail']['discount_price'] : $item['product_detail']['price'];
             return $item['quantity'] * $actual_price;
         }, $carts->toArray()));
@@ -36,7 +36,7 @@ class CartController extends Controller
     public function index_api()
     {
         $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->withSum('product_detail', 'price')->orderBy('id', 'DESC')->get();
-        
+
         return response()->json([
             'success'       => true,
             'message'       => "List of all carts",
@@ -49,7 +49,7 @@ class CartController extends Controller
         $addresses = Address::where('customer_id', Auth::id())->orderBy('id', 'DESC')->get();
 
         $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->orderBy('id', 'DESC')->get();
-        $total_carts = array_sum(array_map(function($item) {
+        $total_carts = array_sum(array_map(function ($item) {
             $actual_price = $item['product_detail']['discount_price'] > 0 ? $item['product_detail']['discount_price'] : $item['product_detail']['price'];
             return $item['quantity'] * $actual_price;
         }, $carts->toArray()));
@@ -58,7 +58,7 @@ class CartController extends Controller
         //     return to_route('my_account.add_address')
         //     ->with('error', 'Please add your address');
         // }
-        
+
         return view('pages.customer.checkout', [
             "page"  => "checkout",
             "addresses" => $addresses,
@@ -85,12 +85,12 @@ class CartController extends Controller
         $carts = Cart::where('customer_id', Auth::id())->with(['product', 'product_detail'])->get();
 
         // Weight
-        $total_weight = array_sum(array_map(function($item) {
+        $total_weight = array_sum(array_map(function ($item) {
             return $item['quantity'] * $item['product_detail']['weight'];
         }, $carts->toArray()));
 
         // Volume Weight
-        $total_volume_weight = array_sum(array_map(function($item) {
+        $total_volume_weight = array_sum(array_map(function ($item) {
 
             $dimension_width    = $item['product_detail']['width'];
             $dimension_length   = $item['product_detail']['length'];
@@ -102,9 +102,8 @@ class CartController extends Controller
                 (isset($dimension_height) && $dimension_height > 0)
             ) {
                 $total_dimension = $dimension_width * $dimension_length * $dimension_height;
-                return $item['quantity'] * (($total_dimension/6000) * 1000);
-            }
-            else {
+                return $item['quantity'] * (($total_dimension / 6000) * 1000);
+            } else {
                 return 0;
             }
         }, $carts->toArray()));
@@ -129,7 +128,6 @@ class CartController extends Controller
             'message'       => "List of shipping option",
             'data'          => $response['rajaongkir'],
         ], Response::HTTP_OK);
-
     }
 
     public function checkout_store(Request $request)
@@ -143,7 +141,6 @@ class CartController extends Controller
         ]);
 
         dd("Sukses");
-
     }
 
     /**
@@ -168,11 +165,9 @@ class CartController extends Controller
 
         if (isset($request->quantity)) {
             $quantity = $request->quantity;
-        }
-        else if (isset($request->set_quantity)) {
+        } else if (isset($request->set_quantity)) {
             $quantity = $request->set_quantity;
-        }
-        else {
+        } else {
             $quantity = 1;
         }
 
@@ -184,13 +179,13 @@ class CartController extends Controller
         ])->exists();
 
         if ($cartExistCheck == true) {
-            
+
             $cart = Cart::where([
                 ['customer_id', Auth::id()],
                 ['product_id', $request->product_id],
                 ['product_detail_id', $request->product_detail_id],
             ])->firstOrFail();
-            
+
             if (isset($request->set_quantity)) {
                 $cart->update([
                     'quantity' => $quantity
@@ -198,20 +193,17 @@ class CartController extends Controller
             } else {
                 $cart->increment('quantity', $quantity);
             }
-        }
-        else {
+        } else {
 
             Auth::user()->carts()->save(new Cart([
                 'product_id'        => $request->product_id,
                 'product_detail_id' => $request->product_detail_id,
                 'quantity'          => $quantity,
             ]));
-
         }
 
         return redirect()->back()
-            ->with('success', 'Item has been added successfully');
-
+            ->with('add-cart-success', 'Product telah ditambahkan ke keranjang belanja');
     }
 
     public function store_api(Request $request)
@@ -225,11 +217,9 @@ class CartController extends Controller
 
         if (isset($request->quantity)) {
             $quantity = $request->quantity;
-        }
-        else if (isset($request->set_quantity)) {
+        } else if (isset($request->set_quantity)) {
             $quantity = $request->set_quantity;
-        }
-        else {
+        } else {
             $quantity = 1;
         }
 
@@ -241,13 +231,13 @@ class CartController extends Controller
         ])->exists();
 
         if ($cartExistCheck == true) {
-            
+
             $cart = Cart::where([
                 ['customer_id', Auth::id()],
                 ['product_id', $request->product_id],
                 ['product_detail_id', $request->product_detail_id],
             ])->firstOrFail();
-            
+
             if (isset($request->set_quantity)) {
                 $cart->update([
                     'quantity' => $quantity
@@ -255,15 +245,13 @@ class CartController extends Controller
             } else {
                 $cart->increment('quantity', $quantity);
             }
-        }
-        else {
+        } else {
 
             Auth::user()->carts()->save(new Cart([
                 'product_id'        => $request->product_id,
                 'product_detail_id' => $request->product_detail_id,
                 'quantity'          => $quantity,
             ]));
-
         }
 
         $response = [
@@ -272,7 +260,6 @@ class CartController extends Controller
         ];
 
         return response()->json($response, Response::HTTP_OK);
-
     }
 
     /**

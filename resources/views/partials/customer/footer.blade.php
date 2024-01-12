@@ -6,9 +6,9 @@
                 <div id="address-box">
                     <a href="{{ url('/') }}"><img src="{{ asset('images/logo.jpg') }}" alt="" /></a>
                     <div id="address-list">
-                        <div class="tit-name">Address:</div>
+                        <div class="tit-name">Alamat:</div>
                         <div class="tit-contain">Example Street 68, Mahattan, New York, USA.</div>
-                        <div class="tit-name">Phone:</div>
+                        <div class="tit-name">Telepon:</div>
                         <div class="tit-contain">+00 123 456 789</div>
                         <div class="tit-name">Email:</div>
                         <div class="tit-contain">support@business.com</div>
@@ -18,22 +18,22 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="introduce-title">Company</div>
+                        <div class="introduce-title">Perusahaan</div>
                         <ul id="introduce-company" class="introduce-list">
                             <li><a href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
                             <li><a href="{{ url('/faq-product') }}">FAQ Product</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
-                        <div class="introduce-title">My Account</div>
+                        <div class="introduce-title">Akun</div>
                         <ul id = "introduce-Account" class="introduce-list">
-                            <li><a href="{{ url('/my-account/orders') }}">My Order</a></li>
-                            <li><a href="{{ url('/my-account/addresses') }}">My Addresses</a></li>
-                            <li><a href="{{ url('/my-account/edit-account') }}">My Personal In</a></li>
+                            <li><a href="{{ url('/my-account/orders') }}">Order</a></li>
+                            <li><a href="{{ url('/my-account/addresses') }}">Alamat</a></li>
+                            <li><a href="{{ url('/my-account/edit-account') }}">Profile</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
-                        <div class="introduce-title">Support</div>
+                        <div class="introduce-title">Dukungan</div>
                         <ul id = "introduce-support" class="introduce-list">
                             <li><a href="#">Whatsapp</a></li>
                         </ul>
@@ -61,8 +61,8 @@
         </div><!-- /#introduce-box -->
 
         <div id="footer-menu-box">
-            <p class="text-center">Copyrights &#169; 2024 KuteShop. All Rights Reserved. Designed by
-                Fermoso.com</p>
+            <p class="text-center">Copyrights &#169; 2024. All Rights Reserved. Designed by
+                FermosoMedical</p>
         </div><!-- /#footer-menu-box -->
     </div>
 </footer>

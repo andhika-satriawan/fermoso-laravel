@@ -9,39 +9,40 @@
 <script type="text/javascript" src="{{ asset('customer/assets/js/theme-script.js') }}"></script>
 
 @auth
-<script>
-    // setInterval(function() {
-    // }, 5000); 
+    <script>
+        // setInterval(function() {
+        // }, 5000); 
 
-    $.ajax({
-        type: 'GET',
-        url: '{{ route('api.cart') }}',
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content')
-        },
-        dataType: 'JSON',
-        error: function(error) {
-            console.log(error);
-            // Swal.fire("Error!", 'Something is wrong', "error");
-        },
-        success: function (response) {
-            if (response.success == true) {
+        $.ajax({
+            type: 'GET',
+            url: '{{ route('api.cart') }}',
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content')
+            },
+            dataType: 'JSON',
+            error: function(error) {
+                console.log(error);
+                // Swal.fire("Error!", 'Something is wrong', "error");
+            },
+            success: function(response) {
+                if (response.success == true) {
 
-                const responseData = response.data;
+                    const responseData = response.data;
 
-                if (responseData.length > 0) {
-                    $('#cart-block .cart-block').show();
+                    if (responseData.length > 0) {
+                        $('#cart-block .cart-block').show();
 
-                    const cartTotal = responseData.reduce((curr, next) => {
-                        return curr + (next.quantity * next.product_detail.price)
-                    }, 0);
-                    $('#cart-block span.total').text(`${responseData.length} item${responseData.length > 0 ? `s` : ''}`)
-                    $('#cart-block span.notify').text(`${responseData.length}`)
+                        const cartTotal = responseData.reduce((curr, next) => {
+                            return curr + (next.quantity * next.product_detail.price)
+                        }, 0);
+                        $('#cart-block span.total').text(
+                            `${responseData.length} item${responseData.length > 0 ? `s` : ''}`)
+                        $('#cart-block span.notify').text(`${responseData.length}`)
 
-                    $('#cart-block h5.cart-title').text(`${responseData.length} Items in my cart`);
+                        $('#cart-block h5.cart-title').text(`${responseData.length} Items in my cart`);
 
-                    const cartBlockList = responseData.map((e) => {
-                        return `
+                        const cartBlockList = responseData.map((e) => {
+                            return `
                             <li class="product-info">
                                 <div class="p-left">
                                     <a href="{{ url('product') }}/${e.product.slug}">
@@ -57,116 +58,116 @@
                                 </div>
                             </li>
                         `;
-                    });
-                    $('#cart-block .cart-block .cart-block-list ul').html('')
-                    .prepend(cartBlockList);
+                        });
+                        $('#cart-block .cart-block .cart-block-list ul').html('')
+                            .prepend(cartBlockList);
 
-                    $('#cart-block .cart-block .total-cart .total-price').text(`Rp ${parseInt(cartTotal).toLocaleString()}`)
-                    
-                } else {
-                    $('#cart-block .cart-block').hide();
-                    $('#cart-block span.total').text(`0 items`)
-                    $('#cart-block span.notify').text(`0`)
-                    $('#cart-block h5.cart-title').text(`0 Items in my cart`);
-                }
+                        $('#cart-block .cart-block .total-cart .total-price').text(
+                            `Rp ${parseInt(cartTotal).toLocaleString()}`)
+
+                    } else {
+                        $('#cart-block .cart-block').hide();
+                        $('#cart-block span.total').text(`0 items`)
+                        $('#cart-block span.notify').text(`0`)
+                        $('#cart-block h5.cart-title').text(`0 Items in my cart`);
+                    }
 
 
-                // $('#cart-block').html('')
-                // .prepend(categoryMenuList);
+                    // $('#cart-block').html('')
+                    // .prepend(categoryMenuList);
 
-                if ($('#cartSummary').length) {
+                    if ($('#cartSummary').length) {
 
-                }   
+                    }
 
-                // const 
-                // SUCCESS
-                // Swal.fire({
-                //     title: 'Deleted successfully!',
-                //     text: response.message,
-                //     icon: 'success',
-                //     showCancelButton: false,
-                //     confirmButtonText: 'OK'
-                // }).then((result) => {
-                //     if (result.isConfirmed == true) {
-                //         location.reload();
-                //     }
-                // })
-                // END SUCCESS DELETE
-
-            } else {
-                console.log(response)
-                // Swal.fire("Error!", response.message, "error");
-            }
-        }
-    })
-
-    $('#cartSummary .cart-increase').on('click', async function() { 
-        const itemPrice         = await $(this).attr("data-item-price");
-        const quantityBefore    = await $(this).siblings('.cart-quantity').val();
-        const addQuantity       = await $(this).siblings('.cart-quantity').val(parseInt(quantityBefore)+1);
-        // const consoleLog = await console.log('Increased');
-        const quantityAfter     = await $(this).siblings('.cart-quantity').val();
-        const setTotal          = await $(this).closest('.cart-item').find('.total-item-price').html('').prepend(`<span>Rp ${(quantityAfter * itemPrice).toLocaleString()}</span>`);
-        const triggerChange     = await $(this).siblings('.cart-quantity').trigger('change');
-    });
-
-    $('#cartSummary .cart-decrease').on('click', async function() { 
-        const itemPrice         = await $(this).attr("data-item-price");
-        const quantityBefore    = await $(this).siblings('.cart-quantity').val();
-        if (quantityBefore > 1) {
-            const addQuantity   = await $(this).siblings('.cart-quantity').val(parseInt(quantityBefore)-1);
-            // const consoleLog = await console.log('Decreased');
-            const quantityAfter = await $(this).siblings('.cart-quantity').val();
-            const setTotal      = await $(this).closest('.cart-item').find('.total-item-price').html('').prepend(`<span>Rp ${(quantityAfter * itemPrice).toLocaleString()}</span>`);
-            const triggerChange = await $(this).siblings('.cart-quantity').trigger('change');
-        }
-    });
-
-    $("#cartSummary .cart-quantity").change(function(){
-        const quantity          = $(this).val();
-        const product_id        = $(this).siblings('.cart-product-id').val();
-        const product_detail_id = $(this).siblings('.cart-product-detail-id').val();
-
-        console.log('quantity');
-        console.log(quantity);
-        console.log('product_id');
-        console.log(product_id);
-        console.log('product_detail_id');
-        console.log(product_detail_id);
-
-        $.ajax({
-            type: 'POST',
-            url: '{{ route('api.cart.store_api') }}',
-            data: {
-                _token              : $('meta[name="csrf-token"]').attr('content'),
-                set_quantity        : quantity,
-                product_id          : product_id,
-                product_detail_id   : product_detail_id,
-            },
-            dataType: 'JSON',
-            error: function(error) {
-                console.log(error);
-                // Swal.fire("Error!", 'Something is wrong', "error");
-            },
-            success: function (response) {
-                if (response.success == true) {
-
-                    location.reload();
+                    // const 
+                    // SUCCESS
+                    // Swal.fire({
+                    //     title: 'Deleted successfully!',
+                    //     text: response.message,
+                    //     icon: 'success',
+                    //     showCancelButton: false,
+                    //     confirmButtonText: 'OK'
+                    // }).then((result) => {
+                    //     if (result.isConfirmed == true) {
+                    //         location.reload();
+                    //     }
+                    // })
+                    // END SUCCESS DELETE
 
                 } else {
                     console.log(response)
-                    Swal.fire("Error!", response.message, "error");
+                    // Swal.fire("Error!", response.message, "error");
                 }
             }
         })
 
-    });
+        $('#cartSummary .cart-increase').on('click', async function() {
+            const itemPrice = await $(this).attr("data-item-price");
+            const quantityBefore = await $(this).siblings('.cart-quantity').val();
+            const addQuantity = await $(this).siblings('.cart-quantity').val(parseInt(quantityBefore) + 1);
+            // const consoleLog = await console.log('Increased');
+            const quantityAfter = await $(this).siblings('.cart-quantity').val();
+            const setTotal = await $(this).closest('.cart-item').find('.total-item-price').html('').prepend(
+                `<span>Rp ${(quantityAfter * itemPrice).toLocaleString()}</span>`);
+            const triggerChange = await $(this).siblings('.cart-quantity').trigger('change');
+        });
 
-    
-</script>
+        $('#cartSummary .cart-decrease').on('click', async function() {
+            const itemPrice = await $(this).attr("data-item-price");
+            const quantityBefore = await $(this).siblings('.cart-quantity').val();
+            if (quantityBefore > 1) {
+                const addQuantity = await $(this).siblings('.cart-quantity').val(parseInt(quantityBefore) - 1);
+                // const consoleLog = await console.log('Decreased');
+                const quantityAfter = await $(this).siblings('.cart-quantity').val();
+                const setTotal = await $(this).closest('.cart-item').find('.total-item-price').html('').prepend(
+                    `<span>Rp ${(quantityAfter * itemPrice).toLocaleString()}</span>`);
+                const triggerChange = await $(this).siblings('.cart-quantity').trigger('change');
+            }
+        });
+
+        $("#cartSummary .cart-quantity").change(function() {
+            const quantity = $(this).val();
+            const product_id = $(this).siblings('.cart-product-id').val();
+            const product_detail_id = $(this).siblings('.cart-product-detail-id').val();
+
+            console.log('quantity');
+            console.log(quantity);
+            console.log('product_id');
+            console.log(product_id);
+            console.log('product_detail_id');
+            console.log(product_detail_id);
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('api.cart.store_api') }}',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    set_quantity: quantity,
+                    product_id: product_id,
+                    product_detail_id: product_detail_id,
+                },
+                dataType: 'JSON',
+                error: function(error) {
+                    console.log(error);
+                    // Swal.fire("Error!", 'Something is wrong', "error");
+                },
+                success: function(response) {
+                    if (response.success == true) {
+
+                        location.reload();
+
+                    } else {
+                        console.log(response)
+                        Swal.fire("Error!", response.message, "error");
+                    }
+                }
+            })
+
+        });
+    </script>
 @endauth
 <script>
-
     // MENU LIST
     $.ajax({
         type: 'GET',
@@ -179,7 +180,7 @@
             console.log(error);
             // Swal.fire("Error!", 'Something is wrong', "error");
         },
-        success: function (response) {
+        success: function(response) {
             if (response.success == true) {
 
                 const responseData = response.data;
@@ -189,12 +190,12 @@
                         <li>
                             <a href="{{ url('product/category') }}/${e.slug}"><img
                                     class="icon-menu" alt="${e.name}"
-                                    src="{{ asset('customer/assets/data/1.png') }}">${e.name}</a>
+                                    src="{{ asset('icons/benang.png') }}">${e.name}</a>
                         </li>
                     `;
                 });
                 $('ul#categoryMenuList').html('')
-                .prepend(categoryMenuList);
+                    .prepend(categoryMenuList);
 
                 const selectCategory = responseData.map((e) => {
                     return `
@@ -202,8 +203,8 @@
                     `;
                 });
                 $('#selectCategory').html('')
-                .prepend(`<option value="2" selected>All Categories</option>`)
-                .append(selectCategory)
+                    .prepend(`<option value="2" selected>All Categories</option>`)
+                    .append(selectCategory)
 
 
             } else {
@@ -213,7 +214,7 @@
         }
     });
 
-    $('form#formSubmission').submit(function(e){
+    $('form#formSubmission').submit(function(e) {
         $(this).find('button[type="submit"]').hide();
         $(this).find('.loader').show();
     });
@@ -230,7 +231,7 @@
 
                 $.ajax({
                     type: 'DELETE',
-                    url: '{{ route("cart.delete") }}',
+                    url: '{{ route('cart.delete') }}',
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content'),
                         product_id: product_id,
@@ -240,21 +241,21 @@
                     error: function(error) {
                         console.log(error);
                         Swal.fire("Error!", 'Something is wrong', "error")
-                        .then((result) => {
-                            if (result.isConfirmed) {
-                                location.reload();
-                            }
-                        });
-                    },
-                    success: function (response) {
-                        // console.log(response);
-                        if (response.success == true) {
-                            Swal.fire("Success!", response.message, "success")
                             .then((result) => {
                                 if (result.isConfirmed) {
                                     location.reload();
                                 }
                             });
+                    },
+                    success: function(response) {
+                        // console.log(response);
+                        if (response.success == true) {
+                            Swal.fire("Success!", response.message, "success")
+                                .then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
                         } else {
                             Swal.fire("Error!", response.message, "error").then((result) => {
                                 if (result.isConfirmed) {

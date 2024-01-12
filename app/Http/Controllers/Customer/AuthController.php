@@ -41,7 +41,7 @@ class AuthController extends Controller
         if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('home')
-                ->with('success', 'Login success!');
+                ->with('login-success', 'Login success!');
             // return redirect()->intended(RouteServiceProvider::HOME);
         }
 

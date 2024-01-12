@@ -72,74 +72,6 @@
                                     </ul>
                                 </div>
                                 <!-- ./filter price -->
-                                <!-- filter color -->
-                                <div class="layered_subtitle">Color</div>
-                                <div class="layered-content filter-color">
-                                    <ul class="check-box-list">
-                                        <li>
-                                            <input type="checkbox" id="color1" name="cc" />
-                                            <label style=" background:#aab2bd;" for="color1"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color2" name="cc" />
-                                            <label style=" background:#cfc4a6;" for="color2"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color3" name="cc" />
-                                            <label style=" background:#aab2bd;" for="color3"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color4" name="cc" />
-                                            <label style=" background:#fccacd;" for="color4"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color5" name="cc" />
-                                            <label style="background:#964b00;" for="color5"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color6" name="cc" />
-                                            <label style=" background:#faebd7;" for="color6"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color7" name="cc" />
-                                            <label style=" background:#e84c3d;" for="color7"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color8" name="cc" />
-                                            <label style=" background:#c19a6b;" for="color8"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color9" name="cc" />
-                                            <label style=" background:#f39c11;" for="color9"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color10" name="cc" />
-                                            <label style=" background:#5d9cec;" for="color10"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color11" name="cc" />
-                                            <label style=" background:#a0d468;" for="color11"><span
-                                                    class="button"></span></label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="color12" name="cc" />
-                                            <label style=" background:#f1c40f;" for="color12"><span
-                                                    class="button"></span></label>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <!-- ./filter color -->
 
                                 <!-- ./filter size -->
                                 <div class="layered_subtitle">Size</div>
@@ -311,7 +243,7 @@
                         <ul class="row product-list grid">
                             @foreach ($product_subcategories as $product_subcategory)
                                 @foreach ($product_subcategory->products as $product)
-                                    <li class="col-sx-12 col-sm-4">
+                                    <li class="col-sx-12 col-sm-3">
                                         <div class="product-container">
                                             <div class="left-block">
                                                 <a href="{{ route('product.detail.show', $product->slug) }}">
@@ -319,12 +251,15 @@
                                                         src="{{ Storage::url($product->photo) }}" />
                                                 </a>
                                                 <div class="add-to-cart">
-                                                    <a title="Add to Cart" href="{{ route('product.detail.show', $product->slug) }}">Lihat Detail</a>
+                                                    <a title="Add to Cart"
+                                                        href="{{ route('product.detail.show', $product->slug) }}">Lihat
+                                                        Detail</a>
                                                 </div>
                                             </div>
                                             <div class="right-block">
                                                 <h5 class="product-name">
-                                                    <a href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
+                                                    <a
+                                                        href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
                                                 </h5>
                                                 <div class="product-star">
                                                     <i class="fa fa-star"></i>
@@ -335,11 +270,13 @@
                                                     {{-- <i class="fa fa-star-half-o"></i> --}}
                                                 </div>
                                                 <div class="content_price">
-                                                    @if ($product->details->first()->discount_price > 0 )
+                                                    @if ($product->details->first()->discount_price > 0)
                                                         <span class="price product-price">
-                                                            Rp {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
+                                                            Rp
+                                                            {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
                                                         </span>
-                                                        <span class="price old-price">Rp {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                        <span class="price old-price">Rp
+                                                            {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
                                                     @else
                                                         <span class="price product-price">
                                                             Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}

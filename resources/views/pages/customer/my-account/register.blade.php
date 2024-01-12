@@ -42,7 +42,8 @@
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <div class="alert alert-danger alert-dismissible" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
                                         <strong>Error!</strong> {{ $error }}
                                     </div>
                                 @endforeach
@@ -55,7 +56,7 @@
                                     <input id="name" type="text" class="form-control" name="name"
                                         value="{{ old('email') }}">
                                     @error('email')
-                                    <span class="help-block">{{ $message }}</span>
+                                        <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group @error('type') has-error @enderror">
@@ -68,7 +69,7 @@
                                             Klinik</option>
                                     </select>
                                     @error('type')
-                                    <span class="help-block">{{ $message }}</span>
+                                        <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group @error('phone') has-error @enderror">
@@ -76,7 +77,7 @@
                                     <input type="tel" class="form-control" name="phone" id="phone"
                                         autocomplete="phone" value="{{ old('phone') }}" placeholder="08xxxxxxxxxx">
                                     @error('phone')
-                                    <span class="help-block">{{ $message }}</span>
+                                        <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group @error('email') has-error @enderror">
@@ -84,14 +85,25 @@
                                     <input type="email" class="form-control" name="email" id="email"
                                         autocomplete="email" value="{{ old('email') }}">
                                     @error('email')
-                                    <span class="help-block">{{ $message }}</span>
+                                        <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group @error('password') has-error @enderror">
                                     <label for="password">Password&nbsp;<span class="required">*</span></label>
-                                    <input type="password" class="form-control" name="password" id="password" autocomplete="new-password"  value="{{ old('password') }}"><span class="show-password-input"></span>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        autocomplete="new-password" value="{{ old('password') }}"><span
+                                        class="show-password-input"></span>
                                     @error('password')
-                                    <span class="help-block">{{ $message }}</span>
+                                        <span class="help-block">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group @error('password') has-error @enderror">
+                                    <label for="password">Konfirmasi Password&nbsp;<span class="required">*</span></label>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        autocomplete="new-password" value="{{ old('password') }}"><span
+                                        class="show-password-input"></span>
+                                    @error('password')
+                                        <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <button class="button" type="submit"><i class="fa fa-user"></i> Buat Akun</button>

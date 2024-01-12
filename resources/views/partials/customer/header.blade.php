@@ -33,12 +33,12 @@
             </div>
             <div class="col-xs-7 col-sm-7 header-search-box">
                 <form class="form-inline">
-                    <div class="form-group form-category">
+                    {{-- <div class="form-group form-category">
                         <select class="select-category" id="selectCategory">
                             <option value="">All Categories</option>
                             <!-- Generated from AJAX -->
                         </select>
-                    </div>
+                    </div> --}}
                     <div class="form-group input-serach">
                         <input type="text" placeholder="Keyword here...">
                     </div>
@@ -51,7 +51,7 @@
                     <span class="total">0 items</span>
                     <span class="notify notify-left">0</span>
                 </a>
-                <div class="cart-block" style="display: none">
+                <div class="cart-block" style="">
                     <div class="cart-block-content">
                         <h5 class="cart-title">0 Items in my cart</h5>
                         <div class="cart-block-list">
@@ -81,7 +81,7 @@
                 <div class="col-sm-3" id="box-vertical-megamenus">
                     <div class="box-vertical-megamenus">
                         <h4 class="title">
-                            <span class="title-menu">Categories s</span>
+                            <span class="title-menu">Categories</span>
                             <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
                         </h4>
                         <div class="vertical-menu-content is-home">
@@ -90,11 +90,10 @@
                                     <li>
                                         <a href="{{ url('product/category/' . $product_subcategory->slug) }}"><img
                                                 class="icon-menu" alt="{{ $product_subcategory->name }}"
-                                                src="{{ asset('customer/assets/data/1.png') }}">{{ $product_subcategory->name }}</a>
+                                                src="{{ asset('icons/benang.png') }}">{{ $product_subcategory->name }}</a>
                                     </li>
                                 @endforeach --}}
                             </ul>
-                            <div class="all-category"><span class="open-cate">All Categories</span></div>
                         </div>
                     </div>
                 </div>
@@ -125,8 +124,8 @@
                                         <ul class="dropdown-menu container-fluid">
                                             <li class="block-container">
                                                 <ul class="block">
-                                                    <li class="link_container"><a
-                                                            href="{{ url('/faq-product') }}">FAQ Product</a></li>
+                                                    <li class="link_container"><a href="{{ url('/faq-product') }}">FAQ
+                                                            Product</a></li>
                                                     <li class="link_container"><a
                                                             href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
                                                 </ul>
