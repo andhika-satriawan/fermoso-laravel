@@ -97,12 +97,12 @@
                                         <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <div class="form-group @error('password') has-error @enderror">
-                                    <label for="password">Konfirmasi Password&nbsp;<span class="required">*</span></label>
-                                    <input type="password" class="form-control" name="password" id="password"
-                                        autocomplete="new-password" value="{{ old('password') }}"><span
+                                <div class="form-group @error('password_confirmation') has-error @enderror">
+                                    <label for="password_confirmation">Konfirmasi Password&nbsp;<span class="required">*</span></label>
+                                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation"
+                                        value="{{ old('password_confirmation') }}"><span
                                         class="show-password-input"></span>
-                                    @error('password')
+                                    @error('password_confirmation')
                                         <span class="help-block">{{ $message }}</span>
                                     @enderror
                                 </div>

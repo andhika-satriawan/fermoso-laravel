@@ -18,16 +18,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-
-        // Loop through each product subcategory to calculate product count for each category
-        foreach ($product_subcategories as $product_subcategory) {
-            $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
-        }
+        $product_subcategories = ProductSubcategory::orderBy('id')->paginate(1);
+        $products = Product::with(['product_subcategory', 'details', 'images'])->orderBy('id', 'DESC')->paginate(20);
 
         return view('pages.customer.products', [
             "page" => "category-page",
             "product_subcategories" => $product_subcategories,
+            "products" => $products,
         ]);
     }
 
@@ -70,15 +67,19 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
-        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory', 'images'])->firstOrFail();
+        $product = Product::where("slug", $slug)->with(['details', 'product_subcategory', 'images', 'reviews'])
+                    ->withCount('reviews')
+                    ->withSum('transactions', 'quantity')
+                    ->withAvg('reviews', 'rating')
+                    ->firstOrFail();
         $related_products = Product::whereHas('product_subcategory', function ($query) use ($product) {
             $query->where('name', $product->product_subcategory->name);
         })->where('id', '<>', $product->id)->get();
         // $products = Product::get();
 
+        // dd($product);
+
         return view('pages.customer.detail-product', [
-            "product_subcategories" => $product_subcategories,
             "product" => $product,
             // "products" => $products,
             "related_products" => $related_products,

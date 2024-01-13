@@ -241,83 +241,71 @@
                         </ul>
                         <!-- PRODUCT LIST -->
                         <ul class="row product-list grid">
-                            @foreach ($product_subcategories as $product_subcategory)
-                                @foreach ($product_subcategory->products as $product)
-                                    <li class="col-sx-12 col-sm-3">
-                                        <div class="product-container">
-                                            <div class="left-block">
-                                                <a href="{{ route('product.detail.show', $product->slug) }}">
-                                                    <img class="img-responsive" alt="product"
-                                                        src="{{ Storage::url($product->photo) }}" />
-                                                </a>
-                                                <div class="add-to-cart">
-                                                    <a title="Add to Cart"
-                                                        href="{{ route('product.detail.show', $product->slug) }}">Lihat
-                                                        Detail</a>
-                                                </div>
-                                            </div>
-                                            <div class="right-block">
-                                                <h5 class="product-name">
-                                                    <a
-                                                        href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
-                                                </h5>
-                                                <div class="product-star">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    {{-- <i class="fa fa-star-half-o"></i> --}}
-                                                </div>
-                                                <div class="content_price">
-                                                    @if ($product->details->first()->discount_price > 0)
-                                                        <span class="price product-price">
-                                                            Rp
-                                                            {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
-                                                        </span>
-                                                        <span class="price old-price">Rp
-                                                            {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                                    @else
-                                                        <span class="price product-price">
-                                                            Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}
-                                                        </span>
-                                                    @endif
-                                                </div>
-                                                <div class="info-orther">
-                                                    <p>SKU: #{{ $product->details->first()->sku }}</p>
-                                                    <p class="availability">Availability:
-                                                        <span>{{ $product->details->first()->stock }}</span>
-                                                    </p>
-                                                    <div class="product-desc">{!! $product->description !!}</div>
-                                                </div>
+                            @foreach ($products as $product)
+                                <li class="col-sx-12 col-sm-3">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="{{ route('product.detail.show', $product->slug) }}">
+                                                <img class="img-responsive" alt="product"
+                                                    src="{{ Storage::url($product->photo) }}" />
+                                            </a>
+                                            <div class="add-to-cart">
+                                                <a title="Add to Cart"
+                                                    href="{{ route('product.detail.show', $product->slug) }}">Lihat
+                                                    Detail</a>
                                             </div>
                                         </div>
-                                    </li>
-                                @endforeach
+                                        <div class="right-block">
+                                            <h5 class="product-name">
+                                                <a
+                                                    href="{{ route('product.detail.show', $product->slug) }}">{{ $product->name }}</a>
+                                            </h5>
+                                            <div class="product-star">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                {{-- <i class="fa fa-star-half-o"></i> --}}
+                                            </div>
+                                            <div class="content_price">
+                                                @if ($product->details->first()->discount_price > 0)
+                                                    <span class="price product-price">
+                                                        Rp
+                                                        {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
+                                                    </span>
+                                                    <span class="price old-price">Rp
+                                                        {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                @else
+                                                    <span class="price product-price">
+                                                        Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}
+                                                    </span>
+                                                @endif
+                                            </div>
+                                            <div class="info-orther">
+                                                <p>SKU: #{{ $product->details->first()->sku }}</p>
+                                                <p class="availability">Availability:
+                                                    <span>{{ $product->details->first()->stock }}</span>
+                                                </p>
+                                                <div class="product-desc">{!! $product->description !!}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             @endforeach
-
                         </ul>
                         <!-- ./PRODUCT LIST -->
                     </div>
                     <!-- ./view-product-list-->
                     <div class="sortPagiBar">
                         <div class="bottom-pagination">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">Next &raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            @if ($products->hasPages())
+                                <div class="pagination-wrapper">
+                                    {{ $products->links('pagination::bootstrap-4') }}
+                                </div>
+                            @endif
                         </div>
-                        <div class="show-product-item">
+                        {{-- <div class="show-product-item">
                             <select name="">
                                 <option value="">Show 18</option>
                                 <option value="">Show 20</option>
@@ -333,7 +321,7 @@
                             <div class="sort-product-icon">
                                 <i class="fa fa-sort-alpha-asc"></i>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- ./ Center colunm -->

@@ -10,7 +10,7 @@
       <h6>View/Search {{ $page_info['title'] }}</h6>
     </div>
     <div class="page-btn">
-      <a href="{{ route('admin.product.subcategory.create') }}" class="btn btn-added">
+      <a href="{{ route('admin.review.create') }}" class="btn btn-added">
         <img
           src="{{ asset('admin/img/icons/plus.svg')}}"
           class="me-1"
@@ -42,17 +42,17 @@
                                 <span class="checkmarks"></span>
                             </label>
                         </th>
-                        <th>Sub Category Name</th>
-                        <th>Sub Category Slug</th>
-                        <th>Category Group</th>
-                        <th>Created At</th>
+                        <th>Product</th>
+                        <th>Customer Name</th>
+                        <th>Rating</th>
+                        <th>Comment</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($subcategories as $subcategory)
+                    @foreach ($reviews as $review)
                     <tr>
-                        <td>
+                        <td width="5%">
                             <label class="checkboxs">
                                 <input type="checkbox" />
                                 <span class="checkmarks"></span>
@@ -61,20 +61,23 @@
                         <td class="productimgname">
                             <a href="javascript:void(0);" class="product-img">
                                 <img
-                                src="{{ $subcategory->image ? Storage::url($subcategory->image) : asset('admin/img/product/noimage.png') }}"
+                                src="{{ Storage::url($review->product->photo) }}"
                                 alt="product"
                                 />
                             </a>
-                            <a href="javascript:void(0);">{{ $subcategory->name }}</a>
+                            <a href="javascript:void(0);">{{ $review->product->name }}</a>
                         </td>
-                        <td>{{ $subcategory->slug }}</td>
-                        <td>{{ $subcategory->category->name }}</td>
-                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $subcategory->created_at)->format('M d, Y, H:i:s') }}</td>
+                        <td>{{ $review->customer_name }}</td>
                         <td>
-                            <a class="me-3" href="{{ route('admin.product.subcategory.edit', $subcategory->id)}}">
+                            {{ $review->rating }} 
+                            @for ($i = 1; $i <= $review->rating; $i++) ⭐ @endfor
+                        </td>
+                        <td>{{ $review->comment }}</td>
+                        <td>
+                            <a class="me-3" href="{{ route('admin.review.edit', $review->id)}}">
                                 <img src="{{ asset('admin/img/icons/edit.svg')}}" alt="img" />
                             </a>
-                            <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $subcategory->id }})">
+                            <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $review->id }})">
                                 <img src="{{asset('admin/img/icons/delete.svg')}}" alt="img" />
                             </a>
                         </td>
@@ -121,7 +124,7 @@
 
                 $.ajax({
                     type: 'DELETE',
-                    url: '{{ route("admin.product.subcategory.index") }}/' + id,
+                    url: '{{ route("admin.review.index") }}/' + id,
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content'),
                     },

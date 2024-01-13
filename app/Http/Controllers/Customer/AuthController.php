@@ -76,7 +76,7 @@ class AuthController extends Controller
             'name'      => 'required|string|max:255',
             'type'      => 'required|string|max:255',
             'email'     => 'required|email|unique:App\Models\Customer,email',
-            'password'  => 'required|string|max:255',
+            'password'  => 'required|string|confirmed|max:255',
             'phone'     => 'required|string|max:255',
         ]);
 

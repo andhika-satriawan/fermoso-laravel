@@ -54,4 +54,24 @@ class Product extends Model
     {
         return $this->hasMany(ProductImage::class, 'product_id', 'id');
     }
+
+    /**
+     * Get all of the reviews for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(ReviewDummy::class, 'product_id', 'id');
+    }
+
+    /**
+     * Get all of the transactions for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function transactions(): HasMany
+    {
+        return $this->hasMany(TransactionDetail::class, 'product_id', 'id');
+    }
 }

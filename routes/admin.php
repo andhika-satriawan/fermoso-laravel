@@ -23,6 +23,7 @@ Route::prefix('admin')
                 });
 
             Route::resource('service', App\Http\Controllers\Admin\ServiceController::class);
+            Route::resource('review', App\Http\Controllers\Admin\ReviewDummyController::class);
             Route::resource('slider', App\Http\Controllers\Admin\SliderController::class);
 
             Route::prefix('article')

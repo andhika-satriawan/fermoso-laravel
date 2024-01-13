@@ -23,6 +23,12 @@
                                 List</a></li>
                     </ul>
                 </li>
+                <li class="{{ request()->is('admin/review*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.review.index') }}">
+                        <img src="{{ asset('admin/img/icons/transcation.svg') }}" alt="img">
+                        <span>Review</span>
+                    </a>
+                </li>
                 <li class="{{ request()->is('admin/service*') ? 'active' : '' }}">
                     <a href="{{ route('admin.service.index') }}">
                         <img src="{{ asset('admin/img/icons/purchase1.svg') }}" alt="img">

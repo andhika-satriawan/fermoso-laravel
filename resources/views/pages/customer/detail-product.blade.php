@@ -110,14 +110,15 @@
                                 <h1 class="product-name">{{ $product->name }}</h1>
                                 <div class="product-comments">
                                     <div class="product-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
+                                        @for ($i = 1; $i <= $product->reviews_avg_rating; $i++)
+                                            <i class="fa fa-star"></i>
+                                        @endfor
+                                        @if (fmod($product->reviews_avg_rating, 1) != 0)
                                         <i class="fa fa-star-half-o"></i>
+                                        @endif
                                     </div>
-                                    <span class="review">1200 Penilaian</span>
-                                    <span class="terjual">300 Terjual</span>
+                                    <span class="review">{{ $product->reviews_count }} Penilaian</span>
+                                    <span class="terjual">{{ $product->transactions_sum_quantity }} Terjual</span>
                                     {{-- <div class="comments-advices">
                                         <a href="#">Based on 3 ratings</a>
                                         <a href="#"><i class="fa fa-pencil"></i> write a review</a>
@@ -239,10 +240,10 @@
                                 <li>
                                     <a data-toggle="tab" href="#video-reels">video</a>
                                 </li>
-                                {{-- <li>
+                                <li>
                                     <a data-toggle="tab" href="#reviews">reviews</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a data-toggle="tab" href="#extra-tabs">Extra Tabs</a>
                                 </li>
                                 <li>
@@ -287,59 +288,33 @@
                                     @endif
 
                                 </div>
-                                {{-- <div id="reviews" class="tab-panel">
+                                <div id="reviews" class="tab-panel">
                                     <div class="product-comments-block-tab">
+                                        @foreach ($product->reviews as $review)
                                         <div class="comment row">
                                             <div class="col-sm-3 author">
                                                 <div class="grade">
-                                                    <span>Grade</span>
+                                                    <span>Rating</span>
                                                     <span class="reviewRating">
+                                                        @for ($i = 1; $i <= $review->rating; $i++)
                                                         <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                                        @endfor
                                                     </span>
                                                 </div>
                                                 <div class="info-author">
-                                                    <span><strong>Jame</strong></span>
-                                                    <em>04/08/2015</em>
+                                                    <span><strong>{{ $review->customer_name }}</strong></span>
+                                                    <em>{{ $review->created_at }}</em>
                                                 </div>
                                             </div>
                                             <div class="col-sm-9 commnet-dettail">
-                                                Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet
-                                                convallis pulvinar
+                                                {{ $review->comment }}
                                             </div>
                                         </div>
-                                        <div class="comment row">
-                                            <div class="col-sm-3 author">
-                                                <div class="grade">
-                                                    <span>Grade</span>
-                                                    <span class="reviewRating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="info-author">
-                                                    <span><strong>Author</strong></span>
-                                                    <em>04/08/2015</em>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9 commnet-dettail">
-                                                Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet
-                                                convallis pulvinar
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <a class="btn-comment" href="#">Write your review !</a>
-                                        </p>
+                                        @endforeach
                                     </div>
 
                                 </div>
-                                <div id="extra-tabs" class="tab-panel">
+                                {{-- <div id="extra-tabs" class="tab-panel">
                                     <p>Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet convallis
                                         pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Sed lectus. Sed a
                                         libero. Vestibulum eu odio.</p>
