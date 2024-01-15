@@ -15,8 +15,10 @@
 <style>
     .loader {
         position: relative;
-        border: 10px solid #f3f3f3; /* Light grey */
-        border-top: 10px solid #ff3366; /* Blue */
+        border: 10px solid #f3f3f3;
+        /* Light grey */
+        border-top: 10px solid #ff3366;
+        /* Blue */
         border-radius: 50%;
         width: 50px;
         height: 50px;
@@ -24,9 +26,15 @@
     }
 
     @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
+
     .btn-fermoso {
         font-size: 14px;
         line-height: 18px;

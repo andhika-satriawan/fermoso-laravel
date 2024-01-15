@@ -4,6 +4,35 @@
     Products
 @endsection
 
+@push('addon-style')
+    <style>
+        .product-list li .product-name {
+            float: left;
+        }
+
+        .product-list li .product-price {
+            font-size: 12px;
+        }
+
+        .product-container .right-block a {
+            font-size: 12px;
+        }
+
+        .product-list li .product-star {
+            font-size: 11px;
+        }
+
+        .product-list li .right-block {
+            height: 45px;
+        }
+
+        .product-list li .left-block {
+            height: 217.81px;
+            overflow: hidden;
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="columns-container">
         <div class="container" id="columns">

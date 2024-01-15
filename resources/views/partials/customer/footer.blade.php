@@ -17,14 +17,14 @@
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-4 col-12">
                         <div class="introduce-title">Perusahaan</div>
                         <ul id="introduce-company" class="introduce-list">
                             <li><a href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
                             <li><a href="{{ url('/faq-product') }}">FAQ Product</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-4 col-12">
                         <div class="introduce-title">Akun</div>
                         <ul id = "introduce-Account" class="introduce-list">
                             <li><a href="{{ url('/my-account/orders') }}">Order</a></li>
@@ -32,7 +32,7 @@
                             <li><a href="{{ url('/my-account/edit-account') }}">Profile</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-4 col-12">
                         <div class="introduce-title">Dukungan</div>
                         <ul id = "introduce-support" class="introduce-list">
                             <li><a href="#">Whatsapp</a></li>
@@ -67,4 +67,4 @@
     </div>
 </footer>
 
-<a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+<a href="#" class="scroll_top footer" title="Scroll to Top" style="display: inline;">Scroll</a>

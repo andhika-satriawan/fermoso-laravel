@@ -6,7 +6,7 @@
                     <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" />00-62-658-658
                 </a>
                 <a href="#">
-                    <img alt="email" src="{{ asset('customer/assets/images/email.png') }}" />Contact us today!
+                    <img alt="email" src="{{ asset('customer/assets/images/email.png') }}" />Hubungi kami
                 </a>
             </div>
 
@@ -18,7 +18,7 @@
                     <a href="{{ route('my_account.dashboard') }}">My Account</a>
                     <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
                 @else
-                    <a href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('register') }}">Daftar</a>
                     <a href="{{ route('login') }}">Login</a>
                 @endauth
             </div>
@@ -28,10 +28,10 @@
     <!-- MAIN HEADER -->
     <div class="container main-header">
         <div class="row">
-            <div class="col-xs-12 col-sm-3 logo">
+            <div class="col-xs-6 col-sm-3 logo">
                 <a href="{{ route('home') }}"><img alt="Fermoso" src="{{ asset('images/logo.jpg') }}" /></a>
             </div>
-            <div class="col-xs-7 col-sm-7 header-search-box">
+            <div class="col-xs-6 col-sm-7 header-search-box">
                 <form class="form-inline">
                     {{-- <div class="form-group form-category">
                         <select class="select-category" id="selectCategory">
@@ -45,7 +45,7 @@
                     <button type="submit" class="pull-right btn-search"></button>
                 </form>
             </div>
-            <div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
+            <div id="cart-block" class="col-xs-6 col-sm-2 shopping-cart-box">
                 <a class="cart-link" href="{{ route('cart') }}">
                     <span class="title">Shopping cart</span>
                     <span class="total">0 items</span>
@@ -81,7 +81,7 @@
                 <div class="col-sm-3" id="box-vertical-megamenus">
                     <div class="box-vertical-megamenus">
                         <h4 class="title">
-                            <span class="title-menu">Categories</span>
+                            <span class="title-menu">Kategori Produk</span>
                             <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
                         </h4>
                         <div class="vertical-menu-content is-home">
@@ -113,7 +113,7 @@
                                         <a href="{{ url('/') }}">Home</a>
                                     </li>
                                     <li class="{{ $page === 'category-page' ? 'active' : '' }}">
-                                        <a href="{{ url('/products') }}">Products</a>
+                                        <a href="{{ url('/products') }}">Produk</a>
                                     </li>
                                     <li class="{{ $page === 'cara-belanja' ? 'active' : '' }}">
                                         <a href="{{ url('/cara-belanja') }}">Cara Belanja</a>

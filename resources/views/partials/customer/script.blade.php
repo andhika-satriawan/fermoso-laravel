@@ -191,7 +191,7 @@
                             <a href="{{ url('product/category') }}/${e.slug}">
                                 <img
                                     class="icon-menu" alt="${e.name}"
-                                    src="{{ Storage::url('') }}${e.image}" height="15px">
+                                    src="{{ Storage::url('') }}${e.icon}" height="25px">
                                 ${e.name}
                             </a>
                         </li>

@@ -15,7 +15,7 @@
 
     <title>@yield('title')</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/icons/favicon.png') }}">
 
     @stack('prepend-style')
     @include('partials.admin.style')
