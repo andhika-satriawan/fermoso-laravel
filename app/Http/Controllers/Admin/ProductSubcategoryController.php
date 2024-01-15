@@ -61,6 +61,7 @@ class ProductSubcategoryController extends Controller
         $validated = $request->validate([
             'product_category_id'   => 'required|numeric|exists:App\Models\ProductCategory,id',
             'subcategory_name'      => 'required|string|max:255|unique:product_subcategories,name',
+            'icon'                  => 'nullable|mimes:jpg,bmp,png,webp',
             'image'                 => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'        => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_left'           => 'nullable|mimes:jpg,bmp,png,webp',
@@ -93,6 +94,18 @@ class ProductSubcategoryController extends Controller
 
             // $imgResized = $ImageManager->read(public_path('storage/' . $pathFileResized));
             // $imgResized->cover(500, 500);
+        }
+
+        if ($request->hasFile('icon')) {
+            $icon_filenameWithExt      = $request->file('icon')->getClientOriginalName();
+            $icon_filename             = pathinfo($icon_filenameWithExt, PATHINFO_FILENAME);
+            $icon_extension            = $request->file('icon')->getClientOriginalExtension();
+            $icon_fileNameToStore      = $subcategory_slug . '-icon-' . time() . '.' . $icon_extension;
+            $icon_pathFile             = $request->file('icon')->storeAs('assets/product/subcategory', $icon_fileNameToStore, 'public');
+            // $icon_pathFileResized      = $request->file('icon')->storeAs('assets/product/subcategory_resized', $icon_fileNameToStore, 'public');
+
+            // Add value
+            $subcategory->icon = $icon_pathFile;
         }
 
         if ($request->hasFile('featured_image')) {
@@ -177,6 +190,7 @@ class ProductSubcategoryController extends Controller
         $validated = $request->validate([
             'product_category_id'   => 'required|numeric|exists:App\Models\ProductCategory,id',
             'subcategory_name'      => 'required|string|max:255|unique:product_subcategories,name,' . $id,
+            'icon'                  => 'nullable|mimes:jpg,bmp,png,webp',
             'image'                 => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'        => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_left'           => 'nullable|mimes:jpg,bmp,png,webp',
@@ -209,6 +223,18 @@ class ProductSubcategoryController extends Controller
 
             // $imgResized = $ImageManager->read(public_path('storage/' . $pathFileResized));
             // $imgResized->cover(500, 500);
+        }
+
+        if ($request->hasFile('icon')) {
+            $icon_filenameWithExt      = $request->file('icon')->getClientOriginalName();
+            $icon_filename             = pathinfo($icon_filenameWithExt, PATHINFO_FILENAME);
+            $icon_extension            = $request->file('icon')->getClientOriginalExtension();
+            $icon_fileNameToStore      = $subcategory_slug . '-icon-' . time() . '.' . $icon_extension;
+            $icon_pathFile             = $request->file('icon')->storeAs('assets/product/subcategory', $icon_fileNameToStore, 'public');
+            // $icon_pathFileResized      = $request->file('icon')->storeAs('assets/product/subcategory_resized', $icon_fileNameToStore, 'public');
+
+            // Add value
+            $subcategory->icon = $icon_pathFile;
         }
 
         if ($request->hasFile('featured_image')) {

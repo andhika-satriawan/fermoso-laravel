@@ -19,7 +19,23 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                     <div class="card image-uploader">
                         <div class="card-body">
-                            <label for="image" class="form-label">Image <span class="text-danger">*</span></label>
+                            <label for="icon" class="form-label">Icon</label>
+                            <input class="form-control file-uploader @error('icon') is-invalid @enderror" type="file" accept="image/*" name="icon"
+                                value="{{ old('icon') }}">
+                            @error('icon')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                            <img class="card-img-top image-uploader-preview"
+                                src="{{ asset('admin/img/product/upload.png')}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="card image-uploader">
+                        <div class="card-body">
+                            <label for="image" class="form-label">Image</label>
                             <input class="form-control file-uploader @error('image') is-invalid @enderror" type="file" accept="image/*" name="image"
                                 value="{{ old('image') }}">
                             @error('image')
@@ -28,14 +44,14 @@
                             </div>
                             @enderror
                             <img class="card-img-top image-uploader-preview"
-                                src="{{ asset('admin/img/product/noimage.png')}}">
+                                src="{{ asset('admin/img/product/upload.png')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                     <div class="card image-uploader">
                         <div class="card-body">
-                            <label for="featured_image" class="form-label">Featured Image <span class="text-danger">*</span></label>
+                            <label for="featured_image" class="form-label">Featured Image</label>
                             <input class="form-control file-uploader @error('featured_image') is-invalid @enderror" type="file" accept="image/*" name="featured_image"
                                 value="{{ old('featured_image') }}">
                             @error('featured_image')
@@ -44,7 +60,7 @@
                             </div>
                             @enderror
                             <img class="card-img-top image-uploader-preview"
-                                src="{{ asset('admin/img/product/noimage.png')}}">
+                                src="{{ asset('admin/img/product/upload.png')}}">
                         </div>
                     </div>
                 </div>

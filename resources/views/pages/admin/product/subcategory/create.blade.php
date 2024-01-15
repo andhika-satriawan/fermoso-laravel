@@ -16,7 +16,23 @@
     @csrf
         <div class="row">
 
-            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
+                        <h5 class="card-title">Icon (100 x 100)</h5>
+                        <input class="form-control file-uploader @error('icon') is-invalid @enderror" type="file" accept="image/*" 
+                            name="icon" value="{{ old('icon') }}">
+                        @error('icon')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
                         <h5 class="card-title">Image (117 x 92)</h5>
@@ -32,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
                         <h5 class="card-title">Featured Image (234 x 350)</h5>
@@ -48,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
                         <h5 class="card-title">Banner Left (585 x 65)</h5>
@@ -65,7 +81,7 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 upload-product">
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
                         <h5 class="card-title">Banner Right (585 x 65)</h5>

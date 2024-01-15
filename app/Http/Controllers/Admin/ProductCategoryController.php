@@ -54,6 +54,7 @@ class ProductCategoryController extends Controller
     {
         $validated = $request->validate([
             'category_name'     => 'required|string|max:255',
+            'icon'              => 'nullable|mimes:jpg,bmp,png,webp',
             'image'             => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'    => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
@@ -77,6 +78,18 @@ class ProductCategoryController extends Controller
 
             // Add value
             $category->image = $pathFile;
+        }
+
+        if ($request->hasFile('icon')) {
+            $icon_filenameWithExt      = $request->file('icon')->getClientOriginalName();
+            $icon_filename             = pathinfo($icon_filenameWithExt, PATHINFO_FILENAME);
+            $icon_extension            = $request->file('icon')->getClientOriginalExtension();
+            $icon_fileNameToStore      = $category_slug . '-icon-' . time() . '.' . $icon_extension;
+            $icon_pathFile             = $request->file('icon')->storeAs('assets/product/category', $icon_fileNameToStore, 'public');
+            // $icon_pathFileResized      = $request->file('icon')->storeAs('assets/product/category_resized', $icon_fileNameToStore, 'public');
+
+            // Add value
+            $category->icon = $icon_pathFile;
         }
 
         if ($request->hasFile('featured_image')) {
@@ -124,6 +137,7 @@ class ProductCategoryController extends Controller
     {
         $validated = $request->validate([
             'category_name'     => 'required|string|max:255',
+            'icon'              => 'nullable|mimes:jpg,bmp,png,webp',
             'image'             => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'    => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
@@ -147,6 +161,18 @@ class ProductCategoryController extends Controller
 
             // Add value
             $category->image = $pathFile;
+        }
+
+        if ($request->hasFile('icon')) {
+            $icon_filenameWithExt      = $request->file('icon')->getClientOriginalName();
+            $icon_filename             = pathinfo($icon_filenameWithExt, PATHINFO_FILENAME);
+            $icon_extension            = $request->file('icon')->getClientOriginalExtension();
+            $icon_fileNameToStore      = $category_slug . '-icon-' . time() . '.' . $icon_extension;
+            $icon_pathFile             = $request->file('icon')->storeAs('assets/product/category', $icon_fileNameToStore, 'public');
+            // $icon_pathFileResized      = $request->file('icon')->storeAs('assets/product/category_resized', $icon_fileNameToStore, 'public');
+
+            // Add value
+            $category->icon = $icon_pathFile;
         }
 
         if ($request->hasFile('featured_image')) {

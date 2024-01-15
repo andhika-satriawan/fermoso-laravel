@@ -18,6 +18,7 @@ class ProductSubcategory extends Model
         'product_category_id',
         'name',
         'slug',
+        'icon',
         'image',
         'featured_image',
         'banner_left',
