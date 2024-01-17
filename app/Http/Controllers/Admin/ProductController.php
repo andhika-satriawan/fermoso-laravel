@@ -374,4 +374,43 @@ class ProductController extends Controller
 
         return response()->json($response, Response::HTTP_OK);
     }
+
+    public function variant_destroy(string $id)
+    {
+        $item = ProductDetail::findorFail($id);
+
+        if (!$item->delete()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error during delete data'
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        $response = [
+            'success' => true,
+            'message' => 'Product Detail has been deleted'
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
+    }
+
+    public function image_destroy(string $id)
+    {
+        $item = ProductImage::findorFail($id);
+
+        if (!$item->delete()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error during delete data'
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        $response = [
+            'success' => true,
+            'message' => 'Product Image has been deleted'
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
+    }
+
 }

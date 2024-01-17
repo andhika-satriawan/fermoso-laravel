@@ -1,14 +1,14 @@
 @extends('layouts.admin.main')
 
 @section('title')
-    {{ $page_info['title'] }}
+    {{ $page_info['title'] }} Edit
 @endsection
 
 @section('content')
     <div class="page-header">
         <div class="page-title">
-            <h4>Add {{ $page_info['title'] }}</h4>
-            <h6>Create New {{ $page_info['title'] }}</h6>
+            <h4>Edit {{ $page_info['title'] }}</h4>
+            <h6>Change the data of existing {{ $page_info['title'] }}</h6>
         </div>
     </div>
 
@@ -30,7 +30,9 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="card image-uploader">
                             <div class="card-body">
-                                <h5 class="card-title">Primary Image <span class="text-danger">*</span></h5>
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5 class="card-title">Primary Image <span class="text-danger">*</span></h5>
+                                </div>
                                 <input class="form-control file-uploader @error('photo') is-invalid @enderror"
                                     type="file" accept="image/*" name="photo" value="{{ old('photo') }}">
                                 @error('photo')
@@ -48,7 +50,12 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card image-uploader">
                                 <div class="card-body">
-                                    <h5 class="card-title">Image {{ $image_no }}</h5>
+                                    <div class="card-header d-flex justify-content-between align-items-center" width="100%">
+                                        <h5 class="card-title">Image {{ $image_no }}</h5>
+                                        @if (isset($item->images[$loop->index]))
+                                            <i onclick="deleteImage('{{ $item->images[$loop->index]->id }}')" class="fa fa-trash text-danger" role="button"></i>
+                                        @endif
+                                    </div>
                                     <input type="hidden" name="productImages[{{ $loop->index }}][id]" value="{{ isset($item->images[$loop->index]) != null ? $item->images[$loop->index]->id : '' }}">
                                     <input
                                         class="form-control file-uploader @error("{{ 'productImages[' . $loop->index . '][photo]' }}") is-invalid @enderror"
@@ -355,10 +362,7 @@
                                                     @endif
                                                 </td>
                                                 <td class="delete-variant">
-                                                    <a onclick="deleteRow(event)" class="me-3 confirm-text">
-                                                        <img src="{{ asset('admin/img/icons/delete.svg') }}"
-                                                            alt="img">
-                                                    </a>
+                                                    <img onclick="deleteRow(event)" src="{{ asset('admin/img/icons/delete.svg') }}" alt="img">
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -596,8 +600,125 @@
         }
 
         function deleteRow(event) {
-            event.target.parentNode.parentNode.parentNode.remove();
-            changeProductVariant();
+            
+            const product_detail_id = event.target.closest(`tr`).querySelector('.product-detail-id').value;
+            // console.log('product_id ' + product_id)
+            
+            if (product_detail_id) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        $.ajax({
+                            type: 'DELETE',
+                            url: '{{ route("admin.product.variant.delete", ":id") }}'.replace(':id', product_detail_id),
+                            data: {
+                                _token: $('meta[name="csrf-token"]').attr('content'),
+                            },
+                            dataType: 'JSON',
+                            error: function(response) {
+                                console.log(response);
+                                Swal.fire("Error!", 'Something is wrong', "error")
+                                .then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            },
+                            success: function (response) {
+                                console.log(response);
+                                if (response.success == true) {
+                                    Swal.fire("Deleted successfully!", response.message, "success")
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            event.target.parentNode.parentNode.parentNode.remove();
+                                            changeProductVariant();
+                                            // location.reload();
+                                        }
+                                    });
+                                } else {
+                                    Swal.fire("Error!", response.message, "error").then((result) => {
+                                        if (result.isConfirmed) {
+                                            location.reload();
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    } else if (result.dismiss) {
+                        Swal.fire(
+                            'Canceled!',
+                            'Your important file is still safe.',
+                            'error'
+                        )
+                    }
+                });
+            }
+            else {
+                event.target.parentNode.parentNode.parentNode.remove();
+                changeProductVariant();
+            }
         }
+
+        function deleteImage(product_image_id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    $.ajax({
+                        type: 'DELETE',
+                        url: '{{ route("admin.product.image.delete", ":id") }}'.replace(':id', product_image_id),
+                        data: {
+                            _token: $('meta[name="csrf-token"]').attr('content'),
+                        },
+                        dataType: 'JSON',
+                        error: function(response) {
+                            console.log(response);
+                            Swal.fire("Error!", 'Something is wrong', "error")
+                            .then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            if (response.success == true) {
+                                Swal.fire("Deleted successfully!", response.message, "success")
+                                .then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            } else {
+                                Swal.fire("Error!", response.message, "error").then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            }
+                        }
+                    });
+                } else if (result.dismiss) {
+                    Swal.fire(
+                        'Canceled!',
+                        'Your important file is still safe.',
+                        'error'
+                    )
+                }
+            });
+        }
+
+        
     </script>
 @endpush

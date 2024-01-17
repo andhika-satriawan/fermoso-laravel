@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product_subcategories = ProductSubcategory::orderBy('id')->paginate(1);
+        $product_subcategories = ProductSubcategory::orderBy('slug', 'ASC')->paginate(1);
         $products = Product::with(['product_subcategory', 'details', 'images'])->orderBy('id', 'DESC')->paginate(20);
 
         return view('pages.customer.products', [
@@ -46,7 +46,7 @@ class ProductController extends Controller
 
     public function category($slug)
     {
-        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('slug', 'ASC')->get();
         $current_subcategory = ProductSubcategory::where('slug', $slug)->firstOrFail();
         $products = Product::where('product_subcategory_id', $current_subcategory->id)->get();
 
@@ -92,7 +92,7 @@ class ProductController extends Controller
      */
     public function subcategory_api()
     {
-        $product_subcategories = ProductSubcategory::with(['category'])->orderBy('name', 'ASC')->get();
+        $product_subcategories = ProductSubcategory::with(['category'])->orderBy('slug', 'ASC')->get();
         
         return response()->json([
             'success'   => true,

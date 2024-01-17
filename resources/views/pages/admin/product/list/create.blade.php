@@ -344,10 +344,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a onclick="deleteRow(event)" class="me-3 product-detail-delete confirm-text">
-                                                        <img src="{{ asset('admin/img/icons/delete.svg') }}"
-                                                            alt="img">
-                                                    </a>
+                                                    <img src="{{ asset('admin/img/icons/delete.svg') }}" alt="img">
                                                 </td>
                                             </tr>
                                         </tbody>

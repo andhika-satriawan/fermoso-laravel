@@ -18,6 +18,8 @@ Route::prefix('monyet')
                 ->name('product.')
                 ->group(function () {
                     Route::resource('list', App\Http\Controllers\Admin\ProductController::class);
+                    Route::delete('variant-delete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'variant_destroy'])->name('variant.delete');
+                    Route::delete('image-delete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'image_destroy'])->name('image.delete');
                     Route::resource('category', App\Http\Controllers\Admin\ProductCategoryController::class);
                     Route::resource('subcategory', App\Http\Controllers\Admin\ProductSubcategoryController::class);
                 });
