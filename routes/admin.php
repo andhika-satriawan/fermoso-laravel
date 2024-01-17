@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('admin')
+Route::prefix('monyet')
     ->name('admin.')
     ->group(function () {
 
@@ -55,7 +55,7 @@ Route::prefix('admin')
                 ->group(function () {
                     Route::resource('header', App\Http\Controllers\Admin\ThemeHeaderController::class);
                     Route::resource('slider', App\Http\Controllers\Admin\ThemeSliderController::class);
-                    
+
                     Route::resource('footer', App\Http\Controllers\Admin\ThemeFooterController::class);
                 });
         });

@@ -50,11 +50,11 @@ class TransactionController extends Controller
         $uniqueNumber = CommonHelper::generateSerialNumber('FRM');
 
         $carts = Cart::where('customer_id', Auth::id())
-                    ->whereRelation('product_detail', 'status', 1)
-                    ->with(['product', 'product_detail'])
-                    ->get();
+            ->whereRelation('product_detail', 'status', 1)
+            ->with(['product', 'product_detail'])
+            ->get();
 
-        $total_carts = array_sum(array_map(function($item) {
+        $total_carts = array_sum(array_map(function ($item) {
             $actual_price = $item['product_detail']['discount_price'] > 0 ? $item['product_detail']['discount_price'] : $item['product_detail']['price'];
             return $item['quantity'] * $actual_price;
         }, $carts->toArray()));
@@ -87,7 +87,7 @@ class TransactionController extends Controller
             foreach ($carts as $cart) {
                 $actual_price = $cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price;
                 $total_price = $cart->quantity * $actual_price;
-                
+
                 $product_detail = ProductDetail::where([
                     ['id', $cart->product_detail_id],
                     ['product_id', $cart->product_id],
@@ -111,16 +111,30 @@ class TransactionController extends Controller
 
             // Delete cart data
             $deleted = Cart::where('customer_id', Auth::id())
-            ->delete();
+                ->delete();
 
-            $text_chat = 'https://wa.me/6281314529488?text=Halo,%20saya%20memiliki%20pesanan%20no%20' . $uniqueNumber . '. Mohon%20diproses.';
+            $text_chat = 'https://wa.me/6282110101223?text=Halo%20Admin,%20saya%20memiliki%20pesanan%20';
+
+            foreach ($carts as $cart) {
+                if ($cart->product_detail->discount_price > 0) :
+                    $price = number_format($cart->product_detail->discount_price, 0, ',', '.');
+                else :
+                    $price = number_format($cart->product_detail->price, 0, ',', '.');
+                endif;
+
+                $text_chat .=  $cart->product->name . ' (Rp ' . $price . ' x ' . $cart->quantity . ') = Rp ' . number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') . ' ';
+            }
+
+            $text_chat .= '%20dengan%20total%20harga%20yang%20harus%20dibayar%20=%20Rp%20' . number_format($total_carts, 0, ',', '.') . '.%20Mohon%20diproses.';
+
+
+            // $text_chat = 'https://wa.me/6281314529488?text=Halo,%20saya%20memiliki%20pesanan%20no%20' . $uniqueNumber . '. Mohon%20diproses.';
             // $text_chat .= '\n'
-            
+
             return redirect()->away($text_chat);
         }
 
         return back()->with('error', 'Checkout gagal!');
-
     }
 
     /**
@@ -132,12 +146,12 @@ class TransactionController extends Controller
             ['id', $id],
             ['customer_id', Auth::id()],
         ])
-        ->with('transaction_details')
-        ->with('transaction_details.product')
-        ->with('transaction_details.product_detail')
-        ->withSum('transaction_details', 'original_price')
-        ->withSum('transaction_details', 'price')
-        ->firstOrFail();
+            ->with('transaction_details')
+            ->with('transaction_details.product')
+            ->with('transaction_details.product_detail')
+            ->withSum('transaction_details', 'original_price')
+            ->withSum('transaction_details', 'price')
+            ->firstOrFail();
 
         return view('pages.customer.my-account.order-detail', [
             "page"  => 'Order Details',

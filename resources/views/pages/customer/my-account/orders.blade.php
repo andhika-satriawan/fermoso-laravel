@@ -40,27 +40,43 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($transactions as $transaction)
-                                    <tr>
-                                        <td class="order_product">
-                                            <a href="#">#{{ $transaction->code }}</a>
-                                        </td>
-                                        <td class="order_date">{{ $transaction->created_at }}</td>
+                                        <tr>
+                                            <td class="order_product">
+                                                <a href="#">#{{ $transaction->code }}</a>
+                                            </td>
+                                            <td class="order_date">{{ $transaction->created_at }}</td>
 
-                                        @if ($transaction->transaction_status == 'PENDING')
-                                        <td class="order_status text-danger"><strong>{{ $transaction->transaction_status }}</strong></td>
-                                        @elseif ($transaction->transaction_status == 'PROCESS')
-                                        <td class="order_status text-warning"><strong>{{ $transaction->transaction_status }}</strong></td>
-                                        @elseif ($transaction->transaction_status == 'SUCCESS')
-                                        <td class="order_status text-success"><strong>{{ $transaction->transaction_status }}</strong></td>
-                                        @elseif ($transaction->transaction_status == 'CANCELLED')
-                                        <td class="order_status text-secondary"><strong>{{ $transaction->transaction_status }}</strong></td>
-                                        @else
-                                        <td class="order_status text-secondary"><strong>{{ $transaction->transaction_status }}</strong></td>
-                                        @endif
+                                            @if ($transaction->transaction_status == 'PENDING')
+                                                <td class="order_status text-danger">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @elseif ($transaction->transaction_status == 'DIKEMAS')
+                                                <td class="order_status text-warning">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @elseif ($transaction->transaction_status == 'DALAM PENGIRIMAN')
+                                                <td class="order_status text-warning">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @elseif ($transaction->transaction_status == 'SELESAI')
+                                                <td class="order_status text-success">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @elseif ($transaction->transaction_status == 'CANCELLED')
+                                                <td class="order_status text-secondary">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @else
+                                                <td class="order_status text-secondary">
+                                                    <strong>{{ $transaction->transaction_status }}</strong>
+                                                </td>
+                                            @endif
 
-                                        <td class="price"><span>Rp {{ number_format($transaction->total) }}</span></td>
-                                        <td><a href="{{ route('my_account.order.detail', $transaction->id) }}">View</a></td>
-                                    </tr>
+                                            <td class="price"><span>Rp
+                                                    {{ number_format($transaction->total, 0, ',', '.') }}</span></td>
+                                            <td><a href="{{ route('my_account.order.detail', $transaction->id) }}">View</a>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>

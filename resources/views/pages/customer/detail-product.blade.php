@@ -114,7 +114,7 @@
                                             <i class="fa fa-star"></i>
                                         @endfor
                                         @if (fmod($product->reviews_avg_rating, 1) != 0)
-                                        <i class="fa fa-star-half-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
                                         @endif
                                     </div>
                                     <span class="review">{{ $product->reviews_count }} Penilaian</span>
@@ -131,7 +131,7 @@
                                         <span class="old-price">Rp
                                             {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
                                         <span
-                                            class="discount">-{{ number_format((($product->details->first()->price - $product->details->first()->discount_price) / $product->details->first()->price) * 100, 0, ',', '.') }}%</span>
+                                            class="discount">-{{ number_format((($product->details->first()->price - $product->details->first()->discount_price) / $product->details->first()->price) * 100) }}%</span>
                                     @else
                                         <span class="price">Rp
                                             {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
@@ -291,25 +291,25 @@
                                 <div id="reviews" class="tab-panel">
                                     <div class="product-comments-block-tab">
                                         @foreach ($product->reviews as $review)
-                                        <div class="comment row">
-                                            <div class="col-sm-3 author">
-                                                <div class="grade">
-                                                    <span>Rating</span>
-                                                    <span class="reviewRating">
-                                                        @for ($i = 1; $i <= $review->rating; $i++)
-                                                        <i class="fa fa-star"></i>
-                                                        @endfor
-                                                    </span>
+                                            <div class="comment row">
+                                                <div class="col-sm-3 author">
+                                                    <div class="grade">
+                                                        <span>Rating</span>
+                                                        <span class="reviewRating">
+                                                            @for ($i = 1; $i <= $review->rating; $i++)
+                                                                <i class="fa fa-star"></i>
+                                                            @endfor
+                                                        </span>
+                                                    </div>
+                                                    <div class="info-author">
+                                                        <span><strong>{{ $review->customer_name }}</strong></span>
+                                                        <em>{{ $review->created_at }}</em>
+                                                    </div>
                                                 </div>
-                                                <div class="info-author">
-                                                    <span><strong>{{ $review->customer_name }}</strong></span>
-                                                    <em>{{ $review->created_at }}</em>
+                                                <div class="col-sm-9 commnet-dettail">
+                                                    {{ $review->comment }}
                                                 </div>
                                             </div>
-                                            <div class="col-sm-9 commnet-dettail">
-                                                {{ $review->comment }}
-                                            </div>
-                                        </div>
                                         @endforeach
                                     </div>
 
@@ -544,15 +544,15 @@
                             if (responseData.discount_price > 0) {
                                 $('#productPriceGroup').html('')
                                     .prepend(`
-                                        <span class="price">Rp ${responseData.discount_price.toLocaleString()}</span>
-                                        <span class="old-price">Rp ${responseData.price.toLocaleString()}</span>
+                                        <span class="price">Rp ${responseData.discount_price.toLocaleString().replace(/,/g, '.')}</span>
+                                        <span class="old-price">Rp ${responseData.price.toLocaleString().replace(/,/g, '.')}</span>
                                         <span class="discount">-${(((responseData.price-responseData.discount_price)/responseData.price)*100).toLocaleString()}%</span>
                                     `);
                                 $('#SKUSelected').text(`SKU: #${responseData.sku}`);
                             } else {
                                 $('#productPriceGroup').html('')
                                     .prepend(`
-                                        <span class="price">Rp ${responseData.price.toLocaleString()}</span>
+                                        <span class="price">Rp ${responseData.price.toLocaleString().replace(/,/g, '.')}</span>
                                     `);
                                 $('#SKUSelected').text(`SKU: #${responseData.sku}`);
                             }

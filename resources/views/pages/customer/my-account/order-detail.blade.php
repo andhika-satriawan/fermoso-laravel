@@ -66,22 +66,26 @@
                                         <td>
                                             {{ strtoupper($item->courier) }} - {{ $item->service }}
                                             @if ($item->resi)
-                                            <br>No. Resi: {{ $item->resi }}
+                                                <br>No. Resi: {{ $item->resi }}
                                             @endif
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Status Pesanan</td>
                                         @if ($item->transaction_status == 'PENDING')
-                                        <td class="text-danger"><strong>{{ $item->transaction_status }}</strong></td>
-                                        @elseif ($item->transaction_status == 'PROCESS')
-                                        <td class="text-warning"><strong>{{ $item->transaction_status }}</strong></td>
-                                        @elseif ($item->transaction_status == 'SUCCESS')
-                                        <td class="text-success"><strong>{{ $item->transaction_status }}</strong></td>
+                                            <td class="text-danger"><strong>{{ $item->transaction_status }}</strong></td>
+                                        @elseif ($item->transaction_status == 'DIKEMAS')
+                                            <td class="text-warning"><strong>{{ $item->transaction_status }}</strong></td>
+                                        @elseif ($item->transaction_status == 'DALAM PENGIRIMAN')
+                                            <td class="text-warning"><strong>{{ $item->transaction_status }}</strong></td>
+                                        @elseif ($item->transaction_status == 'SELESAI')
+                                            <td class="text-success"><strong>{{ $item->transaction_status }}</strong></td>
                                         @elseif ($item->transaction_status == 'CANCELLED')
-                                        <td class="text-secondary"><strong>{{ $item->transaction_status }}</strong></td>
+                                            <td class="text-secondary"><strong>{{ $item->transaction_status }}</strong>
+                                            </td>
                                         @else
-                                        <td class="text-secondary"><strong>{{ $item->transaction_status }}</strong></td>
+                                            <td class="text-secondary"><strong>{{ $item->transaction_status }}</strong>
+                                            </td>
                                         @endif
                                     </tr>
                                 </table>
@@ -104,55 +108,70 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($item->transaction_details as $detail)
-                                            <tr>
-                                                <td class="cart_product">
-                                                    <a href="#"><img src="{{ Storage::url($detail->product->photo) }}"
-                                                            alt="Product"></a>
-                                                </td>
-                                                <td class="cart_description">
-                                                    <p class="product-name"><a href="#">{{ $detail->product->name }}</a></p>
-                                                    <small class="cart_ref">SKU : #{{ $detail->product_detail->sku }}</small><br>
-                                                    @if ($detail->product_detail->name != "DEFAULT")
-                                                    <small><a href="#">Variant : {{ $detail->product_detail->name }}</a></small><br>
-                                                    @endif
-                                                </td>
-                                                <td class="price item-price">
-                                                    @if ($detail->product_detail->discount_price > 0 )
-                                                    <span class="price">Rp {{ number_format($detail->product_detail->discount_price) }}</span>
-                                                    <s class="old-price text-danger">Rp {{ number_format($detail->product_detail->price) }}</s>
-                                                    @else
-                                                    <span>Rp {{ number_format($detail->product_detail->price) }}</span>
-                                                    @endif
-                                                </td>
-                                                <td class="qty">
-                                                    {{ $detail->quantity }}
-                                                </td>
-                                                <td class="price">
-                                                    <span>Rp {{ number_format(($detail->product_detail->discount_price > 0 ? $detail->product_detail->discount_price : $detail->product_detail->price) * $detail->quantity) }}</span>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td class="cart_product">
+                                                        <a href="#"><img
+                                                                src="{{ Storage::url($detail->product->photo) }}"
+                                                                alt="Product"></a>
+                                                    </td>
+                                                    <td class="cart_description">
+                                                        <p class="product-name"><a
+                                                                href="#">{{ $detail->product->name }}</a></p>
+                                                        <small class="cart_ref">SKU :
+                                                            #{{ $detail->product_detail->sku }}</small><br>
+                                                        @if ($detail->product_detail->name != 'DEFAULT')
+                                                            <small><a href="#">Variant :
+                                                                    {{ $detail->product_detail->name }}</a></small><br>
+                                                        @endif
+                                                    </td>
+                                                    <td class="price item-price">
+                                                        @if ($detail->product_detail->discount_price > 0)
+                                                            <span class="price">Rp
+                                                                {{ number_format($detail->product_detail->discount_price, 0, ',', '.') }}</span>
+                                                            <s class="old-price text-danger">Rp
+                                                                {{ number_format($detail->product_detail->price, 0, ',', '.') }}</s>
+                                                        @else
+                                                            <span>Rp
+                                                                {{ number_format($detail->product_detail->price, 0, ',', '.') }}</span>
+                                                        @endif
+                                                    </td>
+                                                    <td class="qty">
+                                                        {{ $detail->quantity }}
+                                                    </td>
+                                                    <td class="price">
+                                                        <span>Rp
+                                                            {{ number_format(($detail->product_detail->discount_price > 0 ? $detail->product_detail->discount_price : $detail->product_detail->price) * $detail->quantity, 0, ',', '.') }}</span>
+                                                    </td>
+                                                </tr>
                                             @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
                                                 <td colspan="4">Subtotal</td>
-                                                <td>Rp {{ number_format($item->transaction_details_sum_original_price) }}</td>
+                                                <td>Rp
+                                                    {{ number_format($item->transaction_details_sum_original_price, 0, ',', '.') }}
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4">Discount</td>
-                                                <td>Rp {{ number_format($item->transaction_details_sum_original_price - $item->transaction_details_sum_price) }}</td>
+                                                <td>Rp
+                                                    {{ number_format($item->transaction_details_sum_original_price - $item->transaction_details_sum_price, 0, ',', '.') }}
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4">Total</td>
-                                                <td>Rp {{ number_format($item->total_price) }}</td>
+                                                <td>Rp {{ number_format($item->total_price, 0, ',', '.') }}</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="4">Pengiriman ({{ strtoupper($item->courier) }} - {{ $item->service }})</td>
-                                                <td id="shippingCost">Rp {{ number_format($item->shipping_price) }}</td>
+                                                <td colspan="4">Pengiriman ({{ strtoupper($item->courier) }} -
+                                                    {{ $item->service }})</td>
+                                                <td id="shippingCost">Rp
+                                                    {{ number_format($item->shipping_price, 0, ',', '.') }}</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4"><strong>Grand Total</strong></td>
-                                                <td><strong id="totalCost">Rp {{ number_format($item->total) }}</strong></td>
+                                                <td><strong id="totalCost">Rp
+                                                        {{ number_format($item->total, 0, ',', '.') }}</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
