@@ -7,11 +7,12 @@
                     <a href="{{ url('/') }}"><img src="{{ asset('images/logo.jpg') }}" alt="" /></a>
                     <div id="address-list">
                         <div class="tit-name">Alamat:</div>
-                        <div class="tit-contain">Example Street 68, Mahattan, New York, USA.</div>
+                        <div class="tit-contain">Indonesia</div>
                         <div class="tit-name">Telepon:</div>
-                        <div class="tit-contain">+00 123 456 789</div>
+                        <div class="tit-contain"><a href="https://wa.me/6282110101223"
+                                target="_blank">0813-1415-1617</a></div>
                         <div class="tit-name">Email:</div>
-                        <div class="tit-contain">support@business.com</div>
+                        <div class="tit-contain"><a href="mailto:idnfermoso1@gmail.com">idnfermoso1</a></div>
                     </div>
                 </div>
             </div>
@@ -22,6 +23,10 @@
                         <ul id="introduce-company" class="introduce-list">
                             <li><a href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
                             <li><a href="{{ url('/faq-product') }}">FAQ Product</a></li>
+                            <li>
+                                Hubungi kami:
+                                <img src="{{ url('images/barcode-wa.png') }}" alt="">
+                            </li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-xs-4 col-12">

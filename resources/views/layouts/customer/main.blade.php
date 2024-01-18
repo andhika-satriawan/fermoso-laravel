@@ -18,7 +18,7 @@
     <!--  Essential META Tags -->
     <meta property="og:title" content="Fermoso Medical - @yield('title')" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="customer/banner/banner.jpeg" />
+    <meta property="og:image" content="{{ url('/customer/banner/banner.jpeg') }}" />
     <meta property="og:url" content="https://fermosomedical.com/">
     <meta name="twitter:card" content="summary_large_image" />
 

@@ -6019,3 +6019,8 @@ span.notify-right {
 ul#categoryMenuList li {
   border-bottom: 1px solid #eaeaea;
 }
+
+ul#introduce-company li img {
+  height: 100px;
+  margin-top: 10px;
+}

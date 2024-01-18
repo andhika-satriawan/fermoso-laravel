@@ -2,10 +2,10 @@
     <div class="top-header">
         <div class="container">
             <div class="nav-top-links">
-                <a class="first-item" href="#">
-                    <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" />00-62-658-658
+                <a class="first-item" href="https://wa.me/6282110101223" target="_blank">
+                    <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" />0813-1415-1617
                 </a>
-                <a href="#">
+                <a href="mailto:idnfermoso1@gmail.com">
                     <img alt="email" src="{{ asset('customer/assets/images/email.png') }}" />Hubungi kami
                 </a>
             </div>
