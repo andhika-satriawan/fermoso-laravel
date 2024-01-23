@@ -75,112 +75,32 @@
 
                                     <div data-label-reasult="Range:" data-min="0" data-max="500" data-unit="$"
                                         class="slider-range-price" data-value-min="50" data-value-max="350"></div>
-                                    <div class="amount-range-price">Range: $50 - $350</div>
+                                    <div class="amount-range-price">Range: Rp100.000 - Rp1000.000</div>
                                     <ul class="check-box-list">
                                         <li>
                                             <input type="checkbox" id="p1" name="cc" />
                                             <label for="p1">
                                                 <span class="button"></span>
-                                                $20 - $50<span class="count">(0)</span>
+                                                Rp20 - Rp50<span class="count">(0)</span>
                                             </label>
                                         </li>
                                         <li>
                                             <input type="checkbox" id="p2" name="cc" />
                                             <label for="p2">
                                                 <span class="button"></span>
-                                                $50 - $100<span class="count">(0)</span>
+                                                Rp50 - Rp100<span class="count">(0)</span>
                                             </label>
                                         </li>
                                         <li>
                                             <input type="checkbox" id="p3" name="cc" />
                                             <label for="p3">
                                                 <span class="button"></span>
-                                                $100 - $250<span class="count">(0)</span>
+                                                Rp100 - Rp250<span class="count">(0)</span>
                                             </label>
                                         </li>
                                     </ul>
                                 </div>
                                 <!-- ./filter price -->
-
-                                <!-- ./filter size -->
-                                <div class="layered_subtitle">Size</div>
-                                <div class="layered-content filter-size">
-                                    <ul class="check-box-list">
-                                        <li>
-                                            <input type="checkbox" id="size1" name="cc" />
-                                            <label for="size1">
-                                                <span class="button"></span>X
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size2" name="cc" />
-                                            <label for="size2">
-                                                <span class="button"></span>XXL
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size3" name="cc" />
-                                            <label for="size3">
-                                                <span class="button"></span>XL
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size4" name="cc" />
-                                            <label for="size4">
-                                                <span class="button"></span>XXL
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size5" name="cc" />
-                                            <label for="size5">
-                                                <span class="button"></span>M
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size6" name="cc" />
-                                            <label for="size6">
-                                                <span class="button"></span>XXS
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size7" name="cc" />
-                                            <label for="size7">
-                                                <span class="button"></span>S
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size8" name="cc" />
-                                            <label for="size8">
-                                                <span class="button"></span>XS
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size9" name="cc" />
-                                            <label for="size9">
-                                                <span class="button"></span>34
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size10" name="cc" />
-                                            <label for="size10">
-                                                <span class="button"></span>36
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size11" name="cc" />
-                                            <label for="size11">
-                                                <span class="button"></span>35
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="size12" name="cc" />
-                                            <label for="size12">
-                                                <span class="button"></span>37
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- ./filter size -->
                             </div>
                             <!-- ./layered -->
 

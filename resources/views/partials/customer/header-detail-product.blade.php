@@ -752,7 +752,7 @@
     </style>
     <link rel="stylesheet" href="https://kuteshop.b-cdn.net/wp-content/cache/minify/1/5fa7e.css" media="all">
     @verbatim
-    <script type="text/template" id="tmpl-ovic-notice-popup">
+        <script type="text/template" id="tmpl-ovic-notice-popup">
         <# if ( data.img_url != '' ) { #>
         <figure>
             <img src="{{data.img_url}}" alt="{{data.title}}" class="growl-thumb" />
@@ -765,7 +765,7 @@
             {{{data.content}}}
         </p>
     </script>
-    <script type="text/template" id="tmpl-variation-template">
+        <script type="text/template" id="tmpl-variation-template">
         <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
         <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
         <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
@@ -857,8 +857,10 @@
     <meta name="generator" content="WooCommerce 8.3.1">
     <link rel=canonical href=https://kuteshop.kutethemes.net/product/ring-platinum-plated />
     <link rel=shortlink href='https://kuteshop.kutethemes.net/?p=2325'>
-    <link rel=alternate type=application/json+oembed href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fproduct%2Fring-platinum-plated%2F">
-    <link rel=alternate type=text/xml+oembed href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fproduct%2Fring-platinum-plated%2F&#038;format=xml">
+    <link rel=alternate type=application/json+oembed
+        href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fproduct%2Fring-platinum-plated%2F">
+    <link rel=alternate type=text/xml+oembed
+        href="https://kuteshop.kutethemes.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkuteshop.kutethemes.net%2Fproduct%2Fring-platinum-plated%2F&#038;format=xml">
     <style>
         .dgwt-wcas-ico-magnifier,
         .dgwt-wcas-ico-magnifier-handler {
@@ -875,14 +877,16 @@
             }
         </style>
     </noscript>
-    <meta name="generator" content="Elementor 3.17.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+    <meta name="generator"
+        content="Elementor 3.17.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
     <link rel=preconnect href=https://fonts.googleapis.com>
     <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel=icon href=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/cropped-favicon-32x32.png sizes=32x32>
     <link rel=icon href=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/cropped-favicon-192x192.png sizes=192x192>
     <link rel=apple-touch-icon href=https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/cropped-favicon-180x180.png>
-    <meta name="msapplication-TileImage" content="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/cropped-favicon-270x270.png">
+    <meta name="msapplication-TileImage"
+        content="https://kuteshop.b-cdn.net/wp-content/uploads/2022/05/cropped-favicon-270x270.png">
     <style>
         .ovic-menu-clone-wrap .head-menu-mobile {
             background-position: center center;
@@ -893,7 +897,8 @@
     </style>
 </head>
 
-<body data-rsssl=1 class="product-template-default single single-product postid-2325 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
+<body data-rsssl=1
+    class="product-template-default single single-product postid-2325 wp-embed-responsive theme-kuteshop woocommerce woocommerce-page woocommerce-no-js rtwpvs rtwpvs-rounded rtwpvs-attribute-behavior-blur rtwpvs-archive-align-left rtwpvs-tooltip  kuteshop-4.1.8 header-style-01 has-header-sticky elementor-default elementor-kit-12">
     <a href="#" class=overlay-body aria-hidden="true"></a>
     <div id="page" class="site">
         <div class="header-banner">
@@ -902,25 +907,35 @@
                 <div data-elementor-type="wp-page" data-elementor-id="434" class="elementor elementor-434">
                     <div class="elementor-inner">
                         <div class="elementor-section-wrap">
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-ad6d115 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle none" data-id="ad6d115" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                            <section
+                                class="elementor-section elementor-top-section elementor-element elementor-element-ad6d115 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle none"
+                                data-id="ad6d115" data-element_type="section"
+                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
                                 <div class="elementor-container elementor-column-gap-no">
                                     <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-468e945 none" data-id="468e945" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-468e945 none"
+                                            data-id="468e945" data-element_type="column">
                                             <div class="elementor-column-wrap elementor-element-populated">
                                                 <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-bd70b2e main-color none elementor-widget elementor-widget-heading" data-id="bd70b2e" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-element elementor-element-bd70b2e main-color none elementor-widget elementor-widget-heading"
+                                                        data-id="bd70b2e" data-element_type="widget"
+                                                        data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
                                                             <h2 class="elementor-heading-title elementor-size-default">
                                                                 Special Offer!</h2>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-6fb1e63 none elementor-widget elementor-widget-heading" data-id="6fb1e63" data-element_type="widget" data-widget_type=heading.default>
+                                                    <div class="elementor-element elementor-element-6fb1e63 none elementor-widget elementor-widget-heading"
+                                                        data-id="6fb1e63" data-element_type="widget"
+                                                        data-widget_type=heading.default>
                                                         <div class=elementor-widget-container>
                                                             <h3 class="elementor-heading-title elementor-size-default">
                                                                 Rewarding all customers with a 15% discount.</h3>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-e71af1d none elementor-widget elementor-widget-heading" data-id=e71af1d data-element_type=widget data-widget_type=heading.default>
+                                                    <div class="elementor-element elementor-element-e71af1d none elementor-widget elementor-widget-heading"
+                                                        data-id=e71af1d data-element_type=widget
+                                                        data-widget_type=heading.default>
                                                         <div class=elementor-widget-container>
                                                             <p class="elementor-heading-title elementor-size-default">
                                                                 This offer is available from 9th December to 19th
@@ -945,35 +960,63 @@
                         <div class=header-start>
                             <div class="ovic-menu-wapper horizontal">
                                 <ul id=menu-01-submenu-1 class="ovic-menu header-submenu header_submenu ovic-menu">
-                                    <li id=menu-item-338 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338 menu-item-icon-font">
-                                        <a href="tel:00-62-658-658?demo=21" data-megamenu=240><span class=text><span class="icon icon-font fa fa-phone"></span>00-62-658-658</span></a>
+                                    <li id=menu-item-338
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338 menu-item-icon-font">
+                                        <a href="tel:00-62-658-658?demo=21" data-megamenu=240><span class=text><span
+                                                    class="icon icon-font fa fa-phone"></span>00-62-658-658</span></a>
                                     </li>
-                                    <li id=menu-item-337 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-337 menu-item-icon-font">
-                                        <a href="mailto:example@gmail.com?demo=21" data-megamenu=240><span class=text><span class="icon icon-font fa fa-envelope"></span>Contact us
+                                    <li id=menu-item-337
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-337 menu-item-icon-font">
+                                        <a href="mailto:example@gmail.com?demo=21" data-megamenu=240><span
+                                                class=text><span class="icon icon-font fa fa-envelope"></span>Contact
+                                                us
                                                 today!</span></a>
                                     </li>
-                                    <li id=menu-item-343 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-343">
+                                    <li id=menu-item-343
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-343">
                                         <a class=disable-link data-megamenu=0><span class=text>USD</span></a>
                                         <ul class=sub-menu>
-                                            <li id=menu-item-344 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344">
+                                            <li id=menu-item-344
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344">
                                                 <a class=disable-link data-megamenu=0><span class=text>EUR</span></a>
                                             </li>
-                                            <li id=menu-item-345 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345">
+                                            <li id=menu-item-345
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345">
                                                 <a class=disable-link data-megamenu=0><span class=text>GBP</span></a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li id=menu-item-339 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-339 menu-item-icon-image">
-                                        <a class=disable-link data-megamenu=240><span class=text><span class="icon icon-img"><img width=18 height=12 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/18_en.png class="icon-image wp-post-image" alt decoding=async></span>English</span></a>
+                                    <li id=menu-item-339
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-339 menu-item-icon-image">
+                                        <a class=disable-link data-megamenu=240><span class=text><span
+                                                    class="icon icon-img"><img width=18 height=12
+                                                        src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/18_en.png
+                                                        class="icon-image wp-post-image" alt
+                                                        decoding=async></span>English</span></a>
                                         <ul class=sub-menu>
-                                            <li id=menu-item-340 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340 menu-item-icon-image">
-                                                <a class=disable-link data-megamenu=0><span class=text><span class="icon icon-img"><img width=16 height=11 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_de.png class="icon-image wp-post-image" alt decoding=async></span>Deutsch</span></a>
+                                            <li id=menu-item-340
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340 menu-item-icon-image">
+                                                <a class=disable-link data-megamenu=0><span class=text><span
+                                                            class="icon icon-img"><img width=16 height=11
+                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_de.png
+                                                                class="icon-image wp-post-image" alt
+                                                                decoding=async></span>Deutsch</span></a>
                                             </li>
-                                            <li id=menu-item-341 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341 menu-item-icon-image">
-                                                <a class=disable-link data-megamenu=0><span class=text><span class="icon icon-img"><img width=16 height=11 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_fr.png class="icon-image wp-post-image" alt decoding=async></span>Français</span></a>
+                                            <li id=menu-item-341
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341 menu-item-icon-image">
+                                                <a class=disable-link data-megamenu=0><span class=text><span
+                                                            class="icon icon-img"><img width=16 height=11
+                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_fr.png
+                                                                class="icon-image wp-post-image" alt
+                                                                decoding=async></span>Français</span></a>
                                             </li>
-                                            <li id=menu-item-342 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342 menu-item-icon-image">
-                                                <a class=disable-link data-megamenu=0><span class=text><span class="icon icon-img"><img width=16 height=11 src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_es.png class="icon-image wp-post-image" alt decoding=async></span>Espanol</span></a>
+                                            <li id=menu-item-342
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342 menu-item-icon-image">
+                                                <a class=disable-link data-megamenu=0><span class=text><span
+                                                            class="icon icon-img"><img width=16 height=11
+                                                                src=https://kuteshop.b-cdn.net/wp-content/uploads/2021/07/16_es.png
+                                                                class="icon-image wp-post-image" alt
+                                                                decoding=async></span>Espanol</span></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -982,15 +1025,22 @@
                         </div>
                         <div class="header-end">
                             <div class="ovic-menu-wapper horizontal">
-                                <ul id="menu-01-submenu-2" class="ovic-menu header-submenu header_submenu_2 ovic-menu">
-                                    <li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
-                                        <a href="<?= url('/my-account/register') ?>" data-megamenu="0"><span class="text">Register</span></a>
+                                <ul id="menu-01-submenu-2"
+                                    class="ovic-menu header-submenu header_submenu_2 ovic-menu">
+                                    <li id="menu-item-355"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
+                                        <a href="<?= url('/my-account/register') ?>" data-megamenu="0"><span
+                                                class="text">Register</span></a>
                                     </li>
-                                    <li id="menu-item-356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356">
-                                        <a href="<?= url('/my-account/login') ?>" class=disable-link data-megamenu="0"><span class="text">Login</span></a>
+                                    <li id="menu-item-356"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356">
+                                        <a href="<?= url('/my-account/login') ?>" class=disable-link
+                                            data-megamenu="0"><span class="text">Login</span></a>
                                     </li>
-                                    <li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357">
-                                        <a href="#" class="disable-link" data-megamenu="0"><span class="text">Support</span></a>
+                                    <li id="menu-item-357"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357">
+                                        <a href="#" class="disable-link" data-megamenu="0"><span
+                                                class="text">Support</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -1009,15 +1059,18 @@
                             </a>
                         </div>
                         <div class="block-search">
-                            <div class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
-                                <form class="search-form dgwt-wcas-search-form" role="search" method="get" action="#">
+                            <div
+                                class="dgwt-wcas-search-wrapp dgwt-wcas-has-submit js-dgwt-wcas-mobile-overlay-enabled">
+                                <form class="search-form dgwt-wcas-search-form" role="search" method="get"
+                                    action="#">
                                     <div class="category">
-                                        <select name="product_cat" id="163109786" class="category-search-option" tabindex="1">
+                                        <select name="product_cat" id="163109786" class="category-search-option"
+                                            tabindex="1">
                                             <option value="0">All Categories</option>
                                             @foreach ($product_subcategories as $product_subcategory)
-                                            <option class="level-0" value="{{ $product_subcategory->name }}">
-                                                {{ $product_subcategory->name }}
-                                            </option>
+                                                <option class="level-0" value="{{ $product_subcategory->name }}">
+                                                    {{ $product_subcategory->name }}
+                                                </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -1026,7 +1079,10 @@
                                         <input type="hidden" name="dgwt_wcas" value="1">
                                         <input type="hidden" name="post_type" value="product">
                                         <div class="search-input">
-                                            <input id="dgwt-wcas-search-input-1d63" type="search" class="input-text dgwt-wcas-search-input" name="s" value="" placeholder="Search for products..." autocomplete="off" data-custom-params>
+                                            <input id="dgwt-wcas-search-input-1d63" type="search"
+                                                class="input-text dgwt-wcas-search-input" name="s"
+                                                value="" placeholder="Search for products..."
+                                                autocomplete="off" data-custom-params>
                                             <span class="input-focus"></span>
                                             <div class="dgwt-wcas-preloader"></div>
                                         </div>
@@ -1039,17 +1095,19 @@
                         <div class=header-control>
                             <div class=inner-control>
                                 <div class="block-minicart kuteshop-dropdown main-bora-2">
-                                    <a class="woo-cart-link icon-link" href=https://kuteshop.kutethemes.net/cart/ data-kuteshop=kuteshop-dropdown>
+                                    <a class="woo-cart-link icon-link" href=https://kuteshop.kutethemes.net/cart/
+                                        data-kuteshop=kuteshop-dropdown>
                                         <span class="icon main-icon-cart1">
                                             <span class=count>0</span>
                                         </span>
                                         <span class=content>
                                             <span class=text>
-                                                Shopping Cart </span>
+                                                Keranjang Saya </span>
                                             <span class=item>
                                                 <span class=count>0</span>
                                                 items - </span>
-                                            <span class=total><span class="woocommerce-Price-amount amount"><bdi><span class=woocommerce-Price-currencySymbol>&#36;</span>0.00</bdi></span></span>
+                                            <span class=total><span class="woocommerce-Price-amount amount"><bdi><span
+                                                            class=woocommerce-Price-currencySymbol>&#36;</span>0.00</bdi></span></span>
                                         </span>
                                     </a>
                                     <div class="widget woocommerce widget_shopping_cart">
@@ -1068,21 +1126,27 @@
                         <div class=header-vertical>
                             <div class="box-nav-vertical kuteshop-dropdown">
                                 <a href=# data-kuteshop=kuteshop-dropdown class=block-title>
-                                    <span class="icon ovic-icon-menu"><span class=inner><span></span><span></span><span></span></span></span>
+                                    <span class="icon ovic-icon-menu"><span
+                                            class=inner><span></span><span></span><span></span></span></span>
                                     <span class=text>Categories</span>
                                 </a>
                                 <div class="block-content sub-menu">
                                     <div class="ovic-menu-wapper vertical support-mobile-menu">
-                                        <ul id="menu-01-vertical-menu" class="kuteshop-nav vertical-menu ovic-menu ovic-clone-mobile-menu">
+                                        <ul id="menu-01-vertical-menu"
+                                            class="kuteshop-nav vertical-menu ovic-menu ovic-clone-mobile-menu">
                                             @foreach ($product_subcategories as $product_subcategory)
-                                            <li id="menu-item-{{ $product_subcategory->id }}" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-{{ $product_subcategory->id }} menu-item-icon-image">
-                                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}" data-megamenu="{{ $product_subcategory->id }}">
-                                                    <span class="icon icon-img">
-                                                        <img width="16" height="16" src="{{ asset('icons/01-menu-1.png') }}" class="icon-image wp-post-image" alt decoding="async">
-                                                    </span>
-                                                    {{ $product_subcategory->name }}
-                                                </a>
-                                            </li>
+                                                <li id="menu-item-{{ $product_subcategory->id }}"
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-{{ $product_subcategory->id }} menu-item-icon-image">
+                                                    <a href="{{ url('product/category/' . $product_subcategory->slug) }}"
+                                                        data-megamenu="{{ $product_subcategory->id }}">
+                                                        <span class="icon icon-img">
+                                                            <img width="16" height="16"
+                                                                src="{{ asset('icons/01-menu-1.png') }}"
+                                                                class="icon-image wp-post-image" alt decoding="async">
+                                                        </span>
+                                                        {{ $product_subcategory->name }}
+                                                    </a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -1092,35 +1156,44 @@
                         <div class="box-header-nav megamenu-wrap">
                             <div class="ovic-menu-wapper horizontal">
                                 <ul id="menu-primary-menu" class="kuteshop-nav main-menu horizontal-menu ovic-menu">
-                                    <li id="menu-item-121" class="menu-item {{ $page === 'home' ? 'current_page_item' : '' }} menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-21 menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                                    <li id="menu-item-121"
+                                        class="menu-item {{ $page === 'home' ? 'current_page_item' : '' }} menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-21 menu-item-121 menu-item-has-mega-menu menu-item-has-children item-megamenu">
                                         <a href="<?= url('/') ?>" aria-current="page" data-megamenu="464">Home</a>
                                     </li>
-                                    <li id="menu-item-191" class="menu-item {{ $page === 'products' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                                    <li id="menu-item-191"
+                                        class="menu-item {{ $page === 'products' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-191 menu-item-has-mega-menu menu-item-has-children item-megamenu">
                                         <a href="<?= url('/products') ?>" data-megamenu=240>Products</a>
                                     </li>
-                                    <li id="menu-item-192" class="menu-item {{ $page === 'cara-belanja' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
+                                    <li id="menu-item-192"
+                                        class="menu-item {{ $page === 'cara-belanja' ? 'current_page_item' : '' }} menu-item-type-custom menu-item-object-custom menu-item-192 menu-item-has-mega-menu menu-item-has-children item-megamenu">
                                         <a href="<?= url('/cara-belanja') ?>" data-megamenu="239">Cara Belanja</a>
                                     </li>
-                                    <li id="menu-item-193" class="menu-item {{ $page === 'faq-product' || $page === 'faq-toko-kami' ? 'current_page_item' : '' }}
+                                    <li id="menu-item-193"
+                                        class="menu-item {{ $page === 'faq-product' || $page === 'faq-toko-kami' ? 'current_page_item' : '' }}
                                         menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193">
                                         <a class="disable-link" data-megamenu="0">FAQ</a>
                                         <ul class=sub-menu>
-                                            <li id=menu-item-324 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324">
+                                            <li id=menu-item-324
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324">
                                                 <a href="<?= url('/faq-product') ?>" data-megamenu="0">FAQ Product</a>
                                             </li>
-                                            <li id=menu-item-325 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-325">
-                                                <a href="<?= url('/faq-toko-kami') ?>" data-megamenu="0">FAQ Toko Kami</a>
+                                            <li id=menu-item-325
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-325">
+                                                <a href="<?= url('/faq-toko-kami') ?>" data-megamenu="0">FAQ Toko
+                                                    Kami</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-194" class="item-end {{ $page === 'blog' ? 'current_page_item' : '' }} menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
+                                    <li id="menu-item-194"
+                                        class="item-end {{ $page === 'blog' ? 'current_page_item' : '' }} menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
                                         <a href="<?= url('/blog') ?>" data-megamenu="0">Blog</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mobile-block block-menu-bar">
                                 <a href=javascript:void(0) class="menu-bar menu-toggle">
-                                    <span class="icon ovic-icon-menu"><span class=inner><span></span><span></span><span></span></span></span>
+                                    <span class="icon ovic-icon-menu"><span
+                                            class=inner><span></span><span></span><span></span></span></span>
                                     <span class=text>Main Menu</span>
                                 </a>
                             </div>

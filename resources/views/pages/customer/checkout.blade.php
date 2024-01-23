@@ -32,9 +32,9 @@
         }
 
         /* .address-item input:checked+label {
-                                                            font-weight: bold;
-                                                            color: #333;
-                                                        } */
+                                                                            font-weight: bold;
+                                                                            color: #333;
+                                                                        } */
 
         div.address-item.selected {
             background: #ff3366;
@@ -64,6 +64,20 @@
 
         .address-item a {
             color: #ff3366;
+        }
+
+        /* table */
+        table.cart_summary tbody tr td {
+            text-align: center;
+        }
+
+        table.cart_summary tbody tr td span {
+            display: block;
+            text-align: center;
+        }
+
+        table.cart_summary th {
+            text-align: center;
         }
     </style>
 @endpush
@@ -147,7 +161,7 @@
                             </li>
                         </ul>
                         <br />
-                        <em>Untuk jasa pengiriman Gojek dan Grab silahkan konsultasikan kepada Admin</em>
+                        {{-- <em>Untuk jasa pengiriman Gojek dan Grab silahkan konsultasikan kepada Admin</em> --}}
                     </div>
                     <h3 class="checkout-sep">3. Ongkos Pengiriman</h3>
                     <div class="box-border">
@@ -187,7 +201,7 @@
                                             @endif
                                         </td>
                                         <td class="cart_avail">
-                                            @if ($cart->product_detail->stock > 5)
+                                            {{-- @if ($cart->product_detail->stock > 5)
                                                 <span class="label label-success">In stock:
                                                     {{ $cart->product_detail->stock }}</span>
                                             @elseif ($cart->product_detail->stock > 0)
@@ -195,7 +209,8 @@
                                                     {{ $cart->product_detail->stock }}</span>
                                             @else
                                                 <span class="label label-danger">Out of stock</span>
-                                            @endif
+                                            @endif --}}
+                                            <span class="green"><strong>Tersedia</strong></span>
                                         </td>
                                         <td class="price item-price">
                                             @if ($cart->product_detail->discount_price > 0)

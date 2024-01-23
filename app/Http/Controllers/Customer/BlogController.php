@@ -19,8 +19,8 @@ class BlogController extends Controller
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
         $articles = Article::with(['tags', 'categories'])
             ->orderBy('created_at', 'desc')
-            ->limit(6)
-            ->get();
+            // ->limit(6)
+            ->paginate(6);
 
         return view('pages.customer.blog', [
             "product_subcategories" => $product_subcategories,

@@ -48,7 +48,7 @@ class ProductController extends Controller
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('slug', 'ASC')->get();
         $current_subcategory = ProductSubcategory::where('slug', $slug)->firstOrFail();
-        $products = Product::where('product_subcategory_id', $current_subcategory->id)->get();
+        $products = Product::where('product_subcategory_id', $current_subcategory->id)->paginate(12);
 
         foreach ($product_subcategories as $product_subcategory) {
             $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
@@ -68,10 +68,10 @@ class ProductController extends Controller
     public function show($slug)
     {
         $product = Product::where("slug", $slug)->with(['details', 'product_subcategory', 'images', 'reviews'])
-                    ->withCount('reviews')
-                    ->withSum('transactions', 'quantity')
-                    ->withAvg('reviews', 'rating')
-                    ->firstOrFail();
+            ->withCount('reviews')
+            ->withSum('transactions', 'quantity')
+            ->withAvg('reviews', 'rating')
+            ->firstOrFail();
         $related_products = Product::whereHas('product_subcategory', function ($query) use ($product) {
             $query->where('name', $product->product_subcategory->name);
         })->where('id', '<>', $product->id)->get();
@@ -93,7 +93,7 @@ class ProductController extends Controller
     public function subcategory_api()
     {
         $product_subcategories = ProductSubcategory::with(['category'])->orderBy('slug', 'ASC')->get();
-        
+
         return response()->json([
             'success'   => true,
             'message'   => "List of all product subcategories",

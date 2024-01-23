@@ -16,7 +16,7 @@
             <!-- ./breadcrumb -->
             <!-- page heading-->
             <h2 class="page-heading no-line">
-                <span class="page-heading-title2">Shopping Cart Summary</span>
+                <span class="page-heading-title2">RINGKASAN KERANJANG BELANJA</span>
             </h2>
             <!-- ../page heading-->
             <div class="page-content page-order">
@@ -27,8 +27,8 @@
                     <li><span>04. Shipping</span></li>
                     <li><span>05. Payment</span></li>
                 </ul> --}}
-                <div class="heading-counter warning">Your shopping cart contains:
-                    <span>{{ count($carts) }} Products</span>
+                <div class="heading-counter warning">Keranjang belanja Anda berisi:
+                    <span>{{ count($carts) }} Produk</span>
                 </div>
                 <div class="order-detail-content">
                     <table class="table table-bordered table-responsive cart_summary">
@@ -59,7 +59,7 @@
                                         @endif
                                     </td>
                                     <td class="cart_avail">
-                                        @if ($cart->product_detail->stock > 5)
+                                        {{-- @if ($cart->product_detail->stock > 5)
                                             <span class="label label-success">In stock:
                                                 {{ $cart->product_detail->stock }}</span>
                                         @elseif ($cart->product_detail->stock > 0)
@@ -67,7 +67,8 @@
                                                 {{ $cart->product_detail->stock }}</span>
                                         @else
                                             <span class="label label-danger">Out of stock</span>
-                                        @endif
+                                        @endif --}}
+                                        <span class="green"><strong>Tersedia</strong></span>
                                     </td>
                                     <td class="price item-price">
                                         @if ($cart->product_detail->discount_price > 0)
@@ -108,7 +109,7 @@
                         <tfoot>
                             <tr>
                                 <td colspan="2" rowspan="2"></td>
-                                <td colspan="3">Total products (tax incl.)</td>
+                                <td colspan="3">Total produk (termasuk pajak)</td>
                                 <td colspan="2">Rp {{ number_format($total_carts, 0, ',', '.') }}</td>
                             </tr>
                             <tr>

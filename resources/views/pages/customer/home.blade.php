@@ -139,7 +139,7 @@
                             <ul id="contenhomeslider">
                                 @foreach ($sliders as $slider)
                                     <li class="item-{{ $slider->id }}"
-                                        style="background-image: url({{ Storage::url($slider->image) }}); height: 453px;">
+                                        style="background-image: url({{ Storage::url($slider->image) }}); height: 450px;">
                                         <div class="description">
                                             <span class="title">{{ $slider->title }} </span>
                                             {!! $slider->description !!}

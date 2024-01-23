@@ -44,6 +44,46 @@
             margin-top: 15px;
             margin-bottom: 15px;
         }
+
+        /* product related */
+        .product-list li .product-name {
+            float: left;
+        }
+
+        .product-list li .product-price {
+            font-size: 12px;
+        }
+
+        .product-container .right-block a {
+            font-size: 12px;
+        }
+
+        .product-list li .product-star {
+            font-size: 8px;
+        }
+
+        .product-list li .right-block {
+            height: 45px;
+        }
+
+        .product-list li .left-block {
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .product-list li .content_price {
+            padding-left: 4px;
+        }
+
+        .product-list li .old-price {
+            margin-left: 4px;
+            line-height: 14px;
+            font-size: 8px;
+        }
+
+        .product-list li .product-star {
+            padding-right: 0;
+        }
     </style>
 @endpush
 
@@ -139,7 +179,7 @@
                                 </div>
                                 <div class="info-orther">
                                     <p id="SKUSelected">SKU: #{{ $product->details[0]->sku }}</p>
-                                    <p id="StockSelected">
+                                    {{-- <p id="StockSelected">
                                         @if ($product->details->first()->stock > 5)
                                             Availability: <span
                                                 class="in-stock">{{ $product->details->first()->stock }}</span>
@@ -149,8 +189,9 @@
                                         @else
                                             <span class="text-danger">Out of stock</span>
                                         @endif
-                                    </p>
-                                    <p>Condition: New</p>
+                                    </p> --}}
+                                    <p>Stok : <span class="green"><strong>Tersedia</strong></span></p>
+                                    <p>Kondisi: Baru</p>
                                 </div>
                                 <div class="product-desc">
                                     {!! $product->description !!}
@@ -352,7 +393,7 @@
                             <ul class="product-list owl-carousel first-list" data-dots="false" data-loop="true"
                                 data-nav ="true" data-margin ="30" data-autoplayTimeout="1000"
                                 data-autoplayHoverPause ="true" data-slideBy="page"
-                                data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":6}}'>
+                                data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":6}}'>
                                 @foreach ($related_products->take(6) as $related_product)
                                     <li>
                                         <div class="product-container">
@@ -403,7 +444,7 @@
                             <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav ="true"
                                 data-margin ="30" data-autoplayTimeout="1000" data-autoplayHoverPause ="true"
                                 data-slideBy="page"
-                                data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":6}}'>
+                                data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":6}}'>
                                 @foreach ($related_products->slice(6) as $related_product)
                                     <li>
                                         <div class="product-container">

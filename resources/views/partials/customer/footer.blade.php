@@ -23,10 +23,8 @@
                         <ul id="introduce-company" class="introduce-list">
                             <li><a href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
                             <li><a href="{{ url('/faq-product') }}">FAQ Product</a></li>
-                            <li>
-                                Hubungi kami:
-                                <img src="{{ url('images/barcode-wa.png') }}" alt="">
-                            </li>
+                            <li>Hubungi kami:</li>
+                            <li><img src="{{ url('images/barcode-wa.png') }}" alt=""></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-xs-4 col-12">

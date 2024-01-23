@@ -951,7 +951,7 @@ img.alignright {
   float: left;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 2px;
+  margin-top: 8px;
 }
 
 .main-header .shopping-cart-box a.cart-link:after {
@@ -6022,5 +6022,21 @@ ul#categoryMenuList li {
 
 ul#introduce-company li img {
   height: 100px;
-  margin-top: 10px;
+}
+
+ul#contenhomeslider li {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+}
+
+.green {
+  color: green;
+}
+
+@media (max-width: 767px) {
+  .main-header .header-search-box .form-inline .input-serach input {
+    padding-top: 0;
+  }
 }

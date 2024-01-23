@@ -39,7 +39,7 @@
                             `${responseData.length} item${responseData.length > 0 ? `s` : ''}`)
                         $('#cart-block span.notify').text(`${responseData.length}`)
 
-                        $('#cart-block h5.cart-title').text(`${responseData.length} Items in my cart`);
+                        $('#cart-block h5.cart-title').text(`${responseData.length} Item di Keranjang Saya`);
 
                         const cartBlockList = responseData.map((e) => {
                             return `
@@ -69,7 +69,7 @@
                         $('#cart-block .cart-block').hide();
                         $('#cart-block span.total').text(`0 items`)
                         $('#cart-block span.notify').text(`0`)
-                        $('#cart-block h5.cart-title').text(`0 Items in my cart`);
+                        $('#cart-block h5.cart-title').text(`0 Item di keranjang saya`);
                     }
 
 

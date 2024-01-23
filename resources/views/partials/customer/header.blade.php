@@ -40,20 +40,20 @@
                         </select>
                     </div> --}}
                     <div class="form-group input-serach">
-                        <input type="text" placeholder="Keyword here...">
+                        <input type="text" placeholder="Cari Product atau Merk">
                     </div>
                     <button type="submit" class="pull-right btn-search"></button>
                 </form>
             </div>
             <div id="cart-block" class="col-xs-6 col-sm-2 shopping-cart-box">
                 <a class="cart-link" href="{{ route('cart') }}">
-                    <span class="title">Shopping cart</span>
-                    <span class="total">0 items</span>
+                    <span class="title">Keranjang Saya</span>
+                    {{-- <span class="total">0 items</span> --}}
                     <span class="notify notify-left">0</span>
                 </a>
                 <div class="cart-block" style="">
                     <div class="cart-block-content">
-                        <h5 class="cart-title">0 Items in my cart</h5>
+                        <h5 class="cart-title">0 Item di Keranjang Saya</h5>
                         <div class="cart-block-list">
                             <ul>
                             </ul>
