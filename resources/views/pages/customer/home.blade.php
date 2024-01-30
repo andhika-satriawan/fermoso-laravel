@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                content: "";
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                background: inherit;
-                z-index: -1;
-                filter: blur(10px);
-            }
+                    content: "";
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background: inherit;
+                    z-index: -1;
+                    filter: blur(10px);
+                }
 
-            html {
-                background-image: url(/customer/assets/images/watermark.png);
-                background-size: 80%;
-                background-repeat: no-repeat;
-                background-position: center;
-            } */
+                html {
+                    background-image: url(/customer/assets/images/watermark.png);
+                    background-size: 80%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                } */
     </style>
 @endpush
 
@@ -310,7 +310,6 @@
                                     data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
                                     @foreach ($latest_products as $latest_product)
                                         <li>
-                                            <div class="count-down-time" data-countdown="2024/01/30"></div>
                                             <div class="left-block">
                                                 <a href="{{ url('product/' . $latest_product->slug) }}">
                                                     <img class="img-responsive" alt="product"
