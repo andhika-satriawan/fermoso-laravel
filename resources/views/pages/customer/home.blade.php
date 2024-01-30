@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                    content: "";
-                    position: fixed;
-                    width: 100%;
-                    height: 100%;
-                    background: inherit;
-                    z-index: -1;
-                    filter: blur(10px);
-                }
+                            content: "";
+                            position: fixed;
+                            width: 100%;
+                            height: 100%;
+                            background: inherit;
+                            z-index: -1;
+                            filter: blur(10px);
+                        }
 
-                html {
-                    background-image: url(/customer/assets/images/watermark.png);
-                    background-size: 80%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                } */
+                        html {
+                            background-image: url(/customer/assets/images/watermark.png);
+                            background-size: 80%;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        } */
     </style>
 @endpush
 
@@ -481,9 +481,9 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse"></div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
-                        <div id="elevator-1" class="floor-elevator">
+                        <div id="elevator-{{ $key + 1 }}" class="floor-elevator">
                             <a href="#" class="btn-elevator up disabled fa fa-angle-up"></a>
-                            <a href="#elevator-2" class="btn-elevator down fa fa-angle-down"></a>
+                            <a href="#elevator-{{ $key + 2 }}" class="btn-elevator down fa fa-angle-down"></a>
                         </div>
                     </nav>
                     <div class="category-banner">
