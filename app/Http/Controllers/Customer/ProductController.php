@@ -24,7 +24,7 @@ class ProductController extends Controller
         return view('pages.customer.products', [
             "page" => "category-page",
             "product_subcategories" => $product_subcategories,
-            "products" => $products,
+            "products" => $products
         ]);
     }
 

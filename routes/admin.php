@@ -25,6 +25,17 @@ Route::prefix('monyet')
                 });
 
             Route::resource('service', App\Http\Controllers\Admin\ServiceController::class);
+
+            Route::prefix('setting')
+                ->name('setting.')
+                ->group(function () {
+                    Route::resource('deal', App\Http\Controllers\Admin\SettingController::class);
+                    // Route::delete('variant-delete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'variant_destroy'])->name('variant.delete');
+                    // Route::delete('image-delete/{id}', [App\Http\Controllers\Admin\ProductController::class, 'image_destroy'])->name('image.delete');
+                    // Route::resource('category', App\Http\Controllers\Admin\ProductCategoryController::class);
+                    // Route::resource('subcategory', App\Http\Controllers\Admin\ProductSubcategoryController::class);
+                });
+
             Route::resource('review', App\Http\Controllers\Admin\ReviewDummyController::class);
             Route::resource('slider', App\Http\Controllers\Admin\SliderController::class);
 
@@ -48,6 +59,10 @@ Route::prefix('monyet')
             ]);
             Route::post('update-sales-status/{id}', [App\Http\Controllers\Admin\SalesController::class, 'update_status'])->name('sales.update_status');
             Route::post('update-sales-resi/{id}', [App\Http\Controllers\Admin\SalesController::class, 'update_resi'])->name('sales.update_resi');
+
+
+            // Route::get('setting', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.setting.index');
+            // Route::post('setting', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin.setting.update');
 
             // Route::get('sales', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('sales');
             Route::post('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');

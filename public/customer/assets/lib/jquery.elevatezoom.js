@@ -316,7 +316,11 @@ if ( typeof Object.create !== 'function' ) {
 						self.$elem.trigger('click');
 					});
 				}              
-				self.zoomWindowContainer = $('<div/>').addClass('zoomWindowContainer').css("width",self.options.zoomWindowWidth);
+				// self.zoomWindowContainer = $('<div/>').addClass('zoomWindowContainer').css("width",self.options.zoomWindowWidth);
+				self.zoomWindowContainer = $('<div/>').addClass('zoomWindowContainer').css({
+					"width": self.options.zoomWindowWidth,
+					"display": "none"
+				});
 				self.zoomWindow.wrap(self.zoomWindowContainer);
 
 

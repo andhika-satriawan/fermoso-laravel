@@ -113,7 +113,7 @@ class TransactionController extends Controller
             $deleted = Cart::where('customer_id', Auth::id())
                 ->delete();
 
-            $text_chat = 'https://wa.me/6282110101223?text=Halo%20Admin,%20saya%20memiliki%20pesanan%20';
+            $text_chat = 'https://wa.me/6281381970719?text=Halo%20Admin,%20saya%20memiliki%20pesanan%20no:%20';
 
             foreach ($carts as $cart) {
                 if ($cart->product_detail->discount_price > 0) :
@@ -122,10 +122,12 @@ class TransactionController extends Controller
                     $price = number_format($cart->product_detail->price, 0, ',', '.');
                 endif;
 
-                $text_chat .=  $cart->product->name . ' (Rp ' . $price . ' x ' . $cart->quantity . ') = Rp ' . number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') . ' ';
+                // $text_chat .=  $uniqueNumber . ' dengan rincian: Produk ' . $cart->product->name . $cart->quantity . 'pcs x ' . ' Rp ' . number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price), 0, ',', '.') .  number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') . ' ';
+
+                $text_chat .=  $uniqueNumber . ' dengan rincian: Produk ' . $cart->product->name . $cart->quantity . 'pcs x ' . ' Rp ' . $price . ' ';
             }
 
-            $text_chat .= '%20dengan%20total%20harga%20yang%20harus%20dibayar%20=%20Rp%20' . number_format($total_carts, 0, ',', '.') . '.%20Mohon%20diproses.';
+            $text_chat .= '%20Total%20Produk%20=%20Rp%20' . number_format($total_carts, 0, ',', '.') . '.%20Mohon%20diproses.';
 
 
             // $text_chat = 'https://wa.me/6281314529488?text=Halo,%20saya%20memiliki%20pesanan%20no%20' . $uniqueNumber . '. Mohon%20diproses.';

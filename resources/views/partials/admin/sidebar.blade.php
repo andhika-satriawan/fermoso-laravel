@@ -49,13 +49,14 @@
                         <li><a href="{{ route('admin.article.blog.index') }}"
                                 class="{{ request()->is('admin/article/blog*') ? 'active' : '' }}">Blog</a></li>
                         <li><a href="{{ route('admin.article.category.index') }}"
-                                class="{{ request()->is('admin/article/category*') ? 'active' : '' }}">Category List</a>
+                                class="{{ request()->is('admin/article/category*') ? 'active' : '' }}">Category
+                                List</a>
                         </li>
                     </ul>
                 </li>
                 <li class="submenu">
-                    <a href="javascript:void(0);"><img src="{{ asset('admin/img/icons/transfer1.svg') }}"
-                            alt="img"><span>
+                    <a href="javascript:void(0);">
+                        <img src="{{ asset('admin/img/icons/transfer1.svg') }}" alt="img"><span>
                             FAQ</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{ route('admin.faq.list.index') }}"
@@ -79,13 +80,28 @@
                         <span>Sales</span>
                     </a>
                 </li>
-                
-                <li class="{{ request()->is('admin/settings*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.sales.index') }}">
+
+                <li class="submenu">
+                    <a href="javascript:void(0);">
                         <img src="{{ asset('admin/img/icons/settings.svg') }}" alt="img">
                         <span>Setting</span>
+                        <span class="menu-arrow"></span>
                     </a>
+                    <ul>
+                        <li>
+                            <a href="{{ route('admin.setting.deal.index') }}"
+                                class="{{ request()->is('admin/setting*') ? 'active' : '' }}">Latest Deals</a>
+                        </li>
+                        <li></li>
+                    </ul>
                 </li>
+                {{-- <li class="{{ request()->is('admin/setting*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.setting.deal.index') }}">
+                        <img src="{{ asset('admin/img/icons/settings.svg') }}" alt="img">
+                        <span>Setting</span>
+                        <span class="menu-arrow"></span></a>
+                    </a>
+                </li> --}}
 
                 <!--
                 <li class="submenu">
@@ -113,7 +129,7 @@
                     </ul>
                 </li>
                 -->
-                
+
             </ul>
         </div>
     </div>

@@ -9,8 +9,8 @@
                         <div class="tit-name">Alamat:</div>
                         <div class="tit-contain">Indonesia</div>
                         <div class="tit-name">Telepon:</div>
-                        <div class="tit-contain"><a href="https://wa.me/6282110101223"
-                                target="_blank">0813-1415-1617</a></div>
+                        <div class="tit-contain"><a href="https://wa.me/6281381970719"
+                                target="_blank">+62-813-8197-0719</a></div>
                         <div class="tit-name">Email:</div>
                         <div class="tit-contain"><a href="mailto:idnfermoso1@gmail.com">idnfermoso1</a></div>
                     </div>

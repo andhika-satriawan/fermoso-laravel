@@ -22,7 +22,8 @@ class Product extends Model
         'photo',
         'video_url',
         'video_youtube_url',
-        'status'
+        'status',
+        'is_latest_deal'
     ];
 
     /**
