@@ -114,20 +114,5 @@ class SettingController extends Controller
      */
     public function destroy(string $id)
     {
-        // $item = Service::findorFail($id);
-
-        // if (!$item->delete()) {
-        //     return response()->json([
-        //         'success' => false,
-        //         'message' => 'Error during delete data'
-        //     ], Response::HTTP_NOT_FOUND);
-        // }
-
-        // $response = [
-        //     'success' => true,
-        //     'message' => $this->page_info['title'] . ' has been deleted'
-        // ];
-
-        // return response()->json($response, Response::HTTP_OK);
     }
 }

@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                            content: "";
-                            position: fixed;
-                            width: 100%;
-                            height: 100%;
-                            background: inherit;
-                            z-index: -1;
-                            filter: blur(10px);
-                        }
+                                                            content: "";
+                                                            position: fixed;
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            background: inherit;
+                                                            z-index: -1;
+                                                            filter: blur(10px);
+                                                        }
 
-                        html {
-                            background-image: url(/customer/assets/images/watermark.png);
-                            background-size: 80%;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                        } */
+                                                        html {
+                                                            background-image: url(/customer/assets/images/watermark.png);
+                                                            background-size: 80%;
+                                                            background-repeat: no-repeat;
+                                                            background-position: center;
+                                                        } */
     </style>
 @endpush
 
@@ -168,7 +168,8 @@
                         </div>
                     </div>
                     <div class="header-banner banner-opacity">
-                        <a href="#"><img alt="Funky roots" src="{{ url('/images/01-img-2.jpg') }}" /></a>
+                        <a href="#"><img alt="Funky roots"
+                                src="{{ url('/customer/assets/images/banner-right-slider.png') }}" /></a>
                     </div>
                 </div>
             </div>
@@ -481,9 +482,21 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse"></div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
-                        <div id="elevator-{{ $key + 1 }}" class="floor-elevator">
+                        {{-- <div id="elevator-{{ $key + 1 }}" class="floor-elevator">
                             <a href="#" class="btn-elevator up disabled fa fa-angle-up"></a>
                             <a href="#elevator-{{ $key + 2 }}" class="btn-elevator down fa fa-angle-down"></a>
+                        </div> --}}
+                        <div id="elevator-{{ $key + 1 }}" class="floor-elevator">
+                            @if ($key > 0)
+                                <a href="#elevator-{{ $key }}" class="btn-elevator up fa fa-angle-up"></a>
+                            @else
+                                <a href="#" class="btn-elevator up disabled fa fa-angle-up"></a>
+                            @endif
+                            @if ($key < count($product_subcategories) - 1)
+                                <a href="#elevator-{{ $key + 2 }}" class="btn-elevator down fa fa-angle-down"></a>
+                            @else
+                                <a href="#" class="btn-elevator down disabled fa fa-angle-down"></a>
+                            @endif
                         </div>
                     </nav>
                     <div class="category-banner">
@@ -850,14 +863,16 @@
             <div class="row banner-bottom">
                 <div class="col-sm-6">
                     <div class="banner-boder-zoom">
-                        <a href="#"><img alt="ads" class="img-responsive"
-                                src="customer/assets/data/ads17.jpg" /></a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=6281381970719&text=Hi%20admin%2C%20aku%20tertarik%20untuk%20belanja%20klinikku.%20Boleh%20kita%20ngobrol%3F%20Thankyou%20%3A)"><img
+                                alt="ads" class="img-responsive" src="customer/banner/2.png" /></a>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="banner-boder-zoom">
-                        <a href="#"><img alt="ads" class="img-responsive"
-                                src="customer/assets/data/ads18.jpg" /></a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=6281381970719&text=Hi%20admin%2C%20aku%20mau%20kerjasama%20reseller.%20Boleh%20kita%20ngobrol%20%3F%20Thankyou%20%3A)"><img
+                                alt="ads" class="img-responsive" src="customer/banner/1.png" /></a>
                     </div>
                 </div>
             </div>

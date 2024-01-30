@@ -2960,7 +2960,8 @@ span.notify-right {
 [14. footer]
 */
 #footer {
-  background: #eee;
+  background-color: #ff6565;
+  color: #FFFF;
 }
 
 /** add-box **/
@@ -3107,6 +3108,10 @@ span.notify-right {
   background: #415a99;
 }
 
+.social-link .fa-whatsapp {
+  background: green;
+}
+
 .social-link .fa-youtube {
   background: #cb222a;
 }
@@ -3124,9 +3129,9 @@ span.notify-right {
 }
 
 /** #footer-menu-box **/
-#footer {
+/* #footer {
   background: #eaeaea;
-}
+} */
 
 #footer-menu-box {
   border-top: 1px solid #E1E1E1;
@@ -6034,6 +6039,66 @@ ul#contenhomeslider li {
 
 .green {
   color: green;
+}
+
+#header {
+  background-color: #ff6565;
+}
+
+.header-search-box form.form-inline {
+  background: #FFF;
+}
+
+#cart-block a.cart-link {
+  background: #FFF;
+}
+
+.top-header {
+  background: #ff6565;
+}
+
+.top-header a {
+  color: #FFF;
+}
+
+.top-header a.last-item {
+  border-right: 0;
+}
+
+.social-link a img {
+  height: 30px;
+}
+
+#contact-box .social-link a {
+  border: 1px solid #FFF;
+  padding-bottom: 11px;
+  border-radius: 4px;
+}
+
+#footer a {
+  color: #FFF;
+}
+
+.sosmed-top a img {
+  height: 26px;
+  margin: 0;
+  padding-bottom: 4px;
+  margin-right: -4px;
+  border-radius: 4px;
+}
+
+.sosmed-top {
+  display: table;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.sosmed-top a {
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0 6px;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {

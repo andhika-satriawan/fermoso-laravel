@@ -12,7 +12,7 @@
                         <div class="tit-contain"><a href="https://wa.me/6281381970719"
                                 target="_blank">+62-813-8197-0719</a></div>
                         <div class="tit-name">Email:</div>
-                        <div class="tit-contain"><a href="mailto:idnfermoso1@gmail.com">idnfermoso1</a></div>
+                        <div class="tit-contain"><a href="mailto:idnfermoso1@gmail.com">idnfermoso1@gmail.com</a></div>
                     </div>
                 </div>
             </div>
@@ -52,11 +52,13 @@
                             <button class="btn btn-default" type="button">OK</button>
                         </span>
                     </div><!-- /input-group -->
-                    <div class="introduce-title">Let's Socialize</div>
+                    <div class="introduce-title">Sosial Media</div>
                     <div class="social-link">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="https://shopee.co.id/fermoso.idn2"><img
+                                src="{{ url('customer/assets/images/shopee.ico') }}"></a>
+                        <a href="#"><img src="{{ url('customer/assets/images/tokopedia.png') }}"></a>
+                        <a href="https://www.instagram.com/fermoso.id/"><img
+                                src="{{ url('customer/assets/images/instagram.webp') }}"></a>
                     </div>
                 </div>
 
@@ -65,7 +67,7 @@
 
         <div id="footer-menu-box">
             <p class="text-center">Copyrights &#169; 2024. All Rights Reserved. Designed by
-                FermosoMedical</p>
+                ©FermosoMedical.com</p>
         </div><!-- /#footer-menu-box -->
     </div>
 </footer>

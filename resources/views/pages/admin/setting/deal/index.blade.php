@@ -117,16 +117,5 @@
             })
         </script>
     @endif
-    <script type="text/javascript">
-        $(".image-uploader-preview").on("click", function() {
-            $(this).closest(".image-uploader").find(".file-uploader").trigger('click');
-        });
 
-        $(".file-uploader").on("change", function(event) {
-            if (event.target.files.length > 0) {
-                const tmpPath = URL.createObjectURL(event.target.files[0]);
-                $(this).closest(".image-uploader").find(".image-uploader-preview").attr("src", tmpPath);
-            }
-        });
-    </script>
 @endpush

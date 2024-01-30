@@ -1,26 +1,41 @@
 <div id="header" class="header">
     <div class="top-header">
         <div class="container">
-            <div class="nav-top-links">
-                <a class="first-item" href="https://wa.me/6281381970719" target="_blank">
-                    <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" />+62-813-8197-0719
-                </a>
-                <a href="mailto:idnfermoso1@gmail.com">
-                    <img alt="email" src="{{ asset('customer/assets/images/email.png') }}" />Hubungi kami
-                </a>
-            </div>
-
-            <div class="support-link">
-                @auth
-                    <form method="POST" action="{{ route('logout') }}" id="logoutForm">
-                        @csrf
-                    </form>
-                    <a href="{{ route('my_account.dashboard') }}">My Account</a>
-                    <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
-                @else
-                    <a href="{{ route('register') }}">Daftar</a>
-                    <a href="{{ route('login') }}">Login</a>
-                @endauth
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="nav-top-links">
+                        <a class="first-item" href="https://wa.me/6281381970719" target="_blank">+62-813-8197-0719
+                            {{-- <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" /> --}}
+                        </a>
+                        <a href="mailto:idnfermoso1@gmail.com">Hubungi kami
+                            {{-- <img alt="email" src="{{ asset('customer/assets/images/email.png') }}" /> --}}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sosmed-top">
+                        <a href="https://wa.me/6281381970719">
+                            <img src="{{ url('customer/assets/images/whatsapp.png') }}">
+                        </a>
+                        <a href="https://www.instagram.com/fermoso.id/">
+                            <img src="{{ url('customer/assets/images/instagram.webp') }}">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="support-link">
+                        @auth
+                            <form method="POST" action="{{ route('logout') }}" id="logoutForm">
+                                @csrf
+                            </form>
+                            <a href="{{ route('my_account.dashboard') }}">My Account</a>
+                            <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
+                        @else
+                            <a href="{{ route('register') }}">Daftar</a>
+                            <a class="last-item" href="{{ route('login') }}">Login</a>
+                        @endauth
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -124,7 +139,8 @@
                                         <ul class="dropdown-menu container-fluid">
                                             <li class="block-container">
                                                 <ul class="block">
-                                                    <li class="link_container"><a href="{{ url('/faq-product') }}">FAQ
+                                                    <li class="link_container"><a
+                                                            href="{{ url('/faq-product') }}">FAQ
                                                             Product</a></li>
                                                     <li class="link_container"><a
                                                             href="{{ url('/faq-toko-kami') }}">FAQ Toko Kami</a></li>
