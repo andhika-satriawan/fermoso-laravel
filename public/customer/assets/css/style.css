@@ -1921,6 +1921,10 @@ span.notify-right {
   border: 1px solid #fff;
 }
 
+.homeslider li:hover {
+  cursor: pointer;
+}
+
 .bx-wrapper {
   margin: 0;
 }

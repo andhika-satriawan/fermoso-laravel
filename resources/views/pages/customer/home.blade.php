@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                            content: "";
-                                                            position: fixed;
-                                                            width: 100%;
-                                                            height: 100%;
-                                                            background: inherit;
-                                                            z-index: -1;
-                                                            filter: blur(10px);
-                                                        }
+                                                                        content: "";
+                                                                        position: fixed;
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        background: inherit;
+                                                                        z-index: -1;
+                                                                        filter: blur(10px);
+                                                                    }
 
-                                                        html {
-                                                            background-image: url(/customer/assets/images/watermark.png);
-                                                            background-size: 80%;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;
-                                                        } */
+                                                                    html {
+                                                                        background-image: url(/customer/assets/images/watermark.png);
+                                                                        background-size: 80%;
+                                                                        background-repeat: no-repeat;
+                                                                        background-position: center;
+                                                                    } */
     </style>
 @endpush
 
@@ -155,13 +155,14 @@
                         <div class="content-slide">
                             <ul id="contenhomeslider">
                                 @foreach ($sliders as $slider)
-                                    <li class="item-{{ $slider->id }}"
+                                    <li class="item-{{ $slider->id }}" onclick="location.href='{{ $slider->link }}'"
                                         style="background-image: url({{ Storage::url($slider->image) }}); height: 450px;">
-                                        <div class="description">
+                                        <a href="{{ $slider->link }}"></a>
+                                        {{-- <div class="description">
                                             <span class="title">{{ $slider->title }} </span>
                                             {!! $slider->description !!}
                                             <a href="{{ $slider->link }}" class="btn">SHOP NOW</a>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                 @endforeach
                             </ul>
