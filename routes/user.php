@@ -76,6 +76,8 @@ Route::prefix('api')
 
             Route::get('location/city', [App\Http\Controllers\Customer\AddressController::class, 'city'])->name('location.cities');
             Route::get('location/kecamatan', [App\Http\Controllers\Customer\AddressController::class, 'kecamatan'])->name('location.kecamatan');
+
+            Route::get('setting', [App\Http\Controllers\Customer\SettingController::class, 'index_api'])->name('setting');
         });
 
 Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])->name('home');

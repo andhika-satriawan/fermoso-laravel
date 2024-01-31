@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
+
+    public $table = 'settings';
+
+    protected $fillable = [
+        'phone',
+        'chat_text',
+        'banner',
+    ];
 }

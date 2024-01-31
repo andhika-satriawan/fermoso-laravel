@@ -11,13 +11,13 @@ use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
-    private $view_path = 'pages.admin.setting.deal.';
-    private $route_path = 'admin.setting.deal.';
+    private $view_path = 'pages.admin.setting.general.';
+    private $route_path = 'admin.setting.general.';
     private $page_info = [];
 
     public function __construct()
     {
-        $this->page_info['title'] = 'Latest Deals';
+        $this->page_info['title'] = 'General Settings';
     }
 
     /**
@@ -25,28 +25,12 @@ class SettingController extends Controller
      */
     public function index()
     {
-        $latest_deals = Product::where('is_latest_deal', true)->get();
-        $products = Product::all();
+        $setting = Setting::firstOrFail();
         // $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
 
         return view($this->view_path . 'index', [
             'page_info' => $this->page_info,
-            'products'  => $products,
-            'latest_deals' => $latest_deals,
-            // 'product_subcateg$latest_deal' => $product_subcategories
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        $products = Product::all();
-
-        return view($this->view_path . 'create', [
-            'page_info' => $this->page_info,
-            'products'  => $products
+            'setting'   => $setting,
         ]);
     }
 
@@ -55,64 +39,31 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'latest_deal_id' => 'required|exists:products,id',
-        // ]);
-
-        // // Update the Latest Deal in your database
-        // Product::where('is_latest_deal', true)->update(['is_latest_deal' => false]);
-        // Product::where('id', $request->latest_deal_id)->update(['is_latest_deal' => true]);
-
-        // return redirect()->route($this->route_path . 'index')
-        //     ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
-
         $request->validate([
-            'selectedProduct' => 'required|exists:products,id',
+            'phone'     => 'required|string',
+            'chat_text' => 'required|string',
+            'banner'    => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
 
-        // Update only the selected product to have is_latest_deal = true
-        $selectedProductId = $request->selectedProduct;
-        // Product::where('is_latest_deal', true)->update(['is_latest_deal' => false]);
-        Product::where('id', $selectedProductId)->update(['is_latest_deal' => true]);
+        $setting = Setting::firstOrFail();
+        $setting->phone         = $request->phone;
+        $setting->chat_text     = $request->chat_text;
+        
+        if ($request->hasFile('banner')) {
+            $filenameWithExt    = $request->file('banner')->getClientOriginalName();
+            $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension          = $request->file('banner')->getClientOriginalExtension();
+            $fileNameToStore    = $filename . '-' . time() . '.' . $extension;
+            $pathFile           = $request->file('banner')->storeAs('assets/theme/setting', $fileNameToStore, 'public');
 
-        return redirect()->route($this->route_path . 'index')
-            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
+            // Add value
+            $setting->banner = $pathFile;
+        }
+
+        $setting->save();
+
+        return to_route($this->route_path . 'index')
+            ->with('success', $this->page_info['title'] . ' data has been updated successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        // $item = Product::findOrFail($id);
-        // $products = Product::all();
-
-        // return view($this->view_path . 'edit', [
-        //     'page_info' => $this->page_info,
-        //     'item'      => $item,
-        //     'products'  => $products
-        // ]);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-    }
 }

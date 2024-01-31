@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CustomerSeeder::class,
             // LocationSeeder::class,
+            SettingSeeder::class,
         ]);
     }
 }

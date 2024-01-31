@@ -14,6 +14,7 @@ use App\Models\Cart;
 use App\Models\ProductSubcategory;
 use App\Models\ProductDetail;
 use App\Models\Address;
+use App\Models\Setting;
 use App\Helpers\CommonHelper;
 
 class TransactionController extends Controller
@@ -113,8 +114,10 @@ class TransactionController extends Controller
             $deleted = Cart::where('customer_id', Auth::id())
                 ->delete();
 
-            $text_chat = 'https://wa.me/6281381970719?text=Halo%20Admin,%20saya%20memiliki%20pesanan%20no:%20';
+            // General Settings
+            $setting = Setting::firstOrFail();
 
+            $text_products = '';
             foreach ($carts as $cart) {
                 if ($cart->product_detail->discount_price > 0) :
                     $price = number_format($cart->product_detail->discount_price, 0, ',', '.');
@@ -124,16 +127,19 @@ class TransactionController extends Controller
 
                 // $text_chat .=  $uniqueNumber . ' dengan rincian: Produk ' . $cart->product->name . $cart->quantity . 'pcs x ' . ' Rp ' . number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price), 0, ',', '.') .  number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') . ' ';
 
-                $text_chat .=  $uniqueNumber . ' dengan rincian: Produk ' . $cart->product->name . $cart->quantity . 'pcs x ' . ' Rp ' . $price . ' ';
+                $text_products .=  $cart->product_detail->sku . ' ' . $cart->quantity . 'pcs x ' . ' Rp ' . $price . '\n';
             }
 
-            $text_chat .= '%20Total%20Produk%20=%20Rp%20' . number_format($total_carts, 0, ',', '.') . '.%20Mohon%20diproses.';
+            $text_chat = Str::replace('{transaction_products}', $text_products, $text_chat);
+            $text_chat = Str::replace('{transaction_code}', $uniqueNumber, $setting->chat_text);
+            $text_chat = Str::replace('{transaction_price}', number_format($transaction->total_price, 0, ',', '.'), $text_chat);
+            $text_chat = Str::replace('{transaction_courier}', $transaction->courier, $text_chat);
+            $text_chat = Str::replace('{transaction_shipping_price}', number_format($transaction->shipping_price, 0, ',', '.'), $text_chat);
+            $text_chat = Str::replace('{transaction_total}', number_format($transaction->total, 0, ',', '.'), $text_chat);
 
+            $text_chat_link = 'https://wa.me/62'. $setting->phone .'?text='. $text_chat;
 
-            // $text_chat = 'https://wa.me/6281314529488?text=Halo,%20saya%20memiliki%20pesanan%20no%20' . $uniqueNumber . '. Mohon%20diproses.';
-            // $text_chat .= '\n'
-
-            return redirect()->away($text_chat);
+            return redirect()->away($text_chat_link);
         }
 
         return back()->with('error', 'Checkout gagal!');

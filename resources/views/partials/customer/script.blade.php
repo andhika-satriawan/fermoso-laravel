@@ -271,4 +271,33 @@
             }
         });
     }
+
+    // Banner on Slider
+    $.ajax({
+        type: 'GET',
+        url: '{{ route('api.setting') }}',
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content')
+        },
+        dataType: 'JSON',
+        error: function(error) {
+            console.log(error);
+            // Swal.fire("Error!", 'Something is wrong', "error");
+        },
+        success: function(response) {
+            if (response.success == true) {
+
+                const responseData = response.data;
+
+                if ($('img#home-slider-banner').length) {
+                    $('img#home-slider-banner').attr("src", `{{ Storage::url('') }}${responseData.banner}`);
+                }
+
+
+            } else {
+                console.log(response)
+                // Swal.fire("Error!", response.message, "error");
+            }
+        }
+    });
 </script>

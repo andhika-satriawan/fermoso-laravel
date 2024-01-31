@@ -117,5 +117,62 @@
             })
         </script>
     @endif
-
+    <script type="text/javascript">
+        // Delete Data
+        const deleteConfirmation = (id) => {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                // confirmButtonColor: '#ff0022',
+                // cancelButtonColor: '#212529',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+    
+                    $.ajax({
+                        type: 'DELETE',
+                        url: '{{ route("admin.setting.deal.index") }}/' + id,
+                        data: {
+                            _token: $('meta[name="csrf-token"]').attr('content'),
+                        },
+                        dataType: 'JSON',
+                        error: function(response) {
+                            // console.log(response);
+                            Swal.fire("Error!", 'Something is wrong', "error")
+                            .then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
+                        },
+                        success: function (response) {
+                            // console.log(response);
+                            if (response.success == true) {
+                                Swal.fire("Deleted successfully!", response.message, "success")
+                                .then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            } else {
+                                Swal.fire("Error!", response.message, "error").then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            }
+                        }
+                    });
+                } else if (result.dismiss) {
+                    Swal.fire(
+                        'Canceled!',
+                        'Your important file is still safe.',
+                        'error'
+                    )
+                }
+            });
+        }
+    </script>
 @endpush

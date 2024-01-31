@@ -169,8 +169,8 @@
                         </div>
                     </div>
                     <div class="header-banner banner-opacity">
-                        <a href="#"><img alt="Funky roots"
-                                src="{{ url('/customer/assets/images/banner-right-slider.png') }}" /></a>
+                        <a href="#"><img alt="Funky roots" id="home-slider-banner"
+                                src="{{ asset('admin/img/product/noimage.png')}}" /></a>
                     </div>
                 </div>
             </div>
