@@ -1185,6 +1185,7 @@ span.notify-right {
 
 .box-vertical-megamenus .vertical-menu-list {
   border-left: 1px solid #eaeaea;
+  overflow-y: scroll;
 }
 
 .box-vertical-megamenus .vertical-menu-list li {
@@ -2932,6 +2933,7 @@ span.notify-right {
 .cate-content {
   padding-top: 10px;
   padding-bottom: 10px;
+  min-height: 100px;
 }
 
 .cate-content ul {

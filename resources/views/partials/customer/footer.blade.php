@@ -56,7 +56,8 @@
                     <div class="social-link">
                         <a href="https://shopee.co.id/fermoso.idn2"><img
                                 src="{{ url('customer/assets/images/shopee.ico') }}"></a>
-                        <a href="#"><img src="{{ url('customer/assets/images/tokopedia.png') }}"></a>
+                        <a href="https://www.tokopedia.com/fermosoidn"><img
+                                src="{{ url('customer/assets/images/tokopedia.png') }}"></a>
                         <a href="https://www.instagram.com/fermoso.id/"><img
                                 src="{{ url('customer/assets/images/instagram.webp') }}"></a>
                     </div>
