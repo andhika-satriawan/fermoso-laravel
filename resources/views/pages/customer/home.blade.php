@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                        content: "";
-                                                                        position: fixed;
-                                                                        width: 100%;
-                                                                        height: 100%;
-                                                                        background: inherit;
-                                                                        z-index: -1;
-                                                                        filter: blur(10px);
-                                                                    }
+                                                                                content: "";
+                                                                                position: fixed;
+                                                                                width: 100%;
+                                                                                height: 100%;
+                                                                                background: inherit;
+                                                                                z-index: -1;
+                                                                                filter: blur(10px);
+                                                                            }
 
-                                                                    html {
-                                                                        background-image: url(/customer/assets/images/watermark.png);
-                                                                        background-size: 80%;
-                                                                        background-repeat: no-repeat;
-                                                                        background-position: center;
-                                                                    } */
+                                                                            html {
+                                                                                background-image: url(/customer/assets/images/watermark.png);
+                                                                                background-size: 80%;
+                                                                                background-repeat: no-repeat;
+                                                                                background-position: center;
+                                                                            } */
     </style>
 @endpush
 
@@ -170,7 +170,7 @@
                     </div>
                     <div class="header-banner banner-opacity">
                         <a href="#"><img alt="Funky roots" id="home-slider-banner"
-                                src="{{ asset('admin/img/product/noimage.png')}}" /></a>
+                                src="{{ url('customer/assets/images/banner-right-slider.png') }}" /></a>
                     </div>
                 </div>
             </div>

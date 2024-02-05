@@ -16,6 +16,7 @@ use App\Models\ProductDetail;
 use App\Models\Address;
 use App\Models\Setting;
 use App\Helpers\CommonHelper;
+use Illuminate\Support\Str;
 
 class TransactionController extends Controller
 {
@@ -106,7 +107,7 @@ class TransactionController extends Controller
                     'quantity'          => $cart->quantity,
                     'price'             => $actual_price, // Flexible
                     'original_price'    => $cart->product_detail->price,
-                    'total'             => $total_price
+                    'total'             => $total_price,
                 ]);
             }
 
@@ -130,14 +131,14 @@ class TransactionController extends Controller
                 $text_products .=  $cart->product_detail->sku . ' ' . $cart->quantity . 'pcs x ' . ' Rp ' . $price . '\n';
             }
 
-            $text_chat = Str::replace('{transaction_products}', $text_products, $text_chat);
             $text_chat = Str::replace('{transaction_code}', $uniqueNumber, $setting->chat_text);
+            $text_chat = Str::replace('{transaction_products}', $text_products, $text_chat);
             $text_chat = Str::replace('{transaction_price}', number_format($transaction->total_price, 0, ',', '.'), $text_chat);
             $text_chat = Str::replace('{transaction_courier}', $transaction->courier, $text_chat);
             $text_chat = Str::replace('{transaction_shipping_price}', number_format($transaction->shipping_price, 0, ',', '.'), $text_chat);
             $text_chat = Str::replace('{transaction_total}', number_format($transaction->total, 0, ',', '.'), $text_chat);
 
-            $text_chat_link = 'https://wa.me/62'. $setting->phone .'?text='. $text_chat;
+            $text_chat_link = 'https://wa.me/62' . $setting->phone . '?text=' . $text_chat;
 
             return redirect()->away($text_chat_link);
         }
