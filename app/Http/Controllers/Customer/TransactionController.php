@@ -128,7 +128,8 @@ class TransactionController extends Controller
 
                 // $text_chat .=  $uniqueNumber . ' dengan rincian: Produk ' . $cart->product->name . $cart->quantity . 'pcs x ' . ' Rp ' . number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price), 0, ',', '.') .  number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') . ' ';
 
-                $text_products .=  $cart->product_detail->sku . ' ' . $cart->quantity . 'pcs x ' . ' Rp ' . $price . '\n';
+                // $text_products .=  $cart->product_detail->sku . ' ' . $cart->quantity . 'pcs x ' . ' Rp ' . $price . '\n';
+                $text_products .=  $cart->product->name . ' ' . $cart->quantity . 'pcs x ' . ' Rp ' . $price . ' | ';
             }
 
             $text_chat = Str::replace('{transaction_code}', $uniqueNumber, $setting->chat_text);
