@@ -63,6 +63,10 @@ class BlogController extends Controller
         $relatedArticles = Article::where('id', '<>', $article->id)->limit(9)->get();
         $allCategories = MasterArticleCategory::all();
         $allTags = MasterArticleTag::all();
+        $popularArticles = Article::with(['tags', 'categories'])
+            ->orderByDesc('views_count') // Assuming there's a 'views_count' column in the 'articles' table
+            ->limit(10)
+            ->get();
 
         DB::table('articles')->where('id', $article->id)->increment('views_count');
 
@@ -73,6 +77,7 @@ class BlogController extends Controller
             "relatedArticles" => $relatedArticles,
             "allCategories" => $allCategories,
             "allTags" => $allTags,
+            "popularArticles" => $popularArticles
         ]);
     }
 
