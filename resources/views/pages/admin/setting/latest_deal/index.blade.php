@@ -68,7 +68,8 @@
                                         <td><span class="text-danger">DRAFT</span></td>
                                     @endif
 
-                                    <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('M d, Y, H:i:s') }}
+                                    <td>
+                                        {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('M d, Y, H:i:s') }}
                                     </td>
                                     <td>
                                         <a class="me-3 confirm-text" onclick="deleteConfirmation({{ $latest_deal->id }})">

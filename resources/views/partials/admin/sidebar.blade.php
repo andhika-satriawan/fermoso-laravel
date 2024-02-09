@@ -96,6 +96,10 @@
                             <a href="{{ route('admin.setting.deal.index') }}"
                                 class="{{ request()->is('monyet/setting/deal*') ? 'active' : '' }}">Latest Deals</a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin.setting.product-slider.index') }}"
+                                class="{{ request()->is('monyet/setting/product-slider*') ? 'active' : '' }}">Product Sliders</a>
+                        </li>
                     </ul>
                 </li>
                 {{-- <li class="{{ request()->is('monyet/setting*') ? 'active' : '' }}">

@@ -162,16 +162,15 @@
 
                 <!-- Center colunm-->
                 <div class="center_column col-xs-12 col-sm-9" id="center_column">
-                    <!-- category-slider -->
-                    <div class="category-slider">
+                    <!-- product-slider -->
+                    <div class="product-slider">
                         <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
+                            @foreach ($product_sliders as $slider)
                             <li>
-                                <img src="customer/assets/data/category-slide.jpg" alt="category-slider">
+                                <img src="{{ Storage::url($slider->image)}}" alt="product-slider">
                             </li>
-                            <li>
-                                <img src="customer/assets/data/slide-cart2.jpg" alt="category-slider">
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- ./category-slider -->

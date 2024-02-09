@@ -365,7 +365,7 @@
                                 data-responsive='{"0":{"items":1},"600":{"items":1},"1000":{"items":1}}'>
                                 @foreach ($latest_deals as $latest_deal)
                                     <li>
-                                        <div class="count-down-time" data-countdown="2024/01/30"></div>
+                                        <div class="count-down-time" data-countdown="{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('Y/m/d H:i:s') }}"></div>
                                         <div class="left-block">
                                             <a href="{{ $latest_deal->slug }}">
                                                 <img class="img-responsive" alt="product"

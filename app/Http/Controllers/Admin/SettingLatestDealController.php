@@ -58,13 +58,15 @@ class SettingLatestDealController extends Controller
     {
         $request->validate([
             'selectedProduct' => 'required|exists:products,id',
+            'end_last_deal'     => 'required|date_format:Y-m-d\TH:i'
         ]);
 
         // Update only the selected product to have is_latest_deal = true
         $selectedProductId = $request->selectedProduct;
         // Product::where('is_latest_deal', true)->update(['is_latest_deal' => false]);
         Product::where('id', $selectedProductId)->update([
-            'is_latest_deal' => true
+            'is_latest_deal'        => true,
+            'latest_deal_end_date'  => $request->end_last_deal,
         ]);
 
         return redirect()->route($this->route_path . 'index')

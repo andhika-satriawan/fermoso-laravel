@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Models\ProductSubcategory;
 use App\Models\Product;
 use App\Models\ProductDetail;
+use App\Models\ProductSlider;
 
 class ProductController extends Controller
 {
@@ -20,11 +21,13 @@ class ProductController extends Controller
     {
         $product_subcategories = ProductSubcategory::orderBy('slug', 'ASC')->paginate(1);
         $products = Product::with(['product_subcategory', 'details', 'images'])->orderBy('id', 'DESC')->paginate(20);
+        $product_sliders = ProductSlider::get();
 
         return view('pages.customer.products', [
-            "page" => "category-page",
+            "page"                  => "category-page",
             "product_subcategories" => $product_subcategories,
-            "products" => $products
+            "products"              => $products,
+            "product_sliders"       => $product_sliders
         ]);
     }
 

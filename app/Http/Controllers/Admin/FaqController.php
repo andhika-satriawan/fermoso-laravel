@@ -148,8 +148,8 @@ class FaqController extends Controller
         $validated = $request->validate([
             'title'                 => 'required|string',
             'content'               => 'required|string',
-            'image'                 => 'required|mimes:jpg,bmp,png,svg',
-            'faq_categories'    => 'required',
+            'image'                 => 'nullable|mimes:jpg,bmp,png,svg',
+            'faq_categories'        => 'required',
         ]);
 
         // dd($request->faq_tags);

@@ -23,7 +23,17 @@ class Product extends Model
         'video_url',
         'video_youtube_url',
         'status',
-        'is_latest_deal'
+        'is_latest_deal',
+        'latest_deal_end_date',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'latest_deal_end_date' => 'datetime',
     ];
 
     /**

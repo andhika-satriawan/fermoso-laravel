@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon as Carbon;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\ProductSubcategory;
@@ -31,7 +32,9 @@ class HomeController extends Controller
             ->limit(9)
             ->get();
 
-        $latest_deals = Product::where('is_latest_deal', true)->get();
+        $latest_deals = Product::where('is_latest_deal', true)
+                            ->where('latest_deal_end_date', '>', Carbon::now())
+                            ->get();
 
 
         return view('pages.customer.home', [

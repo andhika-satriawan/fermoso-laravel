@@ -12,17 +12,17 @@ use Carbon\Carbon as Carbon;
 use Symfony\Component\HttpFoundation\Response;
 use Intervention\Image\Facades\Image;
 // use DataTables;
-use App\Models\Slider;
+use App\Models\ProductSlider;
 
-class SliderController extends Controller
+class SettingProductSliderController extends Controller
 {
-    private $view_path = 'pages.admin.slider.';
-    private $route_path = 'admin.slider.';
+    private $view_path = 'pages.admin.setting.product_slider.';
+    private $route_path = 'admin.setting.product-slider.';
     private $page_info = [];
 
     public function __construct()
     {
-        $this->page_info['title'] = 'Slider';
+        $this->page_info['title'] = 'Product Slider';
     }
 
     /**
@@ -30,7 +30,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::orderBy('id')->get();
+        $sliders = ProductSlider::orderBy('id')->get();
 
         return view($this->view_path . 'index', [
             'page_info' => $this->page_info,
@@ -55,24 +55,24 @@ class SliderController extends Controller
     {
         $validated = $request->validate([
             'image'         => 'required|mimes:jpg,bmp,png,webp',
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string|max:255',
-            'link'          => 'required|string|max:255',
+            'title'         => 'nullable|string|max:255',
+            'description'   => 'nullable|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
-        $slider = new Slider;
+        $slider = new ProductSlider;
         $slider->title         = $request->title;
         $slider->description   = $request->description;
         $slider->link          = $request->link;
 
-        $slider_slug = Str::slug($request->title);
+        $slider_slug = $request->title ? Str::slug($request->title) : Str::random(5) . '-' . hexdec(uniqid());
 
         if ($request->hasFile('image')) {
             $filenameWithExt    = $request->file('image')->getClientOriginalName();
             $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension          = $request->file('image')->getClientOriginalExtension();
             $fileNameToStore    = $slider_slug . '-' . time() . '.' . $extension;
-            $pathFile           = $request->file('image')->storeAs('assets/theme/slider', $fileNameToStore, 'public');
+            $pathFile           = $request->file('image')->storeAs('assets/product/slider', $fileNameToStore, 'public');
 
             // Add value
             $slider->image = $pathFile;
@@ -97,7 +97,7 @@ class SliderController extends Controller
      */
     public function edit(string $id)
     {
-        $item = Slider::findOrFail($id);
+        $item = ProductSlider::findOrFail($id);
 
         return view($this->view_path . 'edit', [
             'page_info' => $this->page_info,
@@ -112,24 +112,24 @@ class SliderController extends Controller
     {
         $validated = $request->validate([
             'image'         => 'nullable|mimes:jpg,bmp,png,webp',
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string|max:255',
-            'link'          => 'required|string|max:255',
+            'title'         => 'nullable|string|max:255',
+            'description'   => 'nullable|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
-        $slider = Slider::findOrFail($id);
+        $slider = ProductSlider::findOrFail($id);
         $slider->title         = $request->title;
         $slider->description   = $request->description;
         $slider->link          = $request->link;
 
-        $slider_slug = Str::slug($request->title);
+        $slider_slug = $request->title ? Str::slug($request->title) : Str::random(5) . '-' . hexdec(uniqid());
 
         if ($request->hasFile('image')) {
             $filenameWithExt    = $request->file('image')->getClientOriginalName();
             $filename           = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension          = $request->file('image')->getClientOriginalExtension();
             $fileNameToStore    = $slider_slug . '-' . time() . '.' . $extension;
-            $pathFile           = $request->file('image')->storeAs('assets/theme/slider', $fileNameToStore, 'public');
+            $pathFile           = $request->file('image')->storeAs('assets/product/slider', $fileNameToStore, 'public');
 
             // Add value
             $slider->image = $pathFile;
@@ -146,7 +146,7 @@ class SliderController extends Controller
      */
     public function destroy(string $id)
     {
-        $item = Slider::findorFail($id);
+        $item = ProductSlider::findorFail($id);
 
         if (!$item->delete()) {
             return response()->json([

@@ -31,6 +31,7 @@ Route::prefix('monyet')
                 ->group(function () {
                     Route::resource('general', App\Http\Controllers\Admin\SettingController::class);
                     Route::resource('deal', App\Http\Controllers\Admin\SettingLatestDealController::class);
+                    Route::resource('product-slider', App\Http\Controllers\Admin\SettingProductSliderController::class);
                 });
 
             Route::resource('review', App\Http\Controllers\Admin\ReviewDummyController::class);

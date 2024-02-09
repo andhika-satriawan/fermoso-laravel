@@ -7,43 +7,42 @@
 @section('content')
     <div class="page-header">
         <div class="page-title">
-            <h4>Add {{ $page_info['title'] }}</h4>
-            <h6>Create New {{ $page_info['title'] }}</h6>
+            <h4>Edit {{ $page_info['title'] }}</h4>
+            <h6>Change the data of existing {{ $page_info['title'] }}</h6>
         </div>
 
-        <div class="card">
+        <div class="card upload-product">
             <div class="card-body">
-                <form action="{{ route('admin.setting.deal.store') }}" id="formSubmission" method="post" id=""
-                    enctype="multipart/form-data"">
-                    @csrf
+                <form action="{{ route('admin.setting.product-slider.update', $item->id) }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
+                @csrf
+                @method('PATCH')
                     <div class="row">
-                        <div class="col-lg-8">
-
-                            <div class="form-group">
-                                <label for="title" class="form-label">Product <span class="text-danger">*</span></label>
-                                <select class="select @error('selectedProduct') is-invalid @enderror"
-                                    name="selectedProduct">
-                                    @foreach ($products as $product)
-                                        <option value="{{ $product->id }}">{{ $product->name }}</option>
-                                    @endforeach
-                                </select>
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card image-uploader">
+                                <div class="card-body">
+                                    <label for="image" class="form-label">Image <span class="text-danger">*</span></label>
+                                    <input class="form-control file-uploader" type="file" accept="image/*" name="image"
+                                        value="">
+                                    <img class="card-img-top image-uploader-preview"
+                                        src="{{ Storage::url($item->image) }}">
+                                </div>
                             </div>
-
+                        </div>
+                        <div class="col-md-12 col-lg-12">
                             <div class="form-group">
-                                <label for="end_last_deal" class="form-label">End Last Deal <span class="text-danger">*</span></label>
-                                <input type="datetime-local" placeholder="DD-MM-YYYY" id="end_last_deal" class="form-control @error('end_last_deal') is-invalid @enderror" name="end_last_deal">
-                                @error('end_last_deal')
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ $item->title }}" autocomplete="off" required>
+                                @error('title')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
-
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-submit me-2">Submit</button>
-                                <a href="{{ route('admin.setting.deal.index') }}" class="btn btn-cancel">Cancel</a>
+                                <a href="{{ route('admin.setting.product-slider.index') }}" class="btn btn-cancel">Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -65,11 +64,11 @@
         }
 
         img.file-image-preview {
-            max-height: 50px;
+            max-height: 150px;
         }
 
         .card img {
-            max-width: 250px;
+            max-width: 300px;
             display: table;
             margin: 0 auto;
             padding: 20px;
@@ -122,4 +121,18 @@
             })
         </script>
     @endif
+    <script type="text/javascript">
+
+        $(".image-uploader-preview").on("click", function() {
+            $(this).closest(".image-uploader").find(".file-uploader").trigger('click');
+        });
+
+        $(".file-uploader").on("change", function(event) {
+            if (event.target.files.length > 0) {
+                const tmpPath = URL.createObjectURL(event.target.files[0]);
+                $(this).closest(".image-uploader").find(".image-uploader-preview").attr("src", tmpPath);
+            }
+        });
+        
+    </script>
 @endpush
