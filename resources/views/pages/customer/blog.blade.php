@@ -4,6 +4,14 @@
     Blog
 @endsection
 
+@push('addon-style')
+    <style>
+        .blog-posts .post-item .entry-meta-data {
+            padding: 10px 0;
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="columns-container">
         <div class="container" id="columns">
@@ -157,14 +165,14 @@
                                                         {{ $article->created_at->format('F j, Y') }}
                                                     </span>
                                                 </div>
-                                                <div class="post-star">
+                                                {{-- <div class="post-star">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star-half-o"></i>
                                                     <span>(7 votes)</span>
-                                                </div>
+                                                </div> --}}
                                                 <div class="entry-excerpt">
                                                     {!! $article->summary !!}
                                                 </div>

@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                    content: "";
-                                                                                    position: fixed;
-                                                                                    width: 100%;
-                                                                                    height: 100%;
-                                                                                    background: inherit;
-                                                                                    z-index: -1;
-                                                                                    filter: blur(10px);
-                                                                                }
+                                                                                            content: "";
+                                                                                            position: fixed;
+                                                                                            width: 100%;
+                                                                                            height: 100%;
+                                                                                            background: inherit;
+                                                                                            z-index: -1;
+                                                                                            filter: blur(10px);
+                                                                                        }
 
-                                                                                html {
-                                                                                    background-image: url(/customer/assets/images/watermark.png);
-                                                                                    background-size: 80%;
-                                                                                    background-repeat: no-repeat;
-                                                                                    background-position: center;
-                                                                                } */
+                                                                                        html {
+                                                                                            background-image: url(/customer/assets/images/watermark.png);
+                                                                                            background-size: 80%;
+                                                                                            background-repeat: no-repeat;
+                                                                                            background-position: center;
+                                                                                        } */
     </style>
 @endpush
 
@@ -365,7 +365,9 @@
                                 data-responsive='{"0":{"items":1},"600":{"items":1},"1000":{"items":1}}'>
                                 @foreach ($latest_deals as $latest_deal)
                                     <li>
-                                        <div class="count-down-time" data-countdown="{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('Y/m/d H:i:s') }}"></div>
+                                        <div class="count-down-time"
+                                            data-countdown="{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('Y/m/d H:i:s') }}">
+                                        </div>
                                         <div class="left-block">
                                             <a href="{{ $latest_deal->slug }}">
                                                 <img class="img-responsive" alt="product"
@@ -502,20 +504,22 @@
                     </nav>
                     <div class="category-banner">
                         <div class="col-sm-6 banner">
-                            <a href="#"><img alt="ads2" class="img-responsive"
+                            <a href="{{ url('product/category/' . $product_subcategory->slug) }}"><img alt="ads2"
+                                    class="img-responsive"
                                     src="{{ isset($product_subcategory->banner_left) ? Storage::url($product_subcategory->banner_left) : 'customer/assets/data/ads2.jpg' }}" /></a>
 
                         </div>
                         <div class="col-sm-6 banner">
-                            <a href="#"><img alt="ads2" class="img-responsive"
+                            <a href="{{ url('product/category/' . $product_subcategory->slug) }}"><img alt="ads2"
+                                    class="img-responsive"
                                     src="{{ isset($product_subcategory->banner_right) ? Storage::url($product_subcategory->banner_right) : 'customer/assets/data/ads3.jpg' }}" /></a>
                         </div>
                     </div>
                     <div class="product-featured clearfix">
                         <div class="banner-featured">
                             <div class="banner-img">
-                                <a href="#">
-                                    <img alt="Featurered 1"
+                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                    <img alt="{{ $product_subcategory->name }}"
                                         src="{{ isset($product_subcategory->featured_image) ? Storage::url($product_subcategory->featured_image) : 'customer/assets/data/f1.jpg' }}" />
                                 </a>
                             </div>

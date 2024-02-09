@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                float: left;
-            } */
+                    float: left;
+                } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -52,7 +52,8 @@
                     <div class="block left-module">
                         <p class="title_block">Filter selection</p>
                         <div class="block_content">
-                            <form action="{{ route('products_filter') }}" id="formFilterSubmission" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('products_filter') }}" id="formFilterSubmission" method="post"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <!-- layered -->
                                 <div class="layered layered-filter-price">
@@ -75,10 +76,14 @@
                                     <!-- filter price -->
                                     <div class="layered_subtitle">price</div>
                                     <div class="layered-content slider-range">
-    
+
                                         <div data-label-reasult="Range:" data-min="10000" data-max="10000000" data-unit="Rp"
-                                            class="slider-range-price" data-value-min="{{ request()->get('price_from') ?? '10000' }}" data-value-max="{{ request()->get('price_to') ?? '10000000' }}"></div>
-                                        <div class="amount-range-price">Range: Rp{{ request()->get('price_from') ?? '10.000'}} - Rp{{ request()->get('price_to') ?? '10.000.000'}}</div>
+                                            class="slider-range-price"
+                                            data-value-min="{{ request()->get('price_from') ?? '10000' }}"
+                                            data-value-max="{{ request()->get('price_to') ?? '10000000' }}"></div>
+                                        <div class="amount-range-price">Range:
+                                            Rp{{ request()->get('price_from') ?? '10.000' }} -
+                                            Rp{{ request()->get('price_to') ?? '10.000.000' }}</div>
                                         <input type="hidden" name="price_from" class="range-price-from">
                                         <input type="hidden" name="price_to" class="range-price-to">
                                     </div>
@@ -95,7 +100,7 @@
                     <!-- ./block filter  -->
 
                     <!-- left silide -->
-                    <div class="col-left-slide left-module">
+                    {{-- <div class="col-left-slide left-module">
                         <ul class="owl-carousel owl-style2" data-loop="true" data-nav = "false" data-margin = "30"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1"
                             data-autoplay="true">
@@ -106,8 +111,7 @@
                             <li><a href="#"><img src="customer/assets/data/slide-left3.png" alt="slide-left"></a>
                             </li>
                         </ul>
-
-                    </div>
+                    </div> --}}
                     <!--./left silde-->
                     <!-- SPECIAL -->
                     <div class="block left-module">
@@ -171,16 +175,23 @@
                     <!-- ./category-slider -->
 
                     <div>
-                        @if( request()->get('search') )
-                        <h2 style="margin-top: 20px">Search: <span class="text-primary">{{ request()->get('search') }}</span></h2>
+                        @if (request()->get('search'))
+                            <h2 style="margin-top: 20px">Search: <span
+                                    class="text-primary">{{ request()->get('search') }}</span></h2>
                         @endif
                         @if( request()->get('subcategory') )
                         <h2 style="margin-top: 20px">Subcategory: <span class="text-primary">{{ $filters["subcategory_selected"]->name }}</span></h2>
                         @endif
-                        @if( request()->get('price_from') || request()->get('price_from') )
-                        <h2 style="margin-top: 20px">Price: <span class="text-primary">Rp {{ $filters["price_from"] > 0 ? number_format($filters["price_from"], 0, ',', '.') : "Undefined" }}</span> - <span class="text-primary">Rp {{ $filters["price_to"] > 0 ? number_format($filters["price_to"], 0, ',', '.') : "Undefined" }}</span></h2>
+                        @if (request()->get('price_from') || request()->get('price_from'))
+                            <h2 style="margin-top: 20px">Price: <span class="text-primary">Rp
+                                    {{ $filters['price_from'] > 0 ? number_format($filters['price_from'], 0, ',', '.') : 'Undefined' }}</span>
+                                - <span class="text-primary">Rp
+                                    {{ $filters['price_to'] > 0 ? number_format($filters['price_to'], 0, ',', '.') : 'Undefined' }}</span>
+                            </h2>
                         @endif
-                        <h2 style="margin-top: 20px">Show: <span class="text-primary">{{ number_format($filters["product_count"], 0, ',', '.') }} Product(s)</span></h2>
+                        <h2 style="margin-top: 20px">Show: <span
+                                class="text-primary">{{ number_format($filters['product_count'], 0, ',', '.') }}
+                                Product(s)</span></h2>
                     </div>
 
                     <!-- view-product-list-->

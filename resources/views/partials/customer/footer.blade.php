@@ -38,7 +38,7 @@
                     <div class="col-sm-4 col-xs-4 col-12">
                         <div class="introduce-title">Dukungan</div>
                         <ul id = "introduce-support" class="introduce-list">
-                            <li><a href="#">Whatsapp</a></li>
+                            <li><a href="https://wa.me/6281381970719">Whatsapp</a></li>
                         </ul>
                     </div>
                 </div>
