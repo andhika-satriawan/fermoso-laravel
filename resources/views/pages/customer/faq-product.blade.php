@@ -4,6 +4,18 @@
     {{ $faqs[0]->title }}
 @endsection
 
+@push('addon-style')
+    <style>
+        .content-text p {
+            margin-bottom: 10px;
+        }
+
+        article.entry-detail h2 {
+            margin-bottom: 14px;
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="columns-container">
         <div class="container" id="columns">
@@ -17,7 +29,7 @@
             <!-- row -->
             <div class="row">
                 <!-- Center colunm-->
-                <div class="center_column col-xs-12 col-sm-12" id="center_column">
+                <div class="center_column col-xs-12 col-sm-12 col-lg-10" id="center_column">
                     <h1 class="page-heading">
                         <span class="page-heading-title2">{{ $faqs[0]->title }}</span>
                     </h1>
