@@ -57,12 +57,12 @@
                                 <div class="layered_subtitle">CATEGORIES</div>
                                 <div class="layered-content">
                                     <ul class="tree-menu">
-                                        @foreach ($product_subcategories as $product_subcategory)
+                                        @foreach ($allCategories as $category)
                                             <li>
                                                 <span></span>
-                                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
-                                                    {{ $product_subcategory->name }}
-                                                    <span class="count">({{ $product_subcategory->product_count }})</span>
+                                                <a href="{{ url('product/category/' . $category->slug) }}">
+                                                    {{ $category->name }}
+                                                    <span class="count">({{ $category->product_count }})</span>
                                                 </a>
                                             </li>
                                         @endforeach
@@ -167,9 +167,9 @@
                         <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
                             @foreach ($product_sliders as $slider)
-                            <li>
-                                <img src="{{ Storage::url($slider->image)}}" alt="product-slider">
-                            </li>
+                                <li>
+                                    <img src="{{ Storage::url($slider->image) }}" alt="product-slider">
+                                </li>
                             @endforeach
                         </ul>
                     </div>
