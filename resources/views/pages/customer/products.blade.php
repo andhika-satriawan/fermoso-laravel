@@ -6,9 +6,9 @@
 
 @push('addon-style')
     <style>
-        .product-list li .product-name {
-            float: left;
-        }
+        /* .product-list li .product-name {
+                float: left;
+            } */
 
         .product-list li .product-price {
             font-size: 12px;
