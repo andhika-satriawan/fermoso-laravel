@@ -8,6 +8,7 @@ use App\Models\ProductSubcategory;
 use App\Models\Article;
 use App\Models\MasterArticleCategory;
 use App\Models\MasterArticleTag;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -17,6 +18,10 @@ class BlogController extends Controller
     public function index()
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $popularArticles = Article::with(['tags', 'categories'])
+            ->orderByDesc('views_count') // Assuming there's a 'views_count' column in the 'articles' table
+            ->limit(10)
+            ->get();
         $articles = Article::with(['tags', 'categories'])
             ->orderBy('created_at', 'desc')
             // ->limit(6)
@@ -27,6 +32,7 @@ class BlogController extends Controller
             "title" => "Blog",
             "page" => "blog",
             "articles" => $articles,
+            "popularArticles" => $popularArticles,
 
         ]);
     }
@@ -57,6 +63,8 @@ class BlogController extends Controller
         $relatedArticles = Article::where('id', '<>', $article->id)->limit(9)->get();
         $allCategories = MasterArticleCategory::all();
         $allTags = MasterArticleTag::all();
+
+        DB::table('articles')->where('id', $article->id)->increment('views_count');
 
         return view('pages.customer.detail-blog', [
             "product_subcategories" => $product_subcategories,

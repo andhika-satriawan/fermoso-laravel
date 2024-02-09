@@ -51,57 +51,31 @@
                             <div class="layered">
                                 <div class="layered-content">
                                     <ul class="blog-list-sidebar clearfix">
-                                        <li>
-                                            <div class="post-thumb">
-                                                <a href="#"><img
-                                                        src="{{ asset('customer/assets/data/blog-thumb1.jpg') }}"
-                                                        alt="Blog"></a>
-                                            </div>
-                                            <div class="post-info">
-                                                <h5 class="entry_title"><a href="#">Lorem ipsum dolor sit amet</a>
-                                                </h5>
-                                                <div class="post-meta">
-                                                    <span class="date"><i class="fa fa-calendar"></i> 2014-08-05</span>
-                                                    <span class="comment-count">
-                                                        <i class="fa fa-comment-o"></i> 3
-                                                    </span>
+                                        @foreach ($popularArticles as $popularArticle)
+                                            <li>
+                                                <div class="post-thumb">
+                                                    <a href="{{ $popularArticle->slug }}">
+                                                        <img src="{{ Storage::url($popularArticle->image) }}"
+                                                            alt="{{ $popularArticle->title }}">
+                                                    </a>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="post-thumb">
-                                                <a href="#"><img
-                                                        src="{{ asset('customer/assets/data/blog-thumb2.jpg') }}"
-                                                        alt="Blog"></a>
-                                            </div>
-                                            <div class="post-info">
-                                                <h5 class="entry_title"><a href="#">Lorem ipsum dolor sit amet</a>
-                                                </h5>
-                                                <div class="post-meta">
-                                                    <span class="date"><i class="fa fa-calendar"></i> 2014-08-05</span>
-                                                    <span class="comment-count">
-                                                        <i class="fa fa-comment-o"></i> 3
-                                                    </span>
+                                                <div class="post-info">
+                                                    <h5 class="entry_title">
+                                                        <a
+                                                            href="{{ $popularArticle->slug }}">{{ $popularArticle->title }}</a>
+                                                    </h5>
+                                                    <div class="post-meta">
+                                                        <span class="date">
+                                                            <i class="fa fa-calendar"></i>
+                                                            {{ $article->created_at->format('F j, Y') }}
+                                                        </span>
+                                                        <span class="comment-count">
+                                                            <i class="fa fa-comment-o"></i> 3
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="post-thumb">
-                                                <a href="#"><img
-                                                        src="{{ asset('customer/assets/data/blog-thumb3.jpg') }}"
-                                                        alt="Blog"></a>
-                                            </div>
-                                            <div class="post-info">
-                                                <h5 class="entry_title"><a href="#">Lorem ipsum dolor sit amet</a>
-                                                </h5>
-                                                <div class="post-meta">
-                                                    <span class="date"><i class="fa fa-calendar"></i> 2014-08-05</span>
-                                                    <span class="comment-count">
-                                                        <i class="fa fa-comment-o"></i> 3
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -110,16 +84,16 @@
                     </div>
                     <!-- ./Popular Posts -->
                     <!-- Banner -->
-                    <div class="block left-module">
+                    {{-- <div class="block left-module">
                         <div class="banner-opacity">
                             <a href="#"><img src="{{ asset('customer/assets/data/slide-left.jpg') }}"
                                     alt="ads-banner"></a>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- ./Banner -->
 
                     <!-- tags -->
-                    <div class="block left-module">
+                    {{-- <div class="block left-module">
                         <p class="title_block">TAGS</p>
                         <div class="block_content">
                             <div class="tags">
@@ -131,15 +105,15 @@
                                 @endforeach
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- ./tags -->
                     <!-- Banner -->
-                    <div class="block left-module">
+                    {{-- <div class="block left-module">
                         <div class="banner-opacity">
                             <a href="#"><img src="{{ asset('customer/assets/data/slide-left2.jpg') }}"
                                     alt="ads-banner"></a>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- ./Banner -->
                 </div>
                 <!-- ./left colunm -->
@@ -231,7 +205,7 @@
 @endsection
 
 @push('addon-script')
-    <script>
+    {{-- <script>
         // Disable Right click
         document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -260,5 +234,5 @@
                 return false;
             }
         }
-    </script>
+    </script> --}}
 @endpush
