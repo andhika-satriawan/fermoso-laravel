@@ -13,6 +13,10 @@
         article.entry-detail h2 {
             margin-bottom: 14px;
         }
+
+        .entry-photo {
+            margin: 25px 0;
+        }
     </style>
 @endpush
 
