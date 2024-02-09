@@ -174,6 +174,8 @@
                 var result = label_reasult +" "+ unit + ui.values[ 0 ] +' - '+ unit +ui.values[ 1 ];
                 console.log(t);
                 t.closest('.slider-range').find('.amount-range-price').html(result);
+                t.closest('.slider-range').find('.range-price-from').val(ui.values[ 0 ]);
+                t.closest('.slider-range').find('.range-price-to').val(ui.values[ 1 ]);
               }
             });
         })

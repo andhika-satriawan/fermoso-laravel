@@ -63,7 +63,7 @@ class ArticleController extends Controller
             'content'               => 'required|string',
             'image'                 => 'required|mimes:jpg,bmp,png,svg',
             'article_categories'    => 'required',
-            'article_tags'          => 'required',
+            'article_tags'          => 'nullable',
         ]);
 
         // dd($request->article_tags);
@@ -118,27 +118,29 @@ class ArticleController extends Controller
             // -------------
             // ARTICLE TAGS
             // -------------
-            // $tagNames = Str::of($request->article_tags)->explode(',');
-            $tagNames = $request->article_tags;
-
-            $tagIds = [];
-            foreach($tagNames as $tagName) {
-                $tagName = trim($tagName);
-                
-                if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
-                    $tag = new MasterArticleTag;
-                    $tag->slug = Str::slug($tagName);
-                    $tag->name = Str::lower($tagName);
-                    $tag->save();
-                } else {
-                    $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
+            if ($request->article_tags) {
+                // $tagNames = Str::of($request->article_tags)->explode(',');
+                $tagNames = $request->article_tags;
+    
+                $tagIds = [];
+                foreach($tagNames as $tagName) {
+                    $tagName = trim($tagName);
+                    
+                    if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
+                        $tag = new MasterArticleTag;
+                        $tag->slug = Str::slug($tagName);
+                        $tag->name = Str::lower($tagName);
+                        $tag->save();
+                    } else {
+                        $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
+                    }
+    
+                    if($tag) {
+                        $tagIds[] = $tag->id;
+                    }
                 }
-
-                if($tag) {
-                    $tagIds[] = $tag->id;
-                }
+                $article->tags()->attach($tagIds);
             }
-            $article->tags()->attach($tagIds);
 
             return to_route($this->route_path . 'index')
             ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
@@ -180,7 +182,7 @@ class ArticleController extends Controller
             'content'               => 'required|string',
             'image'                 => 'nullable|mimes:jpg,bmp,png,svg',
             'article_categories'    => 'required',
-            'article_tags'          => 'required',
+            'article_tags'          => 'nullable',
         ]);
 
         $article = Article::findOrFail($id);
@@ -233,27 +235,29 @@ class ArticleController extends Controller
             // -------------
             // ARTICLE TAGS
             // -------------
-            // $tagNames = Str::of($request->article_tags)->explode(',');
-            $tagNames = $request->article_tags;
-
-            $tagIds = [];
-            foreach($tagNames as $tagName) {
-                $tagName = trim($tagName);
-
-                if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
-                    $tag = new MasterArticleTag;
-                    $tag->slug = Str::slug($tagName);
-                    $tag->name = Str::lower($tagName);
-                    $tag->save();
-                } else {
-                    $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
+            if ($request->article_tags) {
+                // $tagNames = Str::of($request->article_tags)->explode(',');
+                $tagNames = $request->article_tags;
+    
+                $tagIds = [];
+                foreach($tagNames as $tagName) {
+                    $tagName = trim($tagName);
+    
+                    if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
+                        $tag = new MasterArticleTag;
+                        $tag->slug = Str::slug($tagName);
+                        $tag->name = Str::lower($tagName);
+                        $tag->save();
+                    } else {
+                        $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
+                    }
+    
+                    if($tag) {
+                        $tagIds[] = $tag->id;
+                    }
                 }
-
-                if($tag) {
-                    $tagIds[] = $tag->id;
-                }
+                $article->tags()->sync($tagIds);
             }
-            $article->tags()->sync($tagIds);
 
             return to_route($this->route_path . 'index')
             ->with('success', $this->page_info['title'] . ' data has been updated successfully');

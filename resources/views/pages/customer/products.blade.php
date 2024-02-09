@@ -36,6 +36,7 @@
 @section('content')
     <div class="columns-container">
         <div class="container" id="columns">
+
             <!-- breadcrumb -->
             <div class="breadcrumb clearfix">
                 <a class="home" href="{{ url('/') }}" title="Return to Home">Home</a>
@@ -51,59 +52,42 @@
                     <div class="block left-module">
                         <p class="title_block">Filter selection</p>
                         <div class="block_content">
-                            <!-- layered -->
-                            <div class="layered layered-filter-price">
-                                <!-- filter categgory -->
-                                <div class="layered_subtitle">CATEGORIES</div>
-                                <div class="layered-content">
-                                    <ul class="tree-menu">
-                                        @foreach ($product_subcategories as $product_subcategory)
+                            <form action="{{ route('products_filter') }}" id="formFilterSubmission" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <!-- layered -->
+                                <div class="layered layered-filter-price">
+                                    <!-- filter categgory -->
+                                    <div class="layered_subtitle">CATEGORIES</div>
+                                    <div class="layered-content">
+                                        <ul class="check-box-list">
+                                            @foreach ($product_subcategories as $product_subcategory)
                                             <li>
-                                                <span></span>
-                                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                                <input type="checkbox" id="subcategory-{{ $product_subcategory->id }}" name="subcategory" value="{{ $product_subcategory->id }}" @if( request()->get('subcategory') == $product_subcategory->id ) checked @endif />
+                                                <label for="subcategory-{{ $product_subcategory->id }}">
+                                                    <span class="button"></span>
                                                     {{ $product_subcategory->name }}
-                                                    <span class="count">({{ $product_subcategory->product_count }})</span>
-                                                </a>
+                                                    <span class="count">({{ $product_subcategory->products_count }})</span>
+                                                </label>
                                             </li>
-                                        @endforeach
-                                    </ul>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <!-- ./filter categgory -->
+                                    <!-- filter price -->
+                                    <div class="layered_subtitle">price</div>
+                                    <div class="layered-content slider-range">
+    
+                                        <div data-label-reasult="Range:" data-min="10000" data-max="10000000" data-unit="Rp"
+                                            class="slider-range-price" data-value-min="{{ request()->get('price_from') ?? '10000' }}" data-value-max="{{ request()->get('price_to') ?? '10000000' }}"></div>
+                                        <div class="amount-range-price">Range: Rp{{ request()->get('price_from') ?? '10.000'}} - Rp{{ request()->get('price_to') ?? '10.000.000'}}</div>
+                                        <input type="hidden" name="price_from" class="range-price-from">
+                                        <input type="hidden" name="price_to" class="range-price-to">
+                                    </div>
+                                    <!-- ./filter price -->
+                                    <button class="button" type="submit"><i class="fa fa-lock"></i> Filter</button>
                                 </div>
-                                <!-- ./filter categgory -->
-                                <!-- filter price -->
-                                <div class="layered_subtitle">price</div>
-                                <div class="layered-content slider-range">
-
-                                    <div data-label-reasult="Range:" data-min="0" data-max="500" data-unit="$"
-                                        class="slider-range-price" data-value-min="50" data-value-max="350"></div>
-                                    <div class="amount-range-price">Range: Rp100.000 - Rp1000.000</div>
-                                    <ul class="check-box-list">
-                                        <li>
-                                            <input type="checkbox" id="p1" name="cc" />
-                                            <label for="p1">
-                                                <span class="button"></span>
-                                                Rp20 - Rp50<span class="count">(0)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="p2" name="cc" />
-                                            <label for="p2">
-                                                <span class="button"></span>
-                                                Rp50 - Rp100<span class="count">(0)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="p3" name="cc" />
-                                            <label for="p3">
-                                                <span class="button"></span>
-                                                Rp100 - Rp250<span class="count">(0)</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- ./filter price -->
-                            </div>
-                            <!-- ./layered -->
-
+                                <!-- ./layered -->
+                            </form>
                         </div>
                     </div>
                     <!-- ./block filter  -->
@@ -174,6 +158,20 @@
                         </ul>
                     </div>
                     <!-- ./category-slider -->
+
+                    <div>
+                        @if( request()->get('search') )
+                        <h2 style="margin-top: 20px">Search: <span class="text-primary">{{ request()->get('search') }}</span></h2>
+                        @endif
+                        @if( request()->get('subcategory') )
+                        <h2 style="margin-top: 20px">Subcategory: <span class="text-primary">{{ $filters["subcategory_selected"] }}</span></h2>
+                        @endif
+                        @if( request()->get('price_from') || request()->get('price_from') )
+                        <h2 style="margin-top: 20px">Price: <span class="text-primary">Rp {{ $filters["price_from"] > 0 ? number_format($filters["price_from"], 0, ',', '.') : "Undefined" }}</span> - <span class="text-primary">Rp {{ $filters["price_to"] > 0 ? number_format($filters["price_to"], 0, ',', '.') : "Undefined" }}</span></h2>
+                        @endif
+                        <h2 style="margin-top: 20px">Show: <span class="text-primary">{{ number_format($filters["product_count"], 0, ',', '.') }} Product(s)</span></h2>
+                    </div>
+
                     <!-- view-product-list-->
                     <div id="view-product-list" class="view-product-list">
                         <h2 class="page-heading">

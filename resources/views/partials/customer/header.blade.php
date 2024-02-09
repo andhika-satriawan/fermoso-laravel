@@ -47,7 +47,8 @@
                 <a href="{{ route('home') }}"><img alt="Fermoso" src="{{ asset('images/logo.jpg') }}" /></a>
             </div>
             <div class="col-xs-6 col-sm-7 header-search-box">
-                <form class="form-inline">
+                <form action="{{ route('products_filter') }}" class="form-inline" id="formSearchSubmission" method="post" enctype="multipart/form-data">
+                    @csrf
                     {{-- <div class="form-group form-category">
                         <select class="select-category" id="selectCategory">
                             <option value="">All Categories</option>
@@ -55,7 +56,7 @@
                         </select>
                     </div> --}}
                     <div class="form-group input-serach">
-                        <input type="text" placeholder="Cari Product atau Merk">
+                        <input type="text" placeholder="Cari product di sini" name="search">
                     </div>
                     <button type="submit" class="pull-right btn-search"></button>
                 </form>

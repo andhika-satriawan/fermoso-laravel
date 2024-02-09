@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Tags <span class="text-danger">*</span></label>
+                            <label>Tags</label>
                             <select 
                                 class="form-select @error('article_tags') is-invalid @enderror"
                                 id="article_tags" 

@@ -84,6 +84,7 @@ Route::get('/', [App\Http\Controllers\Customer\HomeController::class, 'index'])-
 Route::get('products', [App\Http\Controllers\Customer\ProductController::class, 'index'])->name('products');
 Route::get('/product/{slug}', [App\Http\Controllers\Customer\ProductController::class, 'show'])->name('product.detail.show');
 Route::get('/product/category/{slug}', [App\Http\Controllers\Customer\ProductController::class, 'category'])->name('category-product.category');
+Route::post('products-filter', [App\Http\Controllers\Customer\ProductController::class, 'filter'])->name('products_filter');
 Route::get('blog', [App\Http\Controllers\Customer\BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [App\Http\Controllers\Customer\BlogController::class, 'show'])->name('blog.show');
 Route::get('cara-belanja', [App\Http\Controllers\Customer\OnePageController::class, 'carabelanja'])->name('cara-belanja.carabelanja');
