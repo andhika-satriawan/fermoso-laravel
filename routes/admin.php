@@ -33,9 +33,10 @@ Route::prefix('monyet')
                     Route::resource('deal', App\Http\Controllers\Admin\SettingLatestDealController::class);
                     Route::resource('product-slider', App\Http\Controllers\Admin\SettingProductSliderController::class);
                 });
-
+                
             Route::resource('review', App\Http\Controllers\Admin\ReviewDummyController::class);
             Route::resource('slider', App\Http\Controllers\Admin\SliderController::class);
+            Route::resource('custom-page', App\Http\Controllers\Admin\CustomPageController::class);
 
             Route::prefix('article')
                 ->name('article.')

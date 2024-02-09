@@ -67,6 +67,23 @@
             <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
                 <div class="card image-uploader">
                     <div class="card-body">
+                        <h5 class="card-title">Banner Top (870 x 288)</h5>
+                        <input class="form-control file-uploader @error('banner_top') is-invalid @enderror" type="file" accept="image/*" 
+                            name="banner_top" value="{{ old('banner_top') }}">
+                        @error('banner_top')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                        <img class="card-img-top image-uploader-preview" src="{{ asset('admin/img/product/upload.png') }}">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 upload-product">
+                <div class="card image-uploader">
+                    <div class="card-body">
                         <h5 class="card-title">Banner Left (585 x 65)</h5>
                         <input class="form-control file-uploader @error('banner_left') is-invalid @enderror" type="file" accept="image/*" 
                             name="banner_left" value="{{ old('banner_left') }}">

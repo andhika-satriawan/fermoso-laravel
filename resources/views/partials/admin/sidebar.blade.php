@@ -81,6 +81,13 @@
                     </a>
                 </li>
 
+                <li class="{{ request()->is('monyet/custom-page*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.custom-page.index') }}">
+                        <img src="{{ asset('admin/img/icons/purchase1.svg') }}" alt="img">
+                        <span>Custom Page</span>
+                    </a>
+                </li>
+
                 <li class="submenu">
                     <a href="javascript:void(0);">
                         <img src="{{ asset('admin/img/icons/settings.svg') }}" alt="img">

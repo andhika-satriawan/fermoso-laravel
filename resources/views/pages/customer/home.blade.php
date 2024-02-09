@@ -424,12 +424,12 @@
                                 <div class="cate-name-wrap">
                                     <p class="cate-name">{{ $product_subcategory->name }}</p>
                                 </div>
-                                <a href="{{ route('category-product.category', $product_subcategory->slug) }}"
+                                <a href="{{ route('products', ["subcategory" => $product_subcategory->id]) }}"
                                     class="cate-link link-active" data-ac="flipInX"><span>shop
                                         now</span></a>
                             </div>
                             <div class="div-2">
-                                <a href="{{ route('category-product.category', $product_subcategory->slug) }}">
+                                <a href="{{ route('products', ["subcategory" => $product_subcategory->id]) }}">
                                     <img src="{{ isset($product_subcategory->image) ? Storage::url($product_subcategory->image) : 'customer/assets/data/cate-product1.png' }}"
                                         alt="{{ $product_subcategory->name }}" class="hot-cate-img" />
                                 </a>

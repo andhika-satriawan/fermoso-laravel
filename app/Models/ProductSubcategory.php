@@ -21,6 +21,7 @@ class ProductSubcategory extends Model
         'icon',
         'image',
         'featured_image',
+        'banner_top',
         'banner_left',
         'banner_right',
     ];

@@ -62,11 +62,10 @@
                                         <ul class="check-box-list">
                                             @foreach ($product_subcategories as $product_subcategory)
                                             <li>
-                                                <input type="checkbox" id="subcategory-{{ $product_subcategory->id }}" name="subcategory" value="{{ $product_subcategory->id }}" @if( request()->get('subcategory') == $product_subcategory->id ) checked @endif />
+                                                <input type="radio" id="subcategory-{{ $product_subcategory->id }}" name="subcategory" value="{{ $product_subcategory->id }}" @if( request()->get('subcategory') == $product_subcategory->id ) checked @endif />
                                                 <label for="subcategory-{{ $product_subcategory->id }}">
-                                                    <span class="button"></span>
-                                                    {{ $product_subcategory->name }}
-                                                    <span class="count">({{ $product_subcategory->products_count }})</span>
+                                                    {{-- <span class="button"></span> --}}
+                                                    {{ $product_subcategory->name }} <span class="count">({{ $product_subcategory->products_count }})</span>
                                                 </label>
                                             </li>
                                             @endforeach
@@ -84,7 +83,10 @@
                                         <input type="hidden" name="price_to" class="range-price-to">
                                     </div>
                                     <!-- ./filter price -->
-                                    <button class="button" type="submit"><i class="fa fa-lock"></i> Filter</button>
+                                    <div>
+                                        <button class="button" type="submit"><i class="fa fa-lock"></i> Filter</button>
+                                        <a href="{{ route('products') }}" class="text-danger">Clear</a>
+                                    </div>
                                 </div>
                                 <!-- ./layered -->
                             </form>
@@ -148,6 +150,14 @@
                 <div class="center_column col-xs-12 col-sm-9" id="center_column">
                     <!-- product-slider -->
                     <div class="product-slider">
+                        @if( request()->get('subcategory') )
+                        <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="false"
+                            data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
+                            <li>
+                                <img src="{{ Storage::url($filters["subcategory_selected"]->banner_top) }}" alt="product-category-slider">
+                            </li>
+                        </ul>
+                        @else
                         <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
                             @foreach ($product_sliders as $slider)
@@ -156,6 +166,7 @@
                                 </li>
                             @endforeach
                         </ul>
+                        @endif
                     </div>
                     <!-- ./category-slider -->
 
@@ -164,7 +175,7 @@
                         <h2 style="margin-top: 20px">Search: <span class="text-primary">{{ request()->get('search') }}</span></h2>
                         @endif
                         @if( request()->get('subcategory') )
-                        <h2 style="margin-top: 20px">Subcategory: <span class="text-primary">{{ $filters["subcategory_selected"] }}</span></h2>
+                        <h2 style="margin-top: 20px">Subcategory: <span class="text-primary">{{ $filters["subcategory_selected"]->name }}</span></h2>
                         @endif
                         @if( request()->get('price_from') || request()->get('price_from') )
                         <h2 style="margin-top: 20px">Price: <span class="text-primary">Rp {{ $filters["price_from"] > 0 ? number_format($filters["price_from"], 0, ',', '.') : "Undefined" }}</span> - <span class="text-primary">Rp {{ $filters["price_to"] > 0 ? number_format($filters["price_to"], 0, ',', '.') : "Undefined" }}</span></h2>
@@ -276,6 +287,19 @@
         </div>
     </div>
 @endsection
+
+@push('addon-style')
+    <style>
+        input[type='radio']{
+            margin:0;
+        }
+
+        input[type='radio'], label{   
+            display:inline;
+            vertical-align:top;
+        }
+    </style>
+@endpush
 
 @push('addon-script')
     <script type="text/javascript" src="customer/assets/lib/jquery-ui/jquery-ui.min.js"></script>

@@ -170,13 +170,10 @@
                 <div class="center_column col-xs-12 col-sm-9" id="center_column">
                     <!-- category-slider -->
                     <div class="category-slider">
-                        <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
+                        <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav = "false"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
                             <li>
-                                <img src="{{ asset('customer/assets/data/category-slide.jpg') }}" alt="category-slider">
-                            </li>
-                            <li>
-                                <img src="{{ asset('customer/assets/data/slide-cart2.jpg') }}" alt="category-slider">
+                                <img src="{{ $current_subcategory->banner_top ? Storage::url($current_subcategory->banner_top) : asset('customer/assets/data/category-slide.jpg') }}" alt="category-slider">
                             </li>
                         </ul>
                     </div>

@@ -188,7 +188,7 @@
                 const categoryMenuList = responseData.map((e) => {
                     return `
                         <li>
-                            <a href="{{ url('product/category') }}/${e.slug}">
+                            <a href="{{ url('products') }}?subcategory=${e.id}">
                                 <img
                                     class="icon-menu" alt="${e.name}"
                                     src="{{ Storage::url('') }}${e.icon}" height="25px">

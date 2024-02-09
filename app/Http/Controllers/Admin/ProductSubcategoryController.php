@@ -64,6 +64,7 @@ class ProductSubcategoryController extends Controller
             'icon'                  => 'nullable|mimes:jpg,bmp,png,webp',
             'image'                 => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'        => 'nullable|mimes:jpg,bmp,png,webp',
+            'banner_top'            => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_left'           => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_right'          => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
@@ -121,6 +122,21 @@ class ProductSubcategoryController extends Controller
 
             // $imgResized = $ImageManager->read(public_path('storage/' . $featuredImage_pathFileResized));
             // $imgResized->cover(234, 350);
+        }
+
+        if ($request->hasFile('banner_top')) {
+            $bannerTop_filenameWithExt     = $request->file('banner_top')->getClientOriginalName();
+            $bannerTop_filename            = pathinfo($bannerTop_filenameWithExt, PATHINFO_FILENAME);
+            $bannerTop_extension           = $request->file('banner_top')->getClientOriginalExtension();
+            $bannerTop_fileNameToStore     = $subcategory_slug . '-banner-left-img-' . time() . '.' . $bannerTop_extension;
+            $bannerTop_pathFile            = $request->file('banner_top')->storeAs('assets/product/subcategory', $bannerTop_fileNameToStore, 'public');
+            // $bannerTop_pathFileResized     = $request->file('banner_top')->storeAs('assets/product/subcategory_resized', $bannerTop_fileNameToStore, 'public');
+
+            // Add value
+            $subcategory->banner_top = $bannerTop_pathFile;
+
+            // $imgResized = $ImageManager->read(public_path('storage/' . $bannerTop_pathFileResized));
+            // $imgResized->cover(585, 65);
         }
 
         if ($request->hasFile('banner_left')) {
@@ -193,6 +209,7 @@ class ProductSubcategoryController extends Controller
             'icon'                  => 'nullable|mimes:jpg,bmp,png,webp',
             'image'                 => 'nullable|mimes:jpg,bmp,png,webp',
             'featured_image'        => 'nullable|mimes:jpg,bmp,png,webp',
+            'banner_top'            => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_left'           => 'nullable|mimes:jpg,bmp,png,webp',
             'banner_right'          => 'nullable|mimes:jpg,bmp,png,webp',
         ]);
@@ -250,6 +267,21 @@ class ProductSubcategoryController extends Controller
 
             // $imgResized = $ImageManager->read(public_path('storage/' . $featuredImage_pathFileResized));
             // $imgResized->cover(234, 350);
+        }
+
+        if ($request->hasFile('banner_top')) {
+            $bannerTop_filenameWithExt     = $request->file('banner_top')->getClientOriginalName();
+            $bannerTop_filename            = pathinfo($bannerTop_filenameWithExt, PATHINFO_FILENAME);
+            $bannerTop_extension           = $request->file('banner_top')->getClientOriginalExtension();
+            $bannerTop_fileNameToStore     = $subcategory_slug . '-banner-left-img-' . time() . '.' . $bannerTop_extension;
+            $bannerTop_pathFile            = $request->file('banner_top')->storeAs('assets/product/subcategory', $bannerTop_fileNameToStore, 'public');
+            // $bannerTop_pathFileResized     = $request->file('banner_top')->storeAs('assets/product/subcategory_resized', $bannerTop_fileNameToStore, 'public');
+
+            // Add value
+            $subcategory->banner_top = $bannerTop_pathFile;
+
+            // $imgResized = $ImageManager->read(public_path('storage/' . $bannerTop_pathFileResized));
+            // $imgResized->cover(585, 65);
         }
 
         if ($request->hasFile('banner_left')) {

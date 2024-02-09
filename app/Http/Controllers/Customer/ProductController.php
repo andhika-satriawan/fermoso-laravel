@@ -52,7 +52,7 @@ class ProductController extends Controller
             "products"              => $products,
             "filters"    => [
                 "product_count"     => $products->count(),
-                "subcategory_selected" => $request->subcategory && $product_subcategory ? $product_subcategory->name : 'Not found',
+                "subcategory_selected" => $request->subcategory && $product_subcategory ? $product_subcategory : 'Not found',
                 "price_from"        => $request->price_from ?? 0,
                 "price_to"          => $request->price_to ?? 0,
             ]

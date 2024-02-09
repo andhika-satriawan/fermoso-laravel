@@ -126,13 +126,13 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li class="{{ $page === 'home' ? 'active' : '' }}">
+                                    <li class="{{ request()->is('/') ? 'active' : '' }}">
                                         <a href="{{ url('/') }}">Home</a>
                                     </li>
-                                    <li class="{{ $page === 'category-page' ? 'active' : '' }}">
+                                    <li class="{{ request()->is('products*') ? 'active' : '' }}">
                                         <a href="{{ url('/products') }}">Produk</a>
                                     </li>
-                                    <li class="{{ $page === 'cara-belanja' ? 'active' : '' }}">
+                                    <li class="{{ request()->is('cara-belanja*') ? 'active' : '' }}">
                                         <a href="{{ url('/cara-belanja') }}">Cara Belanja</a>
                                     </li>
                                     <li

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\CustomPage;
 use App\Models\ProductSubcategory;
 use App\Models\Faq;
 
@@ -12,9 +13,10 @@ class OnePageController extends Controller
     public function carabelanja()
     {
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('id')->get();
+        $page = CustomPage::where('code', 'cara-belanja')->firstOrFail();
 
         return view('pages.customer.cara-belanja', [
-            "page" => "cara-belanja",
+            "page" => $page,
             "product_subcategories" => $product_subcategories,
         ]);
     }
