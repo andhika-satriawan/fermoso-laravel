@@ -18,6 +18,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-lg-8">
+
                             <div class="form-group">
                                 <label for="title" class="form-label">Product <span class="text-danger">*</span></label>
                                 <select class="select @error('selectedProduct') is-invalid @enderror"
@@ -26,6 +27,21 @@
                                         <option value="{{ $product->id }}">{{ $product->name }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="end_last_deal" class="form-label">End Last Deal <span class="text-danger">*</span></label>
+                                <div class="input-groupicon">
+                                    <input type="text" placeholder="DD-MM-YYYY" class="@error('end_last_deal') is-invalid @enderror" name="end_last_deal">
+                                    <div class="addonset">
+                                        <img src="{{ asset('admin/img/icons/calendars.svg') }}" alt="img">
+                                    </div>
+                                    @error('end_last_deal')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
                             </div>
 
                         </div>
