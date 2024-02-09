@@ -29,8 +29,8 @@
                         </div>
                         <div class="col-lg-10">
                             <div class="form-group">
-                                <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ old('title') }}" autocomplete="off" required>
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ old('title') }}" autocomplete="off">
                                 @error('title')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -39,8 +39,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" placeholder="Description" name="description" value="{{ old('description') }}" autocomplete="off" required>
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" placeholder="Description" name="description" value="{{ old('description') }}" autocomplete="off">
                                 @error('description')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -49,8 +49,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="link" class="form-label">Link <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" placeholder="Link URL" name="link" value="{{ old('link') }}" autocomplete="off" required>
+                                <label for="link" class="form-label">Link</label>
+                                <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" placeholder="Link URL" name="link" value="{{ old('link') }}" autocomplete="off">
                                 @error('link')
                                 <div class="invalid-feedback">
                                     {{ $message }}

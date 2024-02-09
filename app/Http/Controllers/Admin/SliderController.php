@@ -55,9 +55,9 @@ class SliderController extends Controller
     {
         $validated = $request->validate([
             'image'         => 'required|mimes:jpg,bmp,png,webp',
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string|max:255',
-            'link'          => 'required|string|max:255',
+            'title'         => 'nullable|string|max:255',
+            'description'   => 'nullable|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
         $slider = new Slider;
@@ -112,9 +112,9 @@ class SliderController extends Controller
     {
         $validated = $request->validate([
             'image'         => 'nullable|mimes:jpg,bmp,png,webp',
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string|max:255',
-            'link'          => 'required|string|max:255',
+            'title'         => 'nullable|string|max:255',
+            'description'   => 'nullable|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
         $slider = Slider::findOrFail($id);
