@@ -30,8 +30,10 @@
                                 @csrf
                             </form>
                             <p>
-                                Hello <strong>{{ Auth::user()->name }}</strong> (not <strong>{{ Auth::user()->name }}</strong>? <a
-                                    onclick="event.preventDefault(); document.getElementById('logoutForm').submit()" style="cursor: pointer;">Logout</a>)
+                                Hello <strong>{{ Auth::user()->name }}</strong> (not
+                                <strong>{{ Auth::user()->name }}</strong>? <a
+                                    onclick="event.preventDefault(); document.getElementById('logoutForm').submit()"
+                                    style="cursor: pointer;">Logout</a>)
                             </p>
                             <p>
                                 From your account dashboard you can view your <a

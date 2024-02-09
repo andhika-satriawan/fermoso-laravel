@@ -29,7 +29,8 @@
                                 @csrf
                             </form>
                             <a href="{{ route('my_account.dashboard') }}">My Account</a>
-                            <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
+                            <a class="last-item"
+                                onclick="event.preventDefault(); document.getElementById('logoutForm').submit()">Logout</a>
                         @else
                             <a href="{{ route('register') }}">Daftar</a>
                             <a class="last-item" href="{{ route('login') }}">Login</a>

@@ -6,9 +6,9 @@
 
 @push('addon-style')
     <style>
-        .product-list li .product-name {
-            float: left;
-        }
+        /* .product-list li .product-name {
+                float: left;
+            } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -225,9 +225,18 @@
                                                 <i class="fa fa-star-half-o"></i>
                                             </div>
                                             <div class="content_price">
-                                                <span
-                                                    class="price product-price">Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
-                                                <span class="price old-price">$52,00</span>
+                                                @if ($product->details->first()->discount_price > 0)
+                                                    <span class="price product-price">
+                                                        Rp
+                                                        {{ number_format($product->details->first()->discount_price, 0, ',', '.') }}
+                                                    </span>
+                                                    <span class="price old-price">Rp
+                                                        {{ number_format($product->details->first()->price, 0, ',', '.') }}</span>
+                                                @else
+                                                    <span class="price product-price">
+                                                        Rp{{ number_format($product->details->first()->price, 0, ',', '.') }}
+                                                    </span>
+                                                @endif
                                             </div>
                                             <div class="info-orther">
                                                 <p>Item Code: #453217907</p>

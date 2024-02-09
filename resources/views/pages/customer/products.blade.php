@@ -6,9 +6,9 @@
 
 @push('addon-style')
     <style>
-        .product-list li .product-name {
-            float: left;
-        }
+        /* .product-list li .product-name {
+                float: left;
+            } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -151,9 +151,9 @@
                         <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
                             @foreach ($product_sliders as $slider)
-                            <li>
-                                <img src="{{ Storage::url($slider->image)}}" alt="product-slider">
-                            </li>
+                                <li>
+                                    <img src="{{ Storage::url($slider->image) }}" alt="product-slider">
+                                </li>
                             @endforeach
                         </ul>
                     </div>

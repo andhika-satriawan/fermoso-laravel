@@ -103,6 +103,7 @@ class ProductController extends Controller
         $product_subcategories = ProductSubcategory::with(['products', 'details'])->orderBy('slug', 'ASC')->get();
         $current_subcategory = ProductSubcategory::where('slug', $slug)->firstOrFail();
         $products = Product::where('product_subcategory_id', $current_subcategory->id)->paginate(12);
+        $allCategories = ProductSubcategory::orderBy('slug', 'ASC')->get();
 
         foreach ($product_subcategories as $product_subcategory) {
             $product_subcategory->product_count = Product::where('product_subcategory_id', $product_subcategory->id)->count();
@@ -113,6 +114,7 @@ class ProductController extends Controller
             "product_subcategories" => $product_subcategories,
             "products" => $products,
             "current_subcategory" => $current_subcategory,
+            "allCategories" => $allCategories,
         ]);
     }
 

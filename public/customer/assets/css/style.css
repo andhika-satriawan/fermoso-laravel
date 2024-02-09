@@ -600,7 +600,7 @@ img.alignright {
   height: 50px;
   position: absolute;
   top: 0;
-  right: 50px;
+  /* right: 50px; */
 }
 
 #user-info-opntop a.current-open span {
