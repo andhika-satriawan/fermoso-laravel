@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                float: left;
-            } */
+                    float: left;
+                } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -111,7 +111,7 @@
                     <!-- ./block filter  -->
 
                     <!-- left silide -->
-                    <div class="col-left-slide left-module">
+                    {{-- <div class="col-left-slide left-module">
                         <ul class="owl-carousel owl-style2" data-loop="true" data-nav = "false" data-margin = "30"
                             data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1"
                             data-autoplay="true">
@@ -125,8 +125,7 @@
                                         alt="slide-left"></a>
                             </li>
                         </ul>
-
-                    </div>
+                    </div> --}}
                     <!--./left silde-->
                     <!-- SPECIAL -->
                     <div class="block left-module">
