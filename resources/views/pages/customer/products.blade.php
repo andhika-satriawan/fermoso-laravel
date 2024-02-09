@@ -23,7 +23,7 @@
         }
 
         .product-list li .right-block {
-            height: 45px;
+            height: 58px;
         }
 
         .product-list li .left-block {

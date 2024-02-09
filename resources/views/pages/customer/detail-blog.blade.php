@@ -158,6 +158,7 @@
                         <div class="content-text clearfix">
                             {!! $article->content !!}
                         </div>
+                        <p>Dilihat: {{ $article->views_count }}</p>
                         <div class="entry-tags">
                             <span>Tags:</span>
                             @foreach ($article->tags as $tag)
