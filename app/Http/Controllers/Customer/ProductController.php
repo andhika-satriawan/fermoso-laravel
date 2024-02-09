@@ -24,6 +24,10 @@ class ProductController extends Controller
         $product_sliders = ProductSlider::get();
         $allCategories = ProductSubcategory::orderBy('slug', 'ASC')->get();
 
+        foreach ($allCategories as $category) {
+            $category->product_count = Product::where('product_subcategory_id', $category->id)->count();
+        }
+
         return view('pages.customer.products', [
             "page"                  => "category-page",
             "product_subcategories" => $product_subcategories,
