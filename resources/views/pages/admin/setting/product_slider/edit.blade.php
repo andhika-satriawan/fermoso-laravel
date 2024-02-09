@@ -31,7 +31,7 @@
                         <div class="col-md-12 col-lg-12">
                             <div class="form-group">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ $item->title }}" autocomplete="off" required>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ $item->title }}" autocomplete="off">
                                 @error('title')
                                 <div class="invalid-feedback">
                                     {{ $message }}
