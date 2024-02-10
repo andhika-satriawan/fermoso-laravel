@@ -18,5 +18,6 @@ class Service extends Model
         'icon',
         'title',
         'description',
+        'link',
     ];
 }

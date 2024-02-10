@@ -57,6 +57,7 @@ class ServiceController extends Controller
             'icon'          => 'nullable|mimes:jpg,bmp,png,webp',
             'title'         => 'required|string|max:255',
             'description'   => 'required|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
         $service = new Service;
@@ -112,11 +113,13 @@ class ServiceController extends Controller
             'icon'          => 'nullable|mimes:jpg,bmp,png,webp',
             'title'         => 'required|string|max:255',
             'description'   => 'required|string|max:255',
+            'link'          => 'nullable|string|max:255',
         ]);
 
         $service = Service::findOrFail($id);
         $service->title         = $request->title;
         $service->description   = $request->description;
+        $service->link          = $request->link;
 
         $service_slug = Str::slug($request->title);
 

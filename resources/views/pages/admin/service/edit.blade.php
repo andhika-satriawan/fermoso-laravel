@@ -13,9 +13,10 @@
 
         <div class="card upload-product">
             <div class="card-body">
-                <form action="{{ route('admin.service.update', $item->id) }}" id="formSubmission" method="post" id="" enctype="multipart/form-data">
-                @csrf
-                @method('PATCH')
+                <form action="{{ route('admin.service.update', $item->id) }}" id="formSubmission" method="post" id=""
+                    enctype="multipart/form-data">
+                    @csrf
+                    @method('PATCH')
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="card image-uploader">
@@ -23,29 +24,45 @@
                                     <label for="icon" class="form-label">Icon <span class="text-danger">*</span></label>
                                     <input class="form-control file-uploader" type="file" accept="image/*" name="icon"
                                         value="">
-                                    <img class="card-img-top image-uploader-preview"
-                                        src="{{ Storage::url($item->icon) }}">
+                                    <img class="card-img-top image-uploader-preview" src="{{ Storage::url($item->icon) }}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-10">
                             <div class="form-group">
                                 <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" value="{{ $item->title }}" autocomplete="off" required>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                    id="title" placeholder="Title" name="title" value="{{ $item->title }}"
+                                    autocomplete="off" required>
                                 @error('title')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" placeholder="Description" name="description" value="{{ $item->description }}" autocomplete="off" required>
+                                <label for="description" class="form-label">Description <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control @error('description') is-invalid @enderror"
+                                    id="description" placeholder="Description" name="description"
+                                    value="{{ $item->description }}" autocomplete="off" required>
                                 @error('description')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="link" class="form-label">Link</label>
+                                <input type="text" class="form-control @error('link') is-invalid @enderror"
+                                    id="link" placeholder="Link" name="link" value="{{ $item->link }}"
+                                    autocomplete="off">
+                                @error('link')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
@@ -133,7 +150,6 @@
         </script>
     @endif
     <script type="text/javascript">
-
         $(".image-uploader-preview").on("click", function() {
             $(this).closest(".image-uploader").find(".file-uploader").trigger('click');
         });
@@ -144,6 +160,5 @@
                 $(this).closest(".image-uploader").find(".image-uploader-preview").attr("src", tmpPath);
             }
         });
-        
     </script>
 @endpush
