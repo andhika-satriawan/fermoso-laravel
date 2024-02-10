@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                            content: "";
-                                                                                            position: fixed;
-                                                                                            width: 100%;
-                                                                                            height: 100%;
-                                                                                            background: inherit;
-                                                                                            z-index: -1;
-                                                                                            filter: blur(10px);
-                                                                                        }
+                                                                                                content: "";
+                                                                                                position: fixed;
+                                                                                                width: 100%;
+                                                                                                height: 100%;
+                                                                                                background: inherit;
+                                                                                                z-index: -1;
+                                                                                                filter: blur(10px);
+                                                                                            }
 
-                                                                                        html {
-                                                                                            background-image: url(/customer/assets/images/watermark.png);
-                                                                                            background-size: 80%;
-                                                                                            background-repeat: no-repeat;
-                                                                                            background-position: center;
-                                                                                        } */
+                                                                                            html {
+                                                                                                background-image: url(/customer/assets/images/watermark.png);
+                                                                                                background-size: 80%;
+                                                                                                background-repeat: no-repeat;
+                                                                                                background-position: center;
+                                                                                            } */
     </style>
 @endpush
 
@@ -186,7 +186,7 @@
                         <img alt="services" src="{{ Storage::url($service->icon) }}" />
                     </div>
                     <div class="info">
-                        <a href="#">
+                        <a href="{{ $service->link }}">
                             <h3>{{ $service->title }}</h3>
                         </a>
                         <span>{{ $service->description }}</span>
@@ -426,12 +426,12 @@
                                 <div class="cate-name-wrap">
                                     <p class="cate-name">{{ $product_subcategory->name }}</p>
                                 </div>
-                                <a href="{{ route('products', ["subcategory" => $product_subcategory->id]) }}"
+                                <a href="{{ route('products', ['subcategory' => $product_subcategory->id]) }}"
                                     class="cate-link link-active" data-ac="flipInX"><span>shop
                                         now</span></a>
                             </div>
                             <div class="div-2">
-                                <a href="{{ route('products', ["subcategory" => $product_subcategory->id]) }}">
+                                <a href="{{ route('products', ['subcategory' => $product_subcategory->id]) }}">
                                     <img src="{{ isset($product_subcategory->image) ? Storage::url($product_subcategory->image) : 'customer/assets/data/cate-product1.png' }}"
                                         alt="{{ $product_subcategory->name }}" class="hot-cate-img" />
                                 </a>
