@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                                content: "";
-                                                                                                position: fixed;
-                                                                                                width: 100%;
-                                                                                                height: 100%;
-                                                                                                background: inherit;
-                                                                                                z-index: -1;
-                                                                                                filter: blur(10px);
-                                                                                            }
+                                                                                                            content: "";
+                                                                                                            position: fixed;
+                                                                                                            width: 100%;
+                                                                                                            height: 100%;
+                                                                                                            background: inherit;
+                                                                                                            z-index: -1;
+                                                                                                            filter: blur(10px);
+                                                                                                        }
 
-                                                                                            html {
-                                                                                                background-image: url(/customer/assets/images/watermark.png);
-                                                                                                background-size: 80%;
-                                                                                                background-repeat: no-repeat;
-                                                                                                background-position: center;
-                                                                                            } */
+                                                                                                        html {
+                                                                                                            background-image: url(/customer/assets/images/watermark.png);
+                                                                                                            background-size: 80%;
+                                                                                                            background-repeat: no-repeat;
+                                                                                                            background-position: center;
+                                                                                                        } */
     </style>
 @endpush
 
@@ -209,7 +209,7 @@
                         </ul>
                         <div class="tab-container">
                             <div id="tab-1" class="tab-panel active">
-                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="false" data-nav = "true"
                                     data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
                                     data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
                                     @foreach ($best_sellers as $best_seller)
@@ -260,7 +260,7 @@
                                 </ul>
                             </div>
                             <div id="tab-2" class="tab-panel">
-                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="false" data-nav = "true"
                                     data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
                                     data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
                                     @foreach ($low_sales_products as $low_sales_product)
@@ -306,7 +306,7 @@
                                 </ul>
                             </div>
                             <div id="tab-3" class="tab-panel">
-                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="false"
                                     data-nav = "true" data-margin = "30" data-autoplayTimeout="1000"
                                     data-autoplayHoverPause = "true"
                                     data-responsive='{"0":{"items":2},"600":{"items":3},"1000":{"items":3}}'>
@@ -360,7 +360,7 @@
                     <div class="latest-deals">
                         <h2 class="latest-deal-title">latest deals</h2>
                         <div class="latest-deal-content">
-                            <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true"
+                            <ul class="product-list owl-carousel" data-dots="false" data-loop="false" data-nav = "true"
                                 data-autoplayTimeout="1000" data-autoplayHoverPause = "true"
                                 data-responsive='{"0":{"items":1},"600":{"items":1},"1000":{"items":1}}'>
                                 @foreach ($latest_deals as $latest_deal)
@@ -529,7 +529,7 @@
                                 <div class="tab-container">
                                     <!-- tab product -->
                                     <div class="tab-panel active" id="tab-4">
-                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="false"
                                             data-nav = "true" data-margin = "0" data-autoplayTimeout="1000"
                                             data-autoplayHoverPause = "true"
                                             data-responsive='{
@@ -587,7 +587,7 @@
                                     </div>
                                     <!-- tab product -->
                                     <div class="tab-panel" id="tab-5">
-                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="true"
+                                        <ul class="product-list owl-carousel" data-dots="false" data-loop="false"
                                             data-nav = "true" data-margin = "0" data-autoplayTimeout="1000"
                                             data-autoplayHoverPause = "true"
                                             data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
