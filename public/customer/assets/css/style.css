@@ -6107,6 +6107,10 @@ ul#contenhomeslider li {
   overflow: hidden;
 }
 
+.owl-carousel {
+  touch-action: auto;
+}
+
 @media (max-width: 767px) {
   .main-header .header-search-box .form-inline .input-serach input {
     padding-top: 0;
