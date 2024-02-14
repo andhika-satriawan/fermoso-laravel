@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 200);
             $table->string('slug')->unique();
-            $table->text('content');
+            $table->longText('content');
             $table->string('image')->nullable();
             $table->unsignedInteger('status')->default(1); // 0 = TIDAK AKTIF || 1 = AKTIF || 2 = DRAFT
             $table->timestamps();
