@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                                            float: left;
-                                        } */
+                                                float: left;
+                                            } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -216,7 +216,7 @@
                         <!-- PRODUCT LIST -->
                         <ul class="row product-list grid">
                             @foreach ($products as $product)
-                                <li class="col-sx-12 col-sm-3">
+                                <li class="col-sx-12 col-sm-3 col-xs-6">
                                     <div class="product-container">
                                         <div class="left-block">
                                             <a href="{{ route('product.detail.show', $product->slug) }}">
