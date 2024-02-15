@@ -5177,6 +5177,11 @@ span.notify-right {
   text-transform: uppercase;
 }
 
+.box-border.scroll-horizontal {
+  overflow: auto;
+  white-space: nowrap;
+}
+
 .checkout-page .box-border {
   margin-bottom: 15px;
 }

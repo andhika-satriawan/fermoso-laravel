@@ -173,35 +173,35 @@
                         </ul>
                     </div>
                     <h3 class="checkout-sep">6. Order Review</h3>
-                    {{-- <div class="box-border"> --}}
-                    <table class="table table-bordered table-responsive cart_summary">
-                        <thead>
-                            <tr>
-                                <th class="cart_product">Produk</th>
-                                <th>Rincian</th>
-                                <th>Stok</th>
-                                <th>Unit harga</th>
-                                <th>Qty</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($carts as $cart)
+                    <div class="box-border scroll-horizontal">
+                        <table class="table table-bordered table-responsive cart_summary">
+                            <thead>
                                 <tr>
-                                    <td class="cart_product">
-                                        <a href="#"><img src="{{ Storage::url($cart->product->photo) }}"
-                                                alt="Product"></a>
-                                    </td>
-                                    <td class="cart_description">
-                                        <p class="product-name"><a href="#">{{ $cart->product->name }}</a></p>
-                                        <small class="cart_ref">SKU : #{{ $cart->product_detail->sku }}</small><br>
-                                        @if ($cart->product_detail->name != 'DEFAULT')
-                                            <small><a href="#">Variant :
-                                                    {{ $cart->product_detail->name }}</a></small><br>
-                                        @endif
-                                    </td>
-                                    <td class="cart_avail">
-                                        {{-- @if ($cart->product_detail->stock > 5)
+                                    <th class="cart_product">Produk</th>
+                                    <th>Rincian</th>
+                                    <th>Stok</th>
+                                    <th>Unit harga</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($carts as $cart)
+                                    <tr>
+                                        <td class="cart_product">
+                                            <a href="#"><img src="{{ Storage::url($cart->product->photo) }}"
+                                                    alt="Product"></a>
+                                        </td>
+                                        <td class="cart_description">
+                                            <p class="product-name"><a href="#">{{ $cart->product->name }}</a></p>
+                                            <small class="cart_ref">SKU : #{{ $cart->product_detail->sku }}</small><br>
+                                            @if ($cart->product_detail->name != 'DEFAULT')
+                                                <small><a href="#">Variant :
+                                                        {{ $cart->product_detail->name }}</a></small><br>
+                                            @endif
+                                        </td>
+                                        <td class="cart_avail">
+                                            {{-- @if ($cart->product_detail->stock > 5)
                                                 <span class="label label-success">In stock:
                                                     {{ $cart->product_detail->stock }}</span>
                                             @elseif ($cart->product_detail->stock > 0)
@@ -210,47 +210,47 @@
                                             @else
                                                 <span class="label label-danger">Out of stock</span>
                                             @endif --}}
-                                        <span class="green"><strong>Tersedia</strong></span>
-                                    </td>
-                                    <td class="price item-price">
-                                        @if ($cart->product_detail->discount_price > 0)
-                                            <span class="price">Rp
-                                                {{ number_format($cart->product_detail->discount_price, 0, ',', '.') }}</span>
-                                            <s class="old-price text-danger">Rp
-                                                {{ number_format($cart->product_detail->price, 0, ',', '.') }}</s>
-                                        @else
+                                            <span class="green"><strong>Tersedia</strong></span>
+                                        </td>
+                                        <td class="price item-price">
+                                            @if ($cart->product_detail->discount_price > 0)
+                                                <span class="price">Rp
+                                                    {{ number_format($cart->product_detail->discount_price, 0, ',', '.') }}</span>
+                                                <s class="old-price text-danger">Rp
+                                                    {{ number_format($cart->product_detail->price, 0, ',', '.') }}</s>
+                                            @else
+                                                <span>Rp
+                                                    {{ number_format($cart->product_detail->price, 0, ',', '.') }}</span>
+                                            @endif
+                                        </td>
+                                        <td class="qty">
+                                            {{ $cart->quantity }}
+                                        </td>
+                                        <td class="price">
                                             <span>Rp
-                                                {{ number_format($cart->product_detail->price, 0, ',', '.') }}</span>
-                                        @endif
-                                    </td>
-                                    <td class="qty">
-                                        {{ $cart->quantity }}
-                                    </td>
-                                    <td class="price">
-                                        <span>Rp
-                                            {{ number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') }}</span>
-                                    </td>
+                                                {{ number_format(($cart->product_detail->discount_price > 0 ? $cart->product_detail->discount_price : $cart->product_detail->price) * $cart->quantity, 0, ',', '.') }}</span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" rowspan="3"></td>
+                                    <td colspan="3">Subtotal</td>
+                                    <td>Rp {{ number_format($total_carts, 0, ',', '.') }}</td>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="2" rowspan="3"></td>
-                                <td colspan="3">Subtotal</td>
-                                <td>Rp {{ number_format($total_carts, 0, ',', '.') }}</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">Pengiriman</td>
-                                <td id="shippingCost">Rp 0</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3"><strong>Total</strong></td>
-                                <td><strong id="totalCost">Rp 0</strong></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <button class="btn button pull-right" type="submit">Submit Pesanan</button>
-                    {{-- </div> --}}
+                                <tr>
+                                    <td colspan="3">Pengiriman</td>
+                                    <td id="shippingCost">Rp 0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><strong>Total</strong></td>
+                                    <td><strong id="totalCost">Rp 0</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button class="btn button pull-right" type="submit">Submit Pesanan</button>
+                    </div>
                 </form>
             </div>
         </div>
