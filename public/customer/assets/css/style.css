@@ -6120,4 +6120,22 @@ ul#contenhomeslider li {
   .main-header .header-search-box .form-inline .input-serach input {
     padding-top: 0;
   }
+
+  .service .service-item .icon {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  .service .service-item .icon img {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .service .service-item .info {
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 0;
+    text-align: center;
+  }
 }
