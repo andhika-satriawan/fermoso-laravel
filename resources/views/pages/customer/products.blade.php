@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                                                    float: left;
-                                                } */
+                                                        float: left;
+                                                    } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -24,7 +24,7 @@
 
         .product-list li .right-block {
             /* height: 58px; */
-            /* height: 75px; */
+            min-height: 80px;
         }
 
         .product-list li .left-block {
