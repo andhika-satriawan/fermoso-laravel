@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                                            content: "";
-                                                                                                            position: fixed;
-                                                                                                            width: 100%;
-                                                                                                            height: 100%;
-                                                                                                            background: inherit;
-                                                                                                            z-index: -1;
-                                                                                                            filter: blur(10px);
-                                                                                                        }
+                                                                                                                    content: "";
+                                                                                                                    position: fixed;
+                                                                                                                    width: 100%;
+                                                                                                                    height: 100%;
+                                                                                                                    background: inherit;
+                                                                                                                    z-index: -1;
+                                                                                                                    filter: blur(10px);
+                                                                                                                }
 
-                                                                                                        html {
-                                                                                                            background-image: url(/customer/assets/images/watermark.png);
-                                                                                                            background-size: 80%;
-                                                                                                            background-repeat: no-repeat;
-                                                                                                            background-position: center;
-                                                                                                        } */
+                                                                                                                html {
+                                                                                                                    background-image: url(/customer/assets/images/watermark.png);
+                                                                                                                    background-size: 80%;
+                                                                                                                    background-repeat: no-repeat;
+                                                                                                                    background-position: center;
+                                                                                                                } */
     </style>
 @endpush
 
@@ -369,7 +369,7 @@
                                             data-countdown="{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $latest_deal->latest_deal_end_date)->format('Y/m/d H:i:s') }}">
                                         </div>
                                         <div class="left-block">
-                                            <a href="{{ $latest_deal->slug }}">
+                                            <a href="{{ url('product/' . $latest_deal->slug) }}">
                                                 <img class="img-responsive" alt="product"
                                                     src="{{ Storage::url($latest_deal->photo) }}" />
                                             </a>
