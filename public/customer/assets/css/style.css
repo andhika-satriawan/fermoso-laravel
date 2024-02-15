@@ -6121,6 +6121,16 @@ ul#contenhomeslider li {
     padding-top: 0;
   }
 
+  .header-top-right .homeslider .bx-wrapper .bx-pager {
+    bottom: 65px;
+    width: 60%;
+    padding-right: 0;
+  }
+
+  .header-top-right .header-banner {
+    width: 40%;
+  }
+
   .service .service-item .icon {
     width: 100%;
     height: auto;
