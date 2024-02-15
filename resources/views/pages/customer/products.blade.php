@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                    float: left;
-                } */
+                                float: left;
+                            } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -62,13 +62,16 @@
                                     <div class="layered-content">
                                         <ul class="check-box-list">
                                             @foreach ($product_subcategories as $product_subcategory)
-                                            <li>
-                                                <input type="radio" id="subcategory-{{ $product_subcategory->id }}" name="subcategory" value="{{ $product_subcategory->id }}" @if( request()->get('subcategory') == $product_subcategory->id ) checked @endif />
-                                                <label for="subcategory-{{ $product_subcategory->id }}">
-                                                    {{-- <span class="button"></span> --}}
-                                                    {{ $product_subcategory->name }} <span class="count">({{ $product_subcategory->products_count }})</span>
-                                                </label>
-                                            </li>
+                                                <li>
+                                                    <input type="radio" id="subcategory-{{ $product_subcategory->id }}"
+                                                        name="subcategory" value="{{ $product_subcategory->id }}"
+                                                        @if (request()->get('subcategory') == $product_subcategory->id) checked @endif />
+                                                    <label for="subcategory-{{ $product_subcategory->id }}">
+                                                        {{-- <span class="button"></span> --}}
+                                                        {{ $product_subcategory->name }} <span
+                                                            class="count">({{ $product_subcategory->products_count }})</span>
+                                                    </label>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -154,22 +157,23 @@
                 <div class="center_column col-xs-12 col-sm-9" id="center_column">
                     <!-- product-slider -->
                     <div class="product-slider">
-                        @if( request()->get('subcategory') )
-                        <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="false"
-                            data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
-                            <li>
-                                <img src="{{ Storage::url($filters["subcategory_selected"]->banner_top) }}" alt="product-category-slider">
-                            </li>
-                        </ul>
-                        @else
-                        <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
-                            data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
-                            @foreach ($product_sliders as $slider)
+                        @if (request()->get('subcategory'))
+                            <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="false"
+                                data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
                                 <li>
-                                    <img src="{{ Storage::url($slider->image) }}" alt="product-slider">
+                                    <img src="{{ Storage::url($filters['subcategory_selected']->banner_top) }}"
+                                        alt="product-category-slider">
                                 </li>
-                            @endforeach
-                        </ul>
+                            </ul>
+                        @else
+                            <ul class="owl-carousel owl-style2" data-dots="false" data-loop="true" data-nav = "true"
+                                data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
+                                @foreach ($product_sliders as $slider)
+                                    <li>
+                                        <img src="{{ Storage::url($slider->image) }}" alt="product-slider">
+                                    </li>
+                                @endforeach
+                            </ul>
                         @endif
                     </div>
                     <!-- ./category-slider -->
@@ -179,8 +183,9 @@
                             <h2 style="margin-top: 20px">Search: <span
                                     class="text-primary">{{ request()->get('search') }}</span></h2>
                         @endif
-                        @if( request()->get('subcategory') )
-                        <h2 style="margin-top: 20px">Subcategory: <span class="text-primary">{{ $filters["subcategory_selected"]->name }}</span></h2>
+                        @if (request()->get('subcategory'))
+                            <h2 style="margin-top: 20px">Subcategory: <span
+                                    class="text-primary">{{ $filters['subcategory_selected']->name }}</span></h2>
                         @endif
                         @if (request()->get('price_from') || request()->get('price_from'))
                             <h2 style="margin-top: 20px">Price: <span class="text-primary">Rp
@@ -301,17 +306,20 @@
 
 @push('addon-style')
     <style>
-        input[type='radio']{
-            margin:0;
+        input[type='radio'] {
+            margin: 0;
         }
 
-        input[type='radio'], label{   
-            display:inline;
-            vertical-align:top;
+        input[type='radio'],
+        label {
+            display: inline;
+            vertical-align: top;
         }
     </style>
 @endpush
 
 @push('addon-script')
     <script type="text/javascript" src="customer/assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 @endpush
