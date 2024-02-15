@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                                                    content: "";
-                                                                                                                    position: fixed;
-                                                                                                                    width: 100%;
-                                                                                                                    height: 100%;
-                                                                                                                    background: inherit;
-                                                                                                                    z-index: -1;
-                                                                                                                    filter: blur(10px);
-                                                                                                                }
+                                                                                                                                        content: "";
+                                                                                                                                        position: fixed;
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                        background: inherit;
+                                                                                                                                        z-index: -1;
+                                                                                                                                        filter: blur(10px);
+                                                                                                                                    }
 
-                                                                                                                html {
-                                                                                                                    background-image: url(/customer/assets/images/watermark.png);
-                                                                                                                    background-size: 80%;
-                                                                                                                    background-repeat: no-repeat;
-                                                                                                                    background-position: center;
-                                                                                                                } */
+                                                                                                                                    html {
+                                                                                                                                        background-image: url(/customer/assets/images/watermark.png);
+                                                                                                                                        background-size: 80%;
+                                                                                                                                        background-repeat: no-repeat;
+                                                                                                                                        background-position: center;
+                                                                                                                                    } */
     </style>
 @endpush
 
@@ -373,11 +373,6 @@
                                                 <img class="img-responsive" alt="product"
                                                     src="{{ Storage::url($latest_deal->photo) }}" />
                                             </a>
-                                            <div class="quick-view">
-                                                <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                <a title="Add to compare" class="compare" href="#"></a>
-                                                <a title="Quick view" class="search" href="#"></a>
-                                            </div>
                                             <div class="add-to-cart">
                                                 <a title="Add to Cart" href="#">Add to Cart</a>
                                             </div>
@@ -474,14 +469,14 @@
                         <div class="container">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-brand">
-                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                <a href="{{ url('products?subcategory=' . $product_subcategory->id) }}">
                                     {{-- <img alt="fashion" src="customer/assets/data/fashion.png" /> --}}
                                     <img alt="{{ $product_subcategory->name }}"
                                         src="{{ isset($product_subcategory->icon) ? Storage::url($product_subcategory->icon) : 'customer/assets/data/fashion.png' }}" />
                                     {{ $product_subcategory->name }}
                                 </a>
                             </div>
-                            <span class="toggle-menu"></span>
+                            {{-- <span class="toggle-menu"></span> --}}
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse"></div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
