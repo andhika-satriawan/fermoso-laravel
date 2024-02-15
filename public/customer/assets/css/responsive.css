@@ -252,8 +252,12 @@
 		float: left;
 	}
 
-	.category-banner {
+	/* .category-banner {
 		display: none;
+	} */
+
+	.category-banner img {
+		margin: 10px 0;
 	}
 
 	.floor-elevator {
@@ -527,9 +531,9 @@
 		float: left;
 	}
 
-		{
+	/* {
 		min-height: 480px;
-	}
+	} */
 
 	.container {
 		padding-left: 15px;
@@ -540,8 +544,12 @@
 		display: none;
 	}
 
-	.category-banner {
+	/* .category-banner {
 		display: none;
+	} */
+
+	.category-banner img {
+		margin: 10px 0;
 	}
 
 	.product-featured .banner-featured {
@@ -1013,8 +1021,12 @@
 		display: none;
 	}
 
-	.category-banner {
+	/* .category-banner {
 		display: none;
+	} */
+
+	.category-banner img {
+		margin: 10px 0;
 	}
 
 	.product-featured .banner-featured {
