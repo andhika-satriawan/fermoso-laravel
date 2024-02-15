@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                                                float: left;
-                                            } */
+                                                    float: left;
+                                                } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -118,7 +118,7 @@
                     </div> --}}
                     <!--./left silde-->
                     <!-- SPECIAL -->
-                    <div class="block left-module">
+                    {{-- <div class="block left-module">
                         <p class="title_block">SPECIAL PRODUCTS</p>
                         <div class="block_content">
                             <ul class="products-block">
@@ -149,7 +149,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- ./SPECIAL -->
                 </div>
                 <!-- ./left colunm -->
