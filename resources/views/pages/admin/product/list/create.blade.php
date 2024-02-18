@@ -102,11 +102,11 @@
                             </div>
                         </div>
 
-                        {{-- <div class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <h4>Dimension & Shipping</h4>
                                 <div class="row">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    {{-- <div class="col-lg-4 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label>Width</label>
                                             <div class="input-group">
@@ -162,7 +162,7 @@
                                                 </div>
                                             @enderror
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Weight</label>
@@ -184,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
 
                         <div class="card">
                             <div class="card-body">
@@ -292,7 +292,8 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col" id="variant_name_head">Variant Name <span class="text-danger">*</span></th>
+                                                <th scope="col" id="variant_name_head">Variant Name <span
+                                                        class="text-danger">*</span></th>
                                                 <th scope="col">Price <span class="text-danger">*</span></th>
                                                 <th scope="col">Discounted Price</th>
                                                 <th scope="col">Stock <span class="text-danger">*</span></th>
@@ -310,23 +311,24 @@
                                                         value="{{ old('productDetails[0][name]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="form-control product-detail-price" placeholder="Rp"
-                                                        name="productDetails[0][price]"
+                                                    <input type="text" class="form-control product-detail-price"
+                                                        placeholder="Rp" name="productDetails[0][price]"
                                                         value="{{ old('productDetails[0][price]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="form-control product-detail-discount-price"
+                                                    <input type="text"
+                                                        class="form-control product-detail-discount-price"
                                                         placeholder="Rp" name="productDetails[0][discount_price]"
                                                         value="{{ old('productDetails[0][discount_price]') }}">
                                                 </td>
                                                 <td>
-                                                    <input type="number" class="form-control product-detail-stock" placeholder="Pcs"
-                                                        name="productDetails[0][stock]"
+                                                    <input type="number" class="form-control product-detail-stock"
+                                                        placeholder="Pcs" name="productDetails[0][stock]"
                                                         value="{{ old('productDetails[0][stock]') }}" required>
                                                 </td>
                                                 <td>
-                                                    <input type="text" class="form-control product-detail-sku" placeholder="SKU"
-                                                        name="productDetails[0][sku]"
+                                                    <input type="text" class="form-control product-detail-sku"
+                                                        placeholder="SKU" name="productDetails[0][sku]"
                                                         value="{{ old('productDetails[0][sku]') }}" required>
                                                 </td>
                                                 <td class="upload-product">
@@ -552,7 +554,11 @@
             const rowCount = $('#tbodyVariant > tr').length;
             console.log('Lalala ' + rowCount);
             if (rowCount > 1) {
-                $('.product-detail-name').attr( {type: "text", placeholder: "Ukuran S", required: true} );
+                $('.product-detail-name').attr({
+                    type: "text",
+                    placeholder: "Ukuran S",
+                    required: true
+                });
                 $('.product-detail-name').closest("td").show();
                 $('.upload-file-variant').closest("td").show();
                 $('.product-detail-delete').closest("td").show();
@@ -560,7 +566,12 @@
                 $('#variant_image_head').show();
                 $('#variant_delete_head').show();
             } else {
-                $('.product-detail-name').attr( {type: "hidden", placeholder: "DEFAULT", value: "DEFAULT", required: false} );
+                $('.product-detail-name').attr({
+                    type: "hidden",
+                    placeholder: "DEFAULT",
+                    value: "DEFAULT",
+                    required: false
+                });
                 $('.product-detail-name').closest("td").hide();
                 $('.upload-file-variant').closest("td").hide();
                 $('.product-detail-delete').closest("td").hide();

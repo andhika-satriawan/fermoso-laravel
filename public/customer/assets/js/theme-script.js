@@ -225,14 +225,14 @@
         /* Open menu on mobile */
         $(document).on('click','.btn-open-mobile',function(){
             var width = $(window).width();
-            if(width >0){
-                if($('body').hasClass('home')){
-                    if($('#nav-top-menu').hasClass('nav-ontop')){
-                    }else{
-                        return false;
-                    }
-                }
-            }
+            // if(width >0){
+            //     if($('body').hasClass('home')){
+            //         if($('#nav-top-menu').hasClass('nav-ontop')){
+            //         }else{
+            //             return false;
+            //         }
+            //     }
+            // }
             $(this).closest('.box-vertical-megamenus').find('.vertical-menu-content').slideToggle();
             $(this).closest('.title').toggleClass('active');
             return false;

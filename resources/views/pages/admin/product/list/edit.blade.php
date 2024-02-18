@@ -22,8 +22,8 @@
                 </div>
             @endforeach
 
-            <form action="{{ route('admin.product.list.update', $item->id) }}" id="formSubmission" method="post" id=""
-                enctype="multipart/form-data">
+            <form action="{{ route('admin.product.list.update', $item->id) }}" id="formSubmission" method="post"
+                id="" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
                 <div class="row upload-product">
@@ -41,8 +41,7 @@
                                     </div>
                                 @enderror
                             </div>
-                            <img class="card-img-top image-uploader-preview"
-                                src="{{ Storage::url($item->photo) }}">
+                            <img class="card-img-top image-uploader-preview" src="{{ Storage::url($item->photo) }}">
                         </div>
                     </div>
 
@@ -50,13 +49,16 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card image-uploader">
                                 <div class="card-body">
-                                    <div class="card-header d-flex justify-content-between align-items-center" width="100%">
+                                    <div class="card-header d-flex justify-content-between align-items-center"
+                                        width="100%">
                                         <h5 class="card-title">Image {{ $image_no }}</h5>
                                         @if (isset($item->images[$loop->index]))
-                                            <i onclick="deleteImage('{{ $item->images[$loop->index]->id }}')" class="fa fa-trash text-danger" role="button"></i>
+                                            <i onclick="deleteImage('{{ $item->images[$loop->index]->id }}')"
+                                                class="fa fa-trash text-danger" role="button"></i>
                                         @endif
                                     </div>
-                                    <input type="hidden" name="productImages[{{ $loop->index }}][id]" value="{{ isset($item->images[$loop->index]) != null ? $item->images[$loop->index]->id : '' }}">
+                                    <input type="hidden" name="productImages[{{ $loop->index }}][id]"
+                                        value="{{ isset($item->images[$loop->index]) != null ? $item->images[$loop->index]->id : '' }}">
                                     <input
                                         class="form-control file-uploader @error("{{ 'productImages[' . $loop->index . '][photo]' }}") is-invalid @enderror"
                                         type="file" accept="image/*"
@@ -109,11 +111,11 @@
                             </div>
                         </div>
 
-                        {{-- <div class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <h4>Dimension & Shipping</h4>
                                 <div class="row">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    {{-- <div class="col-lg-4 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label>Width</label>
                                             <div class="input-group">
@@ -169,7 +171,7 @@
                                                 </div>
                                             @enderror
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Weight</label>
@@ -191,7 +193,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
 
                         <div class="card">
                             <div class="card-body">
@@ -267,9 +269,12 @@
                                     <div class="form-group">
                                         <label>Status <span class="text-danger">*</span></label>
                                         <select class="select @error('status') is-invalid @enderror" name="status">
-                                            <option value="1" @if ($item->status == "1") selected @endif>Deactivated</option>
-                                            <option value="2" @if ($item->status == "2") selected @endif>Active</option>
-                                            <option value="3" @if ($item->status == "3") selected @endif>Draft</option>
+                                            <option value="1" @if ($item->status == '1') selected @endif>
+                                                Deactivated</option>
+                                            <option value="2" @if ($item->status == '2') selected @endif>
+                                                Active</option>
+                                            <option value="3" @if ($item->status == '3') selected @endif>Draft
+                                            </option>
                                         </select>
                                         @error('product_subcategory_id')
                                             <div class="text-danger">
@@ -299,7 +304,8 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col" id="variant_name_head">Variant Name <span class="text-danger">*</span></th>
+                                                <th scope="col" id="variant_name_head">Variant Name <span
+                                                        class="text-danger">*</span></th>
                                                 <th scope="col">Price <span class="text-danger">*</span></th>
                                                 <th scope="col">Discounted Price</th>
                                                 <th scope="col">Stock <span class="text-danger">*</span></th>
@@ -312,59 +318,73 @@
                                         </thead>
                                         <tbody id="tbodyVariant">
                                             @foreach ($item->details as $variant)
-                                            <tr id="element-variant">
-                                                <td>
-                                                    <input type="hidden" class="form-control product-detail-id" name="productDetails[{{ $loop->index }}][id]" value="{{ $variant->id }}">
-                                                    <input type="text" class="form-control product-detail-name"
-                                                        placeholder="Product Name" name="productDetails[{{ $loop->index }}][name]"
-                                                        value="{{ $variant->name }}" required>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control product-detail-price" placeholder="Rp"
-                                                        name="productDetails[{{ $loop->index }}][price]"
-                                                        value="{{ $variant->price }}" required>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control product-detail-discount-price"
-                                                        placeholder="Rp" name="productDetails[{{ $loop->index }}][discount_price]"
-                                                        value="{{ $variant->discount_price }}">
-                                                </td>
-                                                <td>
-                                                    <input type="number" class="form-control product-detail-stock" placeholder="Pcs"
-                                                        name="productDetails[{{ $loop->index }}][stock]"
-                                                        value="{{ $variant->stock }}" required>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control product-detail-sku" placeholder="SKU"
-                                                        name="productDetails[{{ $loop->index }}][sku]"
-                                                        value="{{ $variant->sku }}" required>
-                                                </td>
-                                                <td class="upload-product">
-                                                    <input class="upload-file-variant" type="file" accept="image/*"
-                                                        name="productDetails[{{ $loop->index }}][photo_variant]"
-                                                        onchange="showPreviewVariant(event)">
-                                                    <img class="card-img-top card-img-variant"
-                                                        src="{{ isset($variant->image) ? Storage::url($variant->image) : asset('admin/img/product/upload.png') }}"
-                                                        alt="Card image cap">
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch"
-                                                            name="productDetails[{{ $loop->index }}][status]" value="1" @if ($variant->status == 1) checked @endif>
-                                                    </div>
-                                                </td>
-                                                <td class="last-update">
-                                                    @if ($variant->last_update_by && $variant->last_update_at)
-                                                        by {{ $variant->last_update_by }}<br/>
-                                                        at {{ $variant->last_update_at }}
-                                                    @else
-                                                        No Data
-                                                    @endif
-                                                </td>
-                                                <td class="delete-variant">
-                                                    <img onclick="deleteRow(event)" src="{{ asset('admin/img/icons/delete.svg') }}" alt="img">
-                                                </td>
-                                            </tr>
+                                                <tr id="element-variant">
+                                                    <td>
+                                                        <input type="hidden" class="form-control product-detail-id"
+                                                            name="productDetails[{{ $loop->index }}][id]"
+                                                            value="{{ $variant->id }}">
+                                                        <input type="text" class="form-control product-detail-name"
+                                                            placeholder="Product Name"
+                                                            name="productDetails[{{ $loop->index }}][name]"
+                                                            value="{{ $variant->name }}" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control product-detail-price"
+                                                            placeholder="Rp"
+                                                            name="productDetails[{{ $loop->index }}][price]"
+                                                            value="{{ $variant->price }}" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text"
+                                                            class="form-control product-detail-discount-price"
+                                                            placeholder="Rp"
+                                                            name="productDetails[{{ $loop->index }}][discount_price]"
+                                                            value="{{ $variant->discount_price }}">
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" class="form-control product-detail-stock"
+                                                            placeholder="Pcs"
+                                                            name="productDetails[{{ $loop->index }}][stock]"
+                                                            value="{{ $variant->stock }}" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control product-detail-sku"
+                                                            placeholder="SKU"
+                                                            name="productDetails[{{ $loop->index }}][sku]"
+                                                            value="{{ $variant->sku }}" required>
+                                                    </td>
+                                                    <td class="upload-product">
+                                                        <input class="upload-file-variant" type="file"
+                                                            accept="image/*"
+                                                            name="productDetails[{{ $loop->index }}][photo_variant]"
+                                                            onchange="showPreviewVariant(event)">
+                                                        <img class="card-img-top card-img-variant"
+                                                            src="{{ isset($variant->image) ? Storage::url($variant->image) : asset('admin/img/product/upload.png') }}"
+                                                            alt="Card image cap">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch"
+                                                                name="productDetails[{{ $loop->index }}][status]"
+                                                                value="1"
+                                                                @if ($variant->status == 1) checked @endif>
+                                                        </div>
+                                                    </td>
+                                                    <td class="last-update">
+                                                        @if ($variant->last_update_by && $variant->last_update_at)
+                                                            by {{ $variant->last_update_by }}<br />
+                                                            at {{ $variant->last_update_at }}
+                                                        @else
+                                                            No Data
+                                                        @endif
+                                                    </td>
+                                                    <td class="delete-variant">
+                                                        <img onclick="deleteRow(event)"
+                                                            src="{{ asset('admin/img/icons/delete.svg') }}"
+                                                            alt="img">
+                                                    </td>
+                                                </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
@@ -570,7 +590,7 @@
 
             let productLastUpdate = clone.querySelector(".last-update");
             productLastUpdate.innerHTML = '';
-            
+
 
             changeProductVariant();
         }
@@ -579,7 +599,11 @@
             const rowCount = $('#tbodyVariant > tr').length;
             console.log('Lalala ' + rowCount);
             if (rowCount > 1) {
-                $('.product-detail-name').attr( {type: "text", placeholder: "Ukuran S", required: true} );
+                $('.product-detail-name').attr({
+                    type: "text",
+                    placeholder: "Ukuran S",
+                    required: true
+                });
                 $('.product-detail-name').closest("td").show();
                 $('.upload-file-variant').closest("td").show();
                 $('.product-detail-delete').closest("td").show();
@@ -588,7 +612,12 @@
                 $('#variant_delete_head').show();
                 $('.delete-variant').show();
             } else {
-                $('.product-detail-name').attr( {type: "hidden", placeholder: "DEFAULT", value: "DEFAULT", required: false} );
+                $('.product-detail-name').attr({
+                    type: "hidden",
+                    placeholder: "DEFAULT",
+                    value: "DEFAULT",
+                    required: false
+                });
                 $('.product-detail-name').closest("td").hide();
                 $('.upload-file-variant').closest("td").hide();
                 $('.product-detail-delete').closest("td").hide();
@@ -600,10 +629,10 @@
         }
 
         function deleteRow(event) {
-            
+
             const product_detail_id = event.target.closest(`tr`).querySelector('.product-detail-id').value;
             // console.log('product_id ' + product_id)
-            
+
             if (product_detail_id) {
                 Swal.fire({
                     title: 'Are you sure?',
@@ -616,7 +645,8 @@
 
                         $.ajax({
                             type: 'DELETE',
-                            url: '{{ route("admin.product.variant.delete", ":id") }}'.replace(':id', product_detail_id),
+                            url: '{{ route('admin.product.variant.delete', ':id') }}'.replace(':id',
+                                product_detail_id),
                             data: {
                                 _token: $('meta[name="csrf-token"]').attr('content'),
                             },
@@ -624,23 +654,24 @@
                             error: function(response) {
                                 console.log(response);
                                 Swal.fire("Error!", 'Something is wrong', "error")
-                                .then((result) => {
-                                    if (result.isConfirmed) {
-                                        location.reload();
-                                    }
-                                });
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            location.reload();
+                                        }
+                                    });
                             },
-                            success: function (response) {
+                            success: function(response) {
                                 console.log(response);
                                 if (response.success == true) {
                                     Swal.fire("Deleted successfully!", response.message, "success")
-                                    .then((result) => {
-                                        if (result.isConfirmed) {
-                                            event.target.parentNode.parentNode.parentNode.remove();
-                                            changeProductVariant();
-                                            // location.reload();
-                                        }
-                                    });
+                                        .then((result) => {
+                                            if (result.isConfirmed) {
+                                                event.target.parentNode.parentNode.parentNode
+                                                    .remove();
+                                                changeProductVariant();
+                                                // location.reload();
+                                            }
+                                        });
                                 } else {
                                     Swal.fire("Error!", response.message, "error").then((result) => {
                                         if (result.isConfirmed) {
@@ -658,8 +689,7 @@
                         )
                     }
                 });
-            }
-            else {
+            } else {
                 event.target.parentNode.parentNode.parentNode.remove();
                 changeProductVariant();
             }
@@ -677,7 +707,8 @@
 
                     $.ajax({
                         type: 'DELETE',
-                        url: '{{ route("admin.product.image.delete", ":id") }}'.replace(':id', product_image_id),
+                        url: '{{ route('admin.product.image.delete', ':id') }}'.replace(':id',
+                            product_image_id),
                         data: {
                             _token: $('meta[name="csrf-token"]').attr('content'),
                         },
@@ -685,21 +716,21 @@
                         error: function(response) {
                             console.log(response);
                             Swal.fire("Error!", 'Something is wrong', "error")
-                            .then((result) => {
-                                if (result.isConfirmed) {
-                                    location.reload();
-                                }
-                            });
-                        },
-                        success: function (response) {
-                            console.log(response);
-                            if (response.success == true) {
-                                Swal.fire("Deleted successfully!", response.message, "success")
                                 .then((result) => {
                                     if (result.isConfirmed) {
                                         location.reload();
                                     }
                                 });
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            if (response.success == true) {
+                                Swal.fire("Deleted successfully!", response.message, "success")
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            location.reload();
+                                        }
+                                    });
                             } else {
                                 Swal.fire("Error!", response.message, "error").then((result) => {
                                     if (result.isConfirmed) {
@@ -718,7 +749,5 @@
                 }
             });
         }
-
-        
     </script>
 @endpush
