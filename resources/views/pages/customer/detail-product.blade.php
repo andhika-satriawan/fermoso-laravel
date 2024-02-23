@@ -94,8 +94,8 @@
             <div class="breadcrumb clearfix">
                 <a class="home" href="{{ url('/') }}" title="Return to Home">Home</a>
                 <span class="navigation-pipe">&nbsp;</span>
-                <a href="{{ 'category/' . $product->product_subcategory->slug }}"
-                    title="Return to Home">{{ $product->product_subcategory->name }}</a>
+                <a
+                    href="{{ route('products', ['subcategory' => $product->product_subcategory->id]) }}">{{ $product->product_subcategory->name }}</a>
                 <span class="navigation-pipe">&nbsp;</span>
                 <span class="navigation_page">{{ $product->name }}</span>
             </div>

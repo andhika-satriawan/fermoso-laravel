@@ -25,8 +25,8 @@ class ProductController extends Controller
         $products = Product::query()
             ->when($request->search, function ($query, $search) {
                 $query->where('name', 'like', "%{$search}%")
-                ->orWhere('description', 'like', "%{$search}%")
-                ->orWhereRelation('product_subcategory', 'name', 'like', "%{$search}%");
+                    ->orWhere('description', 'like', "%{$search}%")
+                    ->orWhereRelation('product_subcategory', 'name', 'like', "%{$search}%");
             })
             ->when($request->subcategory, function ($query, $subcategory) {
                 $query->whereRelation('product_subcategory', 'id', $subcategory);
@@ -41,7 +41,7 @@ class ProductController extends Controller
             ->orderBy('id', 'DESC')
             ->paginate(20);
 
-        if($request->subcategory) {
+        if ($request->subcategory) {
             $product_subcategory = ProductSubcategory::where('id', $request->subcategory)->first();
         }
 
@@ -123,6 +123,7 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
+        $product_subcategory = ProductSubcategory::with(['products', 'details'])->orderBy('id', 'ASC')->firstOrFail();
         $product = Product::where("slug", $slug)->with(['details', 'product_subcategory', 'images', 'reviews'])
             ->withCount('reviews')
             ->withSum('transactions', 'quantity')
@@ -136,6 +137,7 @@ class ProductController extends Controller
         // dd($product);
 
         return view('pages.customer.detail-product', [
+            "product_subcategory" => $product_subcategory,
             "product" => $product,
             // "products" => $products,
             "related_products" => $related_products,

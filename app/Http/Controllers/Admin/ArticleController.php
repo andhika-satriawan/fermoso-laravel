@@ -70,7 +70,7 @@ class ArticleController extends Controller
 
         $article = new Article;
 
-        $article_slug = Str::slug($request->title).'-'.hexdec(uniqid());
+        $article_slug = Str::slug($request->title);
 
         $article->title     = $request->title;
         $article->slug      = $article_slug;
@@ -97,7 +97,7 @@ class ArticleController extends Controller
             $categoryNames = $request->article_categories;
 
             $categoryIds = [];
-            foreach($categoryNames as $categoryName) {
+            foreach ($categoryNames as $categoryName) {
                 $categoryName = trim($categoryName);
 
                 if (MasterArticleCategory::where('slug', Str::slug($categoryName))->doesntExist()) {
@@ -108,8 +108,8 @@ class ArticleController extends Controller
                 } else {
                     $category = MasterArticleCategory::where('slug', Str::slug($categoryName))->firstOrFail();
                 }
-                
-                if($category) {
+
+                if ($category) {
                     $categoryIds[] = $category->id;
                 }
             }
@@ -121,11 +121,11 @@ class ArticleController extends Controller
             if ($request->article_tags) {
                 // $tagNames = Str::of($request->article_tags)->explode(',');
                 $tagNames = $request->article_tags;
-    
+
                 $tagIds = [];
-                foreach($tagNames as $tagName) {
+                foreach ($tagNames as $tagName) {
                     $tagName = trim($tagName);
-                    
+
                     if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
                         $tag = new MasterArticleTag;
                         $tag->slug = Str::slug($tagName);
@@ -134,8 +134,8 @@ class ArticleController extends Controller
                     } else {
                         $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
                     }
-    
-                    if($tag) {
+
+                    if ($tag) {
                         $tagIds[] = $tag->id;
                     }
                 }
@@ -143,8 +143,7 @@ class ArticleController extends Controller
             }
 
             return to_route($this->route_path . 'index')
-            ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
-
+                ->with('success', $this->page_info['title'] . ' data has been inserted successfully');
         }
     }
 
@@ -187,7 +186,7 @@ class ArticleController extends Controller
 
         $article = Article::findOrFail($id);
 
-        $article_slug = Str::slug($request->title).'-'.hexdec(uniqid());
+        $article_slug = Str::slug($request->title) . '-' . hexdec(uniqid());
 
         $article->title     = $request->title;
         $article->slug      = $article_slug;
@@ -214,7 +213,7 @@ class ArticleController extends Controller
             $categoryNames = $request->article_categories;
 
             $categoryIds = [];
-            foreach($categoryNames as $categoryName) {
+            foreach ($categoryNames as $categoryName) {
                 $categoryName = trim($categoryName);
 
                 if (MasterArticleCategory::where('slug', Str::slug($categoryName))->doesntExist()) {
@@ -226,7 +225,7 @@ class ArticleController extends Controller
                     $category = MasterArticleCategory::where('slug', Str::slug($categoryName))->firstOrFail();
                 }
 
-                if($category) {
+                if ($category) {
                     $categoryIds[] = $category->id;
                 }
             }
@@ -238,11 +237,11 @@ class ArticleController extends Controller
             if ($request->article_tags) {
                 // $tagNames = Str::of($request->article_tags)->explode(',');
                 $tagNames = $request->article_tags;
-    
+
                 $tagIds = [];
-                foreach($tagNames as $tagName) {
+                foreach ($tagNames as $tagName) {
                     $tagName = trim($tagName);
-    
+
                     if (MasterArticleTag::where('slug', Str::slug($tagName))->doesntExist()) {
                         $tag = new MasterArticleTag;
                         $tag->slug = Str::slug($tagName);
@@ -251,8 +250,8 @@ class ArticleController extends Controller
                     } else {
                         $tag = MasterArticleTag::where('slug', Str::slug($tagName))->firstOrFail();
                     }
-    
-                    if($tag) {
+
+                    if ($tag) {
                         $tagIds[] = $tag->id;
                     }
                 }
@@ -260,8 +259,7 @@ class ArticleController extends Controller
             }
 
             return to_route($this->route_path . 'index')
-            ->with('success', $this->page_info['title'] . ' data has been updated successfully');
-
+                ->with('success', $this->page_info['title'] . ' data has been updated successfully');
         }
     }
 

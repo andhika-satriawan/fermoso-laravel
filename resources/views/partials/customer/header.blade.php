@@ -2,7 +2,7 @@
     <div class="top-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="nav-top-links">
                         <a class="first-item" href="https://wa.me/6281381970719" target="_blank">+62-813-8197-0719
                             {{-- <img alt="phone" src="{{ asset('customer/assets/images/phone.png') }}" /> --}}
@@ -12,7 +12,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="sosmed-top">
                         <a href="https://wa.me/6281381970719">
                             <img src="{{ url('customer/assets/images/whatsapp.png') }}">
@@ -22,7 +22,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="support-link">
                         @auth
                             <form method="POST" action="{{ route('logout') }}" id="logoutForm">
@@ -48,7 +48,8 @@
                 <a href="{{ route('home') }}"><img alt="Fermoso" src="{{ asset('images/logo.jpg') }}" /></a>
             </div>
             <div class="col-xs-6 col-sm-7 header-search-box">
-                <form action="{{ route('products_filter') }}" class="form-inline" id="formSearchSubmission" method="post" enctype="multipart/form-data">
+                <form action="{{ route('products_filter') }}" class="form-inline" id="formSearchSubmission"
+                    method="post" enctype="multipart/form-data">
                     @csrf
                     {{-- <div class="form-group form-category">
                         <select class="select-category" id="selectCategory">

@@ -7,8 +7,8 @@
 @push('addon-style')
     <style>
         /* .product-list li .product-name {
-                                                        float: left;
-                                                    } */
+                                                                                                float: left;
+                                                                                            } */
 
         .product-list li .product-price {
             font-size: 12px;
@@ -157,7 +157,7 @@
                 <!-- Center colunm-->
                 <div class="center_column col-xs-12 col-sm-9" id="center_column">
                     <!-- product-slider -->
-                    <div class="product-slider">
+                    {{-- <div class="product-slider">
                         @if (request()->get('subcategory'))
                             <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="false"
                                 data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-items="1">
@@ -176,7 +176,51 @@
                                 @endforeach
                             </ul>
                         @endif
+                    </div> --}}
+
+                    <div class="product-slider">
+                        @if (request()->get('subcategory'))
+                            @if ($filters['subcategory_selected']->banner_top)
+                                <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="false"
+                                    data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-items="1">
+                                    <li>
+                                        <img src="{{ Storage::url($filters['subcategory_selected']->banner_top) }}"
+                                            alt="product-category-slider">
+                                    </li>
+                                </ul>
+                            @else
+                                {{-- Tampilkan slider default jika gambar tidak tersedia --}}
+                                <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="true"
+                                    data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-items="1">
+                                    <li>
+                                        <img src="https://placehold.co/870x250" alt="default-slider">
+                                    </li>
+                                </ul>
+                            @endif
+                        @else
+                            @if ($product_sliders->isEmpty())
+                                {{-- Tampilkan slider default jika product_sliders kosong --}}
+                                <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="true"
+                                    data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-items="1">
+                                    <li>
+                                        <img src="https://placehold.co/870x250" alt="default-slider">
+                                    </li>
+                                </ul>
+                            @else
+                                {{-- Tampilkan slider dari product_sliders --}}
+                                <ul class="owl-carousel owl-style2" data-dots="false" data-loop="false" data-nav="true"
+                                    data-autoplayTimeout="1000" data-autoplayHoverPause="true" data-items="1">
+                                    @foreach ($product_sliders as $slider)
+                                        <li>
+                                            <img src="{{ Storage::url($slider->image) }}" alt="product-slider">
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        @endif
                     </div>
+
+
                     <!-- ./category-slider -->
 
                     <div>
