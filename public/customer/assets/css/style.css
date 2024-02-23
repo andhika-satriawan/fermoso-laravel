@@ -1808,6 +1808,16 @@ span.notify-right {
   float: left;
 }
 
+.header-top-right .header-banner {
+  width: 26%;
+  float: right;
+}
+
+.header-top-right .header-banner img {
+  width: 100%;
+  height: auto;
+}
+
 .header-top-right .homeslider img {
   width: 100%;
   height: auto;
