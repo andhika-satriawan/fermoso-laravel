@@ -2152,7 +2152,7 @@ span.notify-right {
   padding-left: 35px;
   border-right: 1px solid #ccc;
   overflow: hidden;
-
+  margin-top: 10px;
 }
 
 .service .service-item .icon {
