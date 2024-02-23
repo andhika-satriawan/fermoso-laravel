@@ -51,7 +51,7 @@
     @stack('addon-script')
     @include('partials.customer.plugin')
 
-    {{-- <script>
+    <script>
         // Disable Right click
         document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -80,7 +80,7 @@
                 return false;
             }
         }
-    </script> --}}
+    </script>
 </body>
 
 </html>
