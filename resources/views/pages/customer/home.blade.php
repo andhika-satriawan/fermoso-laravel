@@ -126,21 +126,21 @@
         }
 
         /* html:before {
-                                                                                                                                                content: "";
-                                                                                                                                                position: fixed;
-                                                                                                                                                width: 100%;
-                                                                                                                                                height: 100%;
-                                                                                                                                                background: inherit;
-                                                                                                                                                z-index: -1;
-                                                                                                                                                filter: blur(10px);
-                                                                                                                                            }
+                                                                                                                                                    content: "";
+                                                                                                                                                    position: fixed;
+                                                                                                                                                    width: 100%;
+                                                                                                                                                    height: 100%;
+                                                                                                                                                    background: inherit;
+                                                                                                                                                    z-index: -1;
+                                                                                                                                                    filter: blur(10px);
+                                                                                                                                                }
 
-                                                                                                                                            html {
-                                                                                                                                                background-image: url(/customer/assets/images/watermark.png);
-                                                                                                                                                background-size: 80%;
-                                                                                                                                                background-repeat: no-repeat;
-                                                                                                                                                background-position: center;
-                                                                                                                                            } */
+                                                                                                                                                html {
+                                                                                                                                                    background-image: url(/customer/assets/images/watermark.png);
+                                                                                                                                                    background-size: 80%;
+                                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                                    background-position: center;
+                                                                                                                                                } */
     </style>
 @endpush
 
@@ -513,7 +513,7 @@
                     <div class="product-featured clearfix">
                         <div class="banner-featured">
                             <div class="banner-img">
-                                <a href="{{ url('product/category/' . $product_subcategory->slug) }}">
+                                <a href="{{ route('products', ['subcategory' => $product_subcategory->id]) }}">
                                     <img alt="{{ $product_subcategory->name }}"
                                         src="{{ isset($product_subcategory->featured_image) ? Storage::url($product_subcategory->featured_image) : 'customer/assets/data/f1.jpg' }}" />
                                 </a>
