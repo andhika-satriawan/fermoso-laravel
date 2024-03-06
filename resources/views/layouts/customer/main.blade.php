@@ -59,18 +59,18 @@
         document.onkeydown = disableSelectCopy;
 
         // Disable mouse down
-        document.onmousedown = dMDown;
+        // document.onmousedown = dMDown;
 
         // Disable click
-        document.onclick = dOClick;
+        // document.onclick = dOClick;
 
-        function dMDown(e) {
-            return false;
-        }
+        // function dMDown(e) {
+        //     return false;
+        // }
 
-        function dOClick() {
-            return true;
-        }
+        // function dOClick() {
+        //     return true;
+        // }
 
         function disableSelectCopy(e) {
             // current pressed key
