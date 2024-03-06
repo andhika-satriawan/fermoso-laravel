@@ -272,7 +272,7 @@
                         <!-- tab product -->
                         <div class="product-tab">
                             <ul class="nav-tab">
-                                <li class="active">
+                                {{-- <li class="active">
                                     <a aria-expanded="false" data-toggle="tab" href="#product-detail">Product Details</a>
                                 </li>
                                 <li>
@@ -280,8 +280,8 @@
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#video-reels">video</a>
-                                </li>
-                                <li>
+                                </li> --}}
+                                <li class="active">
                                     <a data-toggle="tab" href="#reviews">reviews</a>
                                 </li>
                                 {{-- <li>
@@ -292,7 +292,7 @@
                                 </li> --}}
                             </ul>
                             <div class="tab-container">
-                                <div id="product-detail" class="tab-panel active">
+                                {{-- <div id="product-detail" class="tab-panel active">
                                     {!! $product->description !!}
                                 </div>
                                 <div id="information" class="tab-panel">
@@ -327,9 +327,9 @@
                                     @else
                                         Video tidak tersedia
                                     @endif
+                                </div> --}}
 
-                                </div>
-                                <div id="reviews" class="tab-panel">
+                                <div id="reviews" class="tab-panel active">
                                     <div class="product-comments-block-tab">
                                         @foreach ($product->reviews as $review)
                                             <div class="comment row">
