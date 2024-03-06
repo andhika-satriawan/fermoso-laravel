@@ -32,9 +32,9 @@
         }
 
         /* .address-item input:checked+label {
-                                                                                    font-weight: bold;
-                                                                                    color: #333;
-                                                                                } */
+                                                                                                font-weight: bold;
+                                                                                                color: #333;
+                                                                                            } */
 
         div.address-item.selected {
             background: #ff3366;
@@ -151,14 +151,18 @@
                                 <label for="jne"><input type="radio" name="courier" id="jne"
                                         value="jne">JNE</label>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <label for="tiki"><input type="radio" name="courier" id="tiki"
                                         value="tiki">TIKI</label>
-                            </li>
+                            </li> --}}
                             {{-- <li>
                                 <label for="sicepat"><input type="radio" name="courier" id="sicepat" value="sicepat">Si
                                     Cepat</label>
                             </li> --}}
+                            <li>
+                                <label for="jnt"><input type="radio" name="courier" id="jnt"
+                                        value="jnt">JNT</label>
+                            </li>
                         </ul>
                         <br />
                         {{-- <em>Untuk jasa pengiriman Gojek dan Grab silahkan konsultasikan kepada Admin</em> --}}

@@ -132,9 +132,14 @@ class CartController extends Controller
 
     public function ongkir_option_api(Request $request)
     {
+        // $validated = $request->validate([
+        //     'address_id' => 'required|numeric|exists:App\Models\Address,id',
+        //     'courier'    => 'required|string|in:jne,tiki,sicepat',
+        // ]);
+
         $validated = $request->validate([
             'address_id' => 'required|numeric|exists:App\Models\Address,id',
-            'courier'    => 'required|string|in:jne,tiki,sicepat',
+            'courier'    => 'required|string|in:jne,jnt',
         ]);
 
         $address = Address::where([
